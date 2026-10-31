@@ -3,3 +3,4 @@ __pycache__/
 books/
 *.pdf
 .DS_Store
+dist/

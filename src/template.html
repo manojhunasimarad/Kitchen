@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kitchen From Zero</title>
+<!--PWA-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600&display=swap">
 <style>
@@ -1121,6 +1122,10 @@ function renderSetup() {
     '<label class="f">People you usually cook for<span class="hint">Recipes open at this many servings, and each day starts with it. Change a single day on Today.</span><div class="stepper"><button class="rbtn" type="button" data-setp="-1" aria-label="Fewer people">−</button><b>' + setv("people") + '</b><button class="rbtn" type="button" data-setp="1" aria-label="More people">+</button></div></label>' +
     '<div class="f"><b>How many times you usually cook a day</b><span class="hint">Groups the day into cooking sessions. Change a single day on Today.</span><div class="seg" role="group" aria-label="Default cooking times">' + [1, 2, 3].map(n => '<button type="button" data-setsess="' + n + '" aria-pressed="' + (setv("sessions") === n) + '">' + ["", "Once", "Twice", "3 times"][n] + "</button>").join("") + "</div></div>" +
     '<label class="f" for="set-app">Order app<span class="hint">"Order" opens this app\'s search for the item. You place the order there.</span><select id="set-app">' + D.apps.map(a => '<option value="' + a.key + '"' + (a.key === setv("app") ? " selected" : "") + ">" + esc(a.label) + "</option>").join("") + "</select></label>" +
+    '<div class="f"><b>Move your data</b><span class="hint">The Claude link and the offline website keep separate copies of your plan, pantry, profile and results. Copy your data on one and paste it into Settings on the other.</span>' +
+    '<div class="toolbar"><button type="button" class="btn" id="bk-copy">Copy my data</button><span class="small" id="bk-msg" aria-live="polite"></span></div>' +
+    '<textarea id="bk-in" rows="4" placeholder="Paste data here" aria-label="Paste data to load" style="width:100%;font:13px var(--font-mono);background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:8px"></textarea>' +
+    '<div class="toolbar"><button type="button" class="btn" id="bk-load">Replace my data with this</button></div></div>' +
     '<label class="toggle" for="set-manual"><input type="checkbox" id="set-manual"' + (S.set.manual ? " checked" : "") + "> Use my own calorie and protein targets instead of the Me calculator</label>" +
     (S.set.manual || !profOk() ? '<label class="f" for="set-kcal">Daily calories<input type="number" id="set-kcal" inputmode="numeric" min="1200" max="4500" step="50" value="' + setv("kcal") + '"></label>' +
     '<label class="f" for="set-p">Daily protein (g)<span class="hint">For muscle gain with strength training, about 1.6–2.2 g per kg of body weight.</span><input type="number" id="set-p" inputmode="numeric" min="40" max="250" step="5" value="' + setv("p") + '"></label>' : '<p class="small">Targets come from your profile: ' + target("kcal") + " kcal and " + target("p") + " g protein a day.</p>");
@@ -1294,6 +1299,20 @@ document.addEventListener("click", e => {
     return;
   }
   if (c("#c-clear")) { apply(s => { s.pick = {}; }); return; }
+  if (c("#bk-copy")) {
+    const txt = JSON.stringify(S), msg = $("#bk-msg"), area = $("#bk-in");
+    const fail = () => { area.value = txt; area.select(); msg.textContent = "Couldn't copy automatically: the text is selected below, copy it from there."; };
+    try { navigator.clipboard.writeText(txt).then(() => { msg.textContent = "Copied. Paste it into Settings on your other copy."; }, fail); } catch (err) { fail(); }
+    return;
+  }
+  if ((el = c("#bk-load"))) {
+    let x = null; try { x = JSON.parse($("#bk-in").value); } catch (err) {}
+    if (!x || typeof x !== "object" || !KEYS.some(k => x[k] && typeof x[k] === "object")) { $("#bk-msg").textContent = "That isn't Kitchen From Zero data. Copy it again from the other copy."; return; }
+    if (!el.dataset.armed) { el.dataset.armed = "1"; el.textContent = "Tap again to replace everything here"; return; }
+    const nx = norm(x); apply(s => { KEYS.forEach(k => { s[k] = JSON.parse(JSON.stringify(nx[k])); }); });
+    $("#bk-msg").textContent = "Loaded.";
+    return;
+  }
   if ((el = c("[data-mesex]"))) { const v = el.dataset.mesex; apply(s => { s.me = s.me || {}; s.me.sex = v; }); return; }
   if (c("#wl-add")) {
     const v = +$("#wl-v").value, d = $("#wl-d").value || todayStr();
@@ -1340,6 +1359,7 @@ document.addEventListener("visibilitychange", () => { if (document.hidden && dir
 const h0 = (location.hash || "").slice(1);
 selectTab(TABS.includes(h0) ? h0 : lsGet("kfz.tab", "today"), false);
 connect();
+/*PWA_JS*/
 </script>
 </body>
 </html>

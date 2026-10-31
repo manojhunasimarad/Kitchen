@@ -54,9 +54,18 @@ Daily targets: calories and protein are yours to set (defaults 2200 kcal and 110
 
 ## Using it
 
-**Synced across devices:** published as a Claude artifact, the page saves your plan, ticks, pantry and settings to your Claude account. Open the same link signed in on your phone and laptop and they stay in step.
+**Website (works offline):** https://manojhunasimarad.github.io/Kitchen/
 
-**Standalone:** open `index.html` in any browser, or turn on GitHub Pages (**Settings → Pages**, deploy from `main`, `/ (root)`). Used this way, everything is saved in that browser only.
+Open it once with internet and it saves itself on the device. After that it opens with no connection: everything works except the grocery-app Order links. To use it like an app:
+
+- **Android (Chrome):** menu ⋮ → *Add to Home screen* or *Install app*.
+- **iPhone (Safari):** Share → *Add to Home Screen*.
+
+When you're online it picks up new versions automatically. On the website, your plan, pantry, profile and results are saved in that browser on that device.
+
+**Synced across devices:** published as a Claude artifact, the same page saves to your Claude account, so phone and laptop stay in step (this needs internet).
+
+**Moving data between them:** Settings → *Move your data*. Tap *Copy my data* on one copy, paste it into the other and tap *Replace my data with this*.
 
 "Order" only opens the grocery app's search for the item. You place the order in the app, and the item shows as ordered in Shopping until you tick it as arrived.
 
@@ -73,7 +82,9 @@ tools/world_recipes.py   the 32 recipes from other cuisines (with grams) and qui
 tools/book1_extra.py     Book 1 variations and sides
 tools/nutrition.py       nutrients per 100 g, the gram converter and the ingredient-name rules
 tools/build_data.py      pantry, matching rules, cuisine and course, nutrition, track, default week, targets, order apps
-tools/build_page.py      embeds data/data.json into the template and writes index.html
+tools/build_page.py      embeds data/data.json into the template; writes index.html (website, offline-ready)
+                         and dist/artifact.html (the Claude artifact version), and bumps the cache name in sw.js
+sw.js, manifest.webmanifest, icons/   offline support and home-screen install for the website
 tools/extract_b1.py      re-extracts Book 1 from the PDF (needs pdfplumber)
 tools/extract_b2.py      re-extracts Book 2 from the PDF (needs pdfplumber)
 ```
