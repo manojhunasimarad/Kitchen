@@ -1,0 +1,5374 @@
+[
+ {
+  "title": "Phulka (soft chapati)",
+  "chapter": "Breads and rice",
+  "page": 27,
+  "sub": "Everyday whole-wheat flatbread, puffed over the flame",
+  "chips": {
+   "TIME": "35 min (12 hands-on)",
+   "ONE SERVING": "4 phulkas",
+   "PROTEIN": "~14 g",
+   "ADDED OIL": "1½ tsp",
+   "USES": "Tawa + 1 flame"
+  },
+  "intro": "A phulka is a chapati cooked without oil and puffed over an open flame, so it's soft, light and quick. Every step below affects whether it puffs, which is why the method is written out in full.",
+  "ingredients": [
+   {
+    "group": "Dough",
+    "items": [
+     {
+      "name": "Whole-wheat atta",
+      "note": "about 2 cups, plus 3 tbsp for dusting",
+      "q": "120 g",
+      "q2": "240 g"
+     },
+     {
+      "name": "Water, room temperature",
+      "note": "warm in cool weather; hold back the last few spoons",
+      "q": "75 ml",
+      "q2": "150 ml"
+     },
+     {
+      "name": "Salt",
+      "note": "optional",
+      "q": "a pinch",
+      "q2": "¼ tsp"
+     },
+     {
+      "name": "Oil",
+      "note": "kneaded in at the end",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     }
+    ]
+   },
+   {
+    "group": "To finish",
+    "items": [
+     {
+      "name": "Ghee",
+      "note": "optional; about ¼ tsp per phulka",
+      "q": "1 tsp",
+      "q2": "2 tsp"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Mix (2 min). Put the atta and salt in a wide bowl or a rimmed plate. Make a well, pour in most of the water and stir with the fingers of one hand in circles, drawing flour into the water, until it forms rough, shaggy lumps. Add the rest of the water a tablespoon at a time, only where flour is still dry. Atta brands absorb differently, so you may need a little more or less.",
+   "Knead (4 min). Gather the dough into one mass. Push it away with the heel of your hand, fold it back over itself, turn the bowl a quarter turn and repeat. Wet your fingers if it feels stiff; dust a pinch of atta if it sticks. Knead in the oil in the last minute.",
+   "Rest (15–20 min). Cover with a damp cloth or an upturned bowl. Cook your curry or dal in this time.",
+   "Divide (2 min). Knead for 20 seconds, roll into a log and cut it into equal pieces of about 30 g, the size of a golf ball (4 cm): 4 per serving. Roll each between your palms into a smooth ball with no cracks, flatten slightly and keep covered.",
+   "Set up two burners. Tawa on Burner 3 over medium-high; Burner 4 on medium for puffing, with tongs beside it. The tawa is ready when a few drops of water sizzle away in 2–3 seconds.",
+   "Roll (30 s each). Dip a ball in dry atta on both sides. Roll from the centre outward with light, even pressure, turning the disc a quarter turn every 2–3 strokes, to a 15–16 cm (6-inch) circle about 2 mm thick. Pat off loose flour; it burns on the tawa and tastes bitter.",
+   "First side (15–20 s). Lay the chapati on the tawa. Flip it as soon as small bubbles appear and the colour dulls slightly.",
+   "Second side (30–40 s). Cook until light brown spots appear underneath.",
+   "Puff (5 s). Lift it with tongs and set it on the Burner 4 flame, first side down. It balloons in 2–3 seconds; flip it for one second and take it off. No open flame? Press the edges gently with a folded cloth while it's still on the tawa.",
+   "Stack. Brush with ghee if you like and stack in a cloth-lined casserole or a box with a lid; the trapped steam keeps them soft."
+  ],
+  "cues": [
+   "TOUCH Kneaded dough is soft and smooth, like an earlobe. A fingertip pressed in leaves a dent that slowly springs back. Stiff dough makes hard chapatis; sticky dough tears.",
+   "LOOK An evenly rolled phulka puffs into one balloon. Puffing only in patches means uneven thickness."
+  ],
+  "why": "Resting relaxes the gluten, so the dough rolls thin without shrinking back. Even thickness matters because the steam that puffs a phulka escapes through any thin spot or tear.",
+  "tips": [
+   {
+    "title": "The rhythm that saves time",
+    "text": "Roll the next chapati while the current one is on the tawa. With practice each phulka takes about a minute: 4 in 5 minutes, 8 in 10. While you're learning, roll 3 ahead and keep them under a dry cloth."
+   },
+   {
+    "title": "Without a fridge",
+    "text": "Use dough within about 4 hours, covered, in a cool spot; throw it away if it smells sour. Cooked phulkas, wrapped in a cloth inside a closed box, keep until the next morning; warm them 10 seconds a side on the tawa."
+   }
+  ],
+  "var": [
+   "Perfect circles. Roll roughly round, press a 6-inch steel lid on top and lift away the trimmings; re-roll the scraps.",
+   "Reheat in the sandwich maker. Last night's phulkas warm through in 20–30 seconds in the closed, preheated sandwich maker, with no flipping.",
+   "Didn't puff?. The usual causes are uneven rolling, a tear, dough that's too stiff, a tawa that isn't hot enough, or too much dry flour on the surface."
+  ],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Paratha: plain or stuffed",
+  "chapter": "Breads and rice",
+  "page": 28,
+  "sub": "Layered triangle, aloo or paneer · the weekend breakfast",
+  "chips": {
+   "TIME": "40 min (25 hands-on)",
+   "ONE SERVING": "2 parathas",
+   "PROTEIN": "~26 g (paneer)",
+   "ADDED OIL": "2½ tsp",
+   "USES": "Tawa"
+  },
+  "intro": "Parathas are richer than phulkas and keep you full for longer, which makes them a good weekend breakfast. The paneer version is the high-protein choice.",
+  "ingredients": [
+   {
+    "group": "Dough",
+    "items": [
+     {
+      "name": "Whole-wheat atta",
+      "note": "plus extra for dusting",
+      "q": "100 g",
+      "q2": "200 g"
+     },
+     {
+      "name": "Water",
+      "note": "for a slightly firmer dough than phulka",
+      "q": "60 ml",
+      "q2": "120 ml"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "a pinch",
+      "q2": "¼ tsp"
+     },
+     {
+      "name": "Oil",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     }
+    ]
+   },
+   {
+    "group": "Paneer filling",
+    "items": [
+     {
+      "name": "Paneer, finely grated",
+      "note": "",
+      "q": "75 g",
+      "q2": "150 g"
+     },
+     {
+      "name": "Onion, very finely chopped",
+      "note": "",
+      "q": "1 tbsp",
+      "q2": "2 tbsp"
+     },
+     {
+      "name": "Green chilli, minced",
+      "note": "",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Coriander, chopped",
+      "note": "",
+      "q": "1 tbsp",
+      "q2": "2 tbsp"
+     },
+     {
+      "name": "Chaat masala",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "a pinch",
+      "q2": "¼ tsp"
+     }
+    ]
+   },
+   {
+    "group": "Or aloo filling",
+    "items": [
+     {
+      "name": "Potatoes, boiled and peeled",
+      "note": "about 2 medium",
+      "q": "130 g",
+      "q2": "250 g"
+     },
+     {
+      "name": "Green chilli, minced",
+      "note": "",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Ginger, grated",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Coriander, chopped",
+      "note": "",
+      "q": "1 tbsp",
+      "q2": "2 tbsp"
+     },
+     {
+      "name": "Roasted cumin powder",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Amchur (dry mango powder)",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Red chilli powder",
+      "note": "",
+      "q": "a pinch",
+      "q2": "¼ tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     }
+    ]
+   },
+   {
+    "group": "To cook",
+    "items": [
+     {
+      "name": "Ghee or oil",
+      "note": "about 1 tsp per paratha",
+      "q": "2 tsp",
+      "q2": "4 tsp"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Make the dough. Mix and knead as for phulka, using a little less water so the dough is soft but slightly firmer. Cover and rest 15 minutes.",
+   "Make the filling. Paneer: mix everything with your fingers. Aloo: mash the potatoes while still warm until completely smooth (lumps tear the dough), then mix in the rest. Either filling must be dry; wet filling leaks.",
+   "Divide. Make dough balls of about 80 g (2 per serving), and divide the filling into the same number of portions, each about the size of a dough ball.",
+   "Stuff and seal. Roll a dough ball to a 10 cm circle, thicker in the middle than at the edges. Put the filling in the centre, bring the edges up around it like a pouch, pinch them together at the top and twist off any extra dough. Flatten gently, seam side down.",
+   "Roll. Dust both sides with atta and roll gently from the centre outward to 15–17 cm (6–7 inches), turning often. If filling peeks through, patch it with a pinch of dry atta.",
+   "Cook (3–4 min each). Tawa on medium. Cook the first side for about a minute, until small brown spots appear, and flip. Spread ½ tsp ghee on top, flip, and spread ½ tsp on the other side. Keep cooking, pressing gently with a flat spatula and flipping every 30 seconds, until both sides are golden with crisp brown spots."
+  ],
+  "cues": [],
+  "why": "",
+  "tips": [],
+  "var": [
+   "Plain triangle paratha. Roll a dough ball to 12 cm, brush with ¼ tsp ghee, fold in half, brush again and fold into a triangle. Roll to a 15 cm triangle and cook as above.",
+   "Air-fryer parathas. Less ghee and no standing at the tawa: preheat to 200 °C, brush each rolled paratha with ¼ tsp ghee a side and cook about 4 minutes a side, until golden with brown spots. One at a time unless two fit flat. They come out a little crisper than tawa parathas.",
+   "Methi paratha. Knead 1 cup finely chopped fresh methi leaves, ¼ tsp turmeric, ½ tsp chilli powder and ½ tsp ajwain into the dough; roll and cook like a plain paratha."
+  ],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Ragi rotti",
+  "chapter": "Breads and rice",
+  "page": 30,
+  "sub": "Karnataka finger-millet flatbread · patted by hand, no rolling",
+  "chips": {
+   "TIME": "25 min",
+   "ONE SERVING": "2 rottis",
+   "PROTEIN": "~6 g",
+   "ADDED OIL": "2 tsp",
+   "USES": "Tawa"
+  },
+  "intro": "A Bengaluru breakfast staple. The dough is patted out with wet fingers instead of rolled, so it's quick once you have the knack. Ragi is filling and rich in fibre; pair it with something high in protein.",
+  "ingredients": [
+   {
+    "group": "Dough",
+    "items": [
+     {
+      "name": "Ragi flour",
+      "note": "about 1¼ cups",
+      "q": "80 g",
+      "q2": "160 g"
+     },
+     {
+      "name": "Onion, finely chopped",
+      "note": "small",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Green chillies, finely chopped",
+      "note": "",
+      "q": "1",
+      "q2": "2"
+     },
+     {
+      "name": "Coriander, chopped",
+      "note": "",
+      "q": "1½ tbsp",
+      "q2": "3 tbsp"
+     },
+     {
+      "name": "Dill (sabsige soppu), chopped",
+      "note": "optional",
+      "q": "1 tbsp",
+      "q2": "2 tbsp"
+     },
+     {
+      "name": "Carrot, grated",
+      "note": "optional",
+      "q": "1½ tbsp",
+      "q2": "3 tbsp"
+     },
+     {
+      "name": "Cumin seeds",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Warm water",
+      "note": "add gradually",
+      "q": "65 ml",
+      "q2": "130 ml"
+     }
+    ]
+   },
+   {
+    "group": "To cook",
+    "items": [
+     {
+      "name": "Oil",
+      "note": "about 1 tsp per rotti",
+      "q": "2 tsp",
+      "q2": "4 tsp"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Mix. Combine the flour, vegetables, herbs, cumin and salt. Add the warm water a little at a time and knead for a minute into a soft dough like modelling clay: it shouldn't crack at the edges when pressed, or stick to your hands.",
+   "Divide. Make 2 balls per serving.",
+   "Pat. Cut open a clean milk packet (or use butter paper) and grease it with a few drops of oil. Put a ball in the centre and pat it out with wet fingers into a 15 cm circle about 3–4 mm thick, dipping your fingers in water whenever the dough sticks. Poke 4–5 holes with a finger.",
+   "Cook. Heat the tawa on medium. Flip the sheet onto the tawa, dough side down, and peel the sheet away. Drizzle ½ tsp oil into the holes and around the edge. Cover with a lid and cook 2–3 minutes, until the edges look dry and the underside has brown spots. Flip, add ½ tsp oil and cook 1–2 minutes more, uncovered."
+  ],
+  "cues": [
+   "LOOK Cracks at the edges while you pat mean the dough is too dry: knead in 1–2 tbsp water."
+  ],
+  "why": "",
+  "tips": [],
+  "var": [
+   "More protein. Replace 40 g of the ragi flour with besan (+3 g protein per serving), and serve with an egg.",
+   "Akki rotti. The same method with rice flour mixed with hot water instead of ragi; add grated cucumber or carrot."
+  ],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Rice, cooked right",
+  "chapter": "Breads and rice",
+  "page": 31,
+  "sub": "Pressure cooker or open pot",
+  "chips": {
+   "TIME": "20–25 min",
+   "ONE SERVING": "75 g raw",
+   "PROTEIN": "~5 g",
+   "ADDED OIL": "none",
+   "USES": "Cooker or 1 burner"
+  },
+  "intro": "Two rices cover most meals: sona masoori is the everyday South Indian rice, and basmati is for pulao, fried rice and jeera rice. 75 g of raw rice makes about 1¼ cups cooked.",
+  "ingredients": [
+   {
+    "group": "Rice",
+    "items": [
+     {
+      "name": "Sona masoori or basmati rice",
+      "note": "about ¾ cup",
+      "q": "75 g",
+      "q2": "150 g"
+     },
+     {
+      "name": "Water for sona masoori",
+      "note": "2 × the rice volume; 2½ × for soft rice",
+      "q": "¾ cup",
+      "q2": "1½ cups"
+     },
+     {
+      "name": "Water for basmati",
+      "note": "1½ × the rice volume",
+      "q": "½ cup + 1 tbsp",
+      "q2": "1 cup + 2 tbsp"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Wash. Rinse the rice in a bowl 3 times, swirling gently, until the water is only slightly cloudy. Soak basmati 15–20 minutes; sona masoori can go straight in, or soak 10 minutes for softer rice.",
+   "Pressure cooker. Rice and water go into the cooker (or into a container on a trivet with 1 cup of water in the base). Sona masoori: 3 whistles on medium. Basmati: 1 whistle. Let the pressure drop by itself, then fluff with a fork.",
+   "Open pot (basmati). Bring the measured water to a boil with a pinch of salt and ½ tsp ghee. Add the drained rice, stir once, cover tightly and cook on the lowest flame for 12 minutes. Turn off and leave covered for 5 minutes, then fluff.",
+   "With dal. See Pot-in-pot in Part 1: dal below, rice above, 3 whistles."
+  ],
+  "cues": [],
+  "why": "",
+  "tips": [
+   {
+    "title": "Food safety",
+    "text": "Eat cooked rice within 2 hours, or pack it piping hot into a preheated insulated box. Never keep cooked rice overnight without a fridge."
+   }
+  ],
+  "var": [
+   "Jeera rice and lemon rice. See Book 1, Quick everyday rice."
+  ],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Moong dal chilla",
+  "chapter": "Breakfasts",
+  "page": 32,
+  "sub": "Split yellow moong pancakes · soak the night before",
+  "chips": {
+   "TIME": "20 min + soaking",
+   "ONE SERVING": "2 chillas",
+   "PROTEIN": "~14 g",
+   "ADDED OIL": "1 tsp",
+   "USES": "Tawa + mixie"
+  },
+  "intro": "High in protein, light and quick once the dal is soaked. Use split yellow moong dal (hesaru bele), not whole green moong.",
+  "ingredients": [
+   {
+    "group": "Batter",
+    "items": [
+     {
+      "name": "Split yellow moong dal",
+      "note": "hesaru bele; soaked 6–8 hours",
+      "q": "60 g",
+      "q2": "120 g"
+     },
+     {
+      "name": "Ginger",
+      "note": "",
+      "q": "½ inch",
+      "q2": "1 inch"
+     },
+     {
+      "name": "Green chillies",
+      "note": "",
+      "q": "1",
+      "q2": "2"
+     },
+     {
+      "name": "Cumin seeds",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "¾ tsp"
+     },
+     {
+      "name": "Water for grinding",
+      "note": "about 7 tbsp",
+      "q": "50 ml",
+      "q2": "100 ml"
+     },
+     {
+      "name": "Hing",
+      "note": "",
+      "q": "a pinch",
+      "q2": "a pinch"
+     },
+     {
+      "name": "Onion, finely chopped",
+      "note": "",
+      "q": "¼",
+      "q2": "½"
+     },
+     {
+      "name": "Coriander, chopped",
+      "note": "",
+      "q": "1 tbsp",
+      "q2": "2 tbsp"
+     }
+    ]
+   },
+   {
+    "group": "To cook",
+    "items": [
+     {
+      "name": "Oil",
+      "note": "½ tsp per chilla",
+      "q": "1 tsp",
+      "q2": "2 tsp"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Soak (the night before). Wash the dal 3 times and soak it in 2 cups of water: at least 3 hours, and overnight is fine.",
+   "Grind (2 min). Drain. Grind with the ginger, chillies, cumin and salt, adding the water a little at a time, to a smooth batter that pours like dosa batter: thick enough to coat a spoon, thin enough to spread. Stir in the hing, onion and coriander.",
+   "Heat the tawa. Medium heat. Wipe the tawa with a few drops of oil on a folded cloth or half an onion.",
+   "Spread. Pour a ladle of batter (about ⅓ cup) into the centre and spread it outward in circles with the back of the ladle to 15 cm. Drizzle ½ tsp oil around the edge.",
+   "Cook (3 min). Cook 1½–2 minutes, until the top looks dry and the edges turn golden and lift. Flip and cook 1 minute."
+  ],
+  "cues": [
+   "LOOK If the batter tears as you spread it, it's too thick: stir in 1–2 tbsp water. Sticking means the tawa isn't hot enough or needs a little more oil."
+  ],
+  "why": "",
+  "tips": [
+   {
+    "title": "Split yellow or whole green?",
+    "text": "Split yellow moong dal (hesaru bele) is husked and split: small, flat and yellow. Whole green moong (hesaru kaalu) still has its green skin. It makes good chillas too (that's Andhra pesarattu), but it needs a full 6–8 hours of soaking and gives a coarser, greener batter."
+   }
+  ],
+  "var": [
+   "Paneer chilla. Sprinkle 50 g grated paneer and a pinch of chaat masala on each chilla after flipping, and fold (+9 g protein per chilla)."
+  ],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Besan chilla",
+  "chapter": "Breakfasts",
+  "page": 33,
+  "sub": "Gram-flour pancakes · no soaking",
+  "chips": {
+   "TIME": "15 min",
+   "ONE SERVING": "2 chillas",
+   "PROTEIN": "~13 g",
+   "ADDED OIL": "1 tsp",
+   "USES": "Tawa"
+  },
+  "intro": "The fastest high-protein breakfast that needs no planning: besan keeps for weeks, and the batter takes three minutes.",
+  "ingredients": [
+   {
+    "group": "Batter",
+    "items": [
+     {
+      "name": "Besan (gram flour)",
+      "note": "about 1¼ cups",
+      "q": "60 g",
+      "q2": "120 g"
+     },
+     {
+      "name": "Water",
+      "note": "added in three parts",
+      "q": "90 ml",
+      "q2": "180 ml"
+     },
+     {
+      "name": "Onion, finely chopped",
+      "note": "",
+      "q": "¼",
+      "q2": "½"
+     },
+     {
+      "name": "Tomato, finely chopped, seeds removed",
+      "note": "",
+      "q": "¼",
+      "q2": "½"
+     },
+     {
+      "name": "Green chilli, finely chopped",
+      "note": "",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Coriander, chopped",
+      "note": "",
+      "q": "1 tbsp",
+      "q2": "2 tbsp"
+     },
+     {
+      "name": "Ajwain (carom seeds)",
+      "note": "crushed between your palms",
+      "q": "¼ tsp",
+      "q2": "¼ tsp"
+     },
+     {
+      "name": "Turmeric",
+      "note": "",
+      "q": "a pinch",
+      "q2": "a pinch"
+     },
+     {
+      "name": "Red chilli powder",
+      "note": "",
+      "q": "a pinch",
+      "q2": "¼ tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     }
+    ]
+   },
+   {
+    "group": "To cook",
+    "items": [
+     {
+      "name": "Oil",
+      "note": "½ tsp per chilla",
+      "q": "1 tsp",
+      "q2": "2 tsp"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Whisk the batter (3 min). Whisk the besan with a third of the water into a thick, smooth paste with no lumps, then whisk in the rest. It should flow slowly off the spoon, like dosa batter. Stir in everything else and rest 5 minutes.",
+   "Cook. As for moong dal chilla: medium tawa, spread a ladle of batter to 15 cm, ½ tsp oil around the edge, 2 minutes until the top is dry and the edges lift, then flip for 1 minute."
+  ],
+  "cues": [],
+  "why": "",
+  "tips": [],
+  "var": [
+   "Paneer-stuffed. When you have fresh paneer, mix 100 g grated paneer with a pinch each of salt, pepper and chaat masala. Spread a quarter on each chilla after flipping, and fold (+9 g protein per serving).",
+   "Vegetable. Add 3 tbsp grated carrot or finely chopped spinach to the batter."
+  ],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Egg bhurji and masala omelette",
+  "chapter": "Breakfasts",
+  "page": 34,
+  "sub": "Indian scrambled eggs · 10 minutes",
+  "chips": {
+   "TIME": "10 min",
+   "ONE SERVING": "3 eggs",
+   "PROTEIN": "~18 g",
+   "ADDED OIL": "1 tsp",
+   "USES": "1 burner"
+  },
+  "intro": "Eggs keep for a week without a fridge and cook in minutes, which makes them the backbone of fast breakfasts. Bhurji also fills sandwiches and rolls.",
+  "ingredients": [
+   {
+    "group": "Bhurji",
+    "items": [
+     {
+      "name": "Eggs",
+      "note": "",
+      "q": "3",
+      "q2": "6"
+     },
+     {
+      "name": "Oil or butter",
+      "note": "",
+      "q": "1 tsp",
+      "q2": "2 tsp"
+     },
+     {
+      "name": "Onion, finely chopped",
+      "note": "small",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Tomato, finely chopped",
+      "note": "small",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Green chilli, finely chopped",
+      "note": "",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Turmeric",
+      "note": "",
+      "q": "a pinch",
+      "q2": "a pinch"
+     },
+     {
+      "name": "Red chilli powder",
+      "note": "",
+      "q": "a pinch",
+      "q2": "¼ tsp"
+     },
+     {
+      "name": "Garam masala or pav bhaji masala",
+      "note": "",
+      "q": "a pinch",
+      "q2": "¼ tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Coriander, chopped",
+      "note": "",
+      "q": "1 tbsp",
+      "q2": "2 tbsp"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Beat the eggs. Beat them with the salt until the whites and yolks are fully mixed.",
+   "Cook the masala. Heat the oil on medium. Cook the onion 3 minutes until soft, add the chilli and tomato and cook 2 minutes until soft, then the powders for 10 seconds.",
+   "Scramble. Lower the heat and pour in the eggs. Let them set for 20–30 seconds, then push slowly from the edges to the centre with a spatula for 1–2 minutes.",
+   "Stop early. Take the pan off the heat while the eggs still look slightly glossy; they keep cooking. Stir in the coriander."
+  ],
+  "cues": [],
+  "why": "",
+  "tips": [],
+  "var": [
+   "Sandwich-maker omelette pockets. Beat 2 eggs with 1 tbsp each of finely chopped onion, tomato and coriander and a pinch each of chilli, turmeric and salt. Brush the preheated plates with oil, pour the egg into the lower plates, close gently and cook 4–5 minutes until puffed and set. If your plates leak at the hinge, use less egg.",
+   "Masala omelette. Beat the eggs with all the chopped vegetables and spices. For each omelette, heat 1 tsp oil in a pan on medium, pour in the mixture and swirl. Cook 1½ minutes until set underneath and almost set on top, flip and cook 30 seconds."
+  ],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Kanda poha with peanuts",
+  "chapter": "Breakfasts",
+  "page": 35,
+  "sub": "Flattened rice with onion and peanuts · 20 minutes",
+  "chips": {
+   "TIME": "20 min",
+   "ONE SERVING": "about 1½ cups",
+   "PROTEIN": "~8 g",
+   "ADDED OIL": "1½ tsp",
+   "USES": "1 burner"
+  },
+  "intro": "A light, quick breakfast from Maharashtra to Karnataka, where it's called avalakki. Peanuts add protein and crunch; add paneer on days you have it.",
+  "ingredients": [
+   {
+    "group": "Poha",
+    "items": [
+     {
+      "name": "Thick poha (avalakki)",
+      "note": "about 2 cups; thick or medium, not thin",
+      "q": "60 g",
+      "q2": "120 g"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "¾ tsp"
+     },
+     {
+      "name": "Sugar",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Turmeric",
+      "note": "",
+      "q": "a pinch",
+      "q2": "¼ tsp"
+     }
+    ]
+   },
+   {
+    "group": "Tempering",
+    "items": [
+     {
+      "name": "Oil",
+      "note": "",
+      "q": "½ tbsp",
+      "q2": "1 tbsp"
+     },
+     {
+      "name": "Raw peanuts",
+      "note": "",
+      "q": "15 g",
+      "q2": "30 g"
+     },
+     {
+      "name": "Mustard seeds",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Curry leaves",
+      "note": "",
+      "q": "6",
+      "q2": "10"
+     },
+     {
+      "name": "Green chillies, chopped",
+      "note": "",
+      "q": "1",
+      "q2": "2"
+     },
+     {
+      "name": "Onion, chopped",
+      "note": "medium",
+      "q": "½",
+      "q2": "1"
+     }
+    ]
+   },
+   {
+    "group": "To finish",
+    "items": [
+     {
+      "name": "Lemon",
+      "note": "",
+      "q": "¼",
+      "q2": "½"
+     },
+     {
+      "name": "Coriander, chopped",
+      "note": "",
+      "q": "1 tbsp",
+      "q2": "2 tbsp"
+     },
+     {
+      "name": "Fresh grated coconut",
+      "note": "optional",
+      "q": "1 tbsp",
+      "q2": "2 tbsp"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Rinse the poha. Put it in a colander and rinse under running water for 15–20 seconds, tossing with your fingers, until just moistened. Don't soak it; soaked poha turns to mush. Drain and leave 10 minutes to soften, then sprinkle the salt, sugar and turmeric over it and toss gently.",
+   "Fry the peanuts. Heat the oil on medium and fry the peanuts 2–3 minutes, until they crackle and darken a shade. Lift them out.",
+   "Temper. In the same oil, add the mustard seeds; when they crackle, add the curry leaves and chillies for 10 seconds, then the onion. Cook 3 minutes until soft and translucent, not brown.",
+   "Combine. Add the poha and peanuts and toss gently for 1–2 minutes. Cover and leave on the lowest flame for 2 minutes to steam.",
+   "Finish. Off the heat, squeeze over the lemon and add the coriander (and coconut)."
+  ],
+  "cues": [
+   "TOUCH After resting, a flake should squash flat easily between your fingers. If it's still hard after cooking, sprinkle 2 tbsp water, cover and steam 1 more minute."
+  ],
+  "why": "",
+  "tips": [],
+  "var": [
+   "Paneer poha. Add 100 g paneer in 1 cm cubes with the onion (+9 g protein per serving).",
+   "With potato. Add a small potato in 1 cm cubes before the onion; cover and cook 5 minutes until tender."
+  ],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Sprout chaat",
+  "chapter": "Breakfasts",
+  "page": 36,
+  "sub": "Whole green moong, sprouted on your counter",
+  "chips": {
+   "TIME": "10 min + 1–2 days",
+   "ONE SERVING": "about 1 cup",
+   "PROTEIN": "~14 g",
+   "ADDED OIL": "none",
+   "USES": "Steamer or 1 burner"
+  },
+  "intro": "Sprouting needs no fridge, just a day or so on the counter. Use whole green moong (hesaru kaalu) here, not split dal.",
+  "ingredients": [
+   {
+    "group": "Sprouts",
+    "items": [
+     {
+      "name": "Whole green moong",
+      "note": "hesaru kaalu; makes about 300 g of sprouts",
+      "q": "50 g",
+      "q2": "100 g"
+     }
+    ]
+   },
+   {
+    "group": "Chaat",
+    "items": [
+     {
+      "name": "Onion, finely chopped",
+      "note": "",
+      "q": "¼",
+      "q2": "½"
+     },
+     {
+      "name": "Tomato, finely chopped",
+      "note": "",
+      "q": "¼",
+      "q2": "½"
+     },
+     {
+      "name": "Cucumber, finely chopped",
+      "note": "",
+      "q": "¼",
+      "q2": "¼"
+     },
+     {
+      "name": "Green chilli, minced",
+      "note": "",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Roasted peanuts",
+      "note": "",
+      "q": "10 g",
+      "q2": "20 g"
+     },
+     {
+      "name": "Lemon",
+      "note": "",
+      "q": "¼",
+      "q2": "½"
+     },
+     {
+      "name": "Chaat masala",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Roasted cumin powder",
+      "note": "",
+      "q": "a pinch",
+      "q2": "¼ tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "a pinch",
+      "q2": "¼ tsp"
+     },
+     {
+      "name": "Coriander, chopped",
+      "note": "",
+      "q": "1 tbsp",
+      "q2": "2 tbsp"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Soak (night 1). Wash the moong and soak it in 3 cups of water for 8–10 hours.",
+   "Sprout (day 2). Drain, rinse and tip into a colander lined with a damp cotton cloth, or tie loosely in the cloth. Cover and keep in a shaded spot. Rinse and drain morning and evening. In 12–24 hours most seeds have tails 0.5–1 cm long.",
+   "Check. Sprouts should smell fresh and earthy. Throw the batch away if it smells sour or feels slimy.",
+   "Steam (4 min). Steam the sprouts for 4–5 minutes in an idli stand or a colander over boiling water, or boil 2–3 minutes and drain. Cool for a few minutes.",
+   "Toss. Mix with everything else just before eating, and eat within an hour."
+  ],
+  "cues": [],
+  "why": "Warm, damp sprouting conditions also suit bacteria. A short steam makes sprouts safe and easier to digest, and they keep their crunch.",
+  "tips": [],
+  "var": [],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Dal tadka",
+  "chapter": "Dals and beans",
+  "page": 37,
+  "sub": "Toor dal with a garlic-cumin tadka · dhaba style",
+  "chips": {
+   "TIME": "35 min",
+   "ONE SERVING": "about 1 cup",
+   "PROTEIN": "~13 g",
+   "ADDED OIL": "1¾ tsp",
+   "USES": "Cooker + 1 burner"
+  },
+  "intro": "The everyday dal. Cooking the dal plain and adding the flavour at the end in hot ghee (the tadka) keeps it bright and aromatic.",
+  "ingredients": [
+   {
+    "group": "Dal",
+    "items": [
+     {
+      "name": "Toor dal",
+      "note": "togari bele; about ⅔ cup",
+      "q": "60 g",
+      "q2": "120 g"
+     },
+     {
+      "name": "Water",
+      "note": "",
+      "q": "250 ml",
+      "q2": "500 ml"
+     },
+     {
+      "name": "Turmeric",
+      "note": "",
+      "q": "a pinch",
+      "q2": "¼ tsp"
+     },
+     {
+      "name": "Oil",
+      "note": "stops it frothing",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     }
+    ]
+   },
+   {
+    "group": "Tadka",
+    "items": [
+     {
+      "name": "Ghee (or oil)",
+      "note": "",
+      "q": "½ tbsp",
+      "q2": "1 tbsp"
+     },
+     {
+      "name": "Cumin seeds",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Garlic cloves, chopped",
+      "note": "",
+      "q": "2",
+      "q2": "4"
+     },
+     {
+      "name": "Dried red chilli",
+      "note": "",
+      "q": "1",
+      "q2": "1"
+     },
+     {
+      "name": "Hing",
+      "note": "",
+      "q": "a pinch",
+      "q2": "a pinch"
+     },
+     {
+      "name": "Onion, finely chopped",
+      "note": "small",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Ginger, grated",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Green chilli, slit",
+      "note": "",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Tomato, chopped",
+      "note": "medium",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Kashmiri chilli powder",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Coriander powder",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Garam masala",
+      "note": "",
+      "q": "a pinch",
+      "q2": "¼ tsp"
+     },
+     {
+      "name": "Kasuri methi",
+      "note": "crushed between your palms",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     }
+    ]
+   },
+   {
+    "group": "To finish",
+    "items": [
+     {
+      "name": "Lemon juice",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Coriander, chopped",
+      "note": "",
+      "q": "1 tbsp",
+      "q2": "2 tbsp"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Wash and soak. Wash the dal 3 times, until the water is fairly clear. Soak 20–30 minutes if you have time.",
+   "Pressure-cook. Dal, water, turmeric and oil in the cooker. 3 whistles on medium if soaked, 4–5 if not. Let the pressure drop by itself (8–10 minutes).",
+   "Mash. Whisk the dal or mash it with a ladle until smooth and creamy. Add the salt, and hot water until it pours and flows; dal thickens as it stands.",
+   "Tadka. Heat the ghee on medium. Add the cumin; when it crackles and darkens a shade (10–15 seconds), add the garlic and cook until light golden (30 seconds), then the red chilli and hing for 5 seconds. Add the onion and cook 4–5 minutes until golden; the ginger and green chilli for 30 seconds; then the tomato with a pinch of salt for 4 minutes, until mushy with oil showing at the edges. Lower the heat and add the powders for 15 seconds.",
+   "Simmer. Pour the dal into the tadka and simmer 5 minutes on low, stirring. Crush in the kasuri methi.",
+   "Finish. Lemon juice and coriander."
+  ],
+  "cues": [
+   "SMELL Golden garlic smells nutty and sweet. Burnt garlic is bitter, and will make the whole dal bitter: start the tadka again."
+  ],
+  "why": "",
+  "tips": [
+   {
+    "title": "Double tadka, dhaba style",
+    "text": "Just before serving, heat 1 tsp ghee, fry 2 chopped garlic cloves until golden, take it off the heat, add a pinch of Kashmiri chilli powder and pour over the dal."
+   }
+  ],
+  "var": [],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Moong dal",
+  "chapter": "Dals and beans",
+  "page": 38,
+  "sub": "Split yellow moong dal · light and quick, no soaking",
+  "chips": {
+   "TIME": "25 min",
+   "ONE SERVING": "about 1 cup",
+   "PROTEIN": "~14 g",
+   "ADDED OIL": "1 tsp",
+   "USES": "Cooker + 1 burner"
+  },
+  "intro": "The lightest, quickest dal, and the highest in protein. It pairs with anything, including a dry chicken or paneer dish for a grain-free dinner.",
+  "ingredients": [
+   {
+    "group": "Dal",
+    "items": [
+     {
+      "name": "Split yellow moong dal",
+      "note": "hesaru bele",
+      "q": "60 g",
+      "q2": "120 g"
+     },
+     {
+      "name": "Water",
+      "note": "",
+      "q": "250 ml",
+      "q2": "500 ml"
+     },
+     {
+      "name": "Turmeric",
+      "note": "",
+      "q": "a pinch",
+      "q2": "¼ tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "¾ tsp"
+     }
+    ]
+   },
+   {
+    "group": "Tadka",
+    "items": [
+     {
+      "name": "Ghee",
+      "note": "",
+      "q": "1 tsp",
+      "q2": "2 tsp"
+     },
+     {
+      "name": "Cumin seeds",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Garlic cloves, chopped",
+      "note": "",
+      "q": "1½",
+      "q2": "3"
+     },
+     {
+      "name": "Ginger, grated",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Green chilli, slit",
+      "note": "",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Hing",
+      "note": "",
+      "q": "a pinch",
+      "q2": "a pinch"
+     },
+     {
+      "name": "Tomato, chopped",
+      "note": "small",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Red chilli powder",
+      "note": "",
+      "q": "a pinch",
+      "q2": "¼ tsp"
+     }
+    ]
+   },
+   {
+    "group": "To finish",
+    "items": [
+     {
+      "name": "Lemon juice",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Coriander, chopped",
+      "note": "",
+      "q": "1 tbsp",
+      "q2": "2 tbsp"
+     }
+    ]
+   },
+   {
+    "group": "For dal palak (optional)",
+    "items": [
+     {
+      "name": "Spinach, chopped",
+      "note": "",
+      "q": "50 g",
+      "q2": "100 g"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Cook. Wash the dal 3 times. Pressure-cook with the water and turmeric, 2 whistles on medium, and let the pressure drop. (Or simmer in an open pot, partly covered, for 20 minutes, skimming off the froth.)",
+   "Whisk. Whisk until smooth, add the salt and loosen with hot water.",
+   "Tadka. Heat the ghee on medium. Cumin until it crackles; garlic until light golden; ginger, green chilli and hing for 20 seconds; tomato for 3 minutes until soft; chilli powder for 10 seconds.",
+   "Simmer. Add the dal and simmer 3 minutes. Finish with lemon and coriander."
+  ],
+  "cues": [],
+  "why": "",
+  "tips": [],
+  "var": [
+   "Dal palak. Add the chopped spinach with the tomato and cook 2 minutes before adding the dal."
+  ],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Sambar",
+  "chapter": "Dals and beans",
+  "page": 39,
+  "sub": "Karnataka-style lentil and vegetable stew with tamarind",
+  "chips": {
+   "TIME": "40 min",
+   "ONE SERVING": "about 1½ cups",
+   "PROTEIN": "~11 g",
+   "ADDED OIL": "1¼ tsp",
+   "USES": "Cooker + 2 burners"
+  },
+  "intro": "Karnataka sambar is gently sweet from a little jaggery, tangy from tamarind, and full of vegetables. Eat it with rice, or with idli and dosa on weekends.",
+  "ingredients": [
+   {
+    "group": "Dal",
+    "items": [
+     {
+      "name": "Toor dal",
+      "note": "",
+      "q": "40 g",
+      "q2": "80 g"
+     },
+     {
+      "name": "Water",
+      "note": "",
+      "q": "175 ml",
+      "q2": "350 ml"
+     },
+     {
+      "name": "Turmeric",
+      "note": "",
+      "q": "a pinch",
+      "q2": "¼ tsp"
+     },
+     {
+      "name": "Oil",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     }
+    ]
+   },
+   {
+    "group": "Vegetables and masala",
+    "items": [
+     {
+      "name": "Mixed vegetables",
+      "note": "drumstick in 3-inch pieces, carrot, pumpkin, beans, brinjal, 6 small onions",
+      "q": "130 g",
+      "q2": "250 g"
+     },
+     {
+      "name": "Tamarind",
+      "note": "a small lemon-sized ball, soaked in ½ cup hot water",
+      "q": "8 g",
+      "q2": "15 g"
+     },
+     {
+      "name": "Sambar powder",
+      "note": "",
+      "q": "¾ tbsp",
+      "q2": "1½ tbsp"
+     },
+     {
+      "name": "Jaggery",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     }
+    ]
+   },
+   {
+    "group": "Tempering",
+    "items": [
+     {
+      "name": "Oil (coconut oil is traditional)",
+      "note": "",
+      "q": "1 tsp",
+      "q2": "2 tsp"
+     },
+     {
+      "name": "Mustard seeds",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Methi (fenugreek) seeds",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "¼ tsp"
+     },
+     {
+      "name": "Dried red chilli",
+      "note": "",
+      "q": "1",
+      "q2": "1"
+     },
+     {
+      "name": "Curry leaves",
+      "note": "",
+      "q": "6",
+      "q2": "10"
+     },
+     {
+      "name": "Hing",
+      "note": "",
+      "q": "a pinch",
+      "q2": "a pinch"
+     },
+     {
+      "name": "Coriander, chopped",
+      "note": "",
+      "q": "1 tbsp",
+      "q2": "2 tbsp"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Cook the dal. Wash the dal and pressure-cook it with the water, turmeric and oil, 4 whistles. Mash it smooth.",
+   "Tamarind. Meanwhile, squeeze the soaked tamarind with your fingers and strain out the fibres and seeds.",
+   "Cook the vegetables. In a pot, boil the vegetables with 1½ cups of water, the salt and a pinch of turmeric, covered, 8–10 minutes, until a knife slides into the drumstick and pumpkin with slight resistance. Add brinjal for the last 5 minutes only.",
+   "Add the masala. Add the tamarind water, sambar powder and jaggery. Boil 5 minutes, until the raw tamarind smell has gone.",
+   "Add the dal. Stir in the mashed dal and add water until the sambar pours easily. Simmer 5 minutes. Taste: tangy, mildly sweet and well salted.",
+   "Temper. Heat the oil. Add the mustard; when it crackles, add the methi and let it turn light brown (dark methi is bitter), then the red chilli, curry leaves and hing. Pour over the sambar and add the coriander."
+  ],
+  "cues": [],
+  "why": "",
+  "tips": [
+   {
+    "title": "Save a burner",
+    "text": "Cook the vegetables in a second container stacked over the dal in the cooker (pot-in-pot), with a little water and salt. They come out softer, which is fine in sambar."
+   }
+  ],
+  "var": [
+   "Air-fryer vegetables. Toss the vegetables with ½ tsp oil and a pinch of salt and air-fry at 200 °C for 10–12 minutes, shaking twice, until browned at the edges and nearly tender. Add them with the tamarind water and simmer 6–8 minutes so they soak up the masala. It frees a burner and adds a light roasted flavour."
+  ],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Bisi bele bath",
+  "chapter": "Dals and beans",
+  "page": 41,
+  "sub": "Karnataka spiced dal-rice one-pot · the lunch-box hero",
+  "chips": {
+   "TIME": "35 min",
+   "ONE SERVING": "about 1½ cups",
+   "PROTEIN": "~16 g",
+   "ADDED OIL": "1¾ tsp",
+   "USES": "Cooker + 1 burner"
+  },
+  "intro": "\"Hot lentil rice\": dal, rice and vegetables cooked soft in the cooker, then simmered with tamarind and bisi bele bath powder and finished with a ghee tempering. One pot, a complete meal, and it travels well in an insulated box.",
+  "ingredients": [
+   {
+    "group": "Cooker",
+    "items": [
+     {
+      "name": "Toor dal",
+      "note": "",
+      "q": "50 g",
+      "q2": "100 g"
+     },
+     {
+      "name": "Sona masoori rice",
+      "note": "",
+      "q": "40 g",
+      "q2": "80 g"
+     },
+     {
+      "name": "Mixed vegetables, 1.5 cm pieces",
+      "note": "carrot, beans, potato, peas, capsicum, small onions",
+      "q": "100 g",
+      "q2": "200 g"
+     },
+     {
+      "name": "Water",
+      "note": "about 4½ × the dal and rice by volume",
+      "q": "500 ml",
+      "q2": "1 L"
+     },
+     {
+      "name": "Turmeric",
+      "note": "",
+      "q": "a pinch",
+      "q2": "¼ tsp"
+     },
+     {
+      "name": "Oil",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     }
+    ]
+   },
+   {
+    "group": "Masala",
+    "items": [
+     {
+      "name": "Tamarind",
+      "note": "a small lemon-sized ball, soaked in ½ cup hot water",
+      "q": "8 g",
+      "q2": "15 g"
+     },
+     {
+      "name": "Bisi bele bath powder",
+      "note": "MTR or any brand",
+      "q": "1 tbsp",
+      "q2": "2 tbsp"
+     },
+     {
+      "name": "Jaggery",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "¾ tsp",
+      "q2": "1¼ tsp"
+     }
+    ]
+   },
+   {
+    "group": "Tempering",
+    "items": [
+     {
+      "name": "Ghee",
+      "note": "",
+      "q": "½ tbsp",
+      "q2": "1 tbsp"
+     },
+     {
+      "name": "Mustard seeds",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Cashews",
+      "note": "",
+      "q": "4",
+      "q2": "8"
+     },
+     {
+      "name": "Curry leaves",
+      "note": "",
+      "q": "6",
+      "q2": "10"
+     },
+     {
+      "name": "Dried red chilli",
+      "note": "",
+      "q": "1",
+      "q2": "1"
+     },
+     {
+      "name": "Hing",
+      "note": "",
+      "q": "a pinch",
+      "q2": "a pinch"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Pressure-cook. Wash the dal and rice together 3 times. Put them in the cooker with the vegetables, water, turmeric and oil. 4 whistles on medium; let the pressure drop by itself.",
+   "Masala. Meanwhile, squeeze and strain the tamarind. Boil the tamarind water with the bisi bele bath powder, jaggery and salt for 3–4 minutes, until the raw smell has gone.",
+   "Combine. Open the cooker and mash lightly with a ladle; it should be soft and porridge-like. Stir in the masala, then add hot water until it flows softly off the spoon. It thickens a lot as it cools, especially in a lunch box. Simmer 3–4 minutes on low, stirring so it doesn't stick.",
+   "Temper. Heat the ghee, add the mustard; when it crackles, fry the cashews until golden, then the curry leaves, red chilli and hing for a few seconds. Pour over the pot."
+  ],
+  "cues": [],
+  "why": "",
+  "tips": [],
+  "var": [
+   "Masala khichdi. Use split yellow moong dal instead of toor, and skip the tamarind and bisi bele bath powder. In the cooker base, temper 1 tbsp ghee with cumin, ginger, green chilli, onion, tomato, turmeric and ½ tsp garam masala; add the washed dal, rice, vegetables and water and cook 3 whistles."
+  ],
+  "serve": "",
+  "note": "For 4 servings, use a 5 L cooker.",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Rajma masala",
+  "chapter": "Dals and beans",
+  "page": 42,
+  "sub": "Punjabi kidney-bean curry · soak 8 hours",
+  "chips": {
+   "TIME": "1 h + soaking",
+   "ONE SERVING": "about 1 cup",
+   "PROTEIN": "~13 g",
+   "ADDED OIL": "1½ tsp",
+   "USES": "Cooker + 1 burner"
+  },
+  "intro": "Creamy, rich rajma-chawal is a weekend favourite. The beans must be soaked and cooked completely soft.",
+  "ingredients": [
+   {
+    "group": "Beans",
+    "items": [
+     {
+      "name": "Rajma (red kidney beans)",
+      "note": "soaked 8–10 hours in 3 cups water",
+      "q": "60 g",
+      "q2": "120 g"
+     },
+     {
+      "name": "Water for cooking",
+      "note": "",
+      "q": "300 ml",
+      "q2": "600 ml"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     }
+    ]
+   },
+   {
+    "group": "Masala",
+    "items": [
+     {
+      "name": "Oil",
+      "note": "",
+      "q": "½ tbsp",
+      "q2": "1 tbsp"
+     },
+     {
+      "name": "Bay leaf",
+      "note": "",
+      "q": "1",
+      "q2": "1"
+     },
+     {
+      "name": "Cumin seeds",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Onion, finely chopped",
+      "note": "large",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Ginger-garlic paste",
+      "note": "",
+      "q": "½ tbsp",
+      "q2": "1 tbsp"
+     },
+     {
+      "name": "Green chilli, slit",
+      "note": "",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Tomatoes, puréed",
+      "note": "medium",
+      "q": "1",
+      "q2": "2"
+     },
+     {
+      "name": "Kashmiri chilli powder",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Coriander powder",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Turmeric",
+      "note": "",
+      "q": "a pinch",
+      "q2": "¼ tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Garam masala",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Kasuri methi",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Coriander, chopped",
+      "note": "",
+      "q": "1 tbsp",
+      "q2": "2 tbsp"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Soak. The night before (or that morning, for dinner), wash the rajma and soak it in 3 cups of water for 8–10 hours. They double in size.",
+   "Pressure-cook. Drain, rinse, and cook with the fresh water and salt: bring to the first whistle on high, then cook 20 minutes on the lowest flame (or 7–8 whistles on medium). Let the pressure drop. Check that a bean mashes completely; if not, cook 2–3 more whistles. Keep the cooking water.",
+   "Masala. Meanwhile, heat the oil on medium. Add the bay leaf and cumin, then the onion, and cook 8–10 minutes until deep golden; deep golden onion makes a rich rajma. Add the ginger-garlic paste and chilli for a minute, then the tomato purée, powders (except garam masala) and salt. Cook 8–10 minutes, stirring, until thick and darker, with oil separating at the edges.",
+   "Simmer. Add the rajma and its cooking water. Mash a few beans against the side of the pot to thicken the gravy and simmer 10 minutes on low; longer makes it creamier.",
+   "Finish. Garam masala, crushed kasuri methi and coriander. It should be thick but still flowing."
+  ],
+  "cues": [],
+  "why": "",
+  "tips": [
+   {
+    "title": "Never eat undercooked rajma",
+    "text": "Raw or partly cooked kidney beans contain a natural toxin that causes severe stomach upset; thorough boiling destroys it. Soak the beans, throw away the soaking water, and pressure-cook until a bean mashes completely between two fingers."
+   }
+  ],
+  "var": [],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Chole",
+  "chapter": "Dals and beans",
+  "page": 43,
+  "sub": "Punjabi chickpea curry · soak 8 hours",
+  "chips": {
+   "TIME": "1 h + soaking",
+   "ONE SERVING": "about 1 cup",
+   "PROTEIN": "~11 g",
+   "ADDED OIL": "1½ tsp",
+   "USES": "Cooker + 1 burner"
+  },
+  "intro": "Tangy, spicy chickpeas. A tea bag in the cooker gives the dark colour of restaurant chole.",
+  "ingredients": [
+   {
+    "group": "Chickpeas",
+    "items": [
+     {
+      "name": "Kabuli chana",
+      "note": "soaked 8–10 hours in 3 cups water",
+      "q": "60 g",
+      "q2": "120 g"
+     },
+     {
+      "name": "Water for cooking",
+      "note": "",
+      "q": "300 ml",
+      "q2": "600 ml"
+     },
+     {
+      "name": "Tea bag",
+      "note": "optional, for colour",
+      "q": "1",
+      "q2": "1"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     }
+    ]
+   },
+   {
+    "group": "Masala",
+    "items": [
+     {
+      "name": "Oil",
+      "note": "",
+      "q": "½ tbsp",
+      "q2": "1 tbsp"
+     },
+     {
+      "name": "Cumin seeds",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Bay leaf",
+      "note": "",
+      "q": "1",
+      "q2": "1"
+     },
+     {
+      "name": "Onion, finely chopped",
+      "note": "large",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Ginger-garlic paste",
+      "note": "",
+      "q": "½ tbsp",
+      "q2": "1 tbsp"
+     },
+     {
+      "name": "Green chilli, slit",
+      "note": "",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Tomatoes, puréed",
+      "note": "medium",
+      "q": "1",
+      "q2": "2"
+     },
+     {
+      "name": "Chole masala",
+      "note": "or 1 tsp coriander powder + ½ tsp each garam masala, chilli and amchur",
+      "q": "¾ tbsp",
+      "q2": "1½ tbsp"
+     },
+     {
+      "name": "Turmeric",
+      "note": "",
+      "q": "a pinch",
+      "q2": "¼ tsp"
+     },
+     {
+      "name": "Amchur",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     }
+    ]
+   },
+   {
+    "group": "To finish",
+    "items": [
+     {
+      "name": "Ginger, thin strips",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Lemon juice",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Coriander, chopped",
+      "note": "",
+      "q": "1 tbsp",
+      "q2": "2 tbsp"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Soak. Wash and soak the chana 8–10 hours. For a Friday dinner, soak them on Friday morning before you leave.",
+   "Pressure-cook. Drain and cook with the fresh water, tea bag and salt: first whistle on high, then 15 minutes on the lowest flame (or 6 whistles on medium). Let the pressure drop. A chickpea should crush easily between your fingers. Discard the tea bag; keep the water.",
+   "Masala. Heat the oil, add the cumin and bay leaf, then the onion for 8–10 minutes until deep golden. Add the ginger-garlic paste and chilli for a minute, then the tomato purée, chole masala, turmeric and salt. Cook 8–10 minutes until thick, with oil at the edges.",
+   "Simmer. Add the chana with enough cooking water for a thick gravy. Mash a few against the pot and simmer 10–15 minutes on low.",
+   "Finish. Amchur, ginger strips, lemon and coriander."
+  ],
+  "cues": [],
+  "why": "",
+  "tips": [],
+  "var": [
+   "Crunchy air-fried chana. Keep back a cup of the pressure-cooked chana before the masala. Pat dry, toss with 1 tsp oil, ½ tsp chaat masala, ¼ tsp chilli powder and a pinch of salt, and air-fry at 190 °C for 15–18 minutes, shaking every 5, until crunchy. A high-protein snack; eat it the same day."
+  ],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Palya",
+  "chapter": "Vegetables",
+  "page": 45,
+  "sub": "Karnataka dry vegetable with coconut · beans, cabbage, carrot or beetroot",
+  "chips": {
+   "TIME": "20 min",
+   "ONE SERVING": "about 1 cup",
+   "PROTEIN": "~3 g",
+   "ADDED OIL": "1 tsp",
+   "USES": "1 burner"
+  },
+  "intro": "The everyday Karnataka side: one vegetable, a quick tempering, a lid to steam it, and fresh coconut at the end. Learn it once and it works for almost any vegetable.",
+  "ingredients": [
+   {
+    "group": "Palya",
+    "items": [
+     {
+      "name": "Vegetable, cut",
+      "note": "beans in 5 mm rounds, cabbage shredded 2–3 mm, or carrot or beetroot in 5 mm dice",
+      "q": "150 g",
+      "q2": "300 g"
+     },
+     {
+      "name": "Oil (coconut oil is traditional)",
+      "note": "",
+      "q": "1 tsp",
+      "q2": "2 tsp"
+     },
+     {
+      "name": "Mustard seeds",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Urad dal",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Chana dal",
+      "note": "optional",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Curry leaves",
+      "note": "",
+      "q": "5",
+      "q2": "8"
+     },
+     {
+      "name": "Dried red chilli or green chilli",
+      "note": "",
+      "q": "1",
+      "q2": "1"
+     },
+     {
+      "name": "Hing",
+      "note": "",
+      "q": "a pinch",
+      "q2": "a pinch"
+     },
+     {
+      "name": "Onion, chopped",
+      "note": "optional",
+      "q": "¼",
+      "q2": "½"
+     },
+     {
+      "name": "Turmeric",
+      "note": "",
+      "q": "a pinch",
+      "q2": "a pinch"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Fresh grated coconut",
+      "note": "about 3 tbsp",
+      "q": "10 g",
+      "q2": "20 g"
+     },
+     {
+      "name": "Lemon juice",
+      "note": "optional",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Temper. Heat the oil on medium. Add the mustard; when it crackles, add the urad and chana dal and stir 20–30 seconds until golden. Add the curry leaves, chilli and hing, then the onion (if using) for 2 minutes.",
+   "Add the vegetable. Add it with the turmeric and salt and toss for a minute to coat.",
+   "Steam. Sprinkle 2 tbsp water, cover and cook on low-medium until tender but still bright with a slight bite: cabbage 5–6 minutes, beans and carrot 7–9, beetroot 10. Stir once or twice.",
+   "Finish. Uncover and cook off any water for a minute. Off the heat, toss in the coconut, and the lemon if you like."
+  ],
+  "cues": [
+   "LOOK Beans should stay bright green. Dull olive green means overcooked."
+  ],
+  "why": "",
+  "tips": [],
+  "var": [],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Aloo gobi",
+  "chapter": "Vegetables",
+  "page": 46,
+  "sub": "Dry potato and cauliflower · stovetop or air fryer",
+  "chips": {
+   "TIME": "30 min",
+   "ONE SERVING": "about 1 cup",
+   "PROTEIN": "~3 g",
+   "ADDED OIL": "1½ tsp",
+   "USES": "1 burner, or air fryer + 1 burner"
+  },
+  "intro": "A dry North Indian classic for phulkas. The air-fryer method uses less oil and browns the edges nicely.",
+  "ingredients": [
+   {
+    "group": "Vegetables",
+    "items": [
+     {
+      "name": "Cauliflower florets, 3–4 cm",
+      "note": "",
+      "q": "150 g",
+      "q2": "300 g"
+     },
+     {
+      "name": "Potato, 2 cm cubes",
+      "note": "1 medium",
+      "q": "75 g",
+      "q2": "150 g"
+     }
+    ]
+   },
+   {
+    "group": "Masala",
+    "items": [
+     {
+      "name": "Oil",
+      "note": "",
+      "q": "½ tbsp",
+      "q2": "1 tbsp"
+     },
+     {
+      "name": "Cumin seeds",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Ginger, grated",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Green chilli, chopped",
+      "note": "",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Tomato, chopped",
+      "note": "small",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Turmeric",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Kashmiri chilli powder",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Coriander powder",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Garam masala",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Amchur",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Coriander, chopped",
+      "note": "",
+      "q": "1 tbsp",
+      "q2": "2 tbsp"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Clean the cauliflower. Soak the florets in hot salted water for 10 minutes to draw out any insects, then drain well.",
+   "Cook covered. Heat the oil on medium. When the cumin crackles, add the potato, cauliflower, turmeric and salt and toss 2 minutes. Cover and cook on low-medium for 12–15 minutes, stirring gently every 3–4 minutes. Add no water; the lid traps the steam. It's ready when a knife slides into the potato.",
+   "Add the masala. Uncover, add the ginger, chilli, tomato, chilli powder and coriander powder, and cook 3–4 minutes uncovered until the tomato coats everything and the edges brown.",
+   "Finish. Garam masala, amchur and coriander."
+  ],
+  "cues": [],
+  "why": "",
+  "tips": [],
+  "var": [
+   "Air fryer. Toss the florets and potato with 2 tsp oil, the turmeric, chilli powder, coriander powder and salt. Air-fry at 200 °C for 15–18 minutes, shaking every 5, until tender with brown edges. Meanwhile, in a pan with 1 tsp oil, cook the cumin, ginger, chilli and tomato for 3 minutes; toss in the vegetables with the amchur, garam masala and coriander."
+  ],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Bhindi masala",
+  "chapter": "Vegetables",
+  "page": 47,
+  "sub": "Okra with onion masala · crisp, not slimy",
+  "chips": {
+   "TIME": "25 min",
+   "ONE SERVING": "about 1 cup",
+   "PROTEIN": "~2 g",
+   "ADDED OIL": "1½ tsp",
+   "USES": "Air fryer or 2 burners"
+  },
+  "intro": "Okra turns slimy when it meets water or a lid. Dry it completely, cook it open over high heat (or in the air fryer), and add salt only at the end.",
+  "ingredients": [
+   {
+    "group": "Okra",
+    "items": [
+     {
+      "name": "Bhindi (okra)",
+      "note": "washed and dried completely before cutting",
+      "q": "150 g",
+      "q2": "300 g"
+     },
+     {
+      "name": "Oil",
+      "note": "1 tsp is enough in the air fryer",
+      "q": "½ tbsp",
+      "q2": "1 tbsp"
+     },
+     {
+      "name": "Turmeric",
+      "note": "",
+      "q": "a pinch",
+      "q2": "¼ tsp"
+     },
+     {
+      "name": "Kashmiri chilli powder",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     }
+    ]
+   },
+   {
+    "group": "Masala",
+    "items": [
+     {
+      "name": "Cumin seeds",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Onion, sliced",
+      "note": "medium",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Ginger-garlic paste",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Tomato, chopped",
+      "note": "small",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Coriander powder",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Garam masala",
+      "note": "",
+      "q": "a pinch",
+      "q2": "¼ tsp"
+     },
+     {
+      "name": "Amchur",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "¾ tsp"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Dry, then cut. Wash the bhindi, spread it on a cloth and pat dry, then leave 10 minutes to air-dry. Cut off the tops and tips and cut into 1.5–2 cm rounds.",
+   "Air fryer. Toss with 1 tsp oil, the turmeric and chilli powder. 190 °C for 10–12 minutes, shaking every 4, until the edges brown.",
+   "Or stovetop. Heat 2 tsp oil in a wide pan on medium-high. Add the bhindi in one layer with the turmeric and chilli powder and cook uncovered for 8–10 minutes, stirring every minute or two, until the edges brown and the sticky strands disappear. Never cover it.",
+   "Masala. In a pan with 1 tsp oil, crackle the cumin, cook the onion 4 minutes, the ginger-garlic paste 30 seconds and the tomato 3 minutes, then add the coriander powder.",
+   "Combine. Add the bhindi, salt, amchur and garam masala and toss 2 minutes."
+  ],
+  "cues": [],
+  "why": "",
+  "tips": [],
+  "var": [],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Mushroom pepper fry",
+  "chapter": "Vegetables",
+  "page": 48,
+  "sub": "Chettinad-style dry mushrooms with black pepper and curry leaves",
+  "chips": {
+   "TIME": "20 min",
+   "ONE SERVING": "about 1 cup",
+   "PROTEIN": "~4 g",
+   "ADDED OIL": "1½ tsp",
+   "USES": "1 burner (or air fryer + 1 burner)"
+  },
+  "intro": "Peppery, dry and quick. Searing the mushrooms first drives off their water, so they brown instead of stewing.",
+  "ingredients": [
+   {
+    "group": "Pepper fry",
+    "items": [
+     {
+      "name": "Button mushrooms, quartered",
+      "note": "cleaned as in Book 1",
+      "q": "130 g",
+      "q2": "250 g"
+     },
+     {
+      "name": "Oil",
+      "note": "",
+      "q": "½ tbsp",
+      "q2": "1 tbsp"
+     },
+     {
+      "name": "Fennel seeds",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Curry leaves",
+      "note": "",
+      "q": "7",
+      "q2": "12"
+     },
+     {
+      "name": "Onion, finely chopped",
+      "note": "medium",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Ginger-garlic paste",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Green chilli, slit",
+      "note": "",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Turmeric",
+      "note": "",
+      "q": "a pinch",
+      "q2": "¼ tsp"
+     },
+     {
+      "name": "Coriander powder",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Black pepper, freshly crushed",
+      "note": "crush in a mortar; ground pepper is flatter",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Lemon juice",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Coriander, chopped",
+      "note": "",
+      "q": "½ tbsp",
+      "q2": "1 tbsp"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Sear the mushrooms. Heat 1 tsp of the oil on high and cook the mushrooms 5–6 minutes, until their water evaporates and the edges brown (or air-fry at 200 °C for 8 minutes). Set aside.",
+   "Masala. Add the rest of the oil on medium. Fennel and curry leaves for 10 seconds; onion for 5 minutes until golden; ginger-garlic paste for 1 minute; then the chilli, turmeric and coriander powder.",
+   "Combine. Add the mushrooms and salt and toss 2 minutes. Add the pepper and cook 1 more minute. Finish with lemon and coriander."
+  ],
+  "cues": [],
+  "why": "",
+  "tips": [],
+  "var": [
+   "Paneer pepper fry. Use 200 g paneer cubes instead of mushrooms; skip the searing and toss them in for only 2 minutes (about 18 g protein per serving)."
+  ],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Palak paneer",
+  "chapter": "Paneer, eggs and soya",
+  "page": 49,
+  "sub": "Paneer in a bright spinach gravy",
+  "chips": {
+   "TIME": "35 min",
+   "ONE SERVING": "about 1 cup",
+   "PROTEIN": "~21 g",
+   "ADDED OIL": "1½ tsp",
+   "USES": "2 burners + mixie"
+  },
+  "intro": "The trick is to cook the spinach as little as possible: a 2-minute blanch, a cold rinse, and only a few minutes in the masala. That keeps it green.",
+  "ingredients": [
+   {
+    "group": "Spinach",
+    "items": [
+     {
+      "name": "Spinach leaves, picked and washed",
+      "note": "1 large bunch",
+      "q": "100 g",
+      "q2": "200 g"
+     },
+     {
+      "name": "Green chillies",
+      "note": "",
+      "q": "1",
+      "q2": "2"
+     }
+    ]
+   },
+   {
+    "group": "Masala",
+    "items": [
+     {
+      "name": "Paneer, 2 cm cubes",
+      "note": "",
+      "q": "100 g",
+      "q2": "200 g"
+     },
+     {
+      "name": "Oil",
+      "note": "",
+      "q": "1 tsp",
+      "q2": "2 tsp"
+     },
+     {
+      "name": "Ghee or butter",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Cumin seeds",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Onion, finely chopped",
+      "note": "medium",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Ginger-garlic paste",
+      "note": "",
+      "q": "1 tsp",
+      "q2": "2 tsp"
+     },
+     {
+      "name": "Tomato, chopped",
+      "note": "small",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Turmeric",
+      "note": "",
+      "q": "a pinch",
+      "q2": "¼ tsp"
+     },
+     {
+      "name": "Kashmiri chilli powder",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Coriander powder",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Garam masala",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Kasuri methi",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Fresh cream",
+      "note": "optional, or 2 tbsp milk",
+      "q": "½ tbsp",
+      "q2": "1 tbsp"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Blanch. Bring 1 litre of water to a boil in a wide pan. Add the spinach and chillies for 2 minutes, just until wilted and bright green. Drain and plunge into a bowl of cold tap water for a minute.",
+   "Purée. Grind the spinach and chillies with 2–3 tbsp water until smooth.",
+   "Soften the paneer. Soak the paneer cubes in warm salted water while you cook.",
+   "Masala. Heat the oil and ghee on medium. Crackle the cumin, cook the onion 5 minutes until golden, the ginger-garlic paste 1 minute, then the tomato with the salt for 3–4 minutes until mushy. Add the powders for 15 seconds.",
+   "Simmer. Add the spinach purée and ¼ cup water and simmer 3–4 minutes on low. Longer turns it olive-dark.",
+   "Finish. Add the drained paneer, crushed kasuri methi and garam masala and simmer 2 minutes. Swirl in the cream off the heat."
+  ],
+  "cues": [
+   "LOOK The gravy stays bright green. Grey-olive means the spinach has cooked too long."
+  ],
+  "why": "",
+  "tips": [],
+  "var": [
+   "Air-fried paneer. For firmer, lightly charred paneer, toss the cubes with ½ tsp oil and air-fry at 200 °C for 6 minutes before adding them."
+  ],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Paneer butter masala",
+  "chapter": "Paneer, eggs and soya",
+  "page": 50,
+  "sub": "Restaurant-style creamy tomato gravy, with a lighter version",
+  "chips": {
+   "TIME": "35 min",
+   "ONE SERVING": "about 1 cup",
+   "PROTEIN": "~19 g",
+   "ADDED OIL": "2 tsp",
+   "USES": "1 burner + mixie"
+  },
+  "intro": "Silky, mildly sweet and deep orange. The same makhani gravy is the base of butter chicken.",
+  "ingredients": [
+   {
+    "group": "Gravy base",
+    "items": [
+     {
+      "name": "Tomatoes, roughly chopped",
+      "note": "3 medium",
+      "q": "150 g",
+      "q2": "300 g"
+     },
+     {
+      "name": "Onion, roughly chopped",
+      "note": "small; optional, for body",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Cashews",
+      "note": "",
+      "q": "5",
+      "q2": "10"
+     },
+     {
+      "name": "Ginger",
+      "note": "",
+      "q": "½ inch",
+      "q2": "1 inch"
+     },
+     {
+      "name": "Garlic cloves",
+      "note": "",
+      "q": "2",
+      "q2": "4"
+     },
+     {
+      "name": "Green cardamom pods",
+      "note": "",
+      "q": "1",
+      "q2": "2"
+     },
+     {
+      "name": "Water",
+      "note": "",
+      "q": "60 ml",
+      "q2": "120 ml"
+     }
+    ]
+   },
+   {
+    "group": "Masala",
+    "items": [
+     {
+      "name": "Paneer, 2 cm cubes",
+      "note": "soaked in warm salted water",
+      "q": "100 g",
+      "q2": "200 g"
+     },
+     {
+      "name": "Butter",
+      "note": "",
+      "q": "½ tbsp",
+      "q2": "1 tbsp"
+     },
+     {
+      "name": "Oil",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Bay leaf",
+      "note": "",
+      "q": "1",
+      "q2": "1"
+     },
+     {
+      "name": "Kashmiri chilli powder",
+      "note": "for the deep colour",
+      "q": "¾ tsp",
+      "q2": "1½ tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Sugar or honey",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "¾ tsp"
+     },
+     {
+      "name": "Garam masala",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Kasuri methi",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Fresh cream",
+      "note": "lighter version: 3 tbsp milk",
+      "q": "1 tbsp",
+      "q2": "2 tbsp"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Cook the base. Simmer the tomatoes, onion, cashews, ginger, garlic and cardamom with the water, covered, for 10 minutes until soft (or 1 whistle in the cooker). Cool 5 minutes.",
+   "Blend. Blend completely smooth. With hot liquid, fill the jar only halfway and hold the lid down with a cloth. For restaurant silkiness, push it through a strainer.",
+   "Cook the gravy. Heat the butter and oil on medium. Add the bay leaf and chilli powder for 10 seconds (don't let it burn), then the purée. Cook 8–10 minutes, stirring, until thick and glossy with butter separating at the edges; this is where the flavour develops. Add the salt and sugar.",
+   "Add the paneer. Loosen with ¼–½ cup water to a flowing gravy, add the drained paneer and simmer 3–4 minutes.",
+   "Finish. Crushed kasuri methi and garam masala; stir in the cream off the heat."
+  ],
+  "cues": [],
+  "why": "",
+  "tips": [],
+  "var": [
+   "Paneer tikka masala. Use air-fryer paneer tikka (Air fryer chapter) instead of plain cubes, and simmer only 2 minutes.",
+   "Lighter version. Use half the butter, replace the cream with milk, and add 5 more cashews to the base for creaminess."
+  ],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Paneer bhurji",
+  "chapter": "Paneer, eggs and soya",
+  "page": 51,
+  "sub": "Scrambled paneer · for phulkas, sandwiches and rolls",
+  "chips": {
+   "TIME": "15 min",
+   "ONE SERVING": "about ¾ cup",
+   "PROTEIN": "~18 g",
+   "ADDED OIL": "1 tsp",
+   "USES": "1 burner"
+  },
+  "intro": "The quickest paneer dish there is, and one of the highest in protein. Don't overcook it: paneer dries out fast.",
+  "ingredients": [
+   {
+    "group": "Bhurji",
+    "items": [
+     {
+      "name": "Paneer, crumbled",
+      "note": "",
+      "q": "100 g",
+      "q2": "200 g"
+     },
+     {
+      "name": "Oil or butter",
+      "note": "",
+      "q": "1 tsp",
+      "q2": "2 tsp"
+     },
+     {
+      "name": "Cumin seeds",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Onion, finely chopped",
+      "note": "medium",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Capsicum, finely chopped",
+      "note": "optional",
+      "q": "¼",
+      "q2": "¼"
+     },
+     {
+      "name": "Green chilli, finely chopped",
+      "note": "",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Ginger, grated",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Tomato, finely chopped",
+      "note": "small",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Turmeric",
+      "note": "",
+      "q": "a pinch",
+      "q2": "¼ tsp"
+     },
+     {
+      "name": "Kashmiri chilli powder",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Garam masala or pav bhaji masala",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Milk",
+      "note": "keeps it moist",
+      "q": "15 ml",
+      "q2": "30 ml"
+     },
+     {
+      "name": "Kasuri methi",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Coriander, chopped",
+      "note": "",
+      "q": "1 tbsp",
+      "q2": "2 tbsp"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Crumble. Crumble the paneer with your fingers into small, uneven bits, not a paste.",
+   "Masala. Heat the oil on medium. Crackle the cumin, cook the onion 3 minutes, the ginger, chilli and capsicum 1 minute, then the tomato with the salt for 3 minutes until soft. Add the powders for 15 seconds.",
+   "Paneer. Add the paneer and milk and toss 2–3 minutes on low. Finish with kasuri methi and coriander."
+  ],
+  "cues": [],
+  "why": "",
+  "tips": [],
+  "var": [
+   "Egg and paneer bhurji. Stir in 2 beaten eggs before the paneer and scramble 1 minute (+6 g protein per serving)."
+  ],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Egg curry",
+  "chapter": "Paneer, eggs and soya",
+  "page": 52,
+  "sub": "Boiled eggs in onion-tomato gravy · Andhra home style",
+  "chips": {
+   "TIME": "30 min",
+   "ONE SERVING": "3 eggs with gravy",
+   "PROTEIN": "~18 g",
+   "ADDED OIL": "1½ tsp",
+   "USES": "1 burner + air fryer"
+  },
+  "intro": "Boil the eggs in the air fryer while you make the gravy, and dinner is ready in half an hour.",
+  "ingredients": [
+   {
+    "group": "Eggs",
+    "items": [
+     {
+      "name": "Eggs, boiled and peeled",
+      "note": "see Air-fryer boiled eggs",
+      "q": "3",
+      "q2": "6"
+     }
+    ]
+   },
+   {
+    "group": "Gravy",
+    "items": [
+     {
+      "name": "Oil",
+      "note": "",
+      "q": "½ tbsp",
+      "q2": "1 tbsp"
+     },
+     {
+      "name": "Cumin seeds",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Curry leaves",
+      "note": "",
+      "q": "5",
+      "q2": "8"
+     },
+     {
+      "name": "Onion, finely chopped",
+      "note": "large",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Ginger-garlic paste",
+      "note": "",
+      "q": "1 tsp",
+      "q2": "2 tsp"
+     },
+     {
+      "name": "Green chilli, slit",
+      "note": "",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Tomatoes, chopped",
+      "note": "medium",
+      "q": "1",
+      "q2": "2"
+     },
+     {
+      "name": "Turmeric",
+      "note": "",
+      "q": "a pinch",
+      "q2": "¼ tsp"
+     },
+     {
+      "name": "Red chilli powder",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Coriander powder",
+      "note": "",
+      "q": "¾ tsp",
+      "q2": "1½ tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Water",
+      "note": "",
+      "q": "90 ml",
+      "q2": "180 ml"
+     },
+     {
+      "name": "Garam masala",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Coconut milk",
+      "note": "optional, coastal style",
+      "q": "30 ml",
+      "q2": "60 ml"
+     },
+     {
+      "name": "Coriander, chopped",
+      "note": "",
+      "q": "1 tbsp",
+      "q2": "2 tbsp"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Prepare the eggs. Make 3–4 shallow slashes on each peeled egg so the gravy gets in. For a blistered finish, rub them with ¼ tsp oil and a pinch each of chilli and turmeric, and air-fry at 200 °C for 4–5 minutes.",
+   "Brown the onions. Heat the oil on medium. Cumin and curry leaves for 10 seconds, then the onion for 8 minutes until golden-brown.",
+   "Masala. Add the ginger-garlic paste and chilli for a minute, then the tomatoes and salt for 5 minutes, until mushy with oil separating. Add the powders with a splash of water and cook 30 seconds.",
+   "Gravy. Add the water and simmer 5 minutes to a medium-thick gravy.",
+   "Eggs. Add the eggs, spoon the gravy over them and simmer 3–4 minutes. Add the garam masala, and the coconut milk for the last minute (don't boil it hard). Finish with coriander."
+  ],
+  "cues": [],
+  "why": "",
+  "tips": [],
+  "var": [],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Air-fryer boiled eggs",
+  "chapter": "Paneer, eggs and soya",
+  "page": 53,
+  "sub": "No pot, no water, no watching",
+  "chips": {
+   "TIME": "20 min",
+   "ONE SERVING": "2 eggs",
+   "PROTEIN": "~12 g",
+   "ADDED OIL": "none",
+   "USES": "Air fryer"
+  },
+  "intro": "The air fryer cooks eggs in their shells with dry heat. Load it first thing in a session and forget it until the timer goes.",
+  "ingredients": [
+   {
+    "group": "Eggs",
+    "items": [
+     {
+      "name": "Eggs",
+      "note": "from the cupboard, not cold",
+      "q": "2",
+      "q2": "4"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Load. Put the eggs in the basket in one layer, not touching. No preheating and no water.",
+   "Cook. 130 °C: 15 minutes for firm yolks, 12–13 minutes for jammy ones.",
+   "Cool. Move them straight into a bowl of cold water for 5 minutes. This stops the cooking and makes them easier to peel.",
+   "Peel. Tap all over, then peel under running water, starting from the wide end."
+  ],
+  "cues": [],
+  "why": "",
+  "tips": [
+   {
+    "title": "Test your machine",
+    "text": "Air fryers vary. The first time, cook one egg and cut it open, and note the time that suits your machine. A few brown speckles on the shell are normal."
+   }
+  ],
+  "var": [],
+  "serve": "",
+  "note": "Keep them in their shells until you eat them, and eat them the same day (by lunchtime if packed).",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Soya pulao",
+  "chapter": "Paneer, eggs and soya",
+  "page": 54,
+  "sub": "One-pot rice with soya chunks and vegetables · lunch-box hero",
+  "chips": {
+   "TIME": "30 min",
+   "ONE SERVING": "about 1½ cups",
+   "PROTEIN": "~18 g",
+   "ADDED OIL": "1½ tsp",
+   "USES": "Cooker + 1 burner"
+  },
+  "intro": "Soya chunks keep for months and have more protein by weight than chicken. Boiled, squeezed and cooked in a spiced pulao, they soak up flavour like meat.",
+  "ingredients": [
+   {
+    "group": "Soya and rice",
+    "items": [
+     {
+      "name": "Soya chunks, dry",
+      "note": "",
+      "q": "25 g",
+      "q2": "50 g"
+     },
+     {
+      "name": "Basmati rice",
+      "note": "soaked 15 minutes",
+      "q": "60 g",
+      "q2": "120 g"
+     },
+     {
+      "name": "Water",
+      "note": "1½ × the rice volume",
+      "q": "120 ml",
+      "q2": "240 ml"
+     }
+    ]
+   },
+   {
+    "group": "Pulao",
+    "items": [
+     {
+      "name": "Oil",
+      "note": "",
+      "q": "1 tsp",
+      "q2": "2 tsp"
+     },
+     {
+      "name": "Ghee",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Bay leaf",
+      "note": "",
+      "q": "1",
+      "q2": "1"
+     },
+     {
+      "name": "Cinnamon stick, 1 inch",
+      "note": "",
+      "q": "1",
+      "q2": "1"
+     },
+     {
+      "name": "Cloves",
+      "note": "",
+      "q": "2",
+      "q2": "3"
+     },
+     {
+      "name": "Green cardamom pods",
+      "note": "",
+      "q": "1",
+      "q2": "2"
+     },
+     {
+      "name": "Shahi jeera",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Onion, sliced",
+      "note": "medium",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Ginger-garlic paste",
+      "note": "",
+      "q": "1 tsp",
+      "q2": "2 tsp"
+     },
+     {
+      "name": "Green chillies, slit",
+      "note": "",
+      "q": "1",
+      "q2": "2"
+     },
+     {
+      "name": "Mixed vegetables, 1.5 cm pieces",
+      "note": "carrot, beans, peas, capsicum",
+      "q": "50 g",
+      "q2": "100 g"
+     },
+     {
+      "name": "Mint leaves",
+      "note": "",
+      "q": "¼ cup",
+      "q2": "¼ cup"
+     },
+     {
+      "name": "Turmeric",
+      "note": "",
+      "q": "a pinch",
+      "q2": "¼ tsp"
+     },
+     {
+      "name": "Red chilli powder",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Garam masala or biryani masala",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Curd",
+      "note": "",
+      "q": "15 g",
+      "q2": "30 g"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Lemon juice",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Prepare the soya. Boil the soya chunks in plenty of water with a pinch of salt for 5 minutes. Drain, rinse in cold water and squeeze each handful as hard as you can, like wringing a cloth. Halve any big ones.",
+   "Pulao base. In the cooker base, heat the oil and ghee on medium. Add the whole spices for 20 seconds, then the onion for 4–5 minutes until golden. Add the ginger-garlic paste and chillies for a minute, then the vegetables, soya, mint, powders, curd and salt, and stir 2 minutes.",
+   "Rice. Add the drained rice and stir gently for a minute. Pour in the water and lemon juice and taste the water: it should be pleasantly salty.",
+   "Cook. Close and cook 1 whistle on medium. Let the pressure drop for 5–8 minutes, then fluff with a fork."
+  ],
+  "cues": [],
+  "why": "Squeezed soya soaks up the masala like a sponge. Chunks left wet stay bland and spongy.",
+  "tips": [],
+  "var": [
+   "Meatier soya. After squeezing, toss the soya with the curd, chilli powder and a pinch of salt and air-fry at 200 °C for 6–8 minutes, shaking once, before adding it to the pulao base.",
+   "Sona masoori instead of basmati. Use twice the rice volume of water and 2 whistles."
+  ],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Egg fried rice",
+  "chapter": "Paneer, eggs and soya",
+  "page": 55,
+  "sub": "Indo-Chinese street style · eggs, vegetables, soy and pepper",
+  "chips": {
+   "TIME": "30 min",
+   "ONE SERVING": "about 2 cups",
+   "PROTEIN": "~23 g",
+   "ADDED OIL": "1½ tsp",
+   "USES": "Cooker + 1 burner"
+  },
+  "intro": "The rice must be cooked firm and cooled until dry, so it fries instead of steaming. Keep the heat as high as it goes and keep everything moving.",
+  "ingredients": [
+   {
+    "group": "Rice and eggs",
+    "items": [
+     {
+      "name": "Basmati rice",
+      "note": "cooked firm: 1½ × water, 1 whistle",
+      "q": "60 g",
+      "q2": "120 g"
+     },
+     {
+      "name": "Eggs",
+      "note": "",
+      "q": "3",
+      "q2": "6"
+     }
+    ]
+   },
+   {
+    "group": "Stir-fry",
+    "items": [
+     {
+      "name": "Oil",
+      "note": "",
+      "q": "½ tbsp",
+      "q2": "1 tbsp"
+     },
+     {
+      "name": "Garlic cloves, finely chopped",
+      "note": "",
+      "q": "2",
+      "q2": "4"
+     },
+     {
+      "name": "Ginger, finely chopped",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Green chilli, chopped",
+      "note": "",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Spring onions",
+      "note": "whites and greens sliced separately",
+      "q": "1",
+      "q2": "2"
+     },
+     {
+      "name": "Vegetables, finely chopped",
+      "note": "carrot, beans, cabbage, capsicum",
+      "q": "75 g",
+      "q2": "150 g"
+     },
+     {
+      "name": "Soy sauce",
+      "note": "",
+      "q": "1 tsp",
+      "q2": "2 tsp"
+     },
+     {
+      "name": "Vinegar",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Black pepper",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "taste first; soy sauce is salty",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Chilli sauce",
+      "note": "optional",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Cook and cool the rice. Pressure-cook the rice firm, then spread it on a wide plate under the fan for 10 minutes. Hot, wet rice turns mushy in the wok.",
+   "Scramble the eggs. Beat the eggs with a pinch of salt and pepper. Heat 1 tsp of the oil in a wok or kadai on high and scramble them into soft curds, about a minute. Take them out.",
+   "Aromatics. Add the rest of the oil on high. Garlic, ginger, chilli and spring-onion whites for 30 seconds.",
+   "Vegetables. Add the vegetables and toss 2–3 minutes; they should stay crisp.",
+   "Rice. Add the rice and break up any clumps. Add the soy sauce, vinegar, pepper and salt and toss 2 minutes on high, so the rice heats evenly and toasts a little.",
+   "Finish. Return the eggs, toss, and add the spring-onion greens."
+  ],
+  "cues": [],
+  "why": "",
+  "tips": [],
+  "var": [],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Home-style chicken curry",
+  "chapter": "Chicken, fish and mutton",
+  "page": 56,
+  "sub": "Bone-in chicken in onion-tomato masala · pressure-cooker option",
+  "chips": {
+   "TIME": "50 min",
+   "ONE SERVING": "200 g chicken with gravy",
+   "PROTEIN": "~29 g",
+   "ADDED OIL": "1½ tsp",
+   "USES": "1 burner (or cooker)"
+  },
+  "intro": "The colour and sweetness of a good chicken curry come from onions cooked slowly to deep golden. Give them the full 12 minutes.",
+  "ingredients": [
+   {
+    "group": "Marinade",
+    "items": [
+     {
+      "name": "Chicken, bone-in curry cut",
+      "note": "cleaned as in Book 1",
+      "q": "200 g",
+      "q2": "400 g"
+     },
+     {
+      "name": "Curd",
+      "note": "",
+      "q": "25 g",
+      "q2": "50 g"
+     },
+     {
+      "name": "Turmeric",
+      "note": "",
+      "q": "a pinch",
+      "q2": "¼ tsp"
+     },
+     {
+      "name": "Red chilli powder",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     }
+    ]
+   },
+   {
+    "group": "Masala",
+    "items": [
+     {
+      "name": "Oil",
+      "note": "",
+      "q": "½ tbsp",
+      "q2": "1 tbsp"
+     },
+     {
+      "name": "Bay leaf",
+      "note": "",
+      "q": "1",
+      "q2": "1"
+     },
+     {
+      "name": "Cinnamon stick, 1 inch",
+      "note": "",
+      "q": "1",
+      "q2": "1"
+     },
+     {
+      "name": "Cloves",
+      "note": "",
+      "q": "2",
+      "q2": "3"
+     },
+     {
+      "name": "Green cardamom pods",
+      "note": "",
+      "q": "1",
+      "q2": "2"
+     },
+     {
+      "name": "Onions, finely chopped",
+      "note": "medium",
+      "q": "1",
+      "q2": "2"
+     },
+     {
+      "name": "Ginger-garlic paste",
+      "note": "",
+      "q": "½ tbsp",
+      "q2": "1 tbsp"
+     },
+     {
+      "name": "Green chillies, slit",
+      "note": "",
+      "q": "1",
+      "q2": "2"
+     },
+     {
+      "name": "Tomatoes, chopped",
+      "note": "medium",
+      "q": "1",
+      "q2": "2"
+     },
+     {
+      "name": "Kashmiri chilli powder",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Coriander powder",
+      "note": "",
+      "q": "¾ tsp",
+      "q2": "1½ tsp"
+     },
+     {
+      "name": "Cumin powder",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Hot water",
+      "note": "",
+      "q": "90 ml",
+      "q2": "180 ml"
+     },
+     {
+      "name": "Garam masala",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Coriander, chopped",
+      "note": "",
+      "q": "1½ tbsp",
+      "q2": "3 tbsp"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Marinate. Mix the chicken with the marinade and leave it while you chop (20 minutes is plenty; never more than 2 hours without a fridge).",
+   "Onions. Heat the oil on medium. Add the whole spices for 20 seconds, then the onions. Cook 10–12 minutes, stirring every minute, until deep golden-brown; add a splash of water if they stick.",
+   "Ginger-garlic. Add the paste and chillies and cook 1 minute, until the raw smell has gone.",
+   "Tomatoes. Add the tomatoes and salt and cook 5–6 minutes until mushy, with oil showing at the edges. Add the powders with 2 tbsp water and cook 30 seconds.",
+   "Bhuna. Add the chicken with its marinade and cook on high for 5–6 minutes, stirring, until the chicken is white outside and coated in masala.",
+   "Simmer. Add the hot water, bring to a boil, then cover and simmer on low for 15–18 minutes. (Or close the cooker: 2 whistles on medium, then let the pressure drop.)",
+   "Finish. Garam masala and coriander. Adjust the gravy with water or by simmering uncovered, and rest 5 minutes."
+  ],
+  "cues": [
+   "LOOK Done when the meat at the bone shows no pink and the juices run clear."
+  ],
+  "why": "",
+  "tips": [],
+  "var": [
+   "Air-fryer start. Air-fry the marinated chicken at 200 °C for 10 minutes, turning once, while the onions cook. Skip the bhuna in step 5: add the chicken to the finished masala with the water and simmer 10–12 minutes. Less stirring and a deeper, roasted flavour."
+  ],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Butter chicken",
+  "chapter": "Chicken, fish and mutton",
+  "page": 57,
+  "sub": "Air-fried tikka in makhani gravy",
+  "chips": {
+   "TIME": "50 min + marinating",
+   "ONE SERVING": "150 g chicken with gravy",
+   "PROTEIN": "~31 g",
+   "ADDED OIL": "2 tsp",
+   "USES": "Air fryer + 1 burner + mixie"
+  },
+  "intro": "Restaurant butter chicken is tandoor-charred tikka simmered in a smooth tomato-butter gravy. The air fryer does the charring.",
+  "ingredients": [
+   {
+    "group": "Tikka",
+    "items": [
+     {
+      "name": "Boneless chicken thigh, 4 cm chunks",
+      "note": "",
+      "q": "150 g",
+      "q2": "300 g"
+     },
+     {
+      "name": "Thick curd",
+      "note": "",
+      "q": "30 g",
+      "q2": "60 g"
+     },
+     {
+      "name": "Ginger-garlic paste",
+      "note": "",
+      "q": "1 tsp",
+      "q2": "2 tsp"
+     },
+     {
+      "name": "Kashmiri chilli powder",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Garam masala",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Lemon juice",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Oil",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     }
+    ]
+   },
+   {
+    "group": "Makhani gravy",
+    "items": [
+     {
+      "name": "Tomatoes, roughly chopped",
+      "note": "3 medium",
+      "q": "150 g",
+      "q2": "300 g"
+     },
+     {
+      "name": "Cashews",
+      "note": "",
+      "q": "5",
+      "q2": "10"
+     },
+     {
+      "name": "Ginger",
+      "note": "",
+      "q": "½ inch",
+      "q2": "1 inch"
+     },
+     {
+      "name": "Garlic cloves",
+      "note": "",
+      "q": "2",
+      "q2": "4"
+     },
+     {
+      "name": "Water",
+      "note": "",
+      "q": "60 ml",
+      "q2": "120 ml"
+     },
+     {
+      "name": "Butter",
+      "note": "",
+      "q": "½ tbsp",
+      "q2": "1 tbsp"
+     },
+     {
+      "name": "Kashmiri chilli powder",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "¾ tsp"
+     },
+     {
+      "name": "Sugar or honey",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Kasuri methi",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Garam masala",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Fresh cream",
+      "note": "",
+      "q": "1 tbsp",
+      "q2": "2 tbsp"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Marinate. Mix the chicken with the tikka ingredients and leave 30 minutes to 2 hours.",
+   "Gravy base. Meanwhile, simmer the tomatoes, cashews, ginger and garlic with the water, covered, for 10 minutes. Cool, then blend completely smooth (fill the jar only halfway).",
+   "Tikka. Air-fry the chicken at 200 °C for 12–14 minutes, turning halfway, until charred at the edges and cooked through.",
+   "Cook the gravy. Heat the butter on medium, add the chilli powder for 10 seconds, then the purée. Cook 8–10 minutes, stirring, until thick and glossy. Add the salt and sugar.",
+   "Combine. Add the tikka and enough water for a flowing gravy and simmer 5 minutes. Add the kasuri methi and garam masala, and stir in the cream off the heat."
+  ],
+  "cues": [
+   "LOOK Cut the biggest tikka before it goes into the gravy: no pink inside."
+  ],
+  "why": "",
+  "tips": [],
+  "var": [
+   "No air fryer. Sear the chicken in a hot pan with 2 tsp oil for 6–8 minutes, turning, until charred and cooked through."
+  ],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Air-fryer tandoori chicken",
+  "chapter": "Chicken, fish and mutton",
+  "page": 59,
+  "sub": "The highest-protein dinner in the book, with almost no oil",
+  "chips": {
+   "TIME": "25 min + marinating",
+   "ONE SERVING": "175 g chicken",
+   "PROTEIN": "~43 g",
+   "ADDED OIL": "1 tsp",
+   "USES": "Air fryer"
+  },
+  "intro": "Breast chunks in a hung-curd marinade, air-fried until charred. With moong dal and a salad it's a light, high-protein dinner with no grain needed.",
+  "ingredients": [
+   {
+    "group": "Chicken and marinade",
+    "items": [
+     {
+      "name": "Chicken breast, 4 cm chunks",
+      "note": "or thigh",
+      "q": "180 g",
+      "q2": "350 g"
+     },
+     {
+      "name": "Hung curd",
+      "note": "thick curd squeezed in a cloth for 15 minutes",
+      "q": "30 g",
+      "q2": "60 g"
+     },
+     {
+      "name": "Ginger-garlic paste",
+      "note": "",
+      "q": "½ tbsp",
+      "q2": "1 tbsp"
+     },
+     {
+      "name": "Kashmiri chilli powder",
+      "note": "",
+      "q": "¾ tsp",
+      "q2": "1½ tsp"
+     },
+     {
+      "name": "Garam masala",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Roasted cumin powder",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Turmeric",
+      "note": "",
+      "q": "a pinch",
+      "q2": "a pinch"
+     },
+     {
+      "name": "Kasuri methi",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Lemon juice",
+      "note": "",
+      "q": "1 tsp",
+      "q2": "2 tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "¾ tsp"
+     },
+     {
+      "name": "Mustard oil (or any oil)",
+      "note": "",
+      "q": "1 tsp",
+      "q2": "2 tsp"
+     }
+    ]
+   },
+   {
+    "group": "To serve",
+    "items": [
+     {
+      "name": "Onion rings, lemon wedges, chaat masala, green chutney",
+      "note": "",
+      "q": "as you like",
+      "q2": "as you like"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Marinate. Pat the chicken dry. Mix in everything except half the oil and leave 30 minutes to 2 hours.",
+   "Preheat. Air fryer at 200 °C for 3 minutes.",
+   "Cook. Lay the chicken in one layer, brush with the remaining oil and cook 12–14 minutes, turning halfway (bone-in leg pieces, slashed: 18–20 minutes).",
+   "Rest. Rest 3 minutes, then finish with chaat masala and lemon."
+  ],
+  "cues": [],
+  "why": "",
+  "tips": [
+   {
+    "title": "Juicy breast",
+    "text": "Breast dries out when overcooked. Check a piece at 12 minutes: no pink inside means it's done."
+   }
+  ],
+  "var": [
+   "Fish tikka. Use firm fish (seer) in 4 cm chunks; marinate only 20 minutes and cook 8–10 minutes."
+  ],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Pepper chicken fry",
+  "chapter": "Chicken, fish and mutton",
+  "page": 60,
+  "sub": "Dry boneless chicken with black pepper · high protein, ready in 35 minutes",
+  "chips": {
+   "TIME": "35 min",
+   "ONE SERVING": "about 1 cup",
+   "PROTEIN": "~29 g",
+   "ADDED OIL": "1½ tsp",
+   "USES": "1 burner"
+  },
+  "intro": "A South Indian dry chicken that goes with phulkas, rice and dal, or on its own with salad. Boneless thigh stays juiciest.",
+  "ingredients": [
+   {
+    "group": "Marinade",
+    "items": [
+     {
+      "name": "Boneless chicken thigh, 3 cm pieces",
+      "note": "or breast",
+      "q": "150 g",
+      "q2": "300 g"
+     },
+     {
+      "name": "Curd",
+      "note": "",
+      "q": "15 g",
+      "q2": "30 g"
+     },
+     {
+      "name": "Ginger-garlic paste",
+      "note": "",
+      "q": "½ tbsp",
+      "q2": "1 tbsp"
+     },
+     {
+      "name": "Turmeric",
+      "note": "",
+      "q": "a pinch",
+      "q2": "¼ tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "¾ tsp"
+     }
+    ]
+   },
+   {
+    "group": "Masala",
+    "items": [
+     {
+      "name": "Oil",
+      "note": "",
+      "q": "½ tbsp",
+      "q2": "1 tbsp"
+     },
+     {
+      "name": "Fennel seeds",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Curry leaves",
+      "note": "",
+      "q": "9",
+      "q2": "15"
+     },
+     {
+      "name": "Onion, finely chopped",
+      "note": "large",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Green chillies, slit",
+      "note": "",
+      "q": "1",
+      "q2": "2"
+     },
+     {
+      "name": "Coriander powder",
+      "note": "",
+      "q": "¾ tsp",
+      "q2": "1½ tsp"
+     },
+     {
+      "name": "Black pepper, freshly crushed",
+      "note": "",
+      "q": "1 tsp",
+      "q2": "2 tsp"
+     },
+     {
+      "name": "Garam masala",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Lemon juice",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Coriander, chopped",
+      "note": "",
+      "q": "1 tbsp",
+      "q2": "2 tbsp"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Marinate. Mix the chicken with the marinade and leave 15 minutes while you chop.",
+   "Masala. Heat the oil on medium. Fennel and curry leaves for 10 seconds, then the onion for 6–7 minutes until golden, and the chillies.",
+   "Sear. Add the chicken on high heat and stir 5 minutes, until it turns white all over. Add the coriander powder and half the pepper.",
+   "Cook covered. Cover and cook on medium-low for 8–10 minutes (breast: 6–7), stirring twice.",
+   "Dry it out. Uncover, turn the heat to high and stir 3–4 minutes until the masala clings and the pan is almost dry. Add the rest of the pepper, the garam masala, lemon and coriander."
+  ],
+  "cues": [
+   "LOOK Cut the biggest piece: no pink inside and the juices clear."
+  ],
+  "why": "",
+  "tips": [],
+  "var": [
+   "Air-fryer route. Air-fry the marinated chicken at 200 °C for 10–12 minutes, turning once, while you make the onion masala. Toss it into the masala with the coriander powder and pepper and stir on high for 3 minutes. No covered cooking, and far less stirring."
+  ],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Coastal fish curry",
+  "chapter": "Chicken, fish and mutton",
+  "page": 61,
+  "sub": "Karnataka coast style · tamarind and coconut milk",
+  "chips": {
+   "TIME": "35 min",
+   "ONE SERVING": "150 g fish with gravy",
+   "PROTEIN": "~32 g",
+   "ADDED OIL": "1½ tsp",
+   "USES": "1 burner"
+  },
+  "intro": "Tangy with tamarind and mellowed with coconut milk. Mackerel (bangude) is cheap and very Mangalorean; seer (anjal) and pomfret are milder.",
+  "ingredients": [
+   {
+    "group": "Fish",
+    "items": [
+     {
+      "name": "Fish steaks",
+      "note": "seer, pomfret or mackerel, cleaned as in Book 1",
+      "q": "150 g",
+      "q2": "300 g"
+     },
+     {
+      "name": "Turmeric",
+      "note": "",
+      "q": "a pinch",
+      "q2": "¼ tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Lemon juice",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     }
+    ]
+   },
+   {
+    "group": "Gravy",
+    "items": [
+     {
+      "name": "Coconut oil (or any oil)",
+      "note": "",
+      "q": "½ tbsp",
+      "q2": "1 tbsp"
+     },
+     {
+      "name": "Mustard seeds",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Methi (fenugreek) seeds",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "¼ tsp"
+     },
+     {
+      "name": "Curry leaves",
+      "note": "",
+      "q": "7",
+      "q2": "12"
+     },
+     {
+      "name": "Onion, sliced",
+      "note": "medium",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Ginger-garlic paste",
+      "note": "",
+      "q": "1 tsp",
+      "q2": "2 tsp"
+     },
+     {
+      "name": "Green chillies, slit",
+      "note": "",
+      "q": "1",
+      "q2": "2"
+     },
+     {
+      "name": "Tomato, chopped",
+      "note": "small",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Kashmiri chilli powder",
+      "note": "for colour",
+      "q": "¾ tsp",
+      "q2": "1½ tsp"
+     },
+     {
+      "name": "Spicy red chilli powder",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Coriander powder",
+      "note": "",
+      "q": "¾ tsp",
+      "q2": "1½ tsp"
+     },
+     {
+      "name": "Turmeric",
+      "note": "",
+      "q": "a pinch",
+      "q2": "¼ tsp"
+     },
+     {
+      "name": "Tamarind pulp",
+      "note": "from a small lemon-sized ball",
+      "q": "1 tbsp",
+      "q2": "2 tbsp"
+     },
+     {
+      "name": "Water",
+      "note": "",
+      "q": "60 ml",
+      "q2": "120 ml"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Thick coconut milk",
+      "note": "tetra packs keep unopened without a fridge",
+      "q": "75 ml",
+      "q2": "150 ml"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Marinate. Rub the fish with the turmeric, salt and lemon and leave 10 minutes.",
+   "Temper. Heat the oil on medium. Add the mustard; when it crackles, the methi until light brown, then the curry leaves.",
+   "Masala. Cook the onion 5 minutes until soft and golden, the ginger-garlic paste 1 minute, the chillies, then the tomato for 3 minutes. Lower the heat and add the powders with 2 tbsp water for a minute; chilli burns easily.",
+   "Gravy. Add the tamarind, water and salt and boil 4–5 minutes to a thin gravy.",
+   "Fish. Slide in the fish in one layer. Cover and simmer on low for 5–7 minutes. Don't stir: swirl the pan and spoon gravy over the fish.",
+   "Coconut milk. When the fish is opaque and flakes at the thickest part, pour in the coconut milk and heat 2 minutes without letting it boil hard; coconut milk splits if boiled fast. Rest 10 minutes before serving; the flavour deepens."
+  ],
+  "cues": [],
+  "why": "",
+  "tips": [],
+  "var": [
+   "Firmer fish. Air-fry the marinated fish at 200 °C for 5 minutes before sliding it into the gravy, then simmer only 3–4 minutes. The pieces hold together better, which helps with soft fish like pomfret.",
+   "Fish rava fry. The dry, crisp version is in the Air fryer chapter."
+  ],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Mutton curry",
+  "chapter": "Chicken, fish and mutton",
+  "page": 62,
+  "sub": "Pressure-cooker mutton in onion-tomato gravy",
+  "chips": {
+   "TIME": "1 h 15 min + marinating",
+   "ONE SERVING": "200 g mutton with gravy",
+   "PROTEIN": "~29 g",
+   "ADDED OIL": "2 tsp",
+   "USES": "Cooker"
+  },
+  "intro": "A weekend curry. Choose young goat from the shoulder and leg (see Book 1's Prep school) and let the pressure cooker make it tender.",
+  "ingredients": [
+   {
+    "group": "Marinade",
+    "items": [
+     {
+      "name": "Mutton, bone-in, 60–80 g pieces",
+      "note": "",
+      "q": "200 g",
+      "q2": "400 g"
+     },
+     {
+      "name": "Curd",
+      "note": "",
+      "q": "30 g",
+      "q2": "60 g"
+     },
+     {
+      "name": "Ginger-garlic paste",
+      "note": "",
+      "q": "½ tbsp",
+      "q2": "1 tbsp"
+     },
+     {
+      "name": "Turmeric",
+      "note": "",
+      "q": "a pinch",
+      "q2": "¼ tsp"
+     },
+     {
+      "name": "Red chilli powder",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Raw papaya paste",
+      "note": "optional; see Book 1",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     }
+    ]
+   },
+   {
+    "group": "Masala",
+    "items": [
+     {
+      "name": "Oil",
+      "note": "",
+      "q": "½ tbsp",
+      "q2": "1 tbsp"
+     },
+     {
+      "name": "Ghee",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Bay leaf",
+      "note": "",
+      "q": "1",
+      "q2": "1"
+     },
+     {
+      "name": "Cinnamon stick, 1 inch",
+      "note": "",
+      "q": "1",
+      "q2": "1"
+     },
+     {
+      "name": "Cloves",
+      "note": "",
+      "q": "2",
+      "q2": "4"
+     },
+     {
+      "name": "Green cardamom pods",
+      "note": "",
+      "q": "2",
+      "q2": "3"
+     },
+     {
+      "name": "Black peppercorns",
+      "note": "",
+      "q": "4",
+      "q2": "6"
+     },
+     {
+      "name": "Onions, sliced",
+      "note": "medium",
+      "q": "1",
+      "q2": "2"
+     },
+     {
+      "name": "Tomatoes, chopped",
+      "note": "medium",
+      "q": "1",
+      "q2": "2"
+     },
+     {
+      "name": "Green chillies, slit",
+      "note": "",
+      "q": "1",
+      "q2": "2"
+     },
+     {
+      "name": "Coriander powder",
+      "note": "",
+      "q": "1 tsp",
+      "q2": "2 tsp"
+     },
+     {
+      "name": "Cumin powder",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Kashmiri chilli powder",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Hot water",
+      "note": "",
+      "q": "120 ml",
+      "q2": "240 ml"
+     },
+     {
+      "name": "Garam masala",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Coriander and mint, chopped",
+      "note": "",
+      "q": "1½ tbsp",
+      "q2": "3 tbsp"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Marinate. Mix the mutton with the marinade and leave 30 minutes to 1½ hours (no longer without a fridge).",
+   "Onions. In the cooker base, heat the oil and ghee on medium. Whole spices for 20 seconds, then the onions for 10–12 minutes until deep golden.",
+   "Masala. Add the tomatoes, chillies and powders (not the garam masala) and cook 5 minutes until the oil separates.",
+   "Bhuna. Add the mutton with its marinade and cook on high for 8–10 minutes, stirring, until the surface browns and the masala clings.",
+   "Pressure-cook. Add the hot water, close, and cook 5–6 whistles on medium (young goat 4–5), then 5 minutes on the lowest flame. Let the pressure drop by itself (10–15 minutes).",
+   "Check and finish. A knife should slide in with slight resistance and the meat should come off the bone easily; if not, 1–2 more whistles. Simmer uncovered to the thickness you like, then add the garam masala, coriander and mint."
+  ],
+  "cues": [],
+  "why": "",
+  "tips": [],
+  "var": [],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Egg-paneer kathi rolls",
+  "chapter": "Chicken, fish and mutton",
+  "page": 63,
+  "sub": "Phulka rolls for the lunch box · Kolkata street style",
+  "chips": {
+   "TIME": "20 min (with phulkas ready)",
+   "ONE SERVING": "2 rolls",
+   "PROTEIN": "~33 g",
+   "ADDED OIL": "2 tsp",
+   "USES": "Tawa + 1 burner"
+  },
+  "intro": "A dry filling rolled in an egg-coated phulka travels well at room temperature until lunch, and two rolls carry more than 30 g of protein.",
+  "ingredients": [
+   {
+    "group": "Rolls",
+    "items": [
+     {
+      "name": "Phulkas or parathas, made earlier",
+      "note": "",
+      "q": "2",
+      "q2": "4"
+     },
+     {
+      "name": "Eggs",
+      "note": "1 per roll",
+      "q": "2",
+      "q2": "4"
+     },
+     {
+      "name": "Oil",
+      "note": "½ tsp per roll, plus 2 tsp for the filling",
+      "q": "2 tsp",
+      "q2": "4 tsp"
+     }
+    ]
+   },
+   {
+    "group": "Filling",
+    "items": [
+     {
+      "name": "Paneer, thin strips",
+      "note": "",
+      "q": "75 g",
+      "q2": "150 g"
+     },
+     {
+      "name": "Onion, sliced",
+      "note": "",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Capsicum, thin strips",
+      "note": "",
+      "q": "¼",
+      "q2": "½"
+     },
+     {
+      "name": "Chilli-garlic sauce or ketchup",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Chaat masala",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "a pinch",
+      "q2": "a pinch"
+     }
+    ]
+   },
+   {
+    "group": "To roll",
+    "items": [
+     {
+      "name": "Onion, thinly sliced, with lemon and chaat masala",
+      "note": "",
+      "q": "¼",
+      "q2": "½"
+     },
+     {
+      "name": "Green chutney",
+      "note": "",
+      "q": "1 tbsp",
+      "q2": "2 tbsp"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Filling. Heat 2 tsp oil on high. Cook the onion and capsicum 2 minutes, then the paneer, sauce, chaat masala and salt for 2 minutes.",
+   "Egg layer. Beat one egg with a pinch of salt. Heat ½ tsp oil on the tawa over medium, pour in the egg and spread it to the size of the phulka. Immediately press a phulka on top. Cook 1 minute until the egg sets, flip and cook 20 seconds.",
+   "Roll. Egg side up: spread chutney, add a quarter of the filling and the onions, and roll tightly. Wrap the bottom half in butter paper or foil.",
+   "Pack. Let the rolls cool 5 minutes before wrapping, so steam doesn't make them soggy. Eat by lunchtime."
+  ],
+  "cues": [],
+  "why": "",
+  "tips": [],
+  "var": [
+   "Chicken or tikka roll. Use air-fryer tandoori chicken strips or paneer tikka instead of the paneer filling.",
+   "Toasted roll. If your sandwich maker has flat or ribbed grill plates, press the finished roll in it for 2 minutes for a crisp outside that holds together in the lunch box."
+  ],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Air-fryer paneer tikka",
+  "chapter": "Air fryer and sandwich maker",
+  "page": 65,
+  "sub": "Charred, smoky paneer with capsicum and onion",
+  "chips": {
+   "TIME": "30 min + marinating",
+   "ONE SERVING": "about 8 pieces",
+   "PROTEIN": "~21 g",
+   "ADDED OIL": "1 tsp",
+   "USES": "Air fryer"
+  },
+  "intro": "Restaurant paneer tikka without a tandoor. Hung curd makes the marinade cling and adds protein; roasted besan helps it stick.",
+  "ingredients": [
+   {
+    "group": "Tikka",
+    "items": [
+     {
+      "name": "Paneer, 3–4 cm cubes",
+      "note": "warm-soaked 10 minutes, patted dry",
+      "q": "100 g",
+      "q2": "200 g"
+     },
+     {
+      "name": "Capsicum, 3 cm squares",
+      "note": "",
+      "q": "¼",
+      "q2": "½"
+     },
+     {
+      "name": "Onion, quartered and separated into petals",
+      "note": "",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Hung curd",
+      "note": "",
+      "q": "30 g",
+      "q2": "60 g"
+     },
+     {
+      "name": "Besan, dry-roasted",
+      "note": "about 1 tbsp",
+      "q": "4 g",
+      "q2": "8 g"
+     },
+     {
+      "name": "Ginger-garlic paste",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Kashmiri chilli powder",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Garam masala",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Roasted cumin powder",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Chaat masala",
+      "note": "plus a pinch to finish",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Kasuri methi, crushed",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Lemon juice",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Mustard oil (or any oil)",
+      "note": "",
+      "q": "1 tsp",
+      "q2": "2 tsp"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Roast the besan. Stir it in a dry pan on low for 1–2 minutes until it smells nutty; raw besan tastes pasty.",
+   "Marinate. Whisk the hung curd with everything except the paneer and vegetables. Fold in the paneer, capsicum and onion gently and leave 20 minutes (up to an hour).",
+   "Arrange. Preheat to 200 °C for 3 minutes. Lay the pieces in one layer, not touching, or thread them on wooden skewers soaked in water for 20 minutes.",
+   "Air-fry. 8–10 minutes, turning once at 5, until the edges are charred in spots. Don't go longer: paneer turns chewy.",
+   "Finish. Sprinkle with chaat masala and squeeze over some lemon."
+  ],
+  "cues": [],
+  "why": "",
+  "tips": [],
+  "var": [
+   "Paneer tikka masala. Simmer the tikka for 2 minutes in the makhani gravy from the paneer butter masala card.",
+   "Roll or sandwich. Roll in a phulka with green chutney and onions, or fill a sandwich-maker sandwich."
+  ],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Air-fryer chicken seekh kebab",
+  "chapter": "Air fryer and sandwich maker",
+  "page": 66,
+  "sub": "Spiced chicken-mince kebabs · ask the shop to mince it fresh",
+  "chips": {
+   "TIME": "35 min",
+   "ONE SERVING": "3 kebabs",
+   "PROTEIN": "~29 g",
+   "ADDED OIL": "1 tsp",
+   "USES": "Air fryer"
+  },
+  "intro": "Ask the chicken shop to mince boneless thigh, or half thigh and half breast, while you wait. Squeezing the water out of the onion and herbs, and kneading the mince well, keeps the kebabs from falling apart.",
+  "ingredients": [
+   {
+    "group": "Kebabs",
+    "items": [
+     {
+      "name": "Chicken mince (keema)",
+      "note": "",
+      "q": "150 g",
+      "q2": "300 g"
+     },
+     {
+      "name": "Onion, very finely chopped",
+      "note": "small; squeezed dry in a cloth",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Green chillies, minced",
+      "note": "",
+      "q": "1",
+      "q2": "2"
+     },
+     {
+      "name": "Ginger-garlic paste",
+      "note": "",
+      "q": "1 tsp",
+      "q2": "2 tsp"
+     },
+     {
+      "name": "Coriander and mint, finely chopped",
+      "note": "squeezed dry",
+      "q": "1½ tbsp",
+      "q2": "3 tbsp"
+     },
+     {
+      "name": "Besan, dry-roasted",
+      "note": "the binder; about 2 tbsp",
+      "q": "8 g",
+      "q2": "15 g"
+     },
+     {
+      "name": "Kashmiri chilli powder",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Coriander powder",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Garam masala",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "¾ tsp"
+     },
+     {
+      "name": "Roasted cumin powder",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "¾ tsp"
+     },
+     {
+      "name": "Lemon juice",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Oil or melted butter, for brushing",
+      "note": "",
+      "q": "1 tsp",
+      "q2": "2 tsp"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Roast the besan. Stir it in a dry pan on low for 1–2 minutes until nutty.",
+   "Knead. Put everything except the oil in a bowl and knead with your hand for 2 minutes, until the mixture turns sticky and holds together. This binds the mince so the kebabs don't crack.",
+   "Shape. With wet hands, divide into 3 portions per serving and roll each into a log about 10 cm long and 2.5 cm thick (or press it around a soaked wooden skewer). Smooth out any cracks.",
+   "Air-fry. Preheat to 200 °C. Brush the kebabs with oil, lay them in one layer and cook 12–14 minutes, turning at 7, until browned with charred spots.",
+   "Check. Cut the thickest one: no pink inside, and the juices run clear. Rest 2 minutes."
+  ],
+  "cues": [],
+  "why": "",
+  "tips": [],
+  "var": [],
+  "serve": "",
+  "note": "Buy the mince on the day and cook it within 2 hours: minced meat spoils faster than whole pieces.",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Air-fryer fish rava fry",
+  "chapter": "Air fryer and sandwich maker",
+  "page": 67,
+  "sub": "Mangalorean semolina-crusted fish · crisp with 2 tsp of oil",
+  "chips": {
+   "TIME": "25 min",
+   "ONE SERVING": "150 g fish",
+   "PROTEIN": "~34 g",
+   "ADDED OIL": "1 tsp",
+   "USES": "Air fryer"
+  },
+  "intro": "In Mangalore, masala-rubbed fish is pressed into rava and shallow-fried. The air fryer gives the same crunch with a fraction of the oil. Seer (anjal), pomfret and mackerel (bangude) all work.",
+  "ingredients": [
+   {
+    "group": "Fish and masala",
+    "items": [
+     {
+      "name": "Fish steaks, about 1.5 cm thick",
+      "note": "cleaned as in Book 1",
+      "q": "150 g",
+      "q2": "300 g"
+     },
+     {
+      "name": "Kashmiri chilli powder",
+      "note": "",
+      "q": "¾ tsp",
+      "q2": "1½ tsp"
+     },
+     {
+      "name": "Spicy red chilli powder",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Turmeric",
+      "note": "",
+      "q": "a pinch",
+      "q2": "¼ tsp"
+     },
+     {
+      "name": "Ginger-garlic paste",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Lemon juice (or 1 tsp tamarind pulp)",
+      "note": "",
+      "q": "1 tsp",
+      "q2": "2 tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "¾ tsp"
+     }
+    ]
+   },
+   {
+    "group": "Coating",
+    "items": [
+     {
+      "name": "Rava (semolina), fine or medium",
+      "note": "",
+      "q": "20 g",
+      "q2": "40 g"
+     },
+     {
+      "name": "Rice flour",
+      "note": "",
+      "q": "½ tbsp",
+      "q2": "1 tbsp"
+     },
+     {
+      "name": "Red chilli powder",
+      "note": "",
+      "q": "a pinch",
+      "q2": "¼ tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "a pinch",
+      "q2": "a pinch"
+     },
+     {
+      "name": "Coconut oil (or any oil)",
+      "note": "for brushing",
+      "q": "1 tsp",
+      "q2": "2 tsp"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Marinate (10–15 min). Pat the fish dry. Mix the masala into a thick paste with no water, rub it all over the fish and leave 10–15 minutes, no longer.",
+   "Coat. Mix the rava, rice flour, chilli and salt on a plate. Press each piece into it firmly on both sides so the coating sticks.",
+   "Air-fry. Preheat to 200 °C. Brush the fish with oil on both sides, lay it in one layer and cook 10–12 minutes, turning carefully with a flat spatula at 6."
+  ],
+  "cues": [
+   "LOOK The crust is golden and crisp, and the flesh at the thickest part is opaque and flakes easily."
+  ],
+  "why": "",
+  "tips": [],
+  "var": [],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Air-fryer hara bhara kabab",
+  "chapter": "Air fryer and sandwich maker",
+  "page": 68,
+  "sub": "Spinach, peas, potato and paneer patties",
+  "chips": {
+   "TIME": "40 min",
+   "ONE SERVING": "3 kababs",
+   "PROTEIN": "~17 g",
+   "ADDED OIL": "1 tsp",
+   "USES": "Air fryer + 1 burner + mixie"
+  },
+  "intro": "A green vegetarian kabab with paneer for protein. Blanched spinach and peas are pulsed coarse, bound with potato and roasted besan, and air-fried crisp.",
+  "ingredients": [
+   {
+    "group": "Kababs",
+    "items": [
+     {
+      "name": "Spinach leaves, washed",
+      "note": "",
+      "q": "75 g",
+      "q2": "150 g"
+     },
+     {
+      "name": "Green peas",
+      "note": "fresh, or dried peas soaked and boiled soft",
+      "q": "40 g",
+      "q2": "75 g"
+     },
+     {
+      "name": "Potato, boiled and mashed",
+      "note": "1 medium",
+      "q": "75 g",
+      "q2": "150 g"
+     },
+     {
+      "name": "Paneer, grated",
+      "note": "",
+      "q": "50 g",
+      "q2": "100 g"
+     },
+     {
+      "name": "Green chillies",
+      "note": "",
+      "q": "1",
+      "q2": "2"
+     },
+     {
+      "name": "Ginger",
+      "note": "",
+      "q": "½ inch",
+      "q2": "1 inch"
+     },
+     {
+      "name": "Coriander leaves",
+      "note": "",
+      "q": "1½ tbsp",
+      "q2": "3 tbsp"
+     },
+     {
+      "name": "Besan, dry-roasted",
+      "note": "the binder",
+      "q": "15 g",
+      "q2": "30 g"
+     },
+     {
+      "name": "Chaat masala",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Roasted cumin powder",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Garam masala",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "¾ tsp"
+     },
+     {
+      "name": "Lemon juice",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Oil, for brushing",
+      "note": "",
+      "q": "1 tsp",
+      "q2": "2 tsp"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Blanch. Boil the spinach for 1 minute and fresh peas for 3–4 minutes in salted water; drain and cool in cold water. Squeeze the spinach completely dry; wet spinach makes soft kababs that fall apart.",
+   "Pulse. Pulse the spinach, peas, chillies, ginger and coriander in the mixie 4–5 times, to a coarse mixture rather than a paste.",
+   "Mix. Combine with the potato, paneer, roasted besan, spices, salt and lemon. Pressed in your hand it should hold together; add 1 tbsp more besan if it's sticky.",
+   "Shape. Make 3 patties per serving, about 6 cm across and 1.5 cm thick, with smooth edges.",
+   "Air-fry. Preheat to 200 °C. Brush the kababs with oil on both sides and cook 12–14 minutes, turning at 7, until crisp outside."
+  ],
+  "cues": [],
+  "why": "",
+  "tips": [],
+  "var": [],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Air-fryer soya cutlets",
+  "chapter": "Air fryer and sandwich maker",
+  "page": 69,
+  "sub": "Crisp high-protein patties · snack, breakfast or sandwich filling",
+  "chips": {
+   "TIME": "35 min",
+   "ONE SERVING": "3 cutlets",
+   "PROTEIN": "~17 g",
+   "ADDED OIL": "1 tsp",
+   "USES": "Air fryer + 1 burner + mixie"
+  },
+  "intro": "Soya, potato and vegetables shaped into patties and air-fried crisp with two teaspoons of oil instead of a pan of it.",
+  "ingredients": [
+   {
+    "group": "Cutlets",
+    "items": [
+     {
+      "name": "Soya chunks, dry",
+      "note": "",
+      "q": "25 g",
+      "q2": "50 g"
+     },
+     {
+      "name": "Potato, boiled and mashed",
+      "note": "1 medium",
+      "q": "75 g",
+      "q2": "150 g"
+     },
+     {
+      "name": "Carrot, grated",
+      "note": "",
+      "q": "1½ tbsp",
+      "q2": "3 tbsp"
+     },
+     {
+      "name": "Onion, finely chopped",
+      "note": "",
+      "q": "¼",
+      "q2": "½"
+     },
+     {
+      "name": "Green chilli, minced",
+      "note": "",
+      "q": "½",
+      "q2": "1"
+     },
+     {
+      "name": "Ginger, grated",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Coriander, chopped",
+      "note": "",
+      "q": "1 tbsp",
+      "q2": "2 tbsp"
+     },
+     {
+      "name": "Garam masala",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Chaat masala",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Red chilli powder",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": "½ tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "¾ tsp"
+     },
+     {
+      "name": "Lemon juice",
+      "note": "",
+      "q": "½ tsp",
+      "q2": "1 tsp"
+     },
+     {
+      "name": "Besan (or poha powder)",
+      "note": "the binder",
+      "q": "15 g",
+      "q2": "30 g"
+     },
+     {
+      "name": "Oil, for brushing",
+      "note": "",
+      "q": "1 tsp",
+      "q2": "2 tsp"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Prepare the soya. Boil the chunks 5 minutes, drain, rinse in cold water and squeeze them very dry. Pulse in the mixie 5–6 times to a coarse mince.",
+   "Mix. Combine everything except the oil. Pressed in your hand, the mixture should hold together; if it's sticky, add 1 tbsp more besan.",
+   "Shape. Divide into 3 per serving and shape into patties about 7 cm across and 1.5 cm thick, smoothing the edges; cracked edges break in the fryer.",
+   "Air-fry. Preheat to 200 °C. Brush the cutlets with oil on both sides, lay them in one layer and cook 12–14 minutes, turning at 7, until golden and crisp."
+  ],
+  "cues": [],
+  "why": "",
+  "tips": [],
+  "var": [],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": false
+ },
+ {
+  "title": "Masala peanuts, roasted chana and makhana",
+  "chapter": "Air fryer and sandwich maker",
+  "page": 70,
+  "sub": "Crunchy high-protein snacks from the air fryer",
+  "chips": {
+   "TIME": "20 min",
+   "MAKES": "about 8 portions of 30 g",
+   "PROTEIN": "~7–8 g per 30 g (makhana ~3 g)",
+   "KEEPS": "1–2 weeks, airtight",
+   "USES": "Air fryer"
+  },
+  "intro": "Make a batch on Sunday and keep it in airtight jars for the week. A handful replaces biscuits or chips as the afternoon snack.",
+  "ingredients": [
+   {
+    "group": "Masala peanuts",
+    "items": [
+     {
+      "name": "Raw peanuts",
+      "note": "",
+      "q": "150 g",
+      "q2": ""
+     },
+     {
+      "name": "Oil",
+      "note": "",
+      "q": "1 tsp",
+      "q2": ""
+     },
+     {
+      "name": "Water",
+      "note": "",
+      "q": "1½ tbsp",
+      "q2": ""
+     },
+     {
+      "name": "Besan",
+      "note": "about 2 tbsp",
+      "q": "15 g",
+      "q2": ""
+     },
+     {
+      "name": "Rice flour",
+      "note": "optional, for extra crunch",
+      "q": "1 tbsp",
+      "q2": ""
+     },
+     {
+      "name": "Kashmiri chilli powder",
+      "note": "",
+      "q": "1 tsp",
+      "q2": ""
+     },
+     {
+      "name": "Turmeric",
+      "note": "",
+      "q": "a pinch",
+      "q2": ""
+     },
+     {
+      "name": "Hing",
+      "note": "",
+      "q": "a pinch",
+      "q2": ""
+     },
+     {
+      "name": "Chaat masala",
+      "note": "",
+      "q": "½ tsp",
+      "q2": ""
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "¾ tsp",
+      "q2": ""
+     }
+    ]
+   },
+   {
+    "group": "Masala roasted chana",
+    "items": [
+     {
+      "name": "Roasted chana (putani)",
+      "note": "",
+      "q": "100 g",
+      "q2": ""
+     },
+     {
+      "name": "Oil",
+      "note": "",
+      "q": "½ tsp",
+      "q2": ""
+     },
+     {
+      "name": "Chaat masala",
+      "note": "",
+      "q": "½ tsp",
+      "q2": ""
+     },
+     {
+      "name": "Red chilli powder",
+      "note": "",
+      "q": "a pinch",
+      "q2": ""
+     },
+     {
+      "name": "Curry leaves",
+      "note": "",
+      "q": "8",
+      "q2": ""
+     }
+    ]
+   },
+   {
+    "group": "Roasted makhana",
+    "items": [
+     {
+      "name": "Makhana (fox nuts)",
+      "note": "",
+      "q": "50 g",
+      "q2": ""
+     },
+     {
+      "name": "Ghee",
+      "note": "",
+      "q": "1 tsp",
+      "q2": ""
+     },
+     {
+      "name": "Chaat masala",
+      "note": "",
+      "q": "½ tsp",
+      "q2": ""
+     },
+     {
+      "name": "Black pepper",
+      "note": "",
+      "q": "¼ tsp",
+      "q2": ""
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "a pinch",
+      "q2": ""
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Coat the peanuts. Toss the peanuts with the oil and water so they're just damp. Sprinkle over the besan, rice flour, spices and salt and toss until every peanut has a dry, sandy coat.",
+   "Air-fry. 160 °C for 12–15 minutes, shaking every 4 minutes, until the coating is crisp and the peanuts crackle. They crisp more as they cool.",
+   "Chana. Toss the roasted chana with the oil, chaat masala and chilli. Air-fry with the curry leaves at 160 °C for 4–5 minutes.",
+   "Makhana. Toss the makhana with the ghee, chaat masala, pepper and salt. Air-fry at 150 °C for 8–10 minutes, shaking twice, until one crunches right through when you bite it.",
+   "Store. Cool completely before putting them in airtight jars; warm snacks sweat and go soft."
+  ],
+  "cues": [],
+  "why": "",
+  "tips": [],
+  "var": [
+   "Plain roasted peanuts. 160 °C for 10 minutes, shaking twice. Rub off the skins if you like."
+  ],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": true
+ },
+ {
+  "title": "Sandwich-maker meals",
+  "chapter": "Air fryer and sandwich maker",
+  "page": 71,
+  "sub": "Four 10-minute breakfasts and lunch-box fillers",
+  "chips": {
+   "TIME": "10 min",
+   "ONE SERVING": "1 sandwich",
+   "PROTEIN": "~6–15 g each",
+   "ADDED OIL": "about ½ tsp butter",
+   "USES": "Sandwich maker"
+  },
+  "intro": "The sandwich maker toasts and seals in 3–4 minutes with no flipping. The method is the same for every filling: preheat until the ready light comes on, butter the outsides thinly (¼ tsp a side), don't overfill, toast 3–4 minutes until golden, and let it rest a minute before biting; the filling is very hot.",
+  "ingredients": [],
+  "steps": [],
+  "cues": [],
+  "why": "",
+  "tips": [],
+  "var": [],
+  "serve": "",
+  "note": "",
+  "subs": [
+   {
+    "name": "Egg-bhurji sandwich",
+    "meta": "One serving of egg bhurji (3 eggs) fills 2 sandwiches: about 28 g of protein for the pair.",
+    "ing": [
+     "2 slices of bread per sandwich",
+     "Half a serving of egg bhurji (1½ eggs)",
+     "1 tsp green chutney or ketchup",
+     "¼ tsp butter per side"
+    ],
+    "method": "Spread the chutney on the inside of the bread, add the bhurji, close and butter the outsides. Toast 3–4 minutes and cut along the seal."
+   },
+   {
+    "name": "Paneer bhurji sandwich",
+    "meta": "About 14 g of protein per sandwich.",
+    "ing": [
+     "2 slices of bread",
+     "Half a serving of paneer bhurji (50 g paneer)",
+     "1 tsp green chutney",
+     "¼ tsp butter per side"
+    ],
+    "method": "As above. Made with fresh paneer, so cook it the same morning you buy it."
+   },
+   {
+    "name": "Paneer tikka sandwich",
+    "meta": "About 15 g of protein per sandwich.",
+    "ing": [
+     "2 slices of bread",
+     "4–5 pieces of air-fryer paneer tikka",
+     "1 tsp green chutney",
+     "A few thin onion slices",
+     "¼ tsp butter per side"
+    ],
+    "method": "Spread the chutney inside, add the tikka and onion, close and toast 3–4 minutes."
+   },
+   {
+    "name": "Omelette pockets (no bread)",
+    "meta": "About 12 g of protein.",
+    "ing": [
+     "2 eggs, beaten",
+     "1 tbsp each finely chopped onion, tomato and coriander",
+     "A pinch each of chilli, turmeric and salt",
+     "¼ tsp oil for the plates"
+    ],
+    "method": "Brush the preheated plates with oil, pour the egg mixture into the lower plates, close gently and cook 4–5 minutes until puffed and set. If your plates leak at the hinge, use less egg."
+   },
+   {
+    "name": "Bombay veg masala toast",
+    "meta": "About 6 g of protein; 13 g with paneer slices.",
+    "ing": [
+     "2 slices of bread",
+     "1 small boiled potato, mashed with salt, chilli and chaat masala",
+     "Thin slices of cucumber, tomato and onion",
+     "1 tbsp green chutney",
+     "40 g paneer slices or a cheese slice (optional)",
+     "¼ tsp butter per side"
+    ],
+    "method": "Spread chutney on both slices, then the potato, then layer the vegetables (and paneer). Close, butter and toast 4 minutes. The Mumbai street classic."
+   },
+   {
+    "name": "Phulka toastie",
+    "meta": "About 10–13 g of protein. Uses a phulka kept from last night.",
+    "ing": [
+     "1 phulka from the night before",
+     "50 g paneer bhurji, or 1 egg made into bhurji",
+     "1 tsp green chutney",
+     "¼ tsp ghee"
+    ],
+    "method": "Spread chutney on half the phulka, add the filling and fold it over (fold again into a triangle if your plates are triangular). Brush with ghee and toast 3 minutes until crisp."
+   }
+  ],
+  "batch": false
+ },
+ {
+  "title": "Fresh chutneys",
+  "chapter": "Chutneys, podis and raitas",
+  "page": 72,
+  "sub": "Green, coconut, peanut and tomato-onion",
+  "chips": {
+   "TIME": "5–15 min each",
+   "MAKES": "about ½ cup each",
+   "PROTEIN": "1–2 g per serving",
+   "KEEPS": "Same day",
+   "USES": "Mixie"
+  },
+  "intro": "Each of these is ground in the small mixie jar. Without a fridge, make them on the day: fresh coconut and herb chutneys turn quickly.",
+  "ingredients": [],
+  "steps": [],
+  "cues": [],
+  "why": "",
+  "tips": [],
+  "var": [],
+  "serve": "",
+  "note": "",
+  "subs": [
+   {
+    "name": "Green chutney (mint-coriander)",
+    "meta": "For chillas, sandwiches, rolls and tandoori chicken.",
+    "ing": [
+     "1 cup coriander leaves, packed",
+     "½ cup mint leaves",
+     "2 green chillies",
+     "½ inch ginger",
+     "1 garlic clove (optional)",
+     "1 tbsp lemon juice",
+     "1 tbsp roasted chana or peanuts",
+     "¼ tsp salt",
+     "2–3 tbsp cold water"
+    ],
+    "method": "Grind everything until smooth, adding the water a little at a time. The lemon keeps it green; the chana gives body so it doesn't separate. Use less water for a sandwich spread."
+   },
+   {
+    "name": "Coconut chutney",
+    "meta": "For chillas, dosa, idli and ragi rotti.",
+    "ing": [
+     "½ cup fresh grated coconut (or 3 tbsp desiccated, soaked 10 min in warm water)",
+     "2 tbsp roasted chana (putani)",
+     "1–2 green chillies",
+     "½ inch ginger",
+     "Salt to taste",
+     "⅓ cup water",
+     "Tempering: 1 tsp oil, mustard, urad dal, curry leaves, dried red chilli"
+    ],
+    "method": "Grind the coconut, chana, chillies, ginger and salt with the water until smooth. Heat the oil, crackle the mustard, fry the urad dal golden with the curry leaves and red chilli, and pour over."
+   },
+   {
+    "name": "Peanut chutney",
+    "meta": "Andhra style; good with chillas and rotti.",
+    "ing": [
+     "¼ cup roasted peanuts",
+     "2 dried red chillies",
+     "2 garlic cloves",
+     "A small piece of tamarind",
+     "Salt to taste",
+     "About ⅓ cup water",
+     "Optional tempering as for coconut chutney"
+    ],
+    "method": "No roasted peanuts? Air-fry raw ones at 160 °C for 8–10 minutes, shaking twice. Grind everything to a smooth, thick paste. Temper if you like."
+   },
+   {
+    "name": "Tomato-onion chutney",
+    "meta": "Cooked, so it keeps through the day.",
+    "ing": [
+     "1 tsp oil",
+     "1 tsp chana dal",
+     "1 tsp urad dal",
+     "2 dried red chillies",
+     "1 onion, chopped",
+     "2 tomatoes, chopped",
+     "2 garlic cloves",
+     "A pea-sized piece of tamarind",
+     "Salt to taste"
+    ],
+    "method": "Air-fryer route: toss the onion, halved tomatoes and garlic with ½ tsp oil and air-fry at 200 °C for 10–12 minutes until soft and charred, and fry only the dals and chillies in the pan. On the stove: fry the dals and chillies in the oil until golden, add the onion and garlic for 4 minutes, then the tomatoes, tamarind and salt for 6–8 minutes until soft. Cool and grind. Temper if you like."
+   }
+  ],
+  "batch": false
+ },
+ {
+  "title": "Chutney powders that keep",
+  "chapter": "Chutneys, podis and raitas",
+  "page": 73,
+  "sub": "Shenga, agasi and gunpowder · make once, use for weeks",
+  "chips": {
+   "TIME": "25 min each",
+   "MAKES": "about 1 cup each",
+   "PROTEIN": "~2 g per tbsp",
+   "KEEPS": "2–4 weeks, airtight",
+   "USES": "Tawa + mixie"
+  },
+  "intro": "Dry-roasted, coarsely ground powders that need no fridge. Peanuts and dals can be roasted in the air fryer (160 °C, 8–10 minutes, shaking every 3), but roast flaxseeds and sesame in a pan: the fan scatters them. A spoonful mixed with a little ghee, oil or curd turns a plain phulka, rotti or chilla into a meal. The first two are North Karnataka classics.",
+  "ingredients": [],
+  "steps": [],
+  "cues": [],
+  "why": "",
+  "tips": [],
+  "var": [],
+  "serve": "",
+  "note": "",
+  "subs": [
+   {
+    "name": "Shenga chutney pudi (peanut)",
+    "meta": "Keeps about 2 weeks (the garlic shortens it).",
+    "ing": [
+     "100 g raw peanuts",
+     "4–6 dried byadgi chillies (for colour)",
+     "4 garlic cloves",
+     "1 tsp cumin",
+     "¾ tsp salt",
+     "1 tsp jaggery (optional)",
+     "A small piece of tamarind (optional)"
+    ],
+    "method": "Dry-roast the peanuts on low for 5–6 minutes until the skins crack and they smell toasty; cool and rub off the skins. Roast the chillies for a minute. Pulse everything in short bursts to a coarse powder; long grinding releases the peanut oil and turns it into paste."
+   },
+   {
+    "name": "Agasi chutney pudi (flaxseed)",
+    "meta": "Keeps 2–3 weeks.",
+    "ing": [
+     "100 g flaxseeds",
+     "4 dried red chillies",
+     "4 garlic cloves",
+     "10 curry leaves",
+     "1 tsp cumin",
+     "A small piece of tamarind",
+     "¾ tsp salt"
+    ],
+    "method": "Dry-roast the flaxseeds on low for 3–4 minutes until they pop and smell nutty. Roast the chillies and curry leaves until crisp. Cool, then pulse everything to a coarse powder."
+   },
+   {
+    "name": "Gunpowder (idli podi)",
+    "meta": "Keeps about a month.",
+    "ing": [
+     "50 g urad dal",
+     "50 g chana dal",
+     "8 dried red chillies",
+     "2 tbsp sesame seeds",
+     "¼ tsp hing",
+     "1 tsp salt"
+    ],
+    "method": "Roast each dal separately on low for 5–6 minutes until golden and aromatic, the chillies for a minute and the sesame until it pops. Cool completely and grind to a slightly coarse powder with the hing and salt. Mix with oil or ghee to eat with chillas, dosa or idli."
+   }
+  ],
+  "batch": false
+ },
+ {
+  "title": "Raitas and kachumber",
+  "chapter": "Chutneys, podis and raitas",
+  "page": 74,
+  "sub": "Cooling sides for every plate",
+  "chips": {
+   "TIME": "5 min",
+   "ONE SERVING": "about ½ cup",
+   "PROTEIN": "~3 g",
+   "ADDED OIL": "none",
+   "USES": "None"
+  },
+  "intro": "Made with the curd you set the night before. Make raita just before eating or packing; vegetables release water as it stands.",
+  "ingredients": [
+   {
+    "group": "Cucumber raita",
+    "items": [
+     {
+      "name": "Curd",
+      "note": "set the night before",
+      "q": "75 g",
+      "q2": "150 g"
+     },
+     {
+      "name": "Cucumber, grated and squeezed, or finely chopped",
+      "note": "",
+      "q": "¼",
+      "q2": "½"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "a pinch",
+      "q2": "¼ tsp"
+     },
+     {
+      "name": "Roasted cumin powder",
+      "note": "",
+      "q": "a pinch",
+      "q2": "¼ tsp"
+     },
+     {
+      "name": "Red chilli powder",
+      "note": "",
+      "q": "a pinch",
+      "q2": "a pinch"
+     },
+     {
+      "name": "Mint or coriander, chopped",
+      "note": "",
+      "q": "½ tbsp",
+      "q2": "1 tbsp"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   "Whisk. Whisk the curd with the salt and 1–2 tbsp water until smooth and just pourable.",
+   "Mix. Stir in the cucumber and herbs, and sprinkle the cumin and chilli on top."
+  ],
+  "cues": [],
+  "why": "",
+  "tips": [],
+  "var": [
+   "Onion-tomato raita. Use finely chopped onion (soaked 5 minutes in water and drained) and tomato instead of cucumber, with a chopped green chilli.",
+   "Boondi raita. Soak 3 tbsp store-bought boondi (it keeps for weeks) in warm water for 2 minutes, squeeze gently and stir in.",
+   "Hung-curd mint dip. Hung curd with chopped mint, garlic, salt and pepper: a thick dip for tandoori chicken with about twice the protein.",
+   "Kachumber salad. Dice cucumber, tomato and onion into 5 mm pieces. Just before serving, add lemon juice, a pinch each of salt, chilli powder and chaat masala, and chopped coriander."
+  ],
+  "serve": "",
+  "note": "",
+  "subs": [],
+  "batch": false
+ }
+]

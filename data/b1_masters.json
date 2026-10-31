@@ -1,0 +1,1014 @@
+[
+ {
+  "title": "Andhra-Style Chicken Dum Biryani",
+  "page": 18,
+  "chips": {
+   "TOTAL": "1 h 50 min",
+   "HANDS-ON": "about 55 min",
+   "BURNERS": "3 of 4",
+   "METHOD": "Pakki dum"
+  },
+  "intro": "Andhra biryani is the spicy branch of the dum family. Compared with Hyderabadi biryani it uses more fresh green chilli and red chilli, more mint, and a masala built on browned onion and tomato. The chicken is cooked to 85% in that masala (the pakki method), covered with 75% rice, sealed and finished on dum.",
+  "ingredients": [
+   {
+    "group": "Marinade",
+    "items": [
+     {
+      "name": "Bone-in chicken, biryani cut",
+      "note": "Thighs and drumsticks stay juiciest; 70–100 g pieces.",
+      "q": "150 g"
+     },
+     {
+      "name": "Thick full-fat curd",
+      "note": "Whisk smooth first.",
+      "q": "50 g"
+     },
+     {
+      "name": "Ginger-garlic paste",
+      "note": "Fresh is brighter than jarred.",
+      "q": "½ tbsp"
+     },
+     {
+      "name": "Spicy red chilli powder (Guntur)",
+      "note": "The Andhra heat. Kashmiri gives colour with less fire.",
+      "q": "¾ tsp"
+     },
+     {
+      "name": "Turmeric powder",
+      "note": "",
+      "q": "a pinch"
+     },
+     {
+      "name": "Biryani masala",
+      "note": "Any good brand.",
+      "q": "¾ tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "½ tsp"
+     },
+     {
+      "name": "Lemon",
+      "note": "Juiced.",
+      "q": "¼"
+     },
+     {
+      "name": "Green chillies, for paste",
+      "note": "Crushed with a pinch of salt; half here, half in the masala.",
+      "q": "1½"
+     },
+     {
+      "name": "Mint leaves",
+      "note": "Half the total, torn.",
+      "q": "¼ cup"
+     }
+    ]
+   },
+   {
+    "group": "Masala",
+    "items": [
+     {
+      "name": "Birista oil",
+      "note": "Strained from frying the onions.",
+      "q": "1 tbsp"
+     },
+     {
+      "name": "Bay leaf",
+      "note": "",
+      "q": "1"
+     },
+     {
+      "name": "Green cardamom pods",
+      "note": "",
+      "q": "1"
+     },
+     {
+      "name": "Cloves",
+      "note": "",
+      "q": "2"
+     },
+     {
+      "name": "Cinnamon stick, 1 inch",
+      "note": "",
+      "q": "1"
+     },
+     {
+      "name": "Onion, medium",
+      "note": "Sliced 2–3 mm with the grain.",
+      "q": "½"
+     },
+     {
+      "name": "Tomato, small",
+      "note": "Chopped 1 cm.",
+      "q": "½"
+     },
+     {
+      "name": "Green chillies, slit",
+      "note": "",
+      "q": "1"
+     }
+    ]
+   },
+   {
+    "group": "Rice",
+    "items": [
+     {
+      "name": "Aged basmati rice",
+      "note": "About 1 cup per 200 g.",
+      "q": "100 g"
+     },
+     {
+      "name": "Water for boiling",
+      "note": "Never less than 1.25 L.",
+      "q": "1.25 L"
+     },
+     {
+      "name": "Salt for the water",
+      "note": "It must taste noticeably salty.",
+      "q": "¾ tbsp"
+     },
+     {
+      "name": "Bay leaf",
+      "note": "",
+      "q": "1"
+     },
+     {
+      "name": "Green cardamom pods",
+      "note": "",
+      "q": "1"
+     },
+     {
+      "name": "Cloves",
+      "note": "",
+      "q": "1"
+     },
+     {
+      "name": "Star anise",
+      "note": "",
+      "q": "1"
+     },
+     {
+      "name": "Shahi jeera",
+      "note": "",
+      "q": "¼ tsp"
+     },
+     {
+      "name": "Oil",
+      "note": "Keeps the grains from sticking.",
+      "q": "1 tsp"
+     }
+    ]
+   },
+   {
+    "group": "Birista and layering",
+    "items": [
+     {
+      "name": "Onion, large, for birista",
+      "note": "Sliced 2–3 mm with the grain.",
+      "q": "½"
+     },
+     {
+      "name": "Oil for frying",
+      "note": "Strain and keep after frying.",
+      "q": "40 ml"
+     },
+     {
+      "name": "Mint leaves",
+      "note": "The other half.",
+      "q": "¼ cup"
+     },
+     {
+      "name": "Coriander leaves, chopped",
+      "note": "",
+      "q": "¼ cup"
+     },
+     {
+      "name": "Ghee",
+      "note": "",
+      "q": "¾ tbsp"
+     },
+     {
+      "name": "Saffron",
+      "note": "10–15 strands.",
+      "q": "a pinch"
+     },
+     {
+      "name": "Warm milk",
+      "note": "For the saffron.",
+      "q": "1 tbsp"
+     },
+     {
+      "name": "Orange food colour (optional)",
+      "note": "",
+      "q": "a pinch"
+     },
+     {
+      "name": "Atta, for the seal",
+      "note": "",
+      "q": "¼ cup"
+     }
+    ]
+   },
+   {
+    "group": "To serve (optional)",
+    "items": [
+     {
+      "name": "Eggs, boiled and halved",
+      "note": "Andhra-style garnish.",
+      "q": "1"
+     },
+     {
+      "name": "Lemon wedges",
+      "note": "",
+      "q": "1"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "title": "Make the chilli paste and marinate",
+    "meta": "0:00 · Hands · needs you",
+    "text": "Crush 3 green chillies with a pinch of salt to a coarse paste. Rinse, drain and dry the chicken and slash the thick pieces (Prep school: Chicken). In a bowl, whisk the curd until smooth. Add the ginger-garlic paste, chilli powder, turmeric, biryani masala, salt, lemon juice, half the chilli paste and half the mint, torn. Taste a tiny bit: it should be bold and slightly too salty. Add the chicken and massage the marinade into every piece for a full minute, working it into the cuts. Cover and keep in the coolest, shadiest spot."
+   },
+   {
+    "title": "Slice, chop and set up",
+    "meta": "0:10 · Hands · needs you",
+    "text": "Slice both onions 2–3 mm with the grain and keep them in separate piles. Chop the tomato and coriander. Put the saffron into the warm milk. Knead the sealing dough and roll it into a rope (Prep school). Set out the kadai, slotted spoon, a plate for the birista and the colander."
+   },
+   {
+    "title": "Fry the birista",
+    "meta": "0:15 · Burner 1 · needs you",
+    "text": "Heat the oil in the kadai on medium-high. Add the large onion and fry as in Master technique 1: stir every minute until light gold (about 8 minutes), then lower to medium and stir constantly. Lift it out at deep golden with a reddish tinge and spread it thin on the plate. Strain the oil into a bowl and keep it."
+   },
+   {
+    "title": "Wash and soak the rice",
+    "meta": "0:30 · Hands · needs you",
+    "text": "Wash the basmati gently 3–4 times until the water is only slightly cloudy, then soak it in fresh water (Prep school: Washing and soaking rice). It needs at least 30 minutes."
+   },
+   {
+    "title": "Cook the chicken masala to 85%",
+    "meta": "0:45 · Burner 2 · needs you",
+    "text": "Use the heavy 2 L pot; the dum happens in it later. Heat 2 tbsp birista oil on medium. Temper the bay leaf, cardamom, cloves and cinnamon for 30 seconds until the cloves puff. Add the masala onion and fry 6–7 minutes until golden. Add the tomato and slit chillies and cook 3 minutes until the tomato is soft enough to mash with the spoon. Add the chicken with all its marinade, the rest of the chilli paste and a quarter of the birista, crushed between your fingers. Cook on high for 5 minutes, stirring, so the marinade sets onto the chicken without catching on the bottom. Cover and cook on medium-low for 15 minutes, stirring every 5 minutes. If the gravy is still thin at the end, uncover and cook 2–3 minutes more."
+   },
+   {
+    "title": "Boil the rice water",
+    "meta": "1:00 · Burner 3 · runs by itself",
+    "text": "Put the water in the large vessel with the salt, the rice-water whole spices, a few mint leaves and 1 tsp oil. Bring it to a rolling boil while the chicken cooks."
+   },
+   {
+    "title": "Par-boil the rice to 75%",
+    "meta": "1:08 · Burner 3 · needs you",
+    "text": "Drain the soaked rice and tip it into the rolling boil. Stir once, gently. Boil uncovered for 5–6 minutes, testing a grain from minute 4 (Master technique 5). At 75%, drain at once in the colander. Don't rinse. If the chicken isn't ready yet, delay putting the rice in rather than leaving drained rice waiting."
+   },
+   {
+    "title": "Layer and seal",
+    "meta": "1:15 · Hands · needs you",
+    "text": "Put the tawa on Burner 1 on medium to preheat. Spread the chicken masala flat in its pot. Spoon the rice on loosely, without pressing. Scatter the remaining birista, mint and the coriander. Drizzle the saffron milk in thin lines and spots, then spoon the ghee over the top. Don't mix. Press the dough rope round the rim, set the lid on and press the dough up against the lid all the way round (Master techniques 6 and 7)."
+   },
+   {
+    "title": "Dum",
+    "meta": "1:20 · Burner 2, then Burner 1 · runs by itself",
+    "text": "Keep the pot on high on Burner 2 for 2 minutes until you hear a faint hiss inside. Move it onto the hot tawa on Burner 1 and turn that burner to its lowest steady flame for 18 minutes. Turn the pot a quarter turn every 5 minutes. Don't open it."
+   },
+   {
+    "title": "Rest and serve",
+    "meta": "1:40 · Off the heat · runs by itself",
+    "text": "Leave the pot sealed for 10 minutes. Break the seal and check that the top grains are cooked and separate. Slide a flat spatula down the side to the bottom and lift, so every plate gets masala, chicken and all three colours of rice. Serve with onion raita or mirchi ka salan, a lemon wedge and half a boiled egg."
+   }
+  ],
+  "tips": [
+   {
+    "title": "Air-fryer route",
+    "text": "Air-fry the birista instead (Part 4): 1 tbsp oil, 160 °C, 15–25 minutes, tossing every 5 minutes. Burner 1 and your hands stay free, and you use about 70 ml less oil. With no birista oil, cook the masala in step 5 in 2 tbsp fresh oil and stir a pinch of crushed birista into it first.",
+    "step": 3
+   },
+   {
+    "title": "Hotel technique: graded rice",
+    "text": "Lift the rice with a spider in three batches a minute apart instead of draining it all at once: the least-cooked batch at the bottom, the most-cooked on top.",
+    "step": 7
+   }
+  ],
+  "batch": false
+ },
+ {
+  "title": "Lucknowi (Awadhi) Paneer Biryani",
+  "page": 24,
+  "chips": {
+   "TOTAL": "about 1 h 25 min",
+   "HANDS-ON": "about 40 min",
+   "BURNERS": "3 of 4",
+   "METHOD": "Pakki dum, yakhni rice"
+  },
+  "intro": "Awadhi cooking, from the kitchens of Lucknow's nawabs, prizes fragrance over fire. Its biryani is a pakki biryani with two signatures: the rice is boiled in yakhni (a spiced stock) instead of water, and the gravy is enriched with ground golden onions and cashews. There's no red chilli powder; the warmth comes from white pepper, and the finish from saffron, ghee, kewra and rose water.",
+  "ingredients": [
+   {
+    "group": "Yakhni (spiced stock for the rice)",
+    "items": [
+     {
+      "name": "Water",
+      "note": "Never less than 1.25 L.",
+      "q": "1.25 L"
+     },
+     {
+      "name": "Bay leaf",
+      "note": "",
+      "q": "1"
+     },
+     {
+      "name": "Green cardamom pods",
+      "note": "Lightly crushed.",
+      "q": "2"
+     },
+     {
+      "name": "Cloves",
+      "note": "",
+      "q": "2"
+     },
+     {
+      "name": "Cinnamon stick, 1 inch",
+      "note": "",
+      "q": "1"
+     },
+     {
+      "name": "Fennel seeds (saunf)",
+      "note": "",
+      "q": "½ tsp"
+     },
+     {
+      "name": "Coriander seeds",
+      "note": "Lightly crushed.",
+      "q": "½ tsp"
+     },
+     {
+      "name": "Black peppercorns",
+      "note": "",
+      "q": "4"
+     },
+     {
+      "name": "Mace (javitri)",
+      "note": "One blade.",
+      "q": "1"
+     },
+     {
+      "name": "Ginger, 1-inch slice",
+      "note": "",
+      "q": "1"
+     },
+     {
+      "name": "Salt",
+      "note": "Added after straining.",
+      "q": "¾ tbsp"
+     }
+    ]
+   },
+   {
+    "group": "Paneer and marinade",
+    "items": [
+     {
+      "name": "Fresh paneer",
+      "note": "1-inch (2.5 cm) cubes, warm-soaked.",
+      "q": "100 g"
+     },
+     {
+      "name": "Thick full-fat curd",
+      "note": "",
+      "q": "50 g"
+     },
+     {
+      "name": "Cashews",
+      "note": "Soaked in hot water.",
+      "q": "5"
+     },
+     {
+      "name": "Birista",
+      "note": "Half the batch, ground into the marinade.",
+      "q": "½ batch"
+     },
+     {
+      "name": "Ginger-garlic paste",
+      "note": "",
+      "q": "½ tsp"
+     },
+     {
+      "name": "White pepper powder",
+      "note": "Black pepper works too.",
+      "q": "¼ tsp"
+     },
+     {
+      "name": "Green cardamom powder",
+      "note": "",
+      "q": "a pinch"
+     },
+     {
+      "name": "Garam masala",
+      "note": "",
+      "q": "¼ tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "½ tsp"
+     }
+    ]
+   },
+   {
+    "group": "Masala",
+    "items": [
+     {
+      "name": "Ghee",
+      "note": "1 tbsp to sear, 1 tbsp to temper.",
+      "q": "1 tbsp"
+     },
+     {
+      "name": "Bay leaf",
+      "note": "",
+      "q": "1"
+     },
+     {
+      "name": "Green cardamom pod",
+      "note": "",
+      "q": "1"
+     },
+     {
+      "name": "Shahi jeera",
+      "note": "",
+      "q": "¼ tsp"
+     },
+     {
+      "name": "Green chillies, slit",
+      "note": "For aroma, not heat.",
+      "q": "1"
+     },
+     {
+      "name": "Fresh cream (optional)",
+      "note": "",
+      "q": "1 tbsp"
+     }
+    ]
+   },
+   {
+    "group": "Rice, birista and layering",
+    "items": [
+     {
+      "name": "Aged basmati rice",
+      "note": "",
+      "q": "100 g"
+     },
+     {
+      "name": "Onion, large, for birista",
+      "note": "Fried one shade lighter: golden.",
+      "q": "½"
+     },
+     {
+      "name": "Oil for frying",
+      "note": "",
+      "q": "40 ml"
+     },
+     {
+      "name": "Ghee, for the top",
+      "note": "",
+      "q": "½ tbsp"
+     },
+     {
+      "name": "Saffron",
+      "note": "",
+      "q": "a pinch"
+     },
+     {
+      "name": "Warm milk",
+      "note": "",
+      "q": "1½ tbsp"
+     },
+     {
+      "name": "Rose water",
+      "note": "Measure it.",
+      "q": "¼ tsp"
+     },
+     {
+      "name": "Kewra water",
+      "note": "Measure it.",
+      "q": "¼ tsp"
+     },
+     {
+      "name": "Mint leaves",
+      "note": "",
+      "q": "¼ cup"
+     },
+     {
+      "name": "Atta, for the seal",
+      "note": "",
+      "q": "¼ cup"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "title": "Start the yakhni",
+    "meta": "0:00 · Burner 3 · runs by itself",
+    "text": "Yakhni is a spiced stock; here the rice is boiled in it instead of plain water. Tie the yakhni spices and ginger in the muslin to make a potli, or leave them loose to strain later. Put them in the large vessel with the water, bring to a boil, then simmer partly covered on low for 25 minutes."
+   },
+   {
+    "title": "Soak the cashews, cut the paneer and onion",
+    "meta": "0:02 · Hands · needs you",
+    "text": "Soak the cashews in 3 tbsp hot water. Cut the paneer into 1-inch cubes and leave them in warm salted water (Prep school: Paneer). Slice the onion 2–3 mm with the grain."
+   },
+   {
+    "title": "Wash and soak the rice",
+    "meta": "0:07 · Hands · needs you",
+    "text": "Wash the basmati gently 3–4 times and soak it in fresh water. It soaks until step 8."
+   },
+   {
+    "title": "Fry the birista, one shade lighter",
+    "meta": "0:10 · Burner 1 · needs you",
+    "text": "Fry the onion as in Master technique 1, but lift it out at an even golden colour, just before deep golden. Spread it on the plate and keep the oil."
+   },
+   {
+    "title": "Strain the yakhni and make the marinade",
+    "meta": "0:25 · Hands · needs you",
+    "text": "Lift out the potli, squeezing it against the side, or strain out the loose spices. Add the salt, return the yakhni to Burner 3 and keep it on low. In the small mixie jar, grind the drained cashews, half the birista and the curd until completely smooth, scraping down twice. This birista paste gives Awadhi gravy its creamy, golden, gently sweet body. Stir in the ginger-garlic paste, white pepper, cardamom powder, garam masala and salt."
+   },
+   {
+    "title": "Sear the paneer and let it rest",
+    "meta": "0:30 · Burner 2 · needs you",
+    "text": "Heat 1 tbsp ghee in the small heavy pot on medium. Drain the paneer, pat it dry and sear it in one layer, about 1 minute on each of two sides, until it has light golden patches. Tip it into the marinade and fold gently. Leave it for 15 minutes. Meanwhile, put the saffron in the warm milk, roll the sealing dough and pick the mint."
+   },
+   {
+    "title": "Cook the paneer masala",
+    "meta": "0:45 · Burner 2 · needs you",
+    "text": "At 0:43, turn the yakhni on Burner 3 to high so it's boiling for step 8. In the same pot, heat 1 tbsp ghee on medium. Temper the bay leaf, cardamom and shahi jeera for 30 seconds, until the shahi jeera crackles. Add the slit chillies for 10 seconds. Turn the flame to its lowest before adding the paneer with all its marinade. Fold gently for 5 minutes until the gravy thickens and ghee glistens at the edges. Stir in the cream and turn off."
+   },
+   {
+    "title": "Par-boil the rice in the yakhni",
+    "meta": "0:51 · Burner 3 · needs you",
+    "text": "Drain the rice and add it to the boiling yakhni. Stir once. Boil uncovered 5–6 minutes, testing from minute 4. At 75%, drain immediately without rinsing."
+   },
+   {
+    "title": "Layer and seal",
+    "meta": "0:57 · Hands · needs you",
+    "text": "Put the tawa on Burner 1 on medium to preheat. Spread the paneer gravy flat in its pot. Spoon on half the rice, sprinkle half the saffron milk and half the perfumes, then add the rest of the rice. Finish with the remaining saffron milk in streaks, the remaining birista, the ghee, the rest of the rose and kewra water, and the mint. Seal with the dough rope."
+   },
+   {
+    "title": "Dum",
+    "meta": "1:02 · Burner 2, then Burner 1 · runs by itself",
+    "text": "Keep the pot on high for 2 minutes until it hisses, then move it onto the hot tawa on the lowest flame for 12 minutes. Paneer needs less dum than chicken because nothing inside is raw."
+   },
+   {
+    "title": "Rest and serve",
+    "meta": "1:16 · Off the heat · runs by itself",
+    "text": "Rest sealed for 10 minutes, then open and lift gently from the sides. Garnish with a few cashews (air-fried at 160 °C for 3–4 minutes) and saffron strands. Serve with burani raita; skip spicy sides so the fragrance stays the star."
+   }
+  ],
+  "tips": [
+   {
+    "title": "Air-fryer route",
+    "text": "Air-fry it instead (Part 4) and take it out at an even golden colour, usually after 12–18 minutes. This recipe never uses the frying oil, so you lose nothing and save about 75 ml of oil.",
+    "step": 4
+   },
+   {
+    "title": "Insurance against splitting",
+    "text": "Whisk 1 tsp besan or cornflour into the marinade. It stabilises the curd so it stays smooth when heated.",
+    "step": 5
+   },
+   {
+    "title": "Air-fryer route",
+    "text": "Toss the dried paneer with ½ tsp ghee and air-fry at 200 °C for 5–6 minutes, shaking once, until lightly spotted. It saves most of the searing ghee and leaves Burner 2 free.",
+    "step": 6
+   }
+  ],
+  "batch": false
+ },
+ {
+  "title": "Bengaluru Donne-Style Mushroom Biryani",
+  "page": 29,
+  "chips": {
+   "TOTAL": "about 1 h 5 min",
+   "HANDS-ON": "about 35 min",
+   "BURNERS": "3 of 4",
+   "METHOD": "One-pot absorption"
+  },
+  "intro": "Donne biryani is Bengaluru's own. It comes from the city's old \"military hotels\" (non-vegetarian eateries) and is served in a donne, a cup pressed from dried areca palm leaf. It's different from layered biryani in three ways: the masala is green (mint, coriander, green chilli and whole spices ground raw), the rice is short-grain seeraga samba, and the rice cooks in the masala by absorption rather than being boiled and drained. The mushroom version is a Bengaluru favourite; chicken, mutton and prawn versions are in Part 3.",
+  "ingredients": [
+   {
+    "group": "Green masala (ground raw)",
+    "items": [
+     {
+      "name": "Mint leaves, packed",
+      "note": "",
+      "q": "½ cup"
+     },
+     {
+      "name": "Coriander leaves with tender stems",
+      "note": "",
+      "q": "½ cup"
+     },
+     {
+      "name": "Green chillies",
+      "note": "",
+      "q": "2½"
+     },
+     {
+      "name": "Ginger, 1-inch piece",
+      "note": "",
+      "q": "½"
+     },
+     {
+      "name": "Garlic cloves",
+      "note": "",
+      "q": "3"
+     },
+     {
+      "name": "Cinnamon stick, 1 inch",
+      "note": "",
+      "q": "1"
+     },
+     {
+      "name": "Cloves",
+      "note": "",
+      "q": "2"
+     },
+     {
+      "name": "Green cardamom pods",
+      "note": "",
+      "q": "1"
+     },
+     {
+      "name": "Fennel seeds (saunf)",
+      "note": "",
+      "q": "½ tsp"
+     },
+     {
+      "name": "Black peppercorns",
+      "note": "",
+      "q": "¼ tsp"
+     },
+     {
+      "name": "Poppy seeds (khus khus), optional",
+      "note": "Adds body.",
+      "q": "½ tsp"
+     },
+     {
+      "name": "Stone flower (kalpasi), optional",
+      "note": "The authentic Bengaluru note.",
+      "q": "1 small piece"
+     }
+    ]
+   },
+   {
+    "group": "Base",
+    "items": [
+     {
+      "name": "Oil",
+      "note": "1 tbsp for the mushrooms, 2 tbsp for the base.",
+      "q": "1½ tbsp"
+     },
+     {
+      "name": "Ghee",
+      "note": "",
+      "q": "½ tbsp"
+     },
+     {
+      "name": "Bay leaf",
+      "note": "",
+      "q": "1"
+     },
+     {
+      "name": "Star anise",
+      "note": "",
+      "q": "1"
+     },
+     {
+      "name": "Onion, medium",
+      "note": "Sliced 2–3 mm.",
+      "q": "½"
+     },
+     {
+      "name": "Tomato, small",
+      "note": "Chopped 1 cm.",
+      "q": "½"
+     },
+     {
+      "name": "Turmeric powder",
+      "note": "",
+      "q": "a pinch"
+     },
+     {
+      "name": "Thick curd",
+      "note": "",
+      "q": "1½ tbsp"
+     }
+    ]
+   },
+   {
+    "group": "Mushrooms and rice",
+    "items": [
+     {
+      "name": "Button mushrooms",
+      "note": "Cleaned and quartered (Prep school).",
+      "q": "125 g"
+     },
+     {
+      "name": "Seeraga samba rice",
+      "note": "About 1 cup per 200 g.",
+      "q": "100 g"
+     },
+     {
+      "name": "Hot water",
+      "note": "1 : 1¾ by volume. Basmati: 1 : 1½.",
+      "q": "1 cup"
+     },
+     {
+      "name": "Salt",
+      "note": "Split: pinch, masala, water.",
+      "q": "¾ tsp"
+     },
+     {
+      "name": "Lemon",
+      "note": "Juiced.",
+      "q": "¼"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "title": "Wash and soak the rice",
+    "meta": "0:00 · Hands · needs you",
+    "text": "Wash the seeraga samba gently 3 times and soak it for 30 minutes. It's small and sturdier than basmati, but still handle it gently."
+   },
+   {
+    "title": "Clean the mushrooms and slice the vegetables",
+    "meta": "0:02 · Hands · needs you",
+    "text": "Clean and quarter the mushrooms (Prep school: Mushrooms) and spread them on a cloth to dry. Slice the onion and chop the tomato."
+   },
+   {
+    "title": "Grind the green masala",
+    "meta": "0:08 · Hands · needs you",
+    "text": "Put the whole spices (cinnamon, cloves, cardamom, fennel, pepper, poppy seeds, stone flower) in the mixie jar and grind dry for 10 seconds. Add the mint, coriander, chillies, ginger and garlic with 3–4 tbsp of the coldest water you have. Grind in short bursts to a smooth paste, like a thick chutney."
+   },
+   {
+    "title": "Sear the mushrooms dry",
+    "meta": "0:13 · Burner 2 · check now and then",
+    "text": "Heat 1 tbsp oil in the wide pan on high. Add the mushrooms in one layer and leave them for 2 minutes without stirring. They'll release water; keep cooking on high, tossing now and then, until it has boiled away and the edges are brown, 6–8 minutes in all. Add a pinch of salt only at the end. Set aside. Do step 5 at the same time."
+   },
+   {
+    "title": "Fry the onion base",
+    "meta": "0:13 · Burner 1 · needs you",
+    "text": "Use the heavy 2 L pot; the rice cooks and steams in it. Heat 2 tbsp oil and the ghee on medium. Temper the bay leaf and star anise for 30 seconds. Add the onion and fry about 8 minutes until golden, lighter than birista. At the same time, put the measured water on Burner 3 to heat."
+   },
+   {
+    "title": "Cook the green masala",
+    "meta": "0:21 · Burner 1 · needs you",
+    "text": "Add the tomato and cook 2 minutes until soft. Add all the green paste, the turmeric and ½ tsp of the salt. Cook on medium, stirring, for 6–7 minutes; cover partly if it spatters. Lower the heat, stir in the curd, then add the seared mushrooms and cook 1 minute."
+   },
+   {
+    "title": "Add the rice and water",
+    "meta": "0:31 · Burner 1 · needs you",
+    "text": "Drain the rice completely and add it to the pot. Stir gently for 1 minute so every grain is coated. Pour in the hot water, the rest of the salt and the lemon juice. Boil on high, uncovered, without stirring, for 6–8 minutes, until the water has dropped to the level of the rice and small holes appear across the surface. If one side looks higher, level it once with the back of a spoon."
+   },
+   {
+    "title": "Dum",
+    "meta": "0:39 · Burner 2 · runs by itself",
+    "text": "Put the tawa on Burner 2 to preheat as soon as the mushroom pan is off (about 0:33). Cover the pot tightly, with foil under the lid or a dough seal, move it onto the hot tawa, and cook on the lowest steady flame for 15 minutes. Don't open the lid."
+   },
+   {
+    "title": "Rest and serve",
+    "meta": "0:55 · Off the heat · runs by itself",
+    "text": "Rest covered for 10 minutes, then fluff gently from the sides with a fork. Serve in areca-leaf donnes (they're inexpensive online) with onion raita and a lemon wedge."
+   }
+  ],
+  "tips": [
+   {
+    "title": "Air-fryer route",
+    "text": "Toss the mushrooms with 1 tsp oil and air-fry at 200 °C for 8–10 minutes, shaking twice; salt them afterwards. Burner 2 and your hands are then free for the onion base.",
+    "step": 4
+   }
+  ],
+  "batch": false
+ },
+ {
+  "title": "Chicken + Paneer for Five",
+  "page": 34,
+  "chips": {
+   "TOTAL": "about 2 h",
+   "HANDS-ON": "about 1 h",
+   "BURNERS": "4 of 4",
+   "SERVES": "5 (3 chicken, 2 paneer)"
+  },
+  "intro": "Use this when you're cooking for guests and want both a chicken and a vegetarian biryani on the table at the same time. It uses the techniques from Part 1 and a classic Hyderabadi-style shared base.",
+  "ingredients": [
+   {
+    "group": "Shared marinade (\u0000 chicken, \u0000 paneer)",
+    "items": [
+     {
+      "name": "Thick curd",
+      "note": "Plus 100 g extra for raita.",
+      "q": "300 g"
+     },
+     {
+      "name": "Ginger-garlic paste",
+      "note": "",
+      "q": "2½ tbsp"
+     },
+     {
+      "name": "Kashmiri chilli powder",
+      "note": "",
+      "q": "2 tsp"
+     },
+     {
+      "name": "Turmeric powder",
+      "note": "",
+      "q": "½ tsp"
+     },
+     {
+      "name": "Biryani masala",
+      "note": "",
+      "q": "3 tsp"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "2 tsp"
+     },
+     {
+      "name": "Lemon",
+      "note": "Juiced.",
+      "q": "1"
+     },
+     {
+      "name": "Green chillies, slit",
+      "note": "",
+      "q": "4"
+     },
+     {
+      "name": "Mint and coriander",
+      "note": "Half of each.",
+      "q": "½ cup each"
+     }
+    ]
+   },
+   {
+    "group": "Proteins",
+    "items": [
+     {
+      "name": "Bone-in chicken, biryani cut",
+      "note": "",
+      "q": "500 g"
+     },
+     {
+      "name": "Fresh paneer",
+      "note": "1-inch cubes, warm-soaked.",
+      "q": "250 g"
+     }
+    ]
+   },
+   {
+    "group": "Birista",
+    "items": [
+     {
+      "name": "Large onions",
+      "note": "Sliced 2–3 mm; fry in two batches.",
+      "q": "4"
+     },
+     {
+      "name": "Oil",
+      "note": "",
+      "q": "1 cup"
+     }
+    ]
+   },
+   {
+    "group": "Rice water",
+    "items": [
+     {
+      "name": "Aged basmati rice",
+      "note": "",
+      "q": "500 g"
+     },
+     {
+      "name": "Water",
+      "note": "",
+      "q": "3 L"
+     },
+     {
+      "name": "Salt",
+      "note": "",
+      "q": "1½ tbsp"
+     },
+     {
+      "name": "Bay leaves / cardamom / cloves",
+      "note": "",
+      "q": "2 / 4 / 4"
+     },
+     {
+      "name": "Cinnamon 1-inch / star anise / shahi jeera",
+      "note": "",
+      "q": "1 / 1 / 1 tsp"
+     }
+    ]
+   },
+   {
+    "group": "Layering",
+    "items": [
+     {
+      "name": "Ghee",
+      "note": "",
+      "q": "3 tbsp"
+     },
+     {
+      "name": "Saffron in warm milk",
+      "note": "",
+      "q": "a pinch in ¼ cup"
+     },
+     {
+      "name": "Kewra water",
+      "note": "",
+      "q": "1 tsp"
+     },
+     {
+      "name": "Remaining mint and coriander",
+      "note": "",
+      "q": "½ cup each"
+     },
+     {
+      "name": "Atta, for two seals",
+      "note": "",
+      "q": "½ cup"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "title": "Make the shared marinade; marinate the chicken",
+    "meta": "0:00 · Hands · needs you",
+    "text": "Whisk all the marinade ingredients. Scoop one-third into a small covered bowl for the paneer. Massage the rest into the cleaned, slashed chicken and leave it in a cool, shady spot."
+   },
+   {
+    "title": "Prep",
+    "meta": "0:12 · Hands · needs you",
+    "text": "Slice the onions, cube and soak the paneer, pick and chop the herbs, and start the saffron soaking."
+   },
+   {
+    "title": "Fry the birista in two batches",
+    "meta": "0:20 · Burner 1 · needs you",
+    "text": "Fry two onions at a time in the oil (Master technique 1). Keep the oil."
+   },
+   {
+    "title": "Wash and soak the rice",
+    "meta": "0:40 · Hands · needs you",
+    "text": "Wash and soak all 500 g of basmati."
+   },
+   {
+    "title": "Marinate the paneer; make two dough ropes",
+    "meta": "0:43 · Hands · needs you",
+    "text": "Fold the drained paneer into its third of the marinade. Knead ½ cup atta and roll two ropes, one for each pot."
+   },
+   {
+    "title": "Chicken masala to 85%",
+    "meta": "0:55 · Burner 2 · needs you",
+    "text": "In the larger heavy pot, heat 3 tbsp birista oil, add the chicken with its marinade and a quarter of the birista, crushed. Cook on high 7 minutes, then cover and cook on medium-low about 18 minutes, stirring every 5, until 85% done with thick, clinging gravy."
+   },
+   {
+    "title": "Boil the rice water",
+    "meta": "1:00 · Burner 3 · runs by itself",
+    "text": "3 L water with the salt and whole spices, to a rolling boil."
+   },
+   {
+    "title": "Paneer masala",
+    "meta": "1:05 · Burner 4 · needs you",
+    "text": "In the smaller heavy pot, heat 1 tbsp birista oil, add the paneer with its marinade and a small handful of crushed birista. Cook gently on medium-low for 5–6 minutes until thick. No longer: paneer turns rubbery."
+   },
+   {
+    "title": "Par-boil all the rice to 75%",
+    "meta": "1:12 · Burner 3 · needs you",
+    "text": "Boil 5–7 minutes, testing from minute 4, and drain."
+   },
+   {
+    "title": "Layer both pots",
+    "meta": "1:20 · Hands · needs you",
+    "text": "Preheat the tawa on Burner 1 and a thick steel plate on Burner 3. Put 60% of the rice over the chicken and 40% over the paneer. Split the birista, herbs, saffron milk, ghee and kewra between the two. Seal both."
+   },
+   {
+    "title": "Dum both pots",
+    "meta": "",
+    "text": "Give each pot 2 minutes on high, then move the chicken onto the tawa (Burner 1) and the paneer onto the plate (Burner 3), both on the lowest flame. Paneer: 10 minutes. Chicken: 20 minutes."
+   },
+   {
+    "title": "Rest and serve",
+    "meta": "1:52 · Off the heat · runs by itself",
+    "text": "Rest each pot 10 minutes after its dum ends; a sealed pot stays hot for well over 20 minutes, so the paneer waits happily for the chicken. Serve both together."
+   }
+  ],
+  "tips": [
+   {
+    "title": "Air-fryer helper",
+    "text": "Air-fry one of the four onions (1 tbsp oil, 160 °C, 15–25 minutes, tossing every 5) while the other three fry on the stove. A lighter kadai browns faster and more evenly.",
+    "step": 3
+   }
+  ],
+  "batch": true
+ }
+]
