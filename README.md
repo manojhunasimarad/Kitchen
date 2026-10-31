@@ -1,64 +1,73 @@
 # Kitchen From Zero
 
-A single-page kitchen tracker for two home cookbooks: *Restaurant-Grade Biryani at Home* (Book 1) and *Everyday Indian Meals at Home* (Book 2). It's built for one person cooking in a small Indian kitchen with no fridge or oven, using two stoves, a pressure cooker, an air fryer and a sandwich maker.
+A phone-first kitchen planner for a small kitchen with no fridge or oven: two stoves, a pressure cooker, an air fryer and a sandwich maker. It started as a companion to two home cookbooks, *Restaurant-Grade Biryani at Home* (Book 1) and *Everyday Indian Meals at Home* (Book 2), and adds 32 recipes from other cuisines written for the same kitchen.
 
-It works like a learning track. You move from setting curd to a five-star biryani in stages, tick off each dish as you master it, and the progress bars fill up.
+109 recipes across seven cuisines: Indian, Continental, Italian, Indo-Chinese, Mexican, Middle Eastern and East Asian. Every serving has its nutrition worked out.
 
-![Today's kitchen order and progress meters](docs/screenshots/desktop-today.png)
+![Today on a laptop](docs/screenshots/desktop-today.png)
 
 ## What's in it
 
 | Tab | What it does |
 | --- | --- |
-| **Today** (top of page) | Today's breakfast, lunch and dinner from the default week, laid out like a kitchen order slip. Tick each meal as you eat it to see protein so far, what to buy today and what to prep tonight. |
-| **Track** | 14 stages and 81 tick-offs, from kitchen basics through dals, breads, curries, air fryer and sandwich maker, up to the master biryanis and the hotel finish. A *Next* box takes you to the first thing you haven't ticked. |
-| **This week** | The seven-day default menu (about 88–118 g protein a day), with buying lists and night-before tasks. Ticks reset every Monday. |
-| **Cook now** | Every recipe sorted into *ready now*, *one item short* and *two items short* based on your pantry. Filter by diet, time or appliance. |
-| **Pantry** | 94 staples. Tap an item to mark it Have, Low or Out. |
-| **Recipes** | All 77 recipes from both books, searchable. Each opens with the 1-serving ingredients, method, tips, variations and the book page number. |
-| **Shopping** | Fresh items to buy today and tomorrow, plus anything low or out that a meal later this week needs. Ticking an item you've bought marks it Have in the pantry. *Copy list* puts the list on the clipboard. |
-| **Reference** | The five-star scorecard, pressure-cooker whistle chart, air-fryer settings, what keeps without a fridge, food safety, protein boosters, three flavour-jar blends and ready-mix masala brands. |
+| **Today** | The day as a kitchen order slip, for any of the next 7 days. Choose whether you cook **once, twice or three times** and for **how many people**. Meals are grouped into cooking sessions, with combined quantities, cooking time, missing items and food-safety notes for a kitchen without a fridge. Add, remove, scale or **shuffle** dishes, or let it plan the whole day. Nutrition for the day is shown against your targets. |
+| **Cook** | Tap the ingredients you want to cook with. When one isn't in your pantry, it asks whether to **order it** (opens Swiggy Instamart, Zepto, Blinkit or BigBasket search) or **bring it home**. Dishes from every cuisine that use your picks are listed as ready, one item short or two short. |
+| **Surprise me** | Shuffles a random dish that matches your filters: meal, cuisine, diet, only what you can cook now, 30 minutes or less, not cooked yet. Add it to today with one tap. |
+| **Recipes** | All 109 recipes, searchable and sortable by protein, iron, calories or time. Each recipe has a **servings** control that rescales the ingredients and nutrition, plus "Add to plan" and the full method. |
+| **Pantry** | 108 staples, each marked Have, Low or Out. |
+| **Shopping** | Items your plan needs today and tomorrow (with Order and Bring buttons), what you're bringing home, what's on order, and what's running low. *Copy list* puts the list on the clipboard. |
+| **Track** | 15 stages and 92 tick-offs, from setting curd to the master biryanis and a World kitchen stage. |
+| **Reference** | Daily targets, the five-star scorecard, cooker and air-fryer charts, what keeps without a fridge, food safety, flavour jars and ready-mix masalas. |
+| **Settings** | Default people and cooking sessions, your order app, and daily calorie and protein targets. |
 
 <p>
-  <img src="docs/screenshots/phone-cook-now.png" width="260" alt="Cook now on a phone">
-  <img src="docs/screenshots/phone-pantry.png" width="260" alt="Pantry on a phone">
+  <img src="docs/screenshots/phone-today.png" width="250" alt="Today, cooking once for two">
+  <img src="docs/screenshots/phone-order-or-bring.png" width="250" alt="Order or bring an ingredient">
+  <img src="docs/screenshots/phone-surprise.png" width="250" alt="Surprise me">
 </p>
 
-![A recipe card](docs/screenshots/desktop-recipe.png)
+## Nutrition
+
+Each recipe's nutrition comes from its ingredient weights. The nutrients are energy, protein, carbs, fat, fibre, iron, calcium, magnesium, zinc, potassium, sodium, vitamin C and vitamin B12. The values per 100 g come from USDA FoodData Central and the Indian Food Composition Tables (IFCT 2017), rounded, in `tools/nutrition.py`. Book recipes have their quantities ("½ tbsp", "1 medium onion", "a pinch") converted to grams by rules in the same file. The new recipes give grams directly. Treat all figures as approximate.
+
+Daily targets: calories and protein are yours to set (defaults 2200 kcal and 110 g). The rest use typical adult-male needs from ICMR-NIN 2020, with sodium as an upper limit.
+
+<img src="docs/screenshots/phone-recipe-nutrition.png" width="300" alt="Nutrition for two servings">
 
 ## Using it
 
-Open `index.html` in any browser. It's one self-contained file that works offline. The fonts fall back to system fonts when you're offline.
+**Synced across devices:** published as a Claude artifact, the page saves your plan, ticks, pantry and settings to your Claude account. Open the same link signed in on your phone and laptop and they stay in step.
 
-To put it online with GitHub Pages: in **Settings → Pages**, choose *Deploy from a branch*, then `main` and `/ (root)`. It will be served at `https://<user>.github.io/kitchen/`.
+**Standalone:** open `index.html` in any browser, or turn on GitHub Pages (**Settings → Pages**, deploy from `main`, `/ (root)`). Used this way, everything is saved in that browser only.
 
-**Where progress is saved:** opened as a file or from GitHub Pages, your ticks and pantry are saved in that browser (`localStorage`), so they stay on that device. Published as a Claude artifact, the same page also saves to your Claude account when you're signed in, so progress follows you across devices.
+"Order" only opens the grocery app's search for the item. You place the order in the app, and the item shows as ordered in Shopping until you tick it as arrived.
 
-## Editing recipes and rebuilding
+## Editing and rebuilding
 
 The page is built from data, so you don't edit `index.html` by hand.
 
 ```
-src/template.html       page layout, styles and app logic (the /*DATA*/ marker is replaced at build time)
-data/b2_cards.json      Book 2 recipe cards, extracted from the PDF
-data/b1_masters.json    Book 1 master biryanis, extracted from the PDF
-data/data.json          the combined app data (recipes, pantry, track, week, reference)
-tools/book1_extra.py    Book 1 variations and sides, written out by hand
-tools/build_data.py     merges everything into data/data.json: pantry list, ingredient-matching rules,
-                        track stages, default week and reference tables
-tools/build_page.py     embeds data/data.json into the template and writes index.html
-tools/extract_b1.py     re-extracts Book 1 from the PDF (needs pdfplumber)
-tools/extract_b2.py     re-extracts Book 2 from the PDF (needs pdfplumber)
+src/template.html        layout, styles and app logic (/*DATA*/ is replaced at build time)
+data/b2_cards.json       Book 2 recipe cards, extracted from the PDF
+data/b1_masters.json     Book 1 master biryanis, extracted from the PDF
+data/data.json           the combined app data
+tools/world_recipes.py   the 32 recipes from other cuisines (with grams) and quick add-ons like a glass of milk
+tools/book1_extra.py     Book 1 variations and sides
+tools/nutrition.py       nutrients per 100 g, the gram converter and the ingredient-name rules
+tools/build_data.py      pantry, matching rules, cuisine and course, nutrition, track, default week, targets, order apps
+tools/build_page.py      embeds data/data.json into the template and writes index.html
+tools/extract_b1.py      re-extracts Book 1 from the PDF (needs pdfplumber)
+tools/extract_b2.py      re-extracts Book 2 from the PDF (needs pdfplumber)
 ```
-
-After editing `tools/build_data.py`, `tools/book1_extra.py` or `src/template.html`:
 
 ```bash
 python3 tools/build_data.py
 python3 tools/build_page.py
 ```
 
-To re-extract from the books, put the PDFs in `books/` (it's git-ignored, so the books stay out of the repo) or pass their paths:
+To add a recipe, append an entry to `WORLD` in `tools/world_recipes.py`. Give each ingredient a pantry or nutrition key, a display quantity and its weight in grams, then rebuild.
+
+To re-extract from the books, put the PDFs in `books/` (git-ignored) or pass their paths:
 
 ```bash
 pip install pdfplumber
@@ -66,11 +75,8 @@ python3 tools/extract_b2.py books/Everyday_Indian_Meals_at_Home.pdf
 python3 tools/extract_b1.py books/Restaurant_Grade_Biryani_at_Home.pdf
 ```
 
-### How "Cook now" decides what you can make
-
-`build_data.py` scans each recipe's ingredient names with keyword rules and maps them to pantry keys (for example `chicken`, `curd`, `garam`). Alternatives become *either-or* needs, such as `oil|butter`. Finishing touches like coriander, lemon, cream, kasuri methi and saffron are left out of the strict check, so they never block a dish. Fixes for individual recipes go in `OVERRIDE_NEEDS` and `OVERRIDE_STRICT`.
-
 ## Notes
 
-- Page references (`B1 p. 18`, `B2 p. 37`) point to the PDFs. Protein figures are approximate.
-- Book 1, page 34: the heading of the five-person party biryani is missing its fraction symbols in the PDF. It should read "two-thirds chicken, one-third paneer". The app shows it correctly.
+- Page references (`B1 p. 18`, `B2 p. 37`) point to the PDFs. Protein figures in the app are calculated from ingredients, so they can differ a little from the books.
+- The food-safety notes follow the books: without a fridge, eat cooked food within 2 hours, or pack it piping hot into a preheated insulated box. Never keep cooked rice overnight.
+- Book 1, page 34: the heading of the five-person party biryani is missing its fraction symbols in the PDF. It should read "two-thirds chicken, one-third paneer".

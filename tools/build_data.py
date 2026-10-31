@@ -10,20 +10,23 @@ from book1_extra import B1_EXTRA
 PANTRY = [
     ("atta", "Whole-wheat atta", "Grains and flours", 0), ("rice", "Sona masoori rice", "Grains and flours", 0),
     ("basmati", "Basmati rice", "Grains and flours", 0), ("seeraga", "Seeraga samba rice", "Grains and flours", 2),
-    ("ragi", "Ragi flour", "Grains and flours", 2), ("poha", "Thick poha", "Grains and flours", 0),
+    ("ragi", "Ragi flour", "Grains and flours", 0), ("poha", "Thick poha", "Grains and flours", 0),
     ("rava", "Rava (semolina)", "Grains and flours", 2), ("besan", "Besan", "Grains and flours", 0),
     ("ricefl", "Rice flour", "Grains and flours", 2), ("cornflour", "Cornflour", "Grains and flours", 2),
     ("bread", "Bread", "Grains and flours", 2), ("papad", "Papad", "Grains and flours", 2),
+    ("oats", "Rolled oats", "Grains and flours", 0), ("pasta", "Pasta (penne, spaghetti)", "Grains and flours", 2),
+    ("noodles", "Hakka noodles", "Grains and flours", 2),
     ("toor", "Toor dal", "Dals, beans and nuts", 0), ("moongdal", "Split yellow moong dal", "Dals, beans and nuts", 0),
     ("wmoong", "Whole green moong", "Dals, beans and nuts", 0), ("chanadal", "Chana dal", "Dals, beans and nuts", 0),
     ("uraddal", "Urad dal", "Dals, beans and nuts", 0), ("rajma", "Rajma", "Dals, beans and nuts", 2),
     ("kchana", "Kabuli chana", "Dals, beans and nuts", 2), ("soya", "Soya chunks", "Dals, beans and nuts", 0),
     ("rchana", "Roasted chana (putani)", "Dals, beans and nuts", 0), ("peanuts", "Raw peanuts", "Dals, beans and nuts", 0),
-    ("cashews", "Cashews", "Dals, beans and nuts", 2), ("makhana", "Makhana", "Dals, beans and nuts", 2),
+    ("cashews", "Cashews", "Dals, beans and nuts", 0), ("makhana", "Makhana", "Dals, beans and nuts", 2),
     ("flax", "Flaxseeds", "Dals, beans and nuts", 2), ("sesame", "Sesame seeds", "Dals, beans and nuts", 2),
+    ("peanutbutter", "Peanut butter", "Dals, beans and nuts", 0),
     ("eggs", "Eggs", "Dairy and eggs", 0), ("milk", "Milk", "Dairy and eggs", 0), ("curd", "Curd", "Dairy and eggs", 0),
-    ("paneer", "Paneer", "Dairy and eggs", 2), ("ghee", "Ghee", "Dairy and eggs", 0), ("butter", "Butter", "Dairy and eggs", 2),
-    ("cream", "Fresh cream", "Dairy and eggs", 2),
+    ("paneer", "Paneer", "Dairy and eggs", 2), ("ghee", "Ghee", "Dairy and eggs", 0), ("butter", "Butter", "Dairy and eggs", 0),
+    ("cream", "Fresh cream", "Dairy and eggs", 2), ("cheese", "Cheese (mozzarella or processed)", "Dairy and eggs", 2),
     ("chicken", "Chicken, bone-in", "Fresh protein (buy on the day)", 2),
     ("chickenbl", "Chicken, boneless", "Fresh protein (buy on the day)", 2),
     ("mince", "Chicken mince", "Fresh protein (buy on the day)", 2), ("fish", "Fish", "Fresh protein (buy on the day)", 2),
@@ -42,6 +45,8 @@ PANTRY = [
     ("coconut", "Coconut (fresh or desiccated)", "Vegetables and herbs", 2),
     ("springonion", "Spring onions", "Vegetables and herbs", 2),
     ("longchilli", "Long mild chillies (bajji)", "Vegetables and herbs", 2),
+    ("tulsi", "Tulsi (holy basil)", "Vegetables and herbs", 2), ("sweetcorn", "Sweet corn", "Vegetables and herbs", 2),
+    ("banana", "Bananas", "Vegetables and herbs", 2),
     ("turmeric", "Turmeric", "Spices and masalas", 0), ("chilli", "Red chilli powder", "Spices and masalas", 0),
     ("kashmiri", "Kashmiri chilli powder", "Spices and masalas", 0),
     ("coriander_p", "Coriander powder or seeds", "Spices and masalas", 0),
@@ -57,12 +62,28 @@ PANTRY = [
     ("bbbpowder", "Bisi bele bath powder", "Spices and masalas", 2), ("cholemasala", "Chole masala", "Spices and masalas", 2),
     ("saffron", "Saffron", "Spices and masalas", 2), ("kewra", "Kewra or rose water", "Spices and masalas", 2),
     ("tamarind", "Tamarind", "Spices and masalas", 0), ("jaggery", "Jaggery", "Spices and masalas", 0),
-    ("sugar", "Sugar", "Spices and masalas", 0), ("soysauce", "Soy sauce and vinegar", "Spices and masalas", 2),
-    ("coconutmilk", "Coconut milk (tetra pack)", "Spices and masalas", 2), ("oil", "Cooking oil", "Spices and masalas", 0),
+    ("sugar", "Sugar", "Spices and masalas", 0), ("oil", "Cooking oil", "Spices and masalas", 0),
+    ("honey", "Honey", "Sauces and packets", 0), ("soysauce", "Soy sauce", "Sauces and packets", 2),
+    ("vinegar", "Vinegar", "Sauces and packets", 2), ("chillisauce", "Red chilli sauce", "Sauces and packets", 2),
+    ("ketchup", "Tomato ketchup", "Sauces and packets", 2), ("herbs", "Oregano or mixed herbs", "Sauces and packets", 2),
+    ("currypaste", "Thai red curry paste", "Sauces and packets", 2),
+    ("coconutmilk", "Coconut milk (tetra pack)", "Sauces and packets", 2),
 ]
 KEYS = {k for k, *_ in PANTRY}
 SOFT = {"coriander", "cream", "kasuri", "chaat", "sugar", "lemon", "saffron", "kewra", "springonion", "cashews",
-        "redchilli", "mint"}
+        "redchilli", "mint", "herbs", "honey"}
+# what to type into a grocery app's search box, where the label isn't a good search
+BUY = {"atta": "whole wheat atta", "rice": "sona masoori rice", "chicken": "chicken curry cut",
+       "chickenbl": "chicken breast boneless", "mince": "chicken keema", "fish": "seer fish", "sambarveg": "drumstick",
+       "coconut": "grated coconut", "wholespice": "whole garam masala", "coriander_p": "coriander powder",
+       "cumin_p": "roasted jeera powder", "herbs": "oregano seasoning", "currypaste": "thai red curry paste",
+       "chillisauce": "red chilli sauce", "cheese": "mozzarella cheese", "pasta": "penne pasta",
+       "noodles": "hakka noodles", "tulsi": "tulsi leaves", "longchilli": "bajji chilli", "coconutmilk": "coconut milk",
+       "seeraga": "seeraga samba rice", "rchana": "roasted chana", "wmoong": "green moong whole",
+       "moongdal": "moong dal", "kchana": "kabuli chana", "redchilli": "dry red chilli", "kewra": "kewra water",
+       "bbbpowder": "bisi bele bath powder", "oil": "sunflower oil", "curryleaves": "curry leaves",
+       "coriander": "coriander leaves", "chilli": "red chilli powder", "kashmiri": "kashmiri chilli powder",
+       "cumin": "jeera", "methi_s": "methi seeds", "hing": "hing", "peanuts": "groundnut"}
 
 RULES = [  # (regex on lowercased ingredient name, keys); every matching rule contributes
     (r"ginger-garlic", ["ginger", "garlic"]), (r"\bginger\b(?!-)", ["ginger"]), (r"\bgarlic\b", ["garlic"]),
@@ -99,7 +120,7 @@ RULES = [  # (regex on lowercased ingredient name, keys); every matching rule co
     (r"bay leaf|cinnamon|cloves(?! ,)|cardamom|star anise|mace", ["wholespice"]), (r"saffron", ["saffron"]),
     (r"kewra|rose water", ["kewra"]), (r"sambar powder", ["sambarpowder"]), (r"bisi bele bath powder", ["bbbpowder"]),
     (r"chole masala", ["cholemasala"]), (r"tamarind", ["tamarind"]), (r"jaggery", ["jaggery"]),
-    (r"\bsugar\b", ["sugar"]), (r"soy sauce|vinegar", ["soysauce"]), (r"\boil\b(?! for frying)|oil for frying", ["oil"]),
+    (r"\bsugar\b", ["sugar"]), (r"soy sauce", ["soysauce"]), (r"vinegar", ["vinegar"]), (r"\boil\b(?! for frying)|oil for frying", ["oil"]),
 ]
 # garlic cloves "Garlic cloves" -> garlic only; avoid "cloves" whole spice matching it
 SKIP_GROUP = re.compile(r"\(optional\)|^to serve|^or ", re.I)
@@ -298,6 +319,123 @@ for r in recipes:
         tags.append("lunchbox")
     r["tags"] = tags
 
+# ------------------------------------------------------------------ cuisine, course and nutrition (book recipes)
+from nutrition import recipe_total, rounded, scaled, add, FIELDS  # noqa: E402
+from world_recipes import WORLD, EXTRAS  # noqa: E402
+
+COURSE_BY_CHAPTER = {"Breads and rice": "side", "Breakfasts": "breakfast", "Dals and beans": "main",
+                     "Vegetables": "side", "Paneer, eggs and soya": "main", "Chicken, fish and mutton": "main",
+                     "Air fryer and sandwich maker": "main", "Chutneys, podis and raitas": "side",
+                     "Master biryanis": "main", "Biryani variations": "main", "Biryani sides": "side",
+                     "Everyday rice": "side"}
+COURSE = {"paratha-plain-or-stuffed": "breakfast", "ragi-rotti": "breakfast", "air-fryer-boiled-eggs": "breakfast",
+          "air-fryer-hara-bhara-kabab": "snack", "air-fryer-soya-cutlets": "snack",
+          "masala-peanuts-roasted-chana-and-makhana": "snack", "egg-bhurji-sandwich": "breakfast",
+          "paneer-bhurji-sandwich": "breakfast", "paneer-tikka-sandwich": "breakfast",
+          "omelette-pockets-no-bread": "breakfast", "bombay-veg-masala-toast": "breakfast",
+          "phulka-toastie": "breakfast", "air-fryer-chicken-65": "snack", "shami-kebab": "snack",
+          "double-ka-meetha": "sweet", "veg-pulao": "main", "chitranna": "main"}
+REGION = {"sambar": "South Indian", "bisi-bele-bath": "Karnataka", "palya": "Karnataka", "ragi-rotti": "Karnataka",
+          "chitranna": "Karnataka", "coastal-fish-curry": "Coastal", "rajma-masala": "North Indian",
+          "chole": "North Indian", "butter-chicken": "North Indian", "paneer-butter-masala": "North Indian",
+          "palak-paneer": "North Indian", "kanda-poha-with-peanuts": "Maharashtrian",
+          "egg-fried-rice": "Indo-Chinese style"}
+YIELD = {"masala-peanuts-roasted-chana-and-makhana": 8, "shami-kebab": 4, "mirchi-ka-salan": 2.5,
+         "double-ka-meetha": 2.5, "party-chicken-paneer-biryani": 5, "green-chutney-mint-coriander": 4,
+         "coconut-chutney": 4, "peanut-chutney": 4, "tomato-onion-chutney": 4, "shenga-chutney-pudi-peanut": 16,
+         "agasi-chutney-pudi-flaxseed": 16, "gunpowder-idli-podi": 16}
+SERVING_LABEL = {"green-chutney-mint-coriander": "2 tbsp", "coconut-chutney": "2 tbsp", "peanut-chutney": "2 tbsp",
+                 "tomato-onion-chutney": "2 tbsp", "shenga-chutney-pudi-peanut": "1 tbsp",
+                 "agasi-chutney-pudi-flaxseed": "1 tbsp", "gunpowder-idli-podi": "1 tbsp",
+                 "masala-peanuts-roasted-chana-and-makhana": "30 g", "party-chicken-paneer-biryani": "1 plate",
+                 "shami-kebab": "2 kebabs", "mirchi-ka-salan": "1 side portion", "double-ka-meetha": "1 bowl"}
+# sandwiches, chutneys and podis list ingredients as sentences: their weights are written out here
+PLAIN_NUTR = {
+    "egg-bhurji-sandwich": [("bread", 56), ("eggs", 75), ("onion", 25), ("tomato", 25), ("greenchilli", 1.5),
+                            ("oil", 2.5), ("butter", 2.4), ("salt", 0.8), ("coriander", 2)],
+    "paneer-bhurji-sandwich": [("bread", 56), ("paneer", 50), ("onion", 20), ("tomato", 20), ("oil", 2),
+                               ("butter", 2.4), ("salt", 0.6), ("turmeric", 0.3), ("garam", 0.3), ("coriander", 3)],
+    "paneer-tikka-sandwich": [("bread", 56), ("paneer", 50), ("curd", 15), ("onion", 15), ("butter", 2.4),
+                              ("kashmiri", 0.6), ("garam", 0.3), ("salt", 0.6), ("coriander", 3), ("mint", 1)],
+    "omelette-pockets-no-bread": [("eggs", 100), ("onion", 10), ("tomato", 10), ("coriander", 2), ("chilli", 0.3),
+                                  ("turmeric", 0.3), ("salt", 0.6), ("oil", 1.2)],
+    "bombay-veg-masala-toast": [("bread", 56), ("potato", 70), ("cucumber", 25), ("tomato", 25), ("onion", 15),
+                                ("coriander", 5), ("mint", 3), ("butter", 2.4), ("chaat", 0.5), ("salt", 0.6)],
+    "phulka-toastie": [("atta", 30), ("paneer", 25), ("onion", 10), ("tomato", 10), ("ghee", 1.2), ("coriander", 3)],
+    "green-chutney-mint-coriander": [("coriander", 16), ("mint", 8), ("greenchilli", 6), ("ginger", 3),
+                                     ("lemon", 15), ("rchana", 9), ("salt", 1.5)],
+    "coconut-chutney": [("coconut", 40), ("rchana", 18), ("greenchilli", 4.5), ("ginger", 3), ("salt", 1.5),
+                        ("oil", 4.5), ("mustard", 1), ("uraddal", 2), ("curryleaves", 1), ("redchilli", 0.5)],
+    "peanut-chutney": [("peanuts", 36), ("redchilli", 1), ("garlic", 8), ("tamarind", 3), ("salt", 1.5)],
+    "tomato-onion-chutney": [("oil", 4.5), ("chanadal", 4), ("uraddal", 4), ("redchilli", 1), ("onion", 110),
+                             ("tomato", 200), ("garlic", 8), ("tamarind", 2), ("salt", 2)],
+    "shenga-chutney-pudi-peanut": [("peanuts", 100), ("redchilli", 2.5), ("garlic", 16), ("cumin", 2.1), ("salt", 4.5)],
+    "agasi-chutney-pudi-flaxseed": [("flax", 100), ("redchilli", 2), ("garlic", 16), ("curryleaves", 1),
+                                    ("cumin", 2.1), ("tamarind", 3), ("salt", 4.5)],
+    "gunpowder-idli-podi": [("uraddal", 50), ("chanadal", 50), ("redchilli", 4), ("sesame", 18), ("hing", 0.5),
+                            ("salt", 6)],
+}
+for r in recipes:
+    r["cuisine"] = "Indian"
+    r["region"] = REGION.get(r["id"], "")
+    r["course"] = COURSE.get(r["id"], COURSE_BY_CHAPTER[r["chapter"]])
+    r["yield"] = YIELD.get(r["id"], 1)
+    if r["id"] in PLAIN_NUTR:
+        tot = {}
+        for k, g in PLAIN_NUTR[r["id"]]:
+            add(tot, k, g)
+    else:
+        tot, missed = recipe_total(r["ingredients"])
+        assert not missed, (r["id"], missed)
+    per = rounded(scaled(tot, 1 / r["yield"]))
+    r["nutr"] = per
+    r["servingLabel"] = SERVING_LABEL.get(r["id"], r.get("serving", ""))
+
+# ------------------------------------------------------------------ world recipes
+SAND = re.compile(r"sandwich maker", re.I)
+for w in WORLD:
+    groups, needs, tot = [], [], {}
+    for gname, items in w["ing"]:
+        rows = []
+        for it in items:
+            rows.append({"name": it["name"], "note": it["note"] + (" (optional)" if it["opt"] and it["note"] else
+                                                                   ("optional" if it["opt"] else "")), "q": it["q"]})
+            if it["key"] not in ("salt", "water"):
+                add(tot, it["key"], it["g"])
+            elif it["key"] == "salt":
+                add(tot, "salt", it["g"] * (0.1 if "for the water" in it["name"] else 1))
+            if it["key"] in KEYS and not it["opt"] and it["key"] not in needs:
+                needs.append(it["key"])
+        groups.append({"group": gname, "items": rows})
+    y = w.get("yield_", 1)
+    uses = w["uses"].lower()
+    tags = []
+    if "air fryer" in uses:
+        tags.append("airfryer-option" if re.search(r"optional|air fryer or|or air fryer", uses) else "airfryer")
+    if SAND.search(uses):
+        tags.append("sandwich-option" if " or " in uses else "sandwich")
+    if "cooker" in uses:
+        tags.append("cooker")
+    mins = minutes(w["time"])
+    if mins and mins <= 20 and "soak" not in w["time"]:
+        tags.append("quick")
+    r = {"id": w["id"], "book": 0, "page": None, "chapter": w["cuisine"], "title": w["title"], "sub": "",
+         "cuisine": w["cuisine"], "region": "", "course": w["course"], "diet": w["diet"], "time": w["time"],
+         "minutes": mins, "serving": w["serving"], "servingLabel": w["serving"], "uses": w["uses"],
+         "keeps": w["keeps"], "oil": "", "intro": w["intro"], "ingredients": groups, "steps": w["steps"],
+         "tips": [{"title": a, "text": b} for a, b in w.get("tips", [])], "var": w.get("var", []), "cues": [],
+         "why": "", "serve": w.get("serve", ""), "note": "", "batch": False, "yield": y, "needs": needs,
+         "tags": tags, "nutr": rounded(scaled(tot, 1 / y))}
+    r["strict"] = [n for n in needs if n not in SOFT]
+    recipes.append(r)
+
+for r in recipes:
+    r["proteinNum"] = round(r["nutr"]["p"])
+    r["protein"] = f'~{round(r["nutr"]["p"])} g'
+    # dishes that stay good packed hot in an insulated box (curries, dals, rice one-pots)
+    r["holds"] = r["course"] == "main" and not ({"airfryer", "sandwich"} & set(r["tags"])) and \
+        not re.search(r"salad|noodle|pasta|spaghetti|penne|omelette|pizza|wrap|quesadilla|toast", r["title"], re.I)
+
 ids = [r["id"] for r in recipes]
 assert len(ids) == len(set(ids)), [i for i in ids if ids.count(i) > 1]
 RID = set(ids)
@@ -358,8 +496,8 @@ TRACK = [
               row("gunpowder-idli-podi"), row("raitas-and-kachumber")]},
     {"title": "Run the default week", "when": "Week 8",
      "note": "Two weeks without changing anything: the sessions become automatic.",
-     "rows": [row(key="week1", label="Cook every meal of one default week", ref="This week tab"),
-              row(key="week2", label="Cook a second default week, same plan", ref="This week tab"),
+     "rows": [row(key="week1", label="Cook every meal of one default week", ref="Today tab"),
+              row(key="week2", label="Cook a second default week, same plan", ref="Today tab"),
               row(key="morningA", label="Morning A in 40 minutes or less", ref="Book 2 p. 19"),
               row(key="dinner1", label="Dinner 1 in 40 minutes or less", ref="Book 2 p. 22")]},
     {"title": "Biryani foundations", "when": "Week 9",
@@ -381,6 +519,11 @@ TRACK = [
               row("lean-chicken-donne"), row("shami-kebab"),
               row(key="dhungar", label="Charcoal smoke finish (dhungar)", ref="Book 1 p. 57"),
               row("party-chicken-paneer-biryani")]},
+    {"title": "World kitchen", "when": "Any time",
+     "note": "Same knife, tawa and air-fryer skills, new flavours. Take these on once the Indian basics feel easy.",
+     "rows": [row("aglio-olio-chicken"), row("white-sauce-pasta-chicken"), row("penne-arrabbiata-paneer"),
+              row("chilli-paneer"), row("hakka-noodles-egg"), row("shakshuka"), row("chicken-shawarma-wrap"),
+              row("hummus"), row("thai-red-curry-chicken"), row("teriyaki-chicken-bowl"), row("chicken-quesadilla")]},
 ]
 
 # ------------------------------------------------------------------ the default week
@@ -425,6 +568,49 @@ WEEK = [
 for d in WEEK:
     for m in d["meals"]:
         assert m[3] in RID, m
+
+# the same week as dishes, so the day plan can add up nutrition: [recipe or extra id, servings]
+WEEK_DISHES = {
+    "Mon": {"b": [["moong-dal-chilla", 1], ["air-fryer-boiled-eggs", 1]],
+            "l": [["bisi-bele-bath", 1], ["x-curd", 1]],
+            "d": [["home-style-chicken-curry", 1], ["phulka-soft-chapati", 1], ["raitas-and-kachumber", 1]]},
+    "Tue": {"b": [["egg-bhurji-sandwich", 2]], "l": [["soya-pulao", 1], ["raitas-and-kachumber", 1]],
+            "d": [["dal-tadka", 1], ["rice-cooked-right", 1], ["palya", 1], ["x-curd", 1]]},
+    "Wed": {"b": [["kanda-poha-with-peanuts", 1], ["x-milk", 1]], "l": [["egg-fried-rice", 1]],
+            "d": [["palak-paneer", 1], ["phulka-soft-chapati", 1]]},
+    "Thu": {"b": [["moong-dal-chilla", 1], ["air-fryer-boiled-eggs", 1]],
+            "l": [["bisi-bele-bath", 1], ["x-curd", 1]],
+            "d": [["air-fryer-tandoori-chicken", 1], ["moong-dal", 1], ["raitas-and-kachumber", 1]]},
+    "Fri": {"b": [["egg-bhurji-sandwich", 2]], "l": [["soya-pulao", 1], ["raitas-and-kachumber", 1]],
+            "d": [["chole", 1], ["phulka-soft-chapati", 1], ["raitas-and-kachumber", 1]]},
+    "Sat": {"b": [["paratha-plain-or-stuffed", 1], ["x-curd", 1]],
+            "l": [["coastal-fish-curry", 1], ["rice-cooked-right", 1], ["palya", 1]],
+            "d": [["egg-curry", 1], ["phulka-soft-chapati", 1]]},
+    "Sun": {"b": [["sprout-chaat", 1], ["air-fryer-boiled-eggs", 1]],
+            "l": [["andhra-chicken-biryani", 1], ["burani-raita", 1]],
+            "d": [["air-fryer-paneer-tikka", 1], ["phulka-soft-chapati", 1], ["raitas-and-kachumber", 1]]},
+}
+XID = {x["id"] for x in EXTRAS}
+for d in WEEK:
+    d["dishes"] = WEEK_DISHES[d["day"]]
+    for slot in d["dishes"].values():
+        for rid, _ in slot:
+            assert rid in RID or rid in XID, rid
+extras = []
+for x in EXTRAS:
+    tot = {}
+    for k, g in x["items"]:
+        add(tot, k, g)
+    extras.append({"id": x["id"], "title": x["title"], "nutr": rounded(tot), "keys": [k for k, _ in x["items"]]})
+
+TARGETS = {"kcal": 2200, "p": 110, "c": 260, "f": 65, "fib": 30, "fe": 19, "ca": 1000, "mg": 440, "zn": 17,
+           "k": 3500, "na": 2000, "vc": 80, "b12": 2.5}
+ORDER_APPS = [
+    {"key": "instamart", "label": "Swiggy Instamart", "url": "https://www.swiggy.com/instamart/search?custom_back=true&query="},
+    {"key": "zepto", "label": "Zepto", "url": "https://www.zeptonow.com/search?query="},
+    {"key": "blinkit", "label": "Blinkit", "url": "https://blinkit.com/s/?q="},
+    {"key": "bigbasket", "label": "BigBasket", "url": "https://www.bigbasket.com/ps/?q="},
+]
 
 # ------------------------------------------------------------------ reference
 REFERENCE = {
@@ -483,11 +669,14 @@ REFERENCE = {
                "Steam sprouts 4–5 minutes before eating."],
 }
 
-data = {"recipes": recipes, "pantry": [{"key": k, "label": l, "group": g, "def": d} for k, l, g, d in PANTRY],
-        "soft": sorted(SOFT), "track": TRACK, "week": WEEK, "ref": REFERENCE}
+data = {"recipes": recipes,
+        "pantry": [{"key": k, "label": l, "group": g, "def": d, "buy": BUY.get(k, re.sub(r"\s*\(.*", "", l).lower())}
+                   for k, l, g, d in PANTRY],
+        "soft": sorted(SOFT), "track": TRACK, "week": WEEK, "ref": REFERENCE, "extras": extras,
+        "targets": TARGETS, "apps": ORDER_APPS}
 json.dump(data, open(ROOT / "data" / "data.json", "w"), ensure_ascii=False, separators=(",", ":"))
 print(len(recipes), "recipes;", sum(len(s["rows"]) for s in TRACK), "track rows;",
       round(len(json.dumps(data, ensure_ascii=False)) / 1024), "KB")
 for r in recipes:
-    print(f'{r["book"]} {r["page"]:3d} {r["diet"]:6s} {str(r["minutes"]):4s} {r["protein"]:>16s} '
+    print(f'{r["book"]} {r["page"] or 0:3d} {r["cuisine"][:6]:6s} {r["course"][:5]:5s} {r["diet"]:6s} {str(r["minutes"]):4s} {r["protein"]:>6s} {r["nutr"]["kcal"]:5d}kcal fe{r["nutr"]["fe"]:4.1f} '
           f'{r["id"][:34]:34s} {",".join(r["tags"]):26s} {" ".join(r["strict"])}')
