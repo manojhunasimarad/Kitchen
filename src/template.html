@@ -271,6 +271,33 @@ ul.plain { margin: 0; padding-left: 20px; display: flex; flex-direction: column;
 .pick-list li button { width: 100%; display: flex; justify-content: space-between; gap: 10px; text-align: left; padding: 10px 4px; background: none; border: 0; border-bottom: 1px solid var(--line); cursor: pointer; }
 .pick-list li button span:last-child { font: 600 12px var(--font-mono); color: var(--muted); white-space: nowrap; }
 footer { color: var(--muted); font-size: 13px; max-width: 72ch; }
+.card2 { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+.fgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+.fgrid label { display: flex; flex-direction: column; gap: 4px; font-size: 14px; font-weight: 700; min-width: 0; }
+.fgrid label span { font-weight: 400; font-size: 12px; color: var(--muted); }
+.fgrid input, .fgrid select { width: 100%; }
+input[type="text"], input[type="date"] { font: 400 15px var(--font-body); color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; min-height: 38px; max-width: 100%; }
+.stats { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; }
+.stat { border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.stat b { font: 800 22px/1.1 var(--font-display); }
+.stat span { font-size: 12px; color: var(--muted); }
+.stat em { font-style: normal; font-size: 12px; font-weight: 700; }
+.good { color: var(--done); } .warn { color: var(--low); } .bad { color: var(--out); }
+.labs { display: flex; flex-direction: column; }
+.lab { display: grid; grid-template-columns: 1fr 96px; gap: 4px 10px; align-items: center; padding: 9px 0; border-bottom: 1px solid var(--line); }
+.lab .nm { font-weight: 700; font-size: 15px; }
+.lab .rg { font-size: 12px; color: var(--muted); }
+.lab input { width: 96px; }
+.lab .st { grid-column: 1 / -1; font-size: 13px; }
+.lab details { grid-column: 1 / -1; font-size: 13px; color: var(--muted); }
+.lab details .toolbar { margin-top: 6px; }
+.lab details input { width: 90px; }
+.adv { border-left: 4px solid var(--low); padding: 10px 12px; background: var(--surface); border-radius: 0 8px 8px 0; display: flex; flex-direction: column; gap: 6px; }
+.adv.bad { border-left-color: var(--out); color: inherit; }
+.adv ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 3px; }
+.adv .recs { display: flex; flex-wrap: wrap; gap: 6px; }
+.spark { width: 100%; max-width: 360px; height: 70px; }
+.disclaim { margin: 0; font-size: 13px; color: var(--muted); padding: 8px 12px; border: 1px dashed var(--line); border-radius: 8px; }
 @media (max-width: 600px) {
   dialog#dlg { width: 100%; max-width: 100%; height: 100%; max-height: 100%; margin: 0; border-radius: 0; border: 0; }
   .lede { font-size: 15px; }
@@ -301,6 +328,7 @@ footer { color: var(--muted); font-size: 13px; max-width: 72ch; }
     <button class="tab" role="tab" type="button" id="tab-today" aria-controls="panel-today">Today</button>
     <button class="tab" role="tab" type="button" id="tab-cook" aria-controls="panel-cook">Cook</button>
     <button class="tab" role="tab" type="button" id="tab-surprise" aria-controls="panel-surprise">Surprise me</button>
+    <button class="tab" role="tab" type="button" id="tab-me" aria-controls="panel-me">Me</button>
     <button class="tab" role="tab" type="button" id="tab-recipes" aria-controls="panel-recipes">Recipes</button>
     <button class="tab" role="tab" type="button" id="tab-pantry" aria-controls="panel-pantry">Pantry</button>
     <button class="tab" role="tab" type="button" id="tab-shop" aria-controls="panel-shop">Shopping</button>
@@ -358,6 +386,8 @@ footer { color: var(--muted); font-size: 13px; max-width: 72ch; }
     <div class="actbar" id="s-acts"></div>
     <div class="sec" id="s-hist-wrap" hidden><span class="lbl-s">Earlier picks</span><div class="hist" id="s-hist"></div></div>
   </section>
+
+  <section class="panel" id="panel-me" role="tabpanel" aria-labelledby="tab-me" hidden><div class="refs" id="me"></div></section>
 
   <section class="panel" id="panel-recipes" role="tabpanel" aria-labelledby="tab-recipes" hidden>
     <div class="toolbar">
@@ -418,7 +448,7 @@ const D = /*DATA*/;
 const R = {}; D.recipes.forEach(r => { R[r.id] = r; });
 const X = {}; D.extras.forEach(x => { X[x.id] = x; });
 const PDEF = {}; D.pantry.forEach(p => { PDEF[p.key] = p; });
-const TABS = ["today", "cook", "surprise", "recipes", "pantry", "shop", "track", "ref", "setup"];
+const TABS = ["today", "cook", "surprise", "me", "recipes", "pantry", "shop", "track", "ref", "setup"];
 const DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 const SLOT = { b: "Breakfast", l: "Lunch", d: "Dinner" }, SLOTS = ["b", "l", "d"];
 const CUIS = []; D.recipes.forEach(r => { if (!CUIS.includes(r.cuisine)) CUIS.push(r.cuisine); });
@@ -453,7 +483,7 @@ const todayStr = () => ymd(new Date());
 
 /* ---------- state ---------- */
 const SETDEF = { people: 1, sessions: 2, app: "instamart", kcal: D.targets.kcal, p: D.targets.p };
-const KEYS = ["done", "week", "pantry", "days", "set", "plan", "basket", "pick"];
+const KEYS = ["done", "week", "pantry", "days", "set", "plan", "basket", "pick", "me", "wlog", "labs"];
 function blank() { const s = { v: 2 }; KEYS.forEach(k => { s[k] = {}; }); return s; }
 function norm(x) {
   const s = blank();
@@ -558,7 +588,31 @@ function dayNutr(ds, onlyEaten) {
   SLOTS.forEach(sl => { if (onlyEaten && !eaten(ds, sl)) return; (p.m[sl] || []).forEach(([id, k]) => { if (dish(id)) parts.push([dish(id).nutr, k]); }); });
   return nsum(parts);
 }
-const target = k => (k === "kcal" ? +setv("kcal") : k === "p" ? +setv("p") : D.targets[k]);
+const ACT = [["sed", "Mostly sitting, little exercise", 1.2], ["light", "Light exercise 1–3 days a week", 1.375], ["mod", "Moderate exercise 3–5 days a week", 1.55], ["very", "Hard exercise 6–7 days a week", 1.725]];
+const GOALS = [["lose", "Lose fat", 0.8, 2.0], ["recomp", "Lose fat and build muscle", 0.9, 1.8], ["maintain", "Stay where I am", 1.0, 1.2], ["gain", "Build muscle", 1.1, 1.8]];
+const profOk = () => { const m = S.me; return !!(m && (m.sex === "m" || m.sex === "f") && m.age > 0 && m.h > 0 && m.w > 0); };
+function calc() {
+  if (!profOk()) return null;
+  const m = S.me, hM = m.h / 100, bmi = m.w / (hM * hM), female = m.sex === "f", older = m.age >= 50;
+  const bmr = 10 * m.w + 6.25 * m.h - 5 * m.age + (female ? -161 : 5);
+  const act = ACT.find(a => a[0] === m.act) || ACT[0], g = GOALS.find(x => x[0] === m.goal) || GOALS[1];
+  const tdee = bmr * act[2];
+  const kcal = Math.max(Math.round(tdee * g[2] / 10) * 10, Math.round(bmr / 10) * 10);
+  const refW = Math.min(m.w, 24.9 * hM * hM);
+  const pk = g[0] === "maintain" && (m.train || 0) >= 2 ? 1.6 : g[3];
+  const p = Math.round(refW * pk / 5) * 5, f = Math.round(kcal * 0.25 / 9);
+  const c = Math.max(0, Math.round((kcal - p * 4 - f * 9) / 4)), fib = Math.round(kcal / 1000 * 14);
+  const micro = { fe: female && !older ? 29 : 19, ca: female && older ? 1200 : 1000, mg: female ? 370 : 440, zn: female ? 13.2 : 17, k: 3510, na: 2000, vc: female ? 65 : 80, b12: 2.5 };
+  const bmiCat = bmi < 18.5 ? ["Underweight", "warn"] : bmi < 23 ? ["Healthy range", "good"] : bmi < 25 ? ["Overweight (Indian cut-off 23–24.9)", "warn"] : ["Obesity range (Indian cut-off 25+)", "bad"];
+  return { bmi, bmiCat, bmr, tdee, kcal, p, pk, refW, f, c, fib, micro, water: Math.round(m.w * 0.035 * 10) / 10, weekly: (tdee - kcal) * 7 / 7700,
+    lo: 18.5 * hM * hM, hi: 22.9 * hM * hM, whtr: m.waist ? m.waist / m.h : null, waistHigh: m.waist ? m.waist >= (female ? 80 : 90) : null, act, g };
+}
+function target(k) {
+  const cc = !S.set.manual && calc();
+  if (cc) { if (["kcal", "p", "c", "f", "fib"].includes(k)) return cc[k]; if (k in cc.micro) return cc.micro[k]; }
+  return k === "kcal" ? +setv("kcal") : k === "p" ? +setv("p") : D.targets[k];
+}
+const targetSource = () => (!S.set.manual && profOk() ? "your profile (Me)" : S.set.manual ? "your own targets (Settings)" : "default targets: fill in Me to make them yours");
 
 /* ---------- formatting ---------- */
 const refTxt = r => (r.book ? "B" + r.book + " p. " + r.page : r.cuisine);
@@ -658,7 +712,7 @@ function renderToday() {
       (miss.length ? '<div class="miss"><span class="small">Missing:</span>' + missChips(miss) + "</div>" : "") + "</div>";
   }).join("");
   const planned = dayNutr(selDate), eatenN = dayNutr(selDate, true);
-  $("#kot").innerHTML = '<div class="kot-head"><span>Kitchen order · ' + esc(fmtDay(date)) + "</span>" + (selDate === todayStr() ? '<span class="stamp">Today</span>' : "") + "</div>" +
+  $("#kot").innerHTML = '<div class="kot-head"><span>Kitchen order' + (S.me && S.me.name ? " for " + esc(S.me.name) : "") + " · " + esc(fmtDay(date)) + "</span>" + (selDate === todayStr() ? '<span class="stamp">Today</span>' : "") + "</div>" +
     '<p class="kot-title">' + esc(date.toLocaleDateString("en-IN", { weekday: "long" })) + "</p>" +
     '<p class="kot-sub">Cooking ' + ["", "once", "twice", "three times"][p.s] + " · " + n + (n === 1 ? " person" : " people") + (S.plan[selDate] ? " · your plan" : " · default week") + ". Tick each meal as you eat it.</p>" +
     sessHTML +
@@ -675,7 +729,7 @@ function nutriHTML(t, title, daily, mult) {
     const cls = k === "na" ? (pct > 100 ? " over" : "") : (daily && pct < 60 && !["kcal", "c", "f"].includes(k) ? " lowish" : "");
     return '<div class="nbar' + cls + '"><div class="t"><span>' + l + "</span><span>" + fmtN(v, k) + " " + u + " · " + pct + "%" + (k === "na" ? " of limit" : "") + '</span></div><div class="track"><i style="width:' + Math.min(100, pct) + '%"></i></div></div>';
   }).join("");
-  return "<h3>" + esc(title) + '</h3><div class="big4">' + big + '</div><div class="nbars">' + bars + '</div><p class="small">Percent of a daily target: ' + target("kcal") + " kcal and " + target("p") + " g protein (change them in Settings); other nutrients use typical adult-male needs (ICMR-NIN 2020). Approximate, calculated from ingredient weights.</p>";
+  return "<h3>" + esc(title) + '</h3><div class="big4">' + big + '</div><div class="nbars">' + bars + '</div><p class="small">Percent of a daily target of ' + target("kcal") + " kcal and " + target("p") + " g protein, from " + targetSource() + ". Minerals and vitamins use ICMR-NIN 2020 needs. Approximate, calculated from ingredient weights.</p>";
 }
 
 /* ---------- choosing dishes ---------- */
@@ -887,8 +941,13 @@ function table(head, rows, numCols) {
 }
 function renderRef() {
   const F = D.ref;
+  const A = D.audit, src = keys => keys.split(" ").map(k => A.sources[k] ? '<a href="' + esc(A.sources[k][1]) + '" target="_blank" rel="noopener">' + esc(A.sources[k][0].split(":")[0]) + "</a>" : "").join(", ");
   $("#refs").innerHTML =
-    '<section><h2>Daily targets</h2><p class="intro-p">Calories and protein are yours to set in Settings. The rest are typical needs for an adult man (ICMR-NIN 2020); sodium is an upper limit.</p>' + table(["Nutrient", "Per day"], NUT.map(([k, l, u]) => [l, (k === "na" ? "under " : "") + target(k) + " " + u]), [1]) + "</section>" +
+    '<section><h2>How the recipes were checked</h2><p class="small">Checked ' + esc(A.date) + ". " + esc(A.limits) + '</p><ul class="plain">' + A.summary.map(s => "<li>" + esc(s) + "</li>").join("") + "</ul>" +
+    '<h3>What was fixed</h3><ul class="plain">' + A.fixed.map(s => "<li>" + esc(s) + "</li>").join("") + "</ul>" +
+    '<h3>Key numbers against published sources</h3><div class="tbl-wrap"><table><thead><tr><th>What</th><th>In the app</th><th>Published</th><th>Result</th><th>Source</th></tr></thead><tbody>' +
+    A.checks.map(c => "<tr><td>" + esc(c[0]) + "</td><td>" + esc(c[1]) + "</td><td>" + esc(c[2]) + "</td><td>" + esc(c[3]) + "</td><td>" + src(c[4]) + "</td></tr>").join("") + "</tbody></table></div></section>" +
+    '<section><h2>Daily targets</h2><p class="intro-p">From ' + esc(targetSource()) + '. Minerals and vitamins follow ICMR-NIN 2020 for your sex and age; sodium is an upper limit.</p>' + table(["Nutrient", "Per day"], NUT.map(([k, l, u]) => [l, (k === "na" ? "under " : "") + target(k) + " " + u]), [1]) + "</section>" +
     '<section><h2>The five-star scorecard</h2><p class="intro-p">Score every dish 1 to 5 on each line. Tick it on the Track when every line is 3 or more; 32 of 40 on a biryani is hotel grade.</p>' + table(["Criterion", "5 looks like"], F.scorecard) + "</section>" +
     '<section><h2>Pressure cooker</h2><p class="intro-p">For a 3 L cooker on medium heat. Fill no more than half for dals and beans, and let the pressure drop by itself.</p>' + table(["Food", "Soak", "Water", "Whistles"], F.cooker, [2, 3]) + "</section>" +
     '<section><h2>Air fryer settings</h2><p class="intro-p">Preheat 3 minutes, cook in one layer and turn halfway.</p>' + table(["Food", "Heat", "Time"], F.airfryer, [1, 2]) + "</section>" +
@@ -899,6 +958,161 @@ function renderRef() {
     '<section><h2>Ready-mix masalas</h2>' + table(["Brand and mix", "Use it for"], F.brands) + "</section>";
 }
 
+/* ---------- me: profile, calculator, weight, blood tests, hair ---------- */
+const LABS = [
+  { k: "hb", n: "Haemoglobin", u: "g/dL", r: { m: [13, 17], f: [12, 15.5] } },
+  { k: "ferritin", n: "Ferritin", u: "ng/mL", r: { m: [30, 400], f: [30, 150] } },
+  { k: "vitd", n: "Vitamin D (25-OH)", u: "ng/mL", r: [30, 100] },
+  { k: "b12", n: "Vitamin B12", u: "pg/mL", r: [200, 900] },
+  { k: "fbs", n: "Fasting glucose", u: "mg/dL", r: [70, 99] },
+  { k: "hba1c", n: "HbA1c", u: "%", r: [0, 5.6] },
+  { k: "tc", n: "Total cholesterol", u: "mg/dL", r: [0, 199] },
+  { k: "ldl", n: "LDL cholesterol", u: "mg/dL", r: [0, 99] },
+  { k: "hdl", n: "HDL cholesterol", u: "mg/dL", r: { m: [40, 999], f: [50, 999] } },
+  { k: "tg", n: "Triglycerides", u: "mg/dL", r: [0, 149] },
+  { k: "tsh", n: "TSH (thyroid)", u: "mIU/L", r: [0.4, 4.0] },
+  { k: "ua", n: "Uric acid", u: "mg/dL", r: { m: [3.4, 7.0], f: [2.4, 6.0] } },
+  { k: "creat", n: "Creatinine", u: "mg/dL", r: { m: [0.7, 1.3], f: [0.6, 1.1] } },
+  { k: "zinc", n: "Zinc (serum)", u: "µg/dL", r: [70, 120] },
+];
+function labRange(L) { const e = S.labs[L.k] || {}; let r = Array.isArray(L.r) ? L.r : L.r[(S.me && S.me.sex) || "m"]; if (e.lo != null || e.hi != null) r = [e.lo != null ? e.lo : r[0], e.hi != null ? e.hi : r[1]]; return r; }
+const rangeTxt = r => (r[0] <= 0 ? "under " + (r[1] + (r[1] % 1 ? 0.1 : 1)).toFixed(r[1] % 1 ? 1 : 0).replace(/\.0$/, "") : r[1] >= 999 ? r[0] + " or more" : r[0] + "–" + r[1]);
+function labStatus(L) {
+  const e = S.labs[L.k]; if (!e || e.v == null || e.v === "") return null;
+  const v = +e.v, r = labRange(L); let s = v < r[0] ? "low" : v > r[1] ? "high" : "ok", label = s === "ok" ? "In range" : s === "low" ? "Below range" : "Above range", sev = s === "ok" ? "good" : "warn", urgent = false;
+  const k = L.k;
+  if (k === "vitd" && v < 30) { label = v < 20 ? "Deficient" : "Insufficient"; }
+  if (k === "b12" && v >= 200 && v < 300) { s = "low"; label = "Borderline low"; sev = "warn"; }
+  if (k === "fbs" && v >= 100) { label = v >= 126 ? "Diabetes range" : "Prediabetes range"; urgent = v >= 126; }
+  if (k === "hba1c" && v >= 5.7) { label = v >= 6.5 ? "Diabetes range" : "Prediabetes range"; urgent = v >= 6.5; }
+  if (k === "ldl" && v >= 100) { label = v >= 190 ? "Very high" : v >= 160 ? "High" : v >= 130 ? "Borderline high" : "Near optimal"; sev = v >= 130 ? "warn" : "good"; s = v >= 130 ? "high" : "ok"; urgent = v >= 190; }
+  if (k === "tc" && v >= 200) { label = v >= 240 ? "High" : "Borderline high"; }
+  if (k === "tg" && v >= 150) { label = v >= 500 ? "Very high" : v >= 200 ? "High" : "Borderline high"; urgent = v >= 500; }
+  if (k === "hb" && v < 10) urgent = true;
+  if (k === "tsh" && s !== "ok") urgent = true;
+  if (k === "creat" && s === "high") urgent = true;
+  if (urgent) sev = "bad";
+  return { s, label, sev, urgent, v };
+}
+const ADV = {
+  iron: { t: "Low iron (haemoglobin or ferritin)", focus: "fe", tips: ["Eat an iron-rich food at two meals a day: soya chunks, rajma, chole, dals, palak, eggs, chicken, mutton or fish.", "Have vitamin C in the same meal (lemon, tomato, capsicum, amla, guava): it helps your body absorb plant iron.", "Keep tea and coffee at least an hour away from meals; they block iron absorption.", "Cooking in your iron tawa adds a little iron.", "Don't start iron tablets on your own: a doctor should check why it's low and set the dose."] },
+  vitd: { t: "Low vitamin D", focus: null, tips: ["Get midday sun on your arms and legs for about 15–30 minutes on most days (less if you burn easily).", "Food has little vitamin D: egg yolks, fatty fish like mackerel and sardines, and fortified milk help a bit.", "A deficiency usually needs a supplement. Ask your doctor for the dose and a re-test after 2–3 months."] },
+  b12: { t: "Low vitamin B12", focus: "b12", tips: ["Have a B12 food every day: eggs, milk, curd, paneer, chicken or fish.", "Long-term antacids or metformin lower B12 absorption; tell your doctor if you take them.", "Low B12 often needs tablets or injections; your doctor decides which."] },
+  sugar: { t: "Blood sugar above range", focus: "fib", tips: ["Build plates as half vegetables, a quarter protein, a quarter rice or rotis.", "Prefer dals, chana, rajma, ragi and whole grains to white rice and maida; keep rice to one small bowl.", "Cut sugar, sweets, juices and soft drinks.", "Walk 10–15 minutes after meals.", "Losing 5–7% of body weight lowers blood sugar."] },
+  lipids: { t: "Cholesterol above range", focus: "lowfat", tips: ["Cut ghee, butter, cream and fried snacks; measure your cooking oil.", "Add soluble fibre every day: oats, rajma, chana, dals and vegetables.", "A small handful of nuts or peanuts most days.", "Fish twice a week if you eat it."] },
+  hdl: { t: "Low HDL (good cholesterol)", focus: null, tips: ["Regular exercise, especially cardio, raises HDL.", "Lose waist fat, and avoid smoking.", "Swap fried snacks for nuts and seeds."] },
+  tg: { t: "Triglycerides above range", focus: "lowfat", tips: ["Sugar, sweets, juices, refined carbs and alcohol raise triglycerides most: cut them first.", "Fish twice a week if you can.", "Lose waist fat and walk daily."] },
+  tsh: { t: "Thyroid (TSH) out of range", focus: null, tips: ["See a doctor: thyroid problems are treated with medicine, not diet.", "Use iodised salt.", "Don't take biotin supplements before a thyroid test; it can distort the result."] },
+  ua: { t: "Uric acid above range", focus: null, tips: ["Limit organ meats, prawns and other shellfish, and big portions of mutton.", "Avoid beer and sugary drinks.", "Drink 2.5–3 litres of water a day.", "Dals, vegetables, eggs, milk and curd are fine."] },
+  creat: { t: "Creatinine above range", focus: null, tips: ["See a doctor before eating a lot of protein; they may check your kidney function (eGFR).", "Stay well hydrated, and avoid creatine supplements and painkillers like ibuprofen unless your doctor agrees."] },
+  zinc: { t: "Low zinc", focus: "zn", tips: ["Zinc foods: chicken, mutton, eggs, chana, dals, peanuts, sesame and pumpkin seeds.", "Soaking and sprouting dals and beans helps your body absorb zinc."] },
+  high: { t: "Above range", focus: null, tips: ["Ask your doctor what this means for you; it isn't something to change with food alone."] },
+};
+function advKey(k, st) {
+  if ((k === "hb" || k === "ferritin") && st.s === "low") return "iron";
+  if (k === "vitd" && st.s === "low") return "vitd";
+  if (k === "b12" && st.s === "low") return "b12";
+  if ((k === "fbs" || k === "hba1c") && st.s === "high") return "sugar";
+  if ((k === "ldl" || k === "tc") && st.s === "high") return "lipids";
+  if (k === "hdl" && st.s === "low") return "hdl";
+  if (k === "tg" && st.s === "high") return "tg";
+  if (k === "tsh" && st.s !== "ok") return "tsh";
+  if (k === "ua" && st.s === "high") return "ua";
+  if (k === "creat" && st.s === "high") return "creat";
+  if (k === "zinc" && st.s === "low") return "zinc";
+  if (st.s !== "ok") return "high";
+  return null;
+}
+function focusRecipes(f) {
+  let list = D.recipes.filter(r => ["main", "breakfast", "soup", "snack"].includes(r.course));
+  if (f === "fib") list = list.filter(r => r.nutr.c < 75).sort((a, b) => (b.nutr.fib + b.nutr.p / 4) - (a.nutr.fib + a.nutr.p / 4));
+  else if (f === "lowfat") list = list.filter(r => r.nutr.f < 16).sort((a, b) => b.nutr.fib - a.nutr.fib);
+  else list = list.sort((a, b) => b.nutr[f] - a.nutr[f]);
+  return list.slice(0, 6);
+}
+function spark(entries) {
+  if (entries.length < 2) return "";
+  const vs = entries.map(e => e[1]), mn = Math.min(...vs), mx = Math.max(...vs), span = mx - mn || 1, W = 360, H = 70;
+  const pts = entries.map((e, i) => [8 + i * (W - 16) / (entries.length - 1), 8 + (H - 16) * (1 - (e[1] - mn) / span)]);
+  return '<svg class="spark" viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Weight trend"><polyline fill="none" stroke="currentColor" stroke-width="2" points="' + pts.map(p => p.map(x => x.toFixed(1)).join(",")).join(" ") + '"/>' + pts.map(p => '<circle cx="' + p[0].toFixed(1) + '" cy="' + p[1].toFixed(1) + '" r="3" fill="currentColor"/>').join("") + "</svg>";
+}
+function renderMe() {
+  const m = S.me || {}, cc = calc(), sexBtn = (v, l) => '<button type="button" data-mesex="' + v + '" aria-pressed="' + (m.sex === v) + '">' + l + "</button>";
+  const num = (id, label, hint, val, min, max, step) => '<label for="' + id + '">' + label + (hint ? "<span>" + hint + "</span>" : "") + '<input type="number" inputmode="decimal" id="' + id + '" data-me="' + id.slice(3) + '" min="' + min + '" max="' + max + '" step="' + step + '" value="' + (val != null ? esc(val) : "") + '"></label>';
+  let h = '<section><h2>' + (m.name ? "Hi, " + esc(m.name) : "Your profile") + '</h2><p class="disclaim">' + (mode === "db" ? "Saved privately to your Claude account: even if you share this page, nobody else sees your profile or results." : "Saved on this device. Open the page from claude.ai while signed in to keep it in your account.") + " This is general information, not a diagnosis; your doctor and your report's ranges come first.</p></section>";
+  h += '<section class="card2"><div class="fgrid">' +
+    '<label for="me-name">Name<input type="text" id="me-name" data-me="name" autocomplete="given-name" value="' + esc(m.name || "") + '"></label>' +
+    '<div class="f" style="display:flex;flex-direction:column;gap:4px;font-size:14px;font-weight:700">Sex<span class="seg" role="group" aria-label="Sex">' + sexBtn("m", "Male") + sexBtn("f", "Female") + "</span></div>" +
+    num("me-age", "Age", "years", m.age, 14, 100, 1) + num("me-h", "Height", "cm", m.h, 120, 220, 0.5) + num("me-w", "Weight", "kg", m.w, 30, 250, 0.1) +
+    num("me-waist", "Waist", "cm, at the navel (optional)", m.waist, 50, 200, 0.5) +
+    '<label for="me-act" style="grid-column:1/-1">Activity<select id="me-act" data-me="act">' + ACT.map(a => '<option value="' + a[0] + '"' + ((m.act || "sed") === a[0] ? " selected" : "") + ">" + esc(a[1]) + "</option>").join("") + "</select></label>" +
+    num("me-train", "Strength training", "days a week", m.train, 0, 7, 1) +
+    '<label for="me-goal" style="grid-column:1/-1">Goal<select id="me-goal" data-me="goal">' + GOALS.map(g => '<option value="' + g[0] + '"' + ((m.goal || "recomp") === g[0] ? " selected" : "") + ">" + esc(g[1]) + "</option>").join("") + "</select></label></div></section>";
+  if (!cc) h += '<p class="banner">Fill in sex, age, height and weight to get your numbers. Your calorie, protein and nutrient targets then update across the whole app.</p>';
+  else {
+    const wk = cc.weekly, pace = Math.abs(wk) < 0.05 ? "Weight steady" : (wk > 0 ? "About " + wk.toFixed(2) + " kg lost a week" : "About " + (-wk).toFixed(2) + " kg gained a week");
+    const st = (b, l, e, cls) => '<div class="stat"><b>' + b + "</b><span>" + l + "</span>" + (e ? '<em class="' + (cls || "") + '">' + e + "</em>" : "") + "</div>";
+    h += '<section class="sec"><h2>Your numbers</h2><div class="stats">' +
+      st(cc.bmi.toFixed(1), "BMI", cc.bmiCat[0], cc.bmiCat[1]) +
+      st(Math.round(cc.lo) + "–" + Math.round(cc.hi) + " kg", "Healthy weight for your height", "BMI 18.5–22.9 (Indian cut-off)") +
+      (m.waist ? st(m.waist + " cm", "Waist", cc.waistHigh ? "Above " + (m.sex === "f" ? 80 : 90) + " cm: belly fat raises health risk" : "Within the healthy limit", cc.waistHigh ? "warn" : "good") + st(cc.whtr.toFixed(2), "Waist ÷ height", cc.whtr > 0.5 ? "Over 0.5: aim to bring it down" : "0.5 or under: good", cc.whtr > 0.5 ? "warn" : "good") : "") +
+      st(Math.round(cc.bmr), "kcal at rest (BMR)", "Mifflin-St Jeor") + st(Math.round(cc.tdee), "kcal to stay the same", cc.act[1]) +
+      st(cc.kcal, "kcal a day for your goal", pace) + st(cc.p + " g", "Protein a day", cc.pk + " g per kg" + (cc.refW < m.w ? " of " + Math.round(cc.refW) + " kg (healthy-range weight)" : "")) +
+      st(cc.c + " g", "Carbs") + st(cc.f + " g", "Fat", "25% of calories") + st(cc.fib + " g", "Fibre") + st(cc.water + " L", "Water", "plus about 0.5 L per hour of exercise") + "</div>" +
+      '<p class="small">Protein per meal: about ' + Math.round(cc.p / 4) + " g across 4 meals and snacks works well for building muscle. " + (S.set.manual ? "<b>Settings has your own targets switched on, so the app isn't using these.</b>" : "These targets now drive Today, recipe nutrition and the protein meter.") + " Minerals and vitamins: iron " + cc.micro.fe + " mg, calcium " + cc.micro.ca + " mg, magnesium " + cc.micro.mg + " mg, zinc " + cc.micro.zn + " mg, vitamin C " + cc.micro.vc + " mg, B12 2.5 µg (ICMR-NIN 2020).</p></section>";
+  }
+  const wl = Object.entries(S.wlog).filter(e => +e[1] > 0).sort((a, b) => (a[0] < b[0] ? -1 : 1)).map(e => [e[0], +e[1]]);
+  const last = wl[wl.length - 1], ago = days => { const d = new Date(); d.setDate(d.getDate() - days); const ds = ymd(d); const prev = wl.filter(e => e[0] <= ds).pop(); return prev && last ? last[1] - prev[1] : null; };
+  const ch = (v, l) => (v == null ? "" : '<span class="chip">' + (v > 0 ? "+" : "") + v.toFixed(1) + " kg " + l + "</span>");
+  h += '<section class="sec"><h2>Weight log</h2><div class="toolbar"><input type="number" inputmode="decimal" id="wl-v" min="30" max="250" step="0.1" placeholder="kg" aria-label="Today\'s weight in kg" style="width:110px"><input type="date" id="wl-d" value="' + todayStr() + '" aria-label="Date"><button type="button" class="btn primary" id="wl-add">Log weight</button></div>' +
+    (wl.length ? '<div class="toolbar">' + (last ? '<span class="chip p">' + last[1] + " kg on " + esc(fmtDay(parseYmd(last[0]))) + "</span>" : "") + ch(ago(7), "in 7 days") + ch(ago(30), "in 30 days") + "</div>" + spark(wl.slice(-20)) +
+      '<ul class="rows">' + wl.slice(-6).reverse().map(e => '<li class="row"><span class="lbl"><span class="plain">' + esc(fmtDay(parseYmd(e[0]))) + '</span></span><span class="meta"><span class="mono">' + e[1] + ' kg</span><button type="button" class="x" data-wldel="' + e[0] + '" aria-label="Delete ' + esc(e[0]) + '">×</button></span></li>').join("") + "</ul>"
+      : '<p class="small">Weigh yourself first thing in the morning, after the toilet and before eating, 2–3 times a week. Your profile weight updates with each entry.</p>') + "</section>";
+  const date = S.labs._date || "";
+  h += '<section class="sec"><h2>Blood tests</h2><p class="small">Type in the values from your report. The ranges shown are typical for adults; if your lab prints a different range, set it under "Use my lab\'s range".</p>' +
+    '<label class="toggle" for="lab-date" style="gap:10px">Report date <input type="date" id="lab-date" value="' + esc(date) + '"></label><div class="labs">' +
+    LABS.map(L => {
+      const e = S.labs[L.k] || {}, st = labStatus(L), r = labRange(L);
+      return '<div class="lab"><div><div class="nm">' + esc(L.n) + '</div><div class="rg">Range ' + esc(rangeTxt(r)) + " " + esc(L.u) + '</div></div><input type="number" inputmode="decimal" step="any" id="lab-' + L.k + '" data-lab="' + L.k + '" value="' + (e.v != null ? esc(e.v) : "") + '" aria-label="' + esc(L.n + " in " + L.u) + '">' +
+        (st ? '<div class="st ' + st.sev + '">' + esc(st.label) + (st.urgent ? " · please see a doctor soon" : "") + "</div>" : "") +
+        '<details><summary>Use my lab\'s range</summary><div class="toolbar"><input type="number" step="any" id="labl-' + L.k + '" data-lablo="' + L.k + '" placeholder="low" value="' + (e.lo != null ? esc(e.lo) : "") + '" aria-label="' + esc(L.n) + ' range low"><input type="number" step="any" id="labh-' + L.k + '" data-labhi="' + L.k + '" placeholder="high" value="' + (e.hi != null ? esc(e.hi) : "") + '" aria-label="' + esc(L.n) + ' range high"></div></details></div>';
+    }).join("") + "</div></section>";
+  const adv = {}; LABS.forEach(L => { const st = labStatus(L); if (!st) return; const a = advKey(L.k, st); if (a) { adv[a] = adv[a] || { names: [], urgent: false }; adv[a].names.push(L.n + " " + st.v + " " + L.u + " (" + st.label.toLowerCase() + ")"); adv[a].urgent = adv[a].urgent || st.urgent; } });
+  const ak = Object.keys(adv);
+  h += '<section class="sec"><h2>What your results mean for your food</h2>' + (ak.length ? ak.map(a => {
+    const A = ADV[a], recs = A.focus ? focusRecipes(A.focus) : [];
+    return '<div class="adv' + (adv[a].urgent ? " bad" : "") + '"><h3>' + esc(A.t) + '</h3><p class="small">' + esc(adv[a].names.join("; ")) + (adv[a].urgent ? ". This is far enough out of range that you should see a doctor soon." : "") + "</p><ul>" + A.tips.map(x => "<li>" + esc(x) + "</li>").join("") + "</ul>" +
+      (recs.length ? '<span class="lbl-s">Recipes that help</span><div class="recs">' + recs.map(r => '<button type="button" class="chip" data-open="' + r.id + '">' + esc(r.title) + "</button>").join("") + "</div>" : "") + "</div>";
+  }).join("") : '<p class="empty">' + (LABS.some(L => labStatus(L)) ? "Everything you entered is in range." : "Enter some results above and food advice for anything out of range appears here.") + "</p>") + "</section>";
+  // hair fall
+  const flags = [], tp = Math.round(dayNutr(todayStr()).p), tgP = target("p");
+  if (tp < tgP * 0.8) flags.push("Today's plan has about " + tp + " g of protein against your " + tgP + " g target. Low protein is a common, fixable cause of shedding: add a protein dish or two eggs.");
+  const fe = labStatus(LABS[1]), hb = labStatus(LABS[0]), vd = labStatus(LABS[2]), b12 = labStatus(LABS[3]), tsh = labStatus(LABS[10]), zn = labStatus(LABS[13]);
+  if ((fe && fe.s === "low") || (hb && hb.s === "low")) flags.push("Your iron results are low. Low ferritin is one of the most common causes of hair fall: see the iron advice above.");
+  if (vd && vd.s === "low") flags.push("Your vitamin D is low, which is linked with hair loss.");
+  if (b12 && b12.s === "low") flags.push("Your B12 is low; correcting it can help.");
+  if (tsh && tsh.s !== "ok") flags.push("Your TSH is out of range. Thyroid problems commonly cause hair fall and need a doctor.");
+  if (zn && zn.s === "low") flags.push("Your zinc is low.");
+  if (wl.length >= 2) { const first = wl.find(e => e[0] >= ymd(new Date(Date.now() - 28 * 864e5))) || wl[0]; const weeks = Math.max(1, (parseYmd(last[0]) - parseYmd(first[0])) / 6048e5); const rate = (first[1] - last[1]) / weeks / first[1]; if (rate > 0.01) flags.push("You're losing more than 1% of your weight a week. Fast weight loss can trigger shedding 2–3 months later; a steadier pace protects your hair."); }
+  const untested = ["hb", "ferritin", "tsh", "vitd", "b12"].filter(k => !labStatus(LABS.find(L => L.k === k))).map(k => LABS.find(L => L.k === k).n);
+  const REM = [["Minoxidil on the scalp", "Proven for pattern hair loss. A dermatologist can advise strength and how to use it.", "Strong"],
+    ["Finasteride tablets (men)", "Proven for male pattern hair loss. Prescription only; discuss side effects with a dermatologist.", "Strong"],
+    ["Fixing a deficiency (iron, vitamin D, B12, protein) or thyroid", "Helps when a blood test shows the problem.", "Good"],
+    ["Ketoconazole shampoo", "Treats dandruff, which can make shedding worse.", "Moderate"],
+    ["Rosemary oil", "One small 2015 trial found it about as good as 2% minoxidil after 6 months. More research is needed.", "Limited"],
+    ["Coconut oil", "Reduces breakage. It doesn't regrow hair.", "Breakage only"],
+    ["Onion juice", "Only tiny studies, mostly in patchy hair loss.", "Weak"],
+    ["Biotin supplements", "Help only if you're deficient, which is rare. Biotin can distort thyroid and other blood tests: tell the lab, and stop it a few days before testing.", "Rarely needed"]];
+  h += '<section class="sec"><h2>Hair fall</h2><p class="small">Losing 50–100 hairs a day is normal. Heavy shedding usually starts a couple of months after a trigger such as illness, fever, big weight loss or stress, and often settles within 6–9 months. Gradual thinning at the temples or crown is usually pattern hair loss, which has proven treatments.</p>' +
+    (flags.length ? '<div class="adv"><h3>From your plan and results</h3><ul>' + flags.map(x => "<li>" + esc(x) + "</li>").join("") + "</ul></div>" : "") +
+    (untested.length ? '<p class="small"><b>Tests worth asking your doctor about:</b> ' + esc(untested.join(", ")) + " (and zinc if the others are normal).</p>" : "") +
+    '<div class="adv" style="border-left-color:var(--done)"><h3>Food that supports hair</h3><ul><li>Reach your protein target every day; hair is made of protein.</li><li>Iron and zinc: eggs, chicken, mutton, dals, chana, rajma, soya, peanuts and sesame.</li><li>Don\'t crash diet: keep weight loss to about 0.5–1% of your weight a week.</li></ul><span class="lbl-s">High-protein recipes</span><div class="recs">' + focusRecipes("p").map(r => '<button type="button" class="chip" data-open="' + r.id + '">' + esc(r.title) + "</button>").join("") + "</div></div>" +
+    '<h3>Remedies and what the evidence says</h3>' + table(["Remedy", "What we know", "Evidence"], REM) +
+    '<p class="small"><b>See a dermatologist if</b> you have patchy bald spots, sudden heavy shedding or clumps, a red, scaly, itchy or painful scalp, a receding hairline or thinning crown that keeps getting worse, shedding for more than 3 months, or hair fall with tiredness, weight change or feeling cold.</p></section>';
+  h += '<section class="sec"><h3>Sources</h3><ul class="plain">' + D.healthSources.map(s => '<li><a href="' + esc(s[1]) + '" target="_blank" rel="noopener">' + esc(s[0]) + "</a></li>").join("") + "</ul></section>";
+  $("#me").innerHTML = h;
+}
+
 /* ---------- settings ---------- */
 function renderSetup() {
   const sync = { saved: "Synced to your Claude account. Open this same link on your phone and laptop, signed in to the same account, and everything stays in step.", saving: "Syncing…", local: "Saved on this device only. Open the page from claude.ai while signed in to sync across devices.", error: "Couldn't reach your account just now; changes are kept on this device and sync next time.", loading: "Checking…" }[syncNote];
@@ -907,8 +1121,9 @@ function renderSetup() {
     '<label class="f">People you usually cook for<span class="hint">Recipes open at this many servings, and each day starts with it. Change a single day on Today.</span><div class="stepper"><button class="rbtn" type="button" data-setp="-1" aria-label="Fewer people">−</button><b>' + setv("people") + '</b><button class="rbtn" type="button" data-setp="1" aria-label="More people">+</button></div></label>' +
     '<div class="f"><b>How many times you usually cook a day</b><span class="hint">Groups the day into cooking sessions. Change a single day on Today.</span><div class="seg" role="group" aria-label="Default cooking times">' + [1, 2, 3].map(n => '<button type="button" data-setsess="' + n + '" aria-pressed="' + (setv("sessions") === n) + '">' + ["", "Once", "Twice", "3 times"][n] + "</button>").join("") + "</div></div>" +
     '<label class="f" for="set-app">Order app<span class="hint">"Order" opens this app\'s search for the item. You place the order there.</span><select id="set-app">' + D.apps.map(a => '<option value="' + a.key + '"' + (a.key === setv("app") ? " selected" : "") + ">" + esc(a.label) + "</option>").join("") + "</select></label>" +
-    '<label class="f" for="set-kcal">Daily calories<input type="number" id="set-kcal" inputmode="numeric" min="1200" max="4500" step="50" value="' + setv("kcal") + '"></label>' +
-    '<label class="f" for="set-p">Daily protein (g)<span class="hint">For muscle gain with strength training, about 1.6 g per kg of body weight.</span><input type="number" id="set-p" inputmode="numeric" min="40" max="250" step="5" value="' + setv("p") + '"></label>';
+    '<label class="toggle" for="set-manual"><input type="checkbox" id="set-manual"' + (S.set.manual ? " checked" : "") + "> Use my own calorie and protein targets instead of the Me calculator</label>" +
+    (S.set.manual || !profOk() ? '<label class="f" for="set-kcal">Daily calories<input type="number" id="set-kcal" inputmode="numeric" min="1200" max="4500" step="50" value="' + setv("kcal") + '"></label>' +
+    '<label class="f" for="set-p">Daily protein (g)<span class="hint">For muscle gain with strength training, about 1.6–2.2 g per kg of body weight.</span><input type="number" id="set-p" inputmode="numeric" min="40" max="250" step="5" value="' + setv("p") + '"></label>' : '<p class="small">Targets come from your profile: ' + target("kcal") + " kcal and " + target("p") + " g protein a day.</p>");
 }
 
 /* ---------- recipe dialog ---------- */
@@ -995,7 +1210,7 @@ function renderPickList() {
 
 /* ---------- render ---------- */
 let currentTab = "today";
-const RENDER = { today: renderToday, cook: renderCook, surprise: renderSurprise, recipes: renderRecipes, pantry: renderPantry, shop: renderShop, track: renderTrack, ref: renderRef, setup: renderSetup };
+const RENDER = { today: renderToday, cook: renderCook, surprise: renderSurprise, me: renderMe, recipes: renderRecipes, pantry: renderPantry, shop: renderShop, track: renderTrack, ref: renderRef, setup: renderSetup };
 function render() {
   const fid = document.activeElement && document.activeElement.id;
   renderHeader();
@@ -1030,6 +1245,17 @@ document.addEventListener("change", e => {
   else if (t.id === "set-app") { const v = t.value; apply(s => { s.set.app = v; }); }
   else if (t.id === "set-kcal" || t.id === "set-p") { const v = Math.max(+t.min, Math.min(+t.max, Math.round(+t.value || 0))); const k = t.id === "set-kcal" ? "kcal" : "p"; if (v) apply(s => { s.set[k] = v; }); }
   else if (t.id === "pk-ready") renderPickList();
+  else if (t.dataset.me) {
+    const k = t.dataset.me, raw = t.value.trim();
+    const v = ["name", "act", "goal"].includes(k) ? raw : (raw === "" ? null : Math.max(+t.min, Math.min(+t.max, +raw)));
+    apply(s => { s.me = s.me || {}; if (v == null || v === "") delete s.me[k]; else s.me[k] = v; });
+  }
+  else if (t.dataset.lab || t.dataset.lablo || t.dataset.labhi) {
+    const k = t.dataset.lab || t.dataset.lablo || t.dataset.labhi, f = t.dataset.lab ? "v" : t.dataset.lablo ? "lo" : "hi", raw = t.value.trim();
+    apply(s => { const e = s.labs[k] = s.labs[k] || {}; if (raw === "") delete e[f]; else e[f] = +raw; if (!Object.keys(e).length) delete s.labs[k]; });
+  }
+  else if (t.id === "lab-date") { const v = t.value; apply(s => { if (v) s.labs._date = v; else delete s.labs._date; }); }
+  else if (t.id === "set-manual") { const on = t.checked; apply(s => { if (on) s.set.manual = true; else delete s.set.manual; }); }
   else if (["c-course", "c-diet", "c-time", "r-cuis", "r-course", "r-diet", "r-app", "r-hide", "r-sort"].includes(t.id)) render();
   else if (["s-course", "s-cuis", "s-diet", "s-ready", "s-quick", "s-new"].includes(t.id)) shuffle();
 });
@@ -1068,6 +1294,14 @@ document.addEventListener("click", e => {
     return;
   }
   if (c("#c-clear")) { apply(s => { s.pick = {}; }); return; }
+  if ((el = c("[data-mesex]"))) { const v = el.dataset.mesex; apply(s => { s.me = s.me || {}; s.me.sex = v; }); return; }
+  if (c("#wl-add")) {
+    const v = +$("#wl-v").value, d = $("#wl-d").value || todayStr();
+    if (!(v >= 30 && v <= 250)) { $("#wl-v").focus(); return; }
+    apply(s => { s.wlog[d] = Math.round(v * 10) / 10; const latest = Object.keys(s.wlog).sort().pop(); s.me = s.me || {}; s.me.w = s.wlog[latest]; });
+    return;
+  }
+  if ((el = c("[data-wldel]"))) { const d = el.dataset.wldel; apply(s => { delete s.wlog[d]; }); return; }
   if ((el = c("[data-cuis]"))) { cookCuis = el.dataset.cuis; renderCook(); return; }
   if (c("#s-go")) { shuffle(); return; }
   if (c("#s-add")) { const id = surId, sl = $("#s-slot").value, r = R[id]; const add = [[id, 1]]; if (needsCarb(r)) add.push(["phulka-soft-chapati", 1]); editPlan(todayStr(), p => { p.m[sl] = (p.m[sl] || []).concat(add); }); $("#s-add").textContent = "Added to today"; return; }

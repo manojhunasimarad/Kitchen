@@ -13,18 +13,36 @@ A phone-first kitchen planner for a small kitchen with no fridge or oven: two st
 | **Today** | The day as a kitchen order slip, for any of the next 7 days. Choose whether you cook **once, twice or three times** and for **how many people**. Meals are grouped into cooking sessions, with combined quantities, cooking time, missing items and food-safety notes for a kitchen without a fridge. Add, remove, scale or **shuffle** dishes, or let it plan the whole day. Nutrition for the day is shown against your targets. |
 | **Cook** | Tap the ingredients you want to cook with. When one isn't in your pantry, it asks whether to **order it** (opens Swiggy Instamart, Zepto, Blinkit or BigBasket search) or **bring it home**. Dishes from every cuisine that use your picks are listed as ready, one item short or two short. |
 | **Surprise me** | Shuffles a random dish that matches your filters: meal, cuisine, diet, only what you can cook now, 30 minutes or less, not cooked yet. Add it to today with one tap. |
+| **Me** | Your profile (name, sex, age, height, weight, waist, activity, training days, goal) and a **diet calculator**: BMI and waist with Indian cut-offs, BMR (Mifflin-St Jeor), maintenance calories, a calorie target for your goal, protein (1.2–2.0 g/kg of a healthy-range weight), carbs, fat, fibre, water, and vitamin and mineral needs by sex and age (ICMR-NIN 2020). These targets drive the rest of the app. Also a **weight log** with a trend line, **blood tests** (haemoglobin, ferritin, vitamin D, B12, glucose, HbA1c, cholesterol, triglycerides, TSH, uric acid, creatinine, zinc) with typical ranges you can replace with your lab's, food advice and recipes for anything out of range, and a **hair-fall guide** that checks your plan and results and rates common remedies by evidence. |
 | **Recipes** | All 109 recipes, searchable and sortable by protein, iron, calories or time. Each recipe has a **servings** control that rescales the ingredients and nutrition, plus "Add to plan" and the full method. |
 | **Pantry** | 108 staples, each marked Have, Low or Out. |
 | **Shopping** | Items your plan needs today and tomorrow (with Order and Bring buttons), what you're bringing home, what's on order, and what's running low. *Copy list* puts the list on the clipboard. |
 | **Track** | 15 stages and 92 tick-offs, from setting curd to the master biryanis and a World kitchen stage. |
-| **Reference** | Daily targets, the five-star scorecard, cooker and air-fryer charts, what keeps without a fridge, food safety, flavour jars and ready-mix masalas. |
-| **Settings** | Default people and cooking sessions, your order app, and daily calorie and protein targets. |
+| **Reference** | How the recipes were checked (with sources), daily targets, the five-star scorecard, cooker and air-fryer charts, what keeps without a fridge, food safety, flavour jars and ready-mix masalas. |
+| **Settings** | Default people and cooking sessions, your order app, and an option to set your own calorie and protein targets instead of the calculator's. |
 
 <p>
   <img src="docs/screenshots/phone-today.png" width="250" alt="Today, cooking once for two">
   <img src="docs/screenshots/phone-order-or-bring.png" width="250" alt="Order or bring an ingredient">
   <img src="docs/screenshots/phone-surprise.png" width="250" alt="Surprise me">
 </p>
+
+<p>
+  <img src="docs/screenshots/phone-me-numbers.png" width="250" alt="Your numbers from the calculator">
+  <img src="docs/screenshots/phone-me-blood-tests.png" width="250" alt="Food advice from blood tests">
+</p>
+
+## How the recipes were checked
+
+- **Against the books:** all 77 book recipes were compared line by line with the two PDFs (ingredient names, quantities, method text). They match. The Book 1 variations and sides are correctly halved from the book's 2-serving amounts. Eight ingredient rows the book has but the app had left out were added.
+- **Consistency and food safety:** all 109 recipes were checked automatically for ingredients missing from the list or never used, salt per serving, air-fryer temperatures, marinating longer than 2 hours without a fridge, doneness checks, rice and rajma safety, and leftovers.
+- **Against published sources:** cooker whistles, soaking, par-boiling, dum, air-fryer settings and safe temperatures were compared with published recipes and food-safety guidance. Fixes: chicken fried rice (rice now fried within 2 hours of cooking), egg pasta (sauce thickened to about 70 °C), Thai red curry (Thai basil, not tulsi), falafel timing, doneness checks on six chicken recipes, and less salt in three recipes.
+
+The books were written in the same chat as the app, so the published-source checks are the independent part. The full table, with links, is in the app under Reference. Figures remain approximate.
+
+## Health features
+
+The calculator, blood-test ranges and hair-fall guide are general information, not a diagnosis. Your report's reference ranges and your doctor's advice come first. Values far out of range are flagged "see a doctor soon". When the page is used through a Claude account, the profile and results are stored in that account's private space.
 
 ## Nutrition
 

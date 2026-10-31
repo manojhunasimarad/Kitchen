@@ -322,6 +322,7 @@ for r in recipes:
 # ------------------------------------------------------------------ cuisine, course and nutrition (book recipes)
 from nutrition import recipe_total, rounded, scaled, add, FIELDS  # noqa: E402
 from world_recipes import WORLD, EXTRAS  # noqa: E402
+from audit import AUDIT, HEALTH_SOURCES  # noqa: E402
 
 COURSE_BY_CHAPTER = {"Breads and rice": "side", "Breakfasts": "breakfast", "Dals and beans": "main",
                      "Vegetables": "side", "Paneer, eggs and soya": "main", "Chicken, fish and mutton": "main",
@@ -361,7 +362,8 @@ PLAIN_NUTR = {
                                   ("turmeric", 0.3), ("salt", 0.6), ("oil", 1.2)],
     "bombay-veg-masala-toast": [("bread", 56), ("potato", 70), ("cucumber", 25), ("tomato", 25), ("onion", 15),
                                 ("coriander", 5), ("mint", 3), ("butter", 2.4), ("chaat", 0.5), ("salt", 0.6)],
-    "phulka-toastie": [("atta", 30), ("paneer", 25), ("onion", 10), ("tomato", 10), ("ghee", 1.2), ("coriander", 3)],
+    "phulka-toastie": [("atta", 30), ("paneer", 25), ("onion", 10), ("tomato", 10), ("ghee", 1.2), ("coriander", 3),
+                       ("salt", 0.4)],
     "green-chutney-mint-coriander": [("coriander", 16), ("mint", 8), ("greenchilli", 6), ("ginger", 3),
                                      ("lemon", 15), ("rchana", 9), ("salt", 1.5)],
     "coconut-chutney": [("coconut", 40), ("rchana", 18), ("greenchilli", 4.5), ("ginger", 3), ("salt", 1.5),
@@ -673,7 +675,7 @@ data = {"recipes": recipes,
         "pantry": [{"key": k, "label": l, "group": g, "def": d, "buy": BUY.get(k, re.sub(r"\s*\(.*", "", l).lower())}
                    for k, l, g, d in PANTRY],
         "soft": sorted(SOFT), "track": TRACK, "week": WEEK, "ref": REFERENCE, "extras": extras,
-        "targets": TARGETS, "apps": ORDER_APPS}
+        "targets": TARGETS, "apps": ORDER_APPS, "audit": AUDIT, "healthSources": HEALTH_SOURCES}
 json.dump(data, open(ROOT / "data" / "data.json", "w"), ensure_ascii=False, separators=(",", ":"))
 print(len(recipes), "recipes;", sum(len(s["rows"]) for s in TRACK), "track rows;",
       round(len(json.dumps(data, ensure_ascii=False)) / 1024), "KB")

@@ -34,7 +34,8 @@ WORLD = [
                 "it covered in the coolest spot for 15 minutes (never more than 2 hours).",
                 "Sear. Heat the tawa on medium-high until a drop of water skitters away. Lay the chicken down and "
                 "leave it alone for 4–5 minutes, until it lifts off golden. Flip and cook 4–5 minutes more. It is "
-                "done when the thickest part is white right through and the juices run clear.",
+                "done when the thickest part is white right through and the juices run clear (74 °C if you have a "
+                "thermometer).",
                 "Rest. Move it to a plate for 3 minutes; the juices settle back into the meat.",
                 "Vegetables. Lower the heat, add the butter and sliced garlic for 20 seconds, then the beans and "
                 "carrot with 2 tbsp water. Cover for 3 minutes, uncover, add the capsicum and toss 2 minutes until "
@@ -59,7 +60,7 @@ WORLD = [
                         I("lemon", "Lemon juice", "1 tsp", 5)])],
          steps=["Sauté. Heat the oil in the cooker, add garlic and ginger for 30 seconds, then the onion for 2 minutes.",
                 "Pressure-cook. Add the chicken, carrot, beans, salt, pepper and 500 ml water. Close and cook "
-                "2 whistles on medium; let the pressure drop by itself.",
+                "2 whistles on medium; let the pressure drop by itself. The meat should come away from the bone easily.",
                 "Finish. Open, add the cabbage and simmer 2 minutes. Pull the meat off the bones if you like, taste "
                 "for salt and pepper, and add the lemon and spring onion."],
          tips=[("Cloudy or clear", "Keep the lid off and the heat at a bare simmer in the last step; a hard boil "
@@ -184,7 +185,8 @@ WORLD = [
                 "Cook. Air-fry at 200 °C for 10–12 minutes, shaking once, or sear on a hot tawa 3–4 minutes a side, "
                 "until white right through.",
                 "Dressing. Stir the hung curd with mint, garlic, lemon, cumin and salt until smooth.",
-                "Assemble. Pile the vegetables in a bowl, top with the warm chicken and spoon the dressing over."],
+                "Assemble. Pile the cucumber, tomato, onion, capsicum and corn in a bowl, top with the warm chicken and "
+                "spoon the dressing over."],
          tips=[("Lunch box", "Pack the dressing separately and eat within 2 hours of cooking the chicken.")]),
 
     # ------------------------------------------------------------------ Italian
@@ -193,7 +195,7 @@ WORLD = [
          intro="The simplest Italian pasta: garlic gently fried in oil, chilli and pasta water, here with seared "
                "chicken for protein.",
          ing=[("Pasta", [I("pasta", "Spaghetti or any long pasta", "80 g", 80),
-                         I("water", "Water for boiling", "1.5 L", 0), I("salt", "Salt for the water", "1 tbsp", 18)]),
+                         I("water", "Water for boiling", "1.5 L", 0), I("salt", "Salt for the water", "2 tsp", 12)]),
               ("Chicken", [I("chickenbl", "Boneless chicken, thin strips", "120 g", 120), SALT("¼ tsp", 1.5),
                            I("pepper", "Black pepper", "¼ tsp", 0.6)]),
               ("Sauce", [I("oil", "Olive oil or any oil", "1½ tbsp", 20),
@@ -202,10 +204,10 @@ WORLD = [
                          I("herbs", "Dried oregano or parsley", "½ tsp", 0.5, opt=True),
                          I("lemon", "Lemon juice", "1 tsp", 5),
                          I("cheese", "Grated cheese", "1 tbsp", 6, opt=True)])],
-         steps=["Boil. Bring 1.5 L water to a rolling boil with 1 tbsp salt. Add the pasta and cook 1 minute less "
+         steps=["Boil. Bring 1.5 L water to a rolling boil with 2 tsp salt. Add the pasta and cook 1 minute less "
                 "than the packet says. Keep 1 cup of the pasta water before draining.",
-                "Chicken. Meanwhile season the chicken and sear it in 1 tsp of the oil on a hot pan, 2 minutes a side. "
-                "Set aside.",
+                "Chicken. Meanwhile season the chicken and sear it in 1 tsp of the oil on a hot pan, 2–3 minutes a side, "
+                "until no pink remains inside. Set aside.",
                 "Garlic oil. Lower the heat, add the rest of the oil and the garlic. Cook gently 2–3 minutes until "
                 "the garlic is pale gold, never brown, then add the chilli flakes for 10 seconds.",
                 "Toss. Add the drained pasta, the chicken and ½ cup pasta water. Toss hard over medium heat for "
@@ -218,11 +220,11 @@ WORLD = [
          diet="veg", time="30 min", uses="2 burners (air fryer optional)", serving="1 plate", keeps="Eat hot",
          intro="'Angry' pasta: a fiery fresh tomato and garlic sauce, with golden paneer cubes stirred through.",
          ing=[("Pasta", [I("pasta", "Penne", "80 g", 80), I("water", "Water for boiling", "1.5 L", 0),
-                         I("salt", "Salt for the water", "1 tbsp", 18)]),
+                         I("salt", "Salt for the water", "2 tsp", 12)]),
               ("Sauce", [I("oil", "Olive oil or any oil", "1 tbsp", 13.5), I("garlic", "Garlic, chopped", "4 cloves", 16),
                          I("redchilli", "Chilli flakes or 2 dried red chillies", "1 tsp", 1),
                          I("tomato", "Ripe tomatoes, finely chopped or grated", "2½", 250),
-                         I("sugar", "Sugar", "a pinch", 0.5), SALT("½ tsp", 3),
+                         I("sugar", "Sugar", "a pinch", 0.5), SALT("¼ tsp", 1.5),
                          I("herbs", "Dried oregano or basil", "½ tsp", 0.5)]),
               ("Paneer", [I("paneer", "Paneer, 1.5 cm cubes", "100 g", 100), I("oil", "Oil", "½ tsp", 2.3)])],
          steps=["Paneer. Toss the paneer with oil and a pinch of salt and air-fry at 200 °C for 7–8 minutes, or "
@@ -238,7 +240,7 @@ WORLD = [
          course="main", diet="nonveg", time="30 min", uses="2 burners", serving="1 plate", keeps="Eat hot",
          intro="Creamy béchamel pasta made with milk, the café favourite, loaded with chicken and vegetables.",
          ing=[("Pasta", [I("pasta", "Penne or fusilli", "80 g", 80), I("water", "Water for boiling", "1.5 L", 0),
-                         I("salt", "Salt for the water", "1 tbsp", 18)]),
+                         I("salt", "Salt for the water", "2 tsp", 12)]),
               ("Chicken and vegetables", [I("chickenbl", "Boneless chicken, small cubes", "100 g", 100),
                                           I("oil", "Oil", "1 tsp", 4.5), I("garlic", "Garlic, chopped", "2 cloves", 8),
                                           I("capsicum", "Capsicum, diced", "¼", 40),
@@ -246,11 +248,11 @@ WORLD = [
                                           I("carrot", "Carrot, small dice", "¼", 20)]),
               ("White sauce", [I("butter", "Butter", "1 tbsp", 14), I("atta", "Maida or atta", "1 tbsp", 8),
                                I("milk", "Milk", "1 cup", 245), I("pepper", "Black pepper", "½ tsp", 1.2),
-                               I("herbs", "Mixed herbs or oregano", "½ tsp", 0.5), SALT("½ tsp", 3),
+                               I("herbs", "Mixed herbs or oregano", "½ tsp", 0.5), SALT("¼ tsp", 1.5),
                                I("cheese", "Grated cheese", "20 g", 20, opt=True)])],
          steps=["Pasta. Boil the pasta in salted water 1 minute short of the packet time and drain.",
-                "Chicken. Sear the chicken in the oil 3–4 minutes, add garlic and the vegetables for 2 minutes, and "
-                "set aside.",
+                "Chicken. Sear the chicken in the oil 4–5 minutes until no pink remains, add garlic and the vegetables "
+                "for 2 minutes, and set aside.",
                 "Roux. In the same pan melt the butter on low, add the flour and stir 1 minute; it should smell like "
                 "biscuits, not brown.",
                 "Sauce. Pour in the milk a little at a time, whisking, so no lumps form. Simmer 3–4 minutes until it "
@@ -260,10 +262,10 @@ WORLD = [
 
     dict(id="egg-pepper-pasta", title="Egg and pepper pasta (carbonara-style)", cuisine="Italian", course="main",
          diet="egg", time="20 min", uses="2 burners", serving="1 plate", keeps="Eat hot",
-         intro="Eggs and cheese turned into a silky sauce by the heat of the pasta, with lots of black pepper. "
-               "No cream, no bacon.",
+         intro="Eggs and cheese turned into a silky sauce, with lots of black pepper. No cream, no bacon. The sauce "
+               "is cooked gently until it thickens, so the eggs are safely cooked but not scrambled.",
          ing=[("Pasta", [I("pasta", "Spaghetti", "90 g", 90), I("water", "Water for boiling", "1.5 L", 0),
-                         I("salt", "Salt for the water", "1 tbsp", 18)]),
+                         I("salt", "Salt for the water", "2 tsp", 12)]),
               ("Sauce", [I("eggs", "Eggs", "2", 100), I("cheese", "Grated cheese", "25 g", 25),
                          I("pepper", "Black pepper, freshly crushed", "1 tsp", 2.3),
                          I("butter", "Butter", "1 tsp", 4.7), I("garlic", "Garlic, crushed", "2 cloves", 8),
@@ -273,10 +275,13 @@ WORLD = [
                 "Butter. Meanwhile melt the butter with the garlic (and mushrooms, if using) for 2 minutes on low. "
                 "Take out the garlic.",
                 "Emulsify. Turn the heat off. Add the drained hot pasta to the pan, wait 30 seconds, then pour in the "
-                "egg mix with 3 tbsp pasta water and toss quickly. The eggs should turn creamy, not scrambled; add "
-                "water a spoon at a time until glossy.",
+                "egg mix with 3 tbsp pasta water and toss quickly.",
+                "Thicken. Put the pan back on the lowest flame and keep tossing for 30–60 seconds, lifting it off "
+                "whenever it feels very hot, until the sauce thickens and clings like custard (about 70 °C: the eggs "
+                "are cooked). Add a spoon of pasta water if it tightens.",
                 "Serve at once with the rest of the pepper."],
-         tips=[("Scrambled eggs", "The pan was too hot. Always add the eggs off the heat.")]),
+         tips=[("Scrambled eggs", "The pan was too hot. Add the eggs off the heat and keep the flame at its lowest "
+                                  "while it thickens.")]),
 
     dict(id="air-fryer-bread-pizza", title="Air-fryer bread pizza (paneer tikka)", cuisine="Italian",
          course="snack", diet="veg", time="20 min", uses="Air fryer", serving="3 slices",
@@ -294,8 +299,8 @@ WORLD = [
          steps=["Sauce. Cook the grated tomato, garlic, ketchup, oregano and salt in a small pan for 4–5 minutes "
                 "until thick.",
                 "Paneer. Toss the paneer with the curd and chilli.",
-                "Build. Butter the bread lightly on the underside, spread the sauce on top, then paneer, vegetables "
-                "and cheese.",
+                "Build. Butter the bread lightly on the underside, spread the sauce on top, then the paneer, capsicum, "
+                "onion and cheese.",
                 "Air-fry. 180 °C for 5–6 minutes, until the cheese bubbles and the edges crisp."],
          tips=[("Chicken pizza", "Use 60 g freshly cooked chicken tikka instead of paneer.")]),
 
@@ -348,14 +353,14 @@ WORLD = [
          ing=[("Chicken", [I("chickenbl", "Boneless chicken, bite-size", "175 g", 175),
                            I("ginger", "Ginger-garlic paste", "1 tsp", 5), I("soysauce", "Soy sauce", "1 tsp", 5.5),
                            I("pepper", "Black pepper", "¼ tsp", 0.6), I("kashmiri", "Kashmiri chilli powder", "½ tsp", 1.3),
-                           SALT("¼ tsp", 1.5), I("cornflour", "Cornflour", "1 tbsp", 8),
+                           I("cornflour", "Cornflour", "1 tbsp", 8),
                            I("oil", "Oil spray or brush", "1 tsp", 4.5)]),
               ("Sauce", [I("oil", "Oil", "2 tsp", 9), I("garlic", "Garlic, chopped", "3 cloves", 12),
                          I("greenchilli", "Green chillies, slit", "2", 6), I("onion", "Onion, squares", "½", 70),
                          I("capsicum", "Capsicum, squares", "½", 80), I("soysauce", "Soy sauce", "2 tsp", 11),
                          I("chillisauce", "Red chilli sauce", "1 tbsp", 18), I("vinegar", "Vinegar", "1 tsp", 5),
                          I("springonion", "Spring onion", "1", 15, opt=True)])],
-         steps=["Marinate. Mix the chicken with ginger-garlic, soy, pepper, chilli and salt; rest 15 minutes. Toss "
+         steps=["Marinate. Mix the chicken with ginger-garlic, soy, pepper and chilli (the soy is salty enough); rest 15 minutes. Toss "
                 "with the cornflour just before cooking.",
                 "Air-fry. Brush with oil and air-fry at 200 °C for 12–14 minutes, shaking halfway, until crisp and "
                 "cooked through.",
@@ -387,10 +392,10 @@ WORLD = [
          tips=[("Smoky taste", "High heat and a pan that isn't crowded. If your burner is small, cook in two rounds.")]),
 
     dict(id="chicken-fried-rice", title="Chicken fried rice", cuisine="Indo-Chinese", course="main",
-         diet="nonveg", time="30 min (with rice cooked that morning)", uses="2 burners", serving="1 plate",
+         diet="nonveg", time="45 min", uses="2 burners", serving="1 plate",
          keeps="Eat within 2 hours",
-         intro="Restaurant fried rice with chicken and egg. Use rice cooked the same day and spread out to cool: "
-               "never overnight rice without a fridge.",
+         intro="Restaurant fried rice with chicken and egg. Cook the rice, spread it out to steam dry, and fry it "
+               "within 2 hours: never use rice that has sat out longer, or overnight rice without a fridge.",
          ing=[("Rice", [I("basmati", "Basmati or sona masoori rice, cooked and cooled", "70 g raw", 70)]),
               ("Stir-fry", [I("oil", "Oil", "1 tbsp", 13.5), I("chickenbl", "Boneless chicken, small cubes", "120 g", 120),
                             I("eggs", "Egg", "1", 50), I("garlic", "Garlic, chopped", "3 cloves", 12),
@@ -398,15 +403,15 @@ WORLD = [
                             I("capsicum", "Capsicum, diced", "¼", 30), I("soysauce", "Soy sauce", "2 tsp", 11),
                             I("vinegar", "Vinegar", "½ tsp", 2.5), I("pepper", "Black pepper", "½ tsp", 1.2),
                             SALT("¼ tsp", 1.5), I("springonion", "Spring onion", "1", 15, opt=True)])],
-         steps=["Rice. Cook the rice 1 : 1¾ so it stays firm, spread it on a plate and let it cool and dry for at "
-                "least 30 minutes, uncovered.",
+         steps=["Rice. Cook the rice 1 : 1¾ so it stays firm, spread it on a wide plate and let it steam dry, "
+                "uncovered, for 20–30 minutes while you prep. Fry it within 2 hours of cooking.",
                 "Chicken. Heat 2 tsp oil on high and stir-fry the chicken with a pinch of salt for 4–5 minutes until "
                 "cooked. Push to the side, scramble the egg in the gap, then mix.",
                 "Vegetables. Add the rest of the oil, garlic for 20 seconds, then the carrot, beans and capsicum for "
                 "2 minutes.",
                 "Fry. Add the rice, break up any lumps, and toss on high for 2 minutes. Add soy, vinegar and pepper "
                 "and toss 1 minute more. Finish with spring onion."],
-         tips=[("Mushy rice", "Rice that is warm and wet steams instead of frying. Cool and dry it well.")]),
+         tips=[("Mushy rice", "Rice that is warm and wet steams instead of frying. Spread it thin so it dries fast.")]),
 
     dict(id="soya-manchurian", title="Soya chunk manchurian", cuisine="Indo-Chinese", course="main", diet="veg",
          time="30 min", uses="Air fryer, 1 burner", serving="1 plate", keeps="Eat hot",
@@ -445,7 +450,7 @@ WORLD = [
                         I("eggs", "Egg, beaten", "1", 50), I("springonion", "Spring onion", "1", 15, opt=True)])],
          steps=["Base. Heat the oil and fry garlic, ginger and chilli for 30 seconds. Add the chicken and stir until "
                 "it turns white, 2 minutes.",
-                "Simmer. Add the vegetables and water, bring to a boil and simmer 5 minutes.",
+                "Simmer. Add the vegetables and water, bring to a boil and simmer 5 minutes; the chicken is cooked through by now.",
                 "Season. Stir in soy, vinegar, chilli sauce and pepper. Pour in the cornflour slurry while stirring "
                 "and simmer 1 minute until thick.",
                 "Egg ribbons. Turn the heat to low and pour the egg in a thin stream while stirring slowly in one "
@@ -497,8 +502,8 @@ WORLD = [
                                I("butter", "Butter, for the plates", "½ tsp", 2.3)])],
          steps=["Rotis. Knead the atta with water and a pinch of salt and roll 4 thin rotis the size of the sandwich "
                 "plates. Cook them 20 seconds a side on the tawa, just until set (or use wraps).",
-                "Filling. Heat the oil on high and cook the chicken 4 minutes, add onion, capsicum and garlic for "
-                "2 minutes, then the spices, salt and lemon. It should be dry, not saucy.",
+                "Filling. Heat the oil on high and cook the chicken 4–5 minutes until no pink remains, add onion, "
+                "capsicum and garlic for 2 minutes, then the spices, salt and lemon. It should be dry, not saucy.",
                 "Build. Roti, half the cheese, half the filling and tomato, another roti.",
                 "Press. Brush the plates with butter and toast 3–4 minutes until golden and the cheese melts. "
                 "Repeat for the second."],
@@ -562,17 +567,18 @@ WORLD = [
                         I("onion", "Onion, thinly sliced", "¼", 30), I("cucumber", "Cucumber, sticks", "¼", 50),
                         I("tomato", "Tomato, sliced", "½", 50), I("cabbage", "Cabbage, shredded", "¼ cup", 25)])],
          steps=["Marinate. Mix the chicken with everything in the chicken list; 20 minutes covered (up to 2 hours).",
-                "Air-fry. 200 °C for 12–14 minutes, shaking halfway, until charred at the edges.",
+                "Air-fry. 200 °C for 12–14 minutes, shaking halfway, until charred at the edges and cooked through "
+                "(cut the thickest piece: no pink).",
                 "Sauce. Stir the hung curd with garlic, lemon, oil and salt until smooth.",
-                "Wrap. Make 2 thin rotis. Spread sauce, add chicken and vegetables, roll tight and toast seam-side "
-                "down on the tawa or in the sandwich maker for 1 minute."],
+                "Wrap. Make 2 thin rotis. Spread sauce, add the chicken, onion, cucumber, tomato and cabbage, roll tight "
+                "and toast seam-side down on the tawa or in the sandwich maker for 1 minute."],
          tips=[("Paneer shawarma", "Use 150 g paneer strips; air-fry 8–10 minutes.")]),
 
     dict(id="air-fryer-falafel", title="Air-fryer falafel with garlic curd", cuisine="Middle Eastern",
          course="snack", diet="veg", time="35 min + overnight soak", uses="Mixer, air fryer", serving="8 small falafel",
          keeps="Eat hot",
          intro="Herby chickpea patties made from soaked (not cooked) chana and air-fried crisp.",
-         ing=[("Falafel", [I("kchana", "Kabuli chana, soaked 10–12 hours, drained", "60 g dry", 60),
+         ing=[("Falafel", [I("kchana", "Kabuli chana, soaked 12–24 hours, drained (not cooked)", "60 g dry", 60),
                            I("onion", "Onion, chopped", "¼", 30), I("garlic", "Garlic", "2 cloves", 8),
                            I("coriander", "Coriander leaves", "½ cup", 8), I("mint", "Mint leaves", "2 tbsp", 4),
                            I("greenchilli", "Green chilli", "1", 3), I("cumin_p", "Roasted cumin powder", "1 tsp", 2.5),
@@ -583,8 +589,10 @@ WORLD = [
          steps=["Grind. Pulse the soaked raw chana with onion, garlic, herbs, chilli, spices and salt to a coarse, "
                 "damp crumb, like couscous. Don't make a paste.",
                 "Shape. Mix in the besan, then press into 8 small patties. If they crumble, pulse 2 seconds more.",
-                "Air-fry. Brush with oil and air-fry at 190 °C for 14–16 minutes, turning halfway, until deep golden.",
-                "Serve with the garlic curd, cucumber and tomato, or tucked into a phulka."],
+                "Air-fry. Brush with oil and air-fry at 190 °C for 16–18 minutes, turning at 10, until deep golden "
+                "and crisp.",
+                "Serve. Stir the curd with the garlic, lemon and salt and serve with the falafel, cucumber and tomato, "
+                "or tuck them into a phulka."],
          tips=[("Never cooked chana", "Cooked chickpeas make falafel fall apart; they must be soaked raw.")]),
 
     dict(id="shakshuka", title="Shakshuka (eggs in spiced tomato)", cuisine="Middle Eastern", course="breakfast",
@@ -607,15 +615,15 @@ WORLD = [
     # ------------------------------------------------------------------ East Asian
     dict(id="thai-red-curry-chicken", title="Thai red curry with chicken and rice", cuisine="East Asian",
          course="main", diet="nonveg", time="30 min", uses="2 burners", serving="1 plate", keeps="Eat hot",
-         intro="Coconut milk curry from a ready red curry paste, with vegetables and tulsi (holy basil, the herb "
-               "Thai cooks use).",
+         intro="Coconut milk curry from a ready red curry paste, with vegetables and basil. Thai cooks use Thai "
+               "sweet basil here; Italian basil or tulsi are fine stand-ins.",
          ing=[("Curry", [I("oil", "Oil", "1 tsp", 4.5), I("currypaste", "Thai red curry paste", "1 tbsp", 15),
                          I("chickenbl", "Boneless chicken, thin slices", "150 g", 150),
                          I("coconutmilk", "Coconut milk", "½ cup", 120), I("water", "Water", "¼ cup", 0),
                          I("capsicum", "Capsicum, strips", "½", 60), I("beans", "Beans, cut", "40 g", 40),
                          I("onion", "Onion, wedges", "¼", 40), I("jaggery", "Jaggery or sugar", "½ tsp", 2.5),
                          I("soysauce", "Soy sauce", "1 tsp", 5.5), I("lemon", "Lemon juice", "1 tsp", 5),
-                         I("tulsi", "Tulsi (holy basil) leaves", "10", 2)]),
+                         I("tulsi", "Thai basil, or Italian basil or tulsi", "10 leaves", 2)]),
               ("Rice", [I("rice", "Rice", "70 g", 70)])],
          steps=["Rice. Start the rice.",
                 "Paste. Heat the oil and fry the curry paste on low for 1 minute, until it smells fragrant.",
@@ -624,7 +632,7 @@ WORLD = [
                 "Vegetables. Add onion, beans and capsicum and simmer 5–6 minutes until the chicken is cooked and the "
                 "beans tender-crisp.",
                 "Balance. Season with jaggery, soy and lemon: it should be spicy, slightly sweet and salty. Tear in "
-                "the tulsi and serve over rice."],
+                "the basil and serve over rice."],
          tips=[("Opened paste and coconut milk", "Without a fridge, buy single-use sachets and small tetra packs.")]),
 
     dict(id="teriyaki-chicken-bowl", title="Teriyaki chicken rice bowl", cuisine="East Asian", course="main",
