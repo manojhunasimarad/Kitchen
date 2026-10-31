@@ -38,6 +38,6 @@ art = page.replace("<!--PWA-->\n", "").replace("\n/*PWA_JS*/", "")
 (ROOT / "dist" / "artifact.html").write_text(art)
 # a new cache name whenever the page changes, so phones drop the old copy
 sw = ROOT / "sw.js"
-build = hashlib.sha1(site.encode()).hexdigest()[:10]
+build = hashlib.sha1(site.encode() + (ROOT / "manifest.webmanifest").read_bytes()).hexdigest()[:10]
 sw.write_text(re.sub(r'const VERSION = "kfz-[^"]*";', f'const VERSION = "kfz-{build}";', sw.read_text()))
 print("index.html", len(site) // 1024, "KB; dist/artifact.html", len(art) // 1024, "KB; cache", build)
