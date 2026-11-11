@@ -1,5 +1,23 @@
 # Kitchen From Zero
 
+See the [product audit and architecture roadmap](docs/PRODUCT-ARCHITECTURE-PLAN.html) for the proposed next phases.
+
+## Local reliability and cooking preview
+
+The local update adds tested fractional scaling, received-stock availability, visible save failures,
+downloadable backups, direct recipe links, cooking step checkboxes, a mobile section selector,
+and preparation metadata for 12 pilot recipes. Nutrition is collapsed below the method.
+
+Run `python -X utf8 tools/serve.py` (or `./Start-Local.ps1` on Windows), then open the printed local URL.
+Run `python -X utf8 tools/evaluate.py` for repeatable engineering checks. See
+[local development instructions](docs/LOCAL-DEVELOPMENT.md) for the build, optional local-model
+adapter, data migration limits and tests.
+
+The optional assistant currently retrieves recipe evidence; it does not invent missing cooking
+instructions. No model is installed or trained. Recipes and times have not been certified by
+kitchen trials. The descriptions below document the original feature set; the local development
+guide records current limitations and the next implementation phases.
+
 A phone-first kitchen planner for a small kitchen with no fridge or oven: two stoves, a pressure cooker, an air fryer and a sandwich maker. It started as a companion to two home cookbooks, *Restaurant-Grade Biryani at Home* (Book 1) and *Everyday Indian Meals at Home* (Book 2), and adds 32 recipes from other cuisines written for the same kitchen.
 
 109 recipes across seven cuisines: Indian, Continental, Italian, Indo-Chinese, Mexican, Middle Eastern and East Asian. Every serving has its nutrition worked out.

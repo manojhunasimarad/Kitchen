@@ -2,10 +2,10 @@
 
 AUDIT = {
     "date": "31 Oct 2026",
-    "limits": "No video transcripts were available to check against, and videos can't be watched here. The two books "
-              "were written for you earlier in this same chat, so matching them shows the app copied them faithfully, "
-              "not that they are right. The independent checks are the published recipes and food-safety sources "
-              "below.",
+    "limits": "Historical review notes from the original version follow. The source PDFs are not included in this "
+              "repository, and these historical checks have not been independently rerun. The current local update "
+              "has executable engineering tests and preparation metadata for 12 pilot recipes. These do not "
+              "certify culinary accuracy: recipe quantities, methods and estimated times still need cooking trials.",
     "summary": [
         "All 77 book recipes in the app were compared line by line with the two PDFs: every ingredient name, "
         "quantity and method step matches. The 20 Book 1 variations and sides are correctly halved from the book's "

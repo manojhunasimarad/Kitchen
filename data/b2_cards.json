@@ -18,7 +18,7 @@
     "items": [
      {
       "name": "Whole-wheat atta",
-      "note": "about 2 cups, plus 3 tbsp for dusting",
+      "note": "Weigh the flour; keep extra flour separately for dusting.",
       "q": "120 g",
       "q2": "240 g"
      },
@@ -58,12 +58,12 @@
    "Mix (2 min). Put the atta and salt in a wide bowl or a rimmed plate. Make a well, pour in most of the water and stir with the fingers of one hand in circles, drawing flour into the water, until it forms rough, shaggy lumps. Add the rest of the water a tablespoon at a time, only where flour is still dry. Atta brands absorb differently, so you may need a little more or less.",
    "Knead (4 min). Gather the dough into one mass. Push it away with the heel of your hand, fold it back over itself, turn the bowl a quarter turn and repeat. Wet your fingers if it feels stiff; dust a pinch of atta if it sticks. Knead in the oil in the last minute.",
    "Rest (15–20 min). Cover with a damp cloth or an upturned bowl. Cook your curry or dal in this time.",
-   "Divide (2 min). Knead for 20 seconds, roll into a log and cut it into equal pieces of about 30 g, the size of a golf ball (4 cm): 4 per serving. Roll each between your palms into a smooth ball with no cracks, flatten slightly and keep covered.",
-   "Set up two burners. Tawa on Burner 3 over medium-high; Burner 4 on medium for puffing, with tongs beside it. The tawa is ready when a few drops of water sizzle away in 2–3 seconds.",
+   "Divide (2 min). Knead for 20 seconds, roll into a log and cut it into 4 equal pieces per serving; divide the entire rested dough evenly. Roll each between your palms into a smooth ball with no cracks, flatten slightly and keep covered.",
+   "Set up two burners. Tawa on one burner over medium-high; the second burner on medium for puffing, with tongs beside it. The tawa is ready when a few drops of water sizzle away in 2–3 seconds.",
    "Roll (30 s each). Dip a ball in dry atta on both sides. Roll from the centre outward with light, even pressure, turning the disc a quarter turn every 2–3 strokes, to a 15–16 cm (6-inch) circle about 2 mm thick. Pat off loose flour; it burns on the tawa and tastes bitter.",
    "First side (15–20 s). Lay the chapati on the tawa. Flip it as soon as small bubbles appear and the colour dulls slightly.",
    "Second side (30–40 s). Cook until light brown spots appear underneath.",
-   "Puff (5 s). Lift it with tongs and set it on the Burner 4 flame, first side down. It balloons in 2–3 seconds; flip it for one second and take it off. No open flame? Press the edges gently with a folded cloth while it's still on the tawa.",
+   "Puff (5 s). Lift it with tongs and set it on the second burner flame, first side down. It balloons in 2–3 seconds; flip it for one second and take it off. No open flame? Press the edges gently with a folded cloth while it's still on the tawa.",
    "Stack. Brush with ghee if you like and stack in a cloth-lined casserole or a box with a lid; the trapped steam keeps them soft."
   ],
   "cues": [
@@ -430,7 +430,7 @@
   "title": "Moong dal chilla",
   "chapter": "Breakfasts",
   "page": 32,
-  "sub": "Split yellow moong pancakes · soak the night before",
+  "sub": "Split yellow moong pancakes · soak before grinding",
   "chips": {
    "TIME": "20 min + soaking",
    "ONE SERVING": "2 chillas",
@@ -445,7 +445,7 @@
     "items": [
      {
       "name": "Split yellow moong dal",
-      "note": "hesaru bele; soaked 6–8 hours",
+      "note": "Husked split yellow dal; soak 3–4 hours, then drain.",
       "q": "60 g",
       "q2": "120 g"
      },
@@ -475,7 +475,7 @@
      },
      {
       "name": "Water for grinding",
-      "note": "about 7 tbsp",
+      "note": "Add gradually; this is separate from the soaking water.",
       "q": "50 ml",
       "q2": "100 ml"
      },
@@ -512,7 +512,7 @@
    }
   ],
   "steps": [
-   "Soak (the night before). Wash the dal 3 times and soak it in 2 cups of water: at least 3 hours, and overnight is fine.",
+   "Soak first. Rinse the split yellow moong dal, cover with plenty of water and soak 3–4 hours. Drain before grinding. This waiting time is additional to the cooking estimate.",
    "Grind (2 min). Drain. Grind with the ginger, chillies, cumin and salt, adding the water a little at a time, to a smooth batter that pours like dosa batter: thick enough to coat a spoon, thin enough to spread. Stir in the hing, onion and coriander.",
    "Heat the tawa. Medium heat. Wipe the tawa with a few drops of oil on a folded cloth or half an onion.",
    "Spread. Pour a ladle of batter (about ⅓ cup) into the centre and spread it outward in circles with the back of the ladle to 15 cm. Drizzle ½ tsp oil around the edge.",
@@ -3680,9 +3680,9 @@
    }
   ],
   "steps": [
-   "Marinate. Pat the chicken dry. Mix in everything except half the oil and leave 30 minutes to 2 hours.",
+   "Marinate. Pat the chicken dry. Mix in everything except half the oil and refrigerate for 30 minutes to 2 hours.",
    "Preheat. Air fryer at 200 °C for 3 minutes.",
-   "Cook. Lay the chicken in one layer, brush with the remaining oil and cook 12–14 minutes, turning halfway (bone-in leg pieces, slashed: 18–20 minutes).",
+   "Cook. Lay the chicken in one layer, brush with the remaining oil and cook 12–14 minutes, turning halfway (bone-in leg pieces, slashed: 18–20 minutes). Check with a food thermometer: the thickest part must reach 74 °C. Continue cooking and recheck if needed; colour alone is not a reliable safety check.",
    "Rest. Rest 3 minutes, then finish with chaat masala and lemon."
   ],
   "cues": [],
@@ -3690,7 +3690,7 @@
   "tips": [
    {
     "title": "Juicy breast",
-    "text": "Breast dries out when overcooked. Check a piece at 12 minutes: no pink inside means it's done."
+    "text": "Breast dries out when overcooked. Start checking at 12 minutes with a food thermometer; the thickest part must reach 74 °C. Colour alone cannot establish doneness."
    }
   ],
   "var": [
@@ -4401,7 +4401,7 @@
   ],
   "steps": [
    "Roast the besan. Stir it in a dry pan on low for 1–2 minutes until it smells nutty; raw besan tastes pasty.",
-   "Marinate. Whisk the hung curd with everything except the paneer and vegetables. Fold in the paneer, capsicum and onion gently and leave 20 minutes (up to an hour).",
+   "Marinate. Whisk the hung curd with everything except the paneer and vegetables. Fold in the paneer, capsicum and onion gently and refrigerate 20 minutes (up to an hour).",
    "Arrange. Preheat to 200 °C for 3 minutes. Lay the pieces in one layer, not touching, or thread them on wooden skewers soaked in water for 20 minutes.",
    "Air-fry. 8–10 minutes, turning once at 5, until the edges are charred in spots. Don't go longer: paneer turns chewy.",
    "Finish. Sprinkle with chaat masala and squeeze over some lemon."

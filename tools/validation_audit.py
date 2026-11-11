@@ -1,0 +1,29 @@
+"""Coverage audit and review triage, not automated culinary certification."""
+import argparse
+import json
+import re
+from pathlib import Path
+from html import escape
+ROOT=Path(__file__).resolve().parents[1]
+def audit():
+    recipes=json.loads((ROOT/'data/data.json').read_text(encoding='utf-8'))['recipes']
+    rows=[]
+    for r in recipes:
+        text=' '.join(r['steps'])+' '+json.dumps(r.get('tips',[]),ensure_ascii=False)
+        flags=[]
+        if not r.get('sources'): flags.append('No external recipe-level evidence attached')
+        if r.get('timing',{}).get('prerequisiteMinutes') is None: flags.append('Raw-start timing unresolved')
+        if any(isinstance(g,str) for g in r['ingredients']): flags.append('Legacy ingredient text: manual scaling review')
+        if re.search(r'no pink|juices (?:run )?clear|loose C|C is cooked',text,re.I): flags.append('Review colour/shape-only doneness claims')
+        if re.search(r'whistle',text,re.I): flags.append('Pressure-cooker instructions require appliance-specific review')
+        if re.search(r'follow .*master|finished masala|from the night before|leftover|cooked rice',text,re.I): flags.append('Review component dependencies and storage instructions')
+        if re.search(r'a little each',json.dumps(r['ingredients']),re.I): flags.append('Unquantified combined ingredients')
+        if r['id']=='prawn-biryani': flags += ['Manual finding: masala ingredient amounts and preparation omitted; two variants are not independently specified','Manual finding: C-shape alone does not establish safe doneness; use authoritative seafood endpoint','Source comparison: Swasthi search excerpt supports different layering; full page returned HTTP 403, so recipe comparison remains incomplete']
+        if r['id']=='rajma-masala': flags.append('Manual finding: whistle-based pressure method is not validated against the cited boiling guidance; do not equate the two without appliance evidence')
+        rows.append({'id':r['id'],'title':r['title'],'externalReferences':len(r.get('sources',[])),'kitchenTested':r.get('review',{}).get('kitchenTested',False),'fullyValidated':False,'reviewFlags':flags,'flagScope':'Triage signals, not a complete list of errors; no flags would not prove correctness'})
+    return {'scope':'All recipes inventoried; heuristic triage plus targeted source comparisons, not a full manual source review','recipes':rows,'summary':{'total':len(rows),'withScopedExternalReferences':sum(x['externalReferences']>0 for x in rows),'kitchenTested':sum(x['kitchenTested'] for x in rows),'fullyValidated':0},'sources':[{'url':'https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures','scope':'Poultry, seafood, eggs and leftovers endpoints; does not validate recipe ratios or times','access':'Full page reviewed'},{'url':'https://www.efsa.europa.eu/en/news/lectins-food-undercooked-beans-pose-health-risk-says-efsa','scope':'Soak, change water and boil pulses; not validation of a particular pressure cooker schedule','access':'Full page reviewed'},{'url':'https://www.indianhealthyrecipes.com/prawn-biryani-recipe-prawn-recipes/','scope':'Variant comparison only; search excerpt available, full page HTTP 403','access':'Partial only'}]}
+def render(d):
+    s=d['summary']; rows=''.join('<tr><td>'+escape(r['title'])+'</td><td>'+str(r['externalReferences'])+'</td><td>'+('Yes' if r['kitchenTested'] else 'No')+'</td><td><ul>'+''.join('<li>'+escape(f)+'</li>' for f in r['reviewFlags'])+'</ul></td></tr>' for r in d['recipes'])
+    return '<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Recipe validation coverage</title><style>body{font:16px/1.6 system-ui;max-width:1200px;margin:32px auto;padding:20px;color:#183139}table{border-collapse:collapse;width:100%}td,th{padding:12px;text-align:left;border:1px solid #ccd8d9;vertical-align:top}th{background:#e6efed}li{margin-bottom:6px}</style><h1>Recipe validation coverage</h1><p><strong>'+str(s['total'])+' recipes inventoried; '+str(s['withScopedExternalReferences'])+' have limited external references; 0 fully validated; 0 kitchen-tested.</strong></p><p>'+escape(d['scope'])+'. Flags are review candidates, not confirmed errors in every case. This inventory does not mean every recipe was manually compared with websites.</p><h2>What validation requires</h2><ol><li>Choose the exact dish and variant, servings and equipment.</li><li>Check every ingredient quantity, preparation action, dependency and safety endpoint against accessible, attributed sources. Resolve conflicts rather than voting by website count.</li><li>Separate hands-on time, soaking/marinating, cooking, pressure release, resting and extra batches.</li><li>Trial the recipe using the stated quantities and equipment, recording actual time, yield and failures.</li><li>Repeat the trial and retain reviewer/date/version evidence. Recipe changes require another review.</li></ol><p>Books and video transcripts can support review when legally accessible and attributed. No paid books were obtained, videos transcribed or corpus training performed in this audit.</p><h2>Sources checked</h2><ul>'+''.join('<li><a href="'+x['url']+'">'+escape(x['url'].split('/')[2])+'</a>: '+escape(x['scope'])+' ('+escape(x['access'])+')</li>' for x in d['sources'])+'</ul><h2>Every recipe</h2><table><thead><tr><th>Recipe</th><th>Scoped references</th><th>Kitchen-tested</th><th>Pending review</th></tr></thead><tbody>'+rows+'</tbody></table></html>'
+if __name__=='__main__':
+    p=argparse.ArgumentParser();p.add_argument('--output',required=True);a=p.parse_args();out=Path(a.output);out.mkdir(parents=True,exist_ok=True);d=audit();(out/'kitchen-validation-coverage.json').write_text(json.dumps(d,ensure_ascii=False,indent=2),encoding='utf-8');(out/'kitchen-validation-coverage.html').write_text(render(d),encoding='utf-8');print(json.dumps(d['summary']))

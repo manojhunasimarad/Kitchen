@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kitchen From Zero</title>
+<meta name="description" content="A personal cooking companion with recipes, preparation checklists, precise serving quantities and meal planning.">
 <!--PWA-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600&display=swap">
@@ -55,9 +56,9 @@ h1 { margin: 0; font: 800 clamp(34px, 7vw, 56px)/0.95 var(--font-display); lette
 .facts { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 20px; font: 400 13px var(--font-mono); color: var(--muted); }
 
 /* tabs: sticky, scroll sideways on phones */
-.tabs { position: sticky; top: 0; z-index: 5; display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none;
+.tabs { position: sticky; top: 0; z-index: 5; display: flex; gap: 2px; overflow-x: auto; scrollbar-width: thin;
   background: var(--bg); border-bottom: 1px solid var(--line); margin-inline: -16px; padding-inline: 12px; }
-.tabs::-webkit-scrollbar { display: none; }
+.tabs::-webkit-scrollbar { height: 5px; }
 .tab { appearance: none; flex: none; background: none; border: 0; border-bottom: 3px solid transparent; margin-bottom: -1px;
   padding: 12px 10px; font: 700 15px var(--font-body); color: var(--muted); cursor: pointer; white-space: nowrap; }
 .tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent-fill); }
@@ -101,7 +102,7 @@ button.chip { cursor: pointer; background: none; }
 .seg button[aria-pressed="true"] { background: var(--ink); color: var(--surface); }
 .stepper { display: inline-flex; align-items: center; gap: 6px; }
 .stepper b { min-width: 2ch; text-align: center; font: 600 16px var(--font-mono); }
-.rbtn { appearance: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line); background: var(--surface); cursor: pointer; font: 600 18px/1 var(--font-mono); }
+.rbtn { appearance: none; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); background: var(--surface); cursor: pointer; font: 600 18px/1 var(--font-mono); }
 .lbl-s { font: 600 12px var(--font-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
 
 /* date strip */
@@ -308,6 +309,21 @@ input[type="text"], input[type="date"] { font: 400 15px var(--font-body); color:
   .step-h .count { grid-column: 2; }
 }
 @media (prefers-reduced-motion: reduce) { .track i, .chev { transition: none; } .card.spin { animation: none; } }
+
+.recipe-tools { display:flex; flex-wrap:wrap; gap:8px; }
+.recipe-details { border:1px solid var(--line); border-radius:10px; padding:14px; }
+.recipe-details summary { cursor:pointer; font-weight:700; min-height:32px; }
+.method li { padding:10px 8px; border-bottom:1px solid var(--line); }
+.step-check { display:flex; gap:12px; align-items:flex-start; }
+.step-check input { margin-top:4px; }
+.step-check:has(input:checked) { opacity:.6; }
+.prep-note { border-left:4px solid var(--accent); padding:12px 16px; background:var(--surface); }
+.nav-jump { display:none; }
+.source-links { display:flex; flex-wrap:wrap; gap:12px; }
+#dlg-live { min-height:1.5em; }
+@media(max-width:600px) { .nav-jump {display:flex;align-items:center;gap:10px;} .chip {white-space:normal;} .btn.sm {min-height:40px;} .top .lede {font-size:14px;} }
+@media print { .tabs,.top,.recipe-tools,.actbar,.toolbar,footer {display:none!important;} dialog[open] {position:static;max-height:none;width:100%;border:0;} .dlg-in {overflow:visible;} }
+#recipe-method, #recipe-ingredients { scroll-margin-top: 85px; }
 </style>
 </head>
 <body>
@@ -318,13 +334,14 @@ input[type="text"], input[type="date"] { font: 400 15px var(--font-body); color:
     <p class="lede">Plan the day, tap what you want to cook with, or let it surprise you. 109 recipes from Indian, Continental, Italian, Indo-Chinese, Mexican, Middle Eastern and East Asian kitchens, with nutrition for every serving.</p>
     <div class="meters">
       <div class="meter"><div class="m-top"><span class="m-name">Protein today</span><span class="m-num" id="m-p-n"></span></div><div class="track"><i id="m-p-b"></i></div></div>
-      <div class="meter"><div class="m-top"><span class="m-name">Ready now</span><span class="m-num" id="m-ready-n"></span></div><div class="track"><i id="m-ready-b"></i></div></div>
+      <div class="meter"><div class="m-top"><span class="m-name">Ingredients available</span><span class="m-num" id="m-ready-n"></span></div><div class="track"><i id="m-ready-b"></i></div></div>
       <div class="meter"><div class="m-top"><span class="m-name">Recipes cooked</span><span class="m-num" id="m-rec-n"></span></div><div class="track"><i id="m-rec-b"></i></div></div>
       <div class="meter"><div class="m-top"><span class="m-name">Track</span><span class="m-num" id="m-track-n"></span></div><div class="track"><i id="m-track-b"></i></div></div>
     </div>
     <div class="facts"><span id="facts"></span><span id="save-status" aria-live="polite">Loading your progress</span></div>
   </header>
 
+  <label class="nav-jump">Go to section <select id="nav-jump" aria-label="Go to section"><option value="today">Today</option><option value="recipes">Recipes</option><option value="cook">Ingredients</option><option value="pantry">Pantry</option><option value="shop">Shopping</option><option value="surprise">Surprise me</option><option value="track">Learn to cook</option><option value="me">Profile</option><option value="ref">Reference</option><option value="setup">Settings</option></select></label>
   <nav class="tabs" role="tablist" aria-label="Sections" id="tabs">
     <button class="tab" role="tab" type="button" id="tab-today" aria-controls="panel-today">Today</button>
     <button class="tab" role="tab" type="button" id="tab-cook" aria-controls="panel-cook">Cook</button>
@@ -379,8 +396,8 @@ input[type="text"], input[type="date"] { font: 400 15px var(--font-body); color:
       <select id="s-diet" aria-label="Diet"><option value="">Veg, egg and non-veg</option><option value="veg">Veg</option><option value="egg">Egg</option><option value="nonveg">Non-veg</option></select>
     </div>
     <div class="toolbar">
-      <label class="toggle"><input type="checkbox" id="s-ready"> Only what I can cook now</label>
-      <label class="toggle"><input type="checkbox" id="s-quick"> 30 minutes or less</label>
+      <label class="toggle"><input type="checkbox" id="s-ready"> Only ingredients in my pantry</label>
+      <label class="toggle"><input type="checkbox" id="s-quick"> 30 minutes from raw or less</label>
       <label class="toggle"><input type="checkbox" id="s-new"> Not cooked yet</label>
     </div>
     <div class="sur"><div class="card" id="s-card" aria-live="polite"></div></div>
@@ -396,7 +413,9 @@ input[type="text"], input[type="date"] { font: 400 15px var(--font-body); color:
       <select id="r-cuis" aria-label="Cuisine"></select>
       <select id="r-course" aria-label="Meal"><option value="">Any meal</option><option value="breakfast">Breakfast</option><option value="main">Lunch or dinner</option><option value="soup">Soup</option><option value="snack">Snack</option><option value="side">Side</option><option value="sweet">Sweet</option></select>
       <select id="r-diet" aria-label="Diet"><option value="">Veg, egg and non-veg</option><option value="veg">Veg</option><option value="egg">Egg</option><option value="nonveg">Non-veg</option></select>
-      <select id="r-app" aria-label="Equipment"><option value="">Any equipment</option><option value="airfryer">Air fryer (incl. options)</option><option value="sandwich">Sandwich maker (incl. options)</option><option value="cooker">Pressure cooker</option><option value="quick">20 min or less</option></select>
+      <select id="r-app" aria-label="Equipment"><option value="">Any equipment</option><option value="airfryer">Air fryer (incl. options)</option><option value="sandwich">Sandwich maker (incl. options)</option><option value="cooker">Pressure cooker</option></select>
+      <select id="r-time" aria-label="Total time"><option value="">Any total time</option><option value="20">Within 20 min from raw</option><option value="30">Within 30 min from raw</option><option value="60">Within 60 min from raw</option></select>
+      <button class="btn" type="button" id="r-clear">Clear filters</button>
       <select id="r-sort" aria-label="Sort"><option value="">Book order</option><option value="protein">Most protein</option><option value="iron">Most iron</option><option value="kcal">Fewest calories</option><option value="time">Quickest</option></select>
       <label class="toggle"><input type="checkbox" id="r-hide"> Hide cooked</label>
     </div>
@@ -437,7 +456,7 @@ input[type="text"], input[type="date"] { font: 400 15px var(--font-body); color:
 
   <section class="panel" id="panel-setup" role="tabpanel" aria-labelledby="tab-setup" hidden><div class="form" id="setup"></div></section>
 
-  <footer>B1 is Restaurant-Grade Biryani at Home, B2 is Everyday Indian Meals at Home; other cuisines are app recipes written for the same kitchen. Nutrition is approximate, calculated from ingredient weights (USDA and Indian food composition tables). Your plan, ticks and pantry are saved to your Claude account when you're signed in, so they follow you between phone and laptop.</footer>
+  <footer>B1 is Restaurant-Grade Biryani at Home, B2 is Everyday Indian Meals at Home; other cuisines are app recipes written for the same kitchen. Nutrition is approximate, calculated from ingredient weights (USDA and Indian food composition tables). On this website, your data stays in this browser on this device. Export a backup in Settings before clearing browser data. Only a connected Claude artifact can offer account sync. Recipe times and nutrition are estimates; preparation reviews are still in progress.</footer>
 </div>
 
 <dialog id="dlg" aria-labelledby="dlg-title"><div class="dlg-in" id="dlg-in"></div></dialog>
@@ -445,6 +464,7 @@ input[type="text"], input[type="date"] { font: 400 15px var(--font-body); color:
 <dialog id="pick" aria-labelledby="pick-title"><div class="dlg-in" id="pick-in"></div></dialog>
 
 <script>
+/*CORE_JS*/
 const D = /*DATA*/;
 const R = {}; D.recipes.forEach(r => { R[r.id] = r; });
 const X = {}; D.extras.forEach(x => { X[x.id] = x; });
@@ -467,7 +487,14 @@ const SESS = {
 const $ = s => document.querySelector(s);
 const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 function lsGet(k, d) { try { const v = localStorage.getItem(k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } }
-function lsSet(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+let storageFailed = false;
+function lsSet(k, v) {
+  let result;
+  try { result = KitchenCore.writeStorage(localStorage, k, v); }
+  catch (error) { result = {ok:false}; }
+  if (k === "kfz.state") { storageFailed = !result.ok; if (storageFailed) setStatus("unsaved"); }
+  return result.ok;
+}
 
 /* ---------- dates ---------- */
 function ymd(d) { return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); }
@@ -500,11 +527,12 @@ function apply(op) {
   op(S);
   if (first) preOps.push(op);
   lsSet("kfz.state", S);
-  if (mode === "db") queueSave();
+  if (mode === "db") queueSave(); else setStatus("local");
   render();
 }
 function setStatus(k) {
-  $("#save-status").textContent = { saving: "Saving…", saved: "Synced to your account", local: "Saved on this device only", error: "Couldn't sync; kept on this device", loading: "Loading your progress" }[k] || "";
+  if (storageFailed && k !== "saved" && k !== "saving") k = "unsaved";
+  $("#save-status").textContent = { unsaved: "Not saved on this device — export a backup in Settings", saving: "Saving…", saved: "Synced to your account", local: "Saved on this device only", error: "Couldn't sync; kept on this device", loading: "Loading your progress" }[k] || "";
   syncNote = k;
 }
 let syncNote = "loading";
@@ -559,7 +587,7 @@ async function connect() {
 
 /* ---------- pantry and availability ---------- */
 const pstate = k => (k in S.pantry ? S.pantry[k] : PDEF[k].def);
-const avail = k => pstate(k) < 2 || !!S.basket[k];
+const avail = k => KitchenCore.pantryAvailable(pstate(k));
 const hasTok = tok => tok.split("|").some(avail);
 const tokLabel = tok => tok.split("|").map(k => PDEF[k].label).join(" or ");
 const firstMissing = tok => tok.split("|")[0];
@@ -618,34 +646,11 @@ const targetSource = () => (!S.set.manual && profOk() ? "your profile (Me)" : S.
 /* ---------- formatting ---------- */
 const refTxt = r => (r.book ? "B" + r.book + " p. " + r.page : r.cuisine);
 const fmtN = (v, k) => (["kcal", "ca", "mg", "k", "na"].includes(k) ? Math.round(v) : v >= 10 ? Math.round(v) : Math.round(v * 10) / 10);
-const FR = [[0, ""], [0.25, "¼"], [1 / 3, "⅓"], [0.5, "½"], [2 / 3, "⅔"], [0.75, "¾"], [1, ""]];
-function nice(x) {
-  if (x >= 10) return String(Math.round(x));
-  let w = Math.floor(x), f = x - w, best = FR[0];
-  FR.forEach(c => { if (Math.abs(c[0] - f) < Math.abs(best[0] - f)) best = c; });
-  if (best[0] === 1) { w += 1; best = FR[0]; }
-  if (w === 0 && !best[1]) return "a little";
-  return (w ? String(w) : "") + best[1];
-}
-const FRV = { "½": .5, "¼": .25, "¾": .75, "⅓": 1 / 3, "⅔": 2 / 3, "⅛": .125 };
-function scaleQ(q, f) {
-  if (!q || Math.abs(f - 1) < 0.01) return q;
-  return q.split(/(\s\/\s|\s\+\s)/).map(part => {
-    if (/^\s[\/+]\s$/.test(part)) return part;
-    if (/^a pinch/i.test(part)) return f >= 1.75 ? Math.round(f) + " pinches" + part.slice(7) : part;
-    const m = part.match(/^(\d+(?:\.\d+)?\s*[½¼¾⅓⅔⅛]?|[½¼¾⅓⅔⅛])(\s*[–-]\s*(\d+(?:\.\d+)?\s*[½¼¾⅓⅔⅛]?|[½¼¾⅓⅔⅛]))?(.*)$/);
-    if (!m) return part;
-    const val = s => { s = s.trim(); let v = parseFloat(s) || 0; const fr = s.match(/[½¼¾⅓⅔⅛]/); if (fr) v += FRV[fr[0]]; return v; };
-    const unit = m[4] || "";
-    const fmt = v => (/^\s*(g|ml)\b/.test(unit) && v * f >= 10 ? String(Math.round(v * f / 5) * 5) : nice(v * f));
-    const out = fmt(val(m[1])) + (m[2] ? "–" + fmt(val(m[3])) : "");
-    const many = val(m[1]) * f > 1.01;
-    return out + (many ? unit.replace(/^(\s*)(cup|clove|slice|inch)\b(?!es|s)/, (x, sp, u) => sp + u + (u === "inch" ? "es" : "s")) : unit);
-  }).join("");
-}
+const nice = n => KitchenCore.format(n);
+const scaleQ = (q, f) => KitchenCore.scaleQuantity(q, f);
 function chips(r) {
   let h = "";
-  if (r.minutes) h += '<span class="chip">' + r.minutes + " min</span>";
+  if (r.minutes) h += '<span class="chip">' + esc(r.time || (r.minutes + " min")) + "</span>";
   h += '<span class="chip p">' + Math.round(r.nutr.p) + " g protein</span>";
   if (r.tags.includes("airfryer")) h += '<span class="chip af">Air fryer</span>';
   else if (r.tags.includes("airfryer-option")) h += '<span class="chip af">Air-fryer option</span>';
@@ -669,7 +674,7 @@ function renderHeader() {
   const ep = Math.round(dayNutr(todayStr(), true).p);
   $("#m-p-n").textContent = ep + " of " + target("p") + " g"; bar($("#m-p-b"), ep, target("p"));
   const rd = readyCount();
-  $("#m-ready-n").textContent = rd + " dishes"; bar($("#m-ready-b"), rd, D.recipes.length);
+  $("#m-ready-n").textContent = rd + (pantryTouched() ? " dishes" : " suggested"); bar($("#m-ready-b"), rd, D.recipes.length);
   const today = todayStr(); let n = 0;
   Object.values(S.done).forEach(ts => { if (ymd(new Date(ts * 1000)) === today) n++; });
   let streak = 0; const d = new Date(); if (!S.days[ymd(d)]) d.setDate(d.getDate() - 1);
@@ -744,7 +749,7 @@ function pool(opts) {
     if (opts.course === "any" && (r.course === "side" || r.course === "sweet")) return false;
     if (opts.cuisine && r.cuisine !== opts.cuisine) return false;
     if (opts.diet && r.diet !== opts.diet) return false;
-    if (opts.maxMin && (!r.minutes || r.minutes > opts.maxMin || /soak|overnight/.test(r.time))) return false;
+    if (opts.maxMin && !KitchenCore.withinTime(r, opts.maxMin)) return false;
     if (opts.ready && status(r).missing.length) return false;
     if (opts.holds && !r.holds) return false;
     if (opts.fresh && S.done["r-" + r.id]) return false;
@@ -794,7 +799,7 @@ function renderCook() {
   if (picks.length) scored = scored.filter(x => x.uses.length);
   scored.sort((a, b) => b.uses.length - a.uses.length || a.miss.length - b.miss.length || b.r.nutr.p - a.r.nutr.p);
   $("#cook-h").textContent = picks.length ? "Dishes with your picks" : "Dishes you can make";
-  const groups = [["Ready to cook", x => x.miss.length === 0], ["One item short", x => x.miss.length === 1], ["Two items short", x => x.miss.length === 2]];
+  const groups = [["Ingredients available · check preparation", x => x.miss.length === 0], ["One item short", x => x.miss.length === 1], ["Two items short", x => x.miss.length === 2]];
   $("#cook-out").innerHTML = groups.map(([title, f]) => {
     const g = scored.filter(f);
     return '<section class="sec" style="margin-bottom:12px"><h3>' + title + ' <span class="m-num">' + g.length + "</span></h3>" +
@@ -820,7 +825,7 @@ function renderSurprise() {
     $("#s-acts").innerHTML = '<button type="button" class="btn primary big" id="s-go">Shuffle</button>';
   } else {
     const st = status(r);
-    card.innerHTML = '<span class="cu">' + esc(r.cuisine) + (r.region ? " · " + esc(r.region) : "") + " · " + esc(r.course) + "</span><h2>" + esc(r.title) + '</h2><div class="stats">' + chips(r) + '<span class="chip">' + Math.round(r.nutr.kcal) + ' kcal</span><span class="chip">' + fmtN(r.nutr.fe, "fe") + " mg iron</span>" + (st.missing.length ? "" : '<span class="chip have">Ready to cook</span>') + '</div><p class="intro">' + esc(r.intro || r.sub || "") + "</p>" +
+    card.innerHTML = '<span class="cu">' + esc(r.cuisine) + (r.region ? " · " + esc(r.region) : "") + " · " + esc(r.course) + "</span><h2>" + esc(r.title) + '</h2><div class="stats">' + chips(r) + '<span class="chip">' + Math.round(r.nutr.kcal) + ' kcal</span><span class="chip">' + fmtN(r.nutr.fe, "fe") + " mg iron</span>" + (st.missing.length ? "" : '<span class="chip have">Ingredients available</span>') + '</div><p class="intro">' + esc(r.intro || r.sub || "") + "</p>" +
       (st.missing.length ? '<div class="miss"><span class="small">Missing:</span>' + missChips(st.missing.map(firstMissing)) + "</div>" : "");
     const def = r.course === "breakfast" ? "b" : (new Date().getHours() < 15 ? "l" : "d");
     $("#s-acts").innerHTML = '<button type="button" class="btn primary big" id="s-go">Shuffle again</button><button type="button" class="btn big" data-open="' + r.id + '">See recipe</button>' +
@@ -841,6 +846,7 @@ function renderRecipes() {
     if (co && r.course !== co) return false;
     if (diet && r.diet !== diet) return false;
     if (app && !r.tags.some(t => t === app || t === app + "-option")) return false;
+    if ($("#r-time").value && !KitchenCore.withinTime(r, +$("#r-time").value)) return false;
     if (hide && S.done["r-" + r.id]) return false;
     if (q) {
       const hay = (r.title + " " + r.sub + " " + r.cuisine + " " + r.chapter + " " + r.ingredients.flatMap(g => g.items.map(i => i.name)).join(" ")).toLowerCase();
@@ -850,6 +856,7 @@ function renderRecipes() {
   });
   const S2 = { protein: (a, b) => b.nutr.p - a.nutr.p, iron: (a, b) => b.nutr.fe - a.nutr.fe, kcal: (a, b) => a.nutr.kcal - b.nutr.kcal, time: (a, b) => (a.minutes || 999) - (b.minutes || 999) };
   if (S2[sort]) list = list.slice().sort(S2[sort]);
+  else if (q) list.sort((a,b) => Number(b.title.toLowerCase().includes(q)) - Number(a.title.toLowerCase().includes(q)));
   $("#r-count").textContent = list.length + " of " + D.recipes.length + " recipes";
   $("#rec-rows").innerHTML = list.map(r => {
     const id = "r-" + r.id, on = !!S.done[id];
@@ -862,7 +869,7 @@ const PLABEL = ["Have", "Low", "Out"];
 function renderPantry() {
   const ban = $("#pantry-banner");
   ban.hidden = pantryTouched();
-  ban.textContent = "This is a starting guess. Change anything that doesn't match your kitchen.";
+  ban.textContent = "Suggested pantry, not confirmed stock. Review each item before relying on ingredient availability. Quantities and prepared ingredients are not tracked yet.";
   const q = $("#p-q").value.trim().toLowerCase(), groups = [];
   D.pantry.forEach(p => { let g = groups.find(x => x.name === p.group); if (!g) groups.push(g = { name: p.group, items: [] }); g.items.push(p); });
   $("#pgroups").innerHTML = groups.map(g => {
@@ -889,15 +896,15 @@ function getButtons(k) {
 function renderShop() {
   const need = planNeeds(2), ks = Object.keys(need);
   const bring = Object.keys(S.basket).filter(k => S.basket[k].via === "bring" && PDEF[k]);
-  const ordered = Object.keys(S.basket).filter(k => S.basket[k].via === "order" && PDEF[k]);
+  const ordered = Object.keys(S.basket).filter(k => (S.basket[k].via === "order" || S.basket[k].via === "search") && PDEF[k]);
   const restock = D.pantry.filter(p => pstate(p.key) === 1 && !S.basket[p.key]).map(p => p.key);
   const sec = (title, sub, body) => '<section class="sec"><h2>' + title + '</h2><p class="small">' + sub + "</p>" + body + "</section>";
   $("#shop-out").innerHTML =
     sec("Needed for your plan", "Missing for meals planned today and tomorrow (" + esc(appOf().label) + " is your order app; change it in Settings).",
-      ks.length ? '<ul class="rows">' + ks.map(k => '<li class="row"><span class="lbl"><span class="plain">' + esc(PDEF[k].label) + '</span><span class="sm">For ' + esc(need[k].slice(0, 3).join(", ")) + '</span></span><span class="meta">' + getButtons(k) + "</span></li>").join("") + "</ul>" : '<p class="empty">Everything for today and tomorrow is in your pantry or on its way.</p>') +
+      ks.length ? '<ul class="rows">' + ks.map(k => '<li class="row"><span class="lbl"><span class="plain">' + esc(PDEF[k].label) + '</span><span class="sm">For ' + esc(need[k].slice(0, 3).join(", ")) + '</span></span><span class="meta">' + getButtons(k) + "</span></li>").join("") + "</ul>" : '<p class="empty">Required ingredient types are in your pantry. Check quantities and preparation before cooking.</p>') +
     sec("To bring home", "Tick when you've bought it; the pantry marks it Have.",
       bring.length ? '<ul class="rows">' + bring.map(k => '<li class="row"><input type="checkbox" id="sb-' + k + '" data-got="' + k + '" aria-label="Bought ' + esc(PDEF[k].label) + '"><span class="lbl"><span class="plain">' + esc(PDEF[k].label) + "</span></span></li>").join("") + "</ul>" : '<p class="empty">Nothing to bring.</p>') +
-    sec("Ordered", "Tick when it arrives.",
+    sec("Shopping searches and orders", "Opening a shop is not a confirmed purchase. Tick only when the item has arrived.",
       ordered.length ? '<ul class="rows">' + ordered.map(k => '<li class="row"><input type="checkbox" id="so-' + k + '" data-got="' + k + '" aria-label="Arrived: ' + esc(PDEF[k].label) + '"><span class="lbl"><span class="plain">' + esc(PDEF[k].label) + '</span></span><span class="meta"><a class="ref" href="' + esc(orderUrl(k)) + '" target="_blank" rel="noopener">Open ' + esc(appOf().label) + "</a></span></li>").join("") + "</ul>" : '<p class="empty">Nothing on order.</p>') +
     sec("Running low", "Pantry items marked Low.",
       restock.length ? '<ul class="rows">' + restock.map(k => '<li class="row"><span class="lbl"><span class="plain">' + esc(PDEF[k].label) + '</span></span><span class="meta">' + getButtons(k) + "</span></li>").join("") + "</ul>" : '<p class="empty">Nothing marked Low.</p>');
@@ -944,9 +951,9 @@ function renderRef() {
   const F = D.ref;
   const A = D.audit, src = keys => keys.split(" ").map(k => A.sources[k] ? '<a href="' + esc(A.sources[k][1]) + '" target="_blank" rel="noopener">' + esc(A.sources[k][0].split(":")[0]) + "</a>" : "").join(", ");
   $("#refs").innerHTML =
-    '<section><h2>How the recipes were checked</h2><p class="small">Checked ' + esc(A.date) + ". " + esc(A.limits) + '</p><ul class="plain">' + A.summary.map(s => "<li>" + esc(s) + "</li>").join("") + "</ul>" +
-    '<h3>What was fixed</h3><ul class="plain">' + A.fixed.map(s => "<li>" + esc(s) + "</li>").join("") + "</ul>" +
-    '<h3>Key numbers against published sources</h3><div class="tbl-wrap"><table><thead><tr><th>What</th><th>In the app</th><th>Published</th><th>Result</th><th>Source</th></tr></thead><tbody>' +
+    '<section><h2>Recipe checks and limits</h2><p class="banner">Historical notes dated ' + esc(A.date) + ". " + esc(A.limits) + '</p><details><summary>Original review claims · not independently rerun</summary><ul class="plain">' + A.summary.map(s => "<li>" + esc(s) + "</li>").join("") + "</ul></details>" +
+    '<h3>Historical changes</h3><ul class="plain">' + A.fixed.map(s => "<li>" + esc(s) + "</li>").join("") + "</ul>" +
+    '<h3>Historical source comparisons</h3><div class="tbl-wrap"><table><thead><tr><th>What</th><th>Original app value</th><th>Published</th><th>Historical result</th><th>Source</th></tr></thead><tbody>' +
     A.checks.map(c => "<tr><td>" + esc(c[0]) + "</td><td>" + esc(c[1]) + "</td><td>" + esc(c[2]) + "</td><td>" + esc(c[3]) + "</td><td>" + src(c[4]) + "</td></tr>").join("") + "</tbody></table></div></section>" +
     '<section><h2>Daily targets</h2><p class="intro-p">From ' + esc(targetSource()) + '. Minerals and vitamins follow ICMR-NIN 2020 for your sex and age; sodium is an upper limit.</p>' + table(["Nutrient", "Per day"], NUT.map(([k, l, u]) => [l, (k === "na" ? "under " : "") + target(k) + " " + u]), [1]) + "</section>" +
     '<section><h2>The five-star scorecard</h2><p class="intro-p">Score every dish 1 to 5 on each line. Tick it on the Track when every line is 3 or more; 32 of 40 on a biryani is hotel grade.</p>' + table(["Criterion", "5 looks like"], F.scorecard) + "</section>" +
@@ -1116,14 +1123,14 @@ function renderMe() {
 
 /* ---------- settings ---------- */
 function renderSetup() {
-  const sync = { saved: "Synced to your Claude account. Open this same link on your phone and laptop, signed in to the same account, and everything stays in step.", saving: "Syncing…", local: "Saved on this device only. Open the page from claude.ai while signed in to sync across devices.", error: "Couldn't reach your account just now; changes are kept on this device and sync next time.", loading: "Checking…" }[syncNote];
+  const sync = { unsaved: "The browser could not save your latest changes. Export a backup now; keep this tab open until your data is safe.", saved: "Synced to your Claude account. Open this same link on your phone and laptop, signed in to the same account, and everything stays in step.", saving: "Syncing…", local: "Saved in this browser on this device. Clearing browser data removes this copy. Export a backup to move or protect it.", error: "Account sync failed. Keep a backup; this session has switched to device-only storage.", loading: "Checking…" }[syncNote];
   $("#setup").innerHTML =
     '<h2>Settings</h2><p class="banner"><b>Sync:</b> ' + esc(sync) + "</p>" +
     '<label class="f">People you usually cook for<span class="hint">Recipes open at this many servings, and each day starts with it. Change a single day on Today.</span><div class="stepper"><button class="rbtn" type="button" data-setp="-1" aria-label="Fewer people">−</button><b>' + setv("people") + '</b><button class="rbtn" type="button" data-setp="1" aria-label="More people">+</button></div></label>' +
     '<div class="f"><b>How many times you usually cook a day</b><span class="hint">Groups the day into cooking sessions. Change a single day on Today.</span><div class="seg" role="group" aria-label="Default cooking times">' + [1, 2, 3].map(n => '<button type="button" data-setsess="' + n + '" aria-pressed="' + (setv("sessions") === n) + '">' + ["", "Once", "Twice", "3 times"][n] + "</button>").join("") + "</div></div>" +
     '<label class="f" for="set-app">Order app<span class="hint">"Order" opens this app\'s search for the item. You place the order there.</span><select id="set-app">' + D.apps.map(a => '<option value="' + a.key + '"' + (a.key === setv("app") ? " selected" : "") + ">" + esc(a.label) + "</option>").join("") + "</select></label>" +
     '<div class="f"><b>Move your data</b><span class="hint">The Claude link and the offline website keep separate copies of your plan, pantry, profile and results. Copy your data on one and paste it into Settings on the other.</span>' +
-    '<div class="toolbar"><button type="button" class="btn" id="bk-copy">Copy my data</button><span class="small" id="bk-msg" aria-live="polite"></span></div>' +
+    '<div class="toolbar"><button type="button" class="btn" id="bk-copy">Copy my data</button><button type="button" class="btn" id="bk-download">Download backup</button><span class="small" id="bk-msg" aria-live="polite"></span></div>' +
     '<textarea id="bk-in" rows="4" placeholder="Paste data here" aria-label="Paste data to load" style="width:100%;font:13px var(--font-mono);background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:8px"></textarea>' +
     '<div class="toolbar"><button type="button" class="btn" id="bk-load">Replace my data with this</button></div></div>' +
     '<label class="toggle" for="set-manual"><input type="checkbox" id="set-manual"' + (S.set.manual ? " checked" : "") + "> Use my own calorie and protein targets instead of the Me calculator</label>" +
@@ -1131,19 +1138,42 @@ function renderSetup() {
     '<label class="f" for="set-p">Daily protein (g)<span class="hint">For muscle gain with strength training, about 1.6–2.2 g per kg of body weight.</span><input type="number" id="set-p" inputmode="numeric" min="40" max="250" step="5" value="' + setv("p") + '"></label>' : '<p class="small">Targets come from your profile: ' + target("kcal") + " kcal and " + target("p") + " g protein a day.</p>");
 }
 
+function preparationHTML(r) {
+  const t=r.timing, raw=KitchenCore.timing(r,false), prepared=KitchenCore.timing(r,true);
+  return '<section class="prep-note"><h3>Before you start</h3><p>'+esc(r.review?.status || "Recipe review pending")+'</p><p><b>From raw ingredients:</b> '+esc(raw.text)+'</p>'+(t?.prerequisites?.length ? '<p><b>After preparation:</b> '+esc(prepared.text)+'</p><ul>'+t.prerequisites.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>' : '')+'<p>'+esc(t?.note || 'Read the whole method before cooking.')+'</p><p class="small">Estimates apply to the base recipe. Allow time for extra batches and your equipment. Quantities in method text refer to the base recipe.</p>'+(r.dependencies?.length ? '<p>Component recipes:</p><div class="recipe-tools">'+r.dependencies.map(id=>'<button class="btn" type="button" data-open="'+id+'">'+esc(R[id].title)+'</button>').join('')+'</div>' : '')+'</section>';
+}
+function sourceHTML(r) { return '<details class="recipe-details"><summary>Recipe review and sources</summary><p>'+esc(r.review?.status || 'Not reviewed')+'. Not a kitchen-tested guarantee.</p>'+(r.sources?.length ? r.sources.map(x=>'<p><a href="'+esc(x.url)+'" target="_blank" rel="noopener">'+esc(x.title)+'</a> — '+esc(x.scope)+'</p>').join('') : '<p>No external recipe-level verification is attached yet. Book page references are provenance, not independent validation.</p>')+'</details>'; }
+function assistantHTML(r) {
+  if (!['localhost','127.0.0.1'].includes(location.hostname)) return '';
+  return '<details class="recipe-details"><summary>Local cooking assistant · preview</summary><p>Search this recipe and its preparation notes. An optional local model can select relevant evidence. This preview does not invent missing steps, certify recipes or provide medical advice.</p><label for="ask-question">Cooking question</label><input type="search" id="ask-question" placeholder="What needs preparing first?"><button class="btn" type="button" id="ask-local">Ask about this recipe</button><div id="ask-answer" aria-live="polite"></div></details>';
+}
+async function askLocal() {
+  const id=dlgId, target=$("#ask-answer"), button=$("#ask-local"), question=$("#ask-question").value.trim();
+  if(!question) { target.textContent='Enter a cooking question.'; return; }
+  button.disabled=true; target.textContent='Looking up recipe evidence…';
+  const control=new AbortController(), timer=setTimeout(()=>control.abort(),45000);
+  try { const response=await fetch('/api/ask',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({recipe_id:id,question}),signal:control.signal}); if(!response.ok) throw new Error('unavailable'); const answer=await response.json(); if(dlgId===id && target.isConnected) { target.textContent=''; const label=document.createElement('p'); label.textContent=answer.mode+' · '+answer.answer; target.appendChild(label); (answer.evidence || []).forEach(item=>{const p=document.createElement('p'); p.textContent='['+item.id+'] '+item.text+(item.status ? ' — '+item.status : ''); if(item.url && item.url.startsWith('https://')) { const a=document.createElement('a'); a.href=item.url; a.textContent=' Read source'; a.target='_blank'; a.rel='noopener noreferrer'; p.appendChild(a); } target.appendChild(p);}); } }
+  catch(e) { if(target.isConnected) target.textContent='The local assistant is unavailable. Start tools/serve.py; the recipe and preparation notes above still work offline.'; }
+  finally { clearTimeout(timer); if(button.isConnected) button.disabled=false; }
+}
 /* ---------- recipe dialog ---------- */
-let dlgId = null, dlgServ = 1, dlgTotal = false;
+let dlgId = null, dlgServ = 1, dlgTotal = false, recipeOpener = null;
+const checkedSteps = {};
 function stepHTML(r, s, i) {
   const m = s.match(/^([^.]{2,48}\.)\s+([\s\S]*)$/);
   const meta = r.stepMeta && r.stepMeta[i] ? '<span class="sm">' + esc(r.stepMeta[i]) + "</span>" : "";
-  return "<li>" + meta + (m ? "<b>" + esc(m[1]) + "</b> " + esc(m[2]) : esc(s)) + "</li>";
+  return '<li><label class="step-check"><input type="checkbox" data-step="' + i + '" aria-label="Complete step ' + (i + 1) + '"' + ((checkedSteps[r.id] || []).includes(i) ? " checked" : "") + '><span>' + meta + (m ? "<b>" + esc(m[1]) + "</b> " + esc(m[2]) : esc(s)) + "</span></label></li>";
 }
 function openRecipe(id, keepServ) {
   const r = R[id]; if (!r) return;
-  if (!keepServ || dlgId !== id) { dlgServ = setv("people"); dlgTotal = false; }
+  const same = keepServ && dlgId === id;
+  const previous = same ? {slot:$("#dlg-slot")?.value, date:$("#dlg-date")?.value, focus:document.activeElement?.id, scroll:$("#dlg").scrollTop, nutrition:$("#recipe-nutrition")?.open} : null;
+  if (!same) { recipeOpener = document.activeElement; dlgServ = setv("people"); dlgTotal = false; }
+  if (!same) { try { history.replaceState(null, "", "#recipe/" + id); } catch (e) {} }
+  document.title = r.title + " · Kitchen From Zero";
   dlgId = id;
   const st = status(r), on = !!S.done["r-" + id], f = dlgServ / (r.yield || 1);
-  const facts = [["Time", r.time], ["One serving", r.servingLabel], ["Uses", r.uses], ["Keeps", r.keeps]].filter(x => x[1]);
+  const facts = [["Time estimate", r.time], ["One serving", r.servingLabel], ["Uses", r.uses], ["Keeps", r.keeps]].filter(x => x[1]);
   const needs = r.needs.map(t => {
     const soft = !r.strict.includes(t), ok = hasTok(t), k = firstMissing(t);
     if (ok) { const onWay = t.split("|").every(x => pstate(x) === 2); return '<span class="chip have">' + esc(tokLabel(t)) + (onWay ? " · on its way" : "") + "</span>"; }
@@ -1159,24 +1189,36 @@ function openRecipe(id, keepServ) {
     '<div class="dlg-top"><h2 id="dlg-title">' + esc(r.title) + '</h2><button class="close" type="button" id="dlg-x" aria-label="Close">×</button></div>' +
     '<p class="dlg-sub">' + esc([r.cuisine, r.region, r.course, { veg: "veg", egg: "egg", nonveg: "non-veg" }[r.diet]].filter(Boolean).join(" · ")) + (r.sub ? " · " + esc(r.sub) : "") + "</p>" +
     '<div class="facts-row">' + facts.map(x => "<div><b>" + esc(x[0]) + "</b><span>" + esc(x[1]) + "</span></div>").join("") + "</div>" +
-    '<div class="toolbar"><span class="lbl-s">Servings</span><div class="stepper"><button class="rbtn" type="button" data-serv="-1" aria-label="Fewer servings">−</button><b id="dlg-serv">' + nice(dlgServ) + '</b><button class="rbtn" type="button" data-serv="1" aria-label="More servings">+</button></div>' +
+    '<div class="toolbar"><span class="lbl-s">Servings</span><div class="stepper"><button class="rbtn" type="button" id="serv-less" data-serv="-1" aria-label="Fewer servings">−</button><b id="dlg-serv">' + nice(dlgServ) + '</b><button class="rbtn" type="button" id="serv-more" data-serv="1" aria-label="More servings">+</button></div>' +
     '<label class="toggle"><input type="checkbox" id="dlg-cooked" data-done="r-' + esc(id) + '"' + (on ? " checked" : "") + "> I've cooked this</label></div>" +
     '<div class="actbar"><select id="dlg-slot" aria-label="Meal">' + SLOTS.map(s => "<option value=\"" + s + '"' + (s === def ? " selected" : "") + ">" + SLOT[s] + "</option>").join("") + '</select><select id="dlg-date" aria-label="Day">' +
     [0, 1, 2, 3, 4, 5, 6].map(i => { const d = new Date(); d.setDate(d.getDate() + i); return '<option value="' + ymd(d) + '">' + (i ? fmtDay(d) : "Today") + "</option>"; }).join("") + '</select><button type="button" class="btn" id="dlg-add">Add to plan</button><span class="small" id="dlg-added" aria-live="polite"></span></div>' +
-    '<div class="nutri"><div class="toolbar"><div class="seg" role="group" aria-label="Nutrition view"><button type="button" data-ntot="0" aria-pressed="' + !dlgTotal + '">Per serving</button><button type="button" data-ntot="1" aria-pressed="' + dlgTotal + '">All ' + nice(dlgServ) + "</button></div></div>" + nutriHTML(r.nutr, dlgTotal ? "For " + nice(dlgServ) + " servings" : "Per serving (" + (r.servingLabel || "1 serving") + ")", false, dlgTotal ? dlgServ : 1) + "</div>" +
-    sec("From your pantry " + (st.missing.length ? '<span class="chip out">' + st.missing.length + " missing</span>" : '<span class="chip have">Ready</span>'), '<div class="needs">' + needs + "</div>") +
+    sec("From your pantry " + (st.missing.length ? '<span class="chip out">' + st.missing.length + " missing</span>" : '<span class="chip have">Ingredients available</span>'), '<div class="needs">' + needs + "</div>") +
     (r.intro ? '<p class="intro-p">' + esc(r.intro) + "</p>" : "") +
     (r.parentIntro ? '<p class="intro-p muted">' + esc(r.parentIntro) + "</p>" : "") +
-    sec("Ingredients", ing) +
+    '<div class="recipe-tools"><button class="btn primary" type="button" data-jump="recipe-method">Start cooking</button><button class="btn" type="button" data-jump="recipe-ingredients">Ingredients</button><button class="btn" type="button" id="recipe-link">Copy recipe link</button></div><p class="small" id="dlg-live" aria-live="polite"></p>' +
+    preparationHTML(r) +
+    '<div id="recipe-ingredients" tabindex="-1">' + sec("Ingredients", ing) + '</div>' +
+    '<div id="recipe-method" tabindex="-1">' +
     sec("Method", r.steps.length ? (f !== 1 ? '<p class="small">Amounts in the method are for ' + nice(r.yield || 1) + (r.yield > 1 ? " servings" : " serving") + "; scale them the same way.</p>" : "") + '<ol class="method">' + r.steps.map((s, i) => stepHTML(r, s, i)).join("") + "</ol>" : "") +
+    '</div><details class="recipe-details" id="recipe-nutrition"><summary>Nutrition estimates</summary>' +
+    '<div class="nutri"><div class="toolbar"><div class="seg" role="group" aria-label="Nutrition view"><button type="button" id="nutrition-serving" data-ntot="0" aria-pressed="' + !dlgTotal + '">Per serving</button><button type="button" id="nutrition-total" data-ntot="1" aria-pressed="' + dlgTotal + '">All ' + nice(dlgServ) + "</button></div></div>" + nutriHTML(r.nutr, dlgTotal ? "For " + nice(dlgServ) + " servings" : "Per serving (" + (r.servingLabel || "1 serving") + ")", false, dlgTotal ? dlgServ : 1) + "</div>" + '</details>' +
     sec("Checks", (r.cues || []).length ? '<ul class="plain">' + r.cues.map(c => "<li>" + esc(c) + "</li>").join("") + "</ul>" : "") +
     (r.why ? '<p class="intro-p"><b>Why it works:</b> ' + esc(r.why) + "</p>" : "") +
     (r.tips || []).map(t => '<p class="tipbox"><b>' + esc(t.title) + "</b>" + esc(t.text) + "</p>").join("") +
     sec("Variations and tips", (r.var || []).length ? '<ul class="plain">' + r.var.map(v => "<li>" + esc(v) + "</li>").join("") + "</ul>" : "") +
     (r.serve ? '<p class="intro-p"><b>Serve with:</b> ' + esc(r.serve) + "</p>" : "") +
     (r.note ? '<p class="intro-p muted">' + esc(r.note) + "</p>" : "") +
+    sourceHTML(r) + assistantHTML(r) +
     '<p class="ref">' + (r.book ? "Full recipe: " + (r.book === 1 ? "Restaurant-Grade Biryani at Home" : "Everyday Indian Meals at Home") + ", p. " + r.page : "App recipe") + "</p>";
   const dlg = $("#dlg");
+  if (previous) {
+    if (previous.slot) $("#dlg-slot").value = previous.slot;
+    if (previous.date) $("#dlg-date").value = previous.date;
+    $("#recipe-nutrition").open = !!previous.nutrition;
+    if (previous.focus) document.getElementById(previous.focus)?.focus({preventScroll:true});
+    dlg.scrollTop = previous.scroll;
+  }
   if (!dlg.open) { if (typeof dlg.showModal === "function") dlg.showModal(); else dlg.setAttribute("open", ""); $("#dlg-x").focus(); }
 }
 
@@ -1188,7 +1230,7 @@ function openGet(k) {
     '<div class="getbtns"><a class="btn primary" href="' + esc(orderUrl(k, app)) + '" target="_blank" rel="noopener" data-order="' + k + '" data-closeafter="1">Order on ' + esc(app.label) + '</a>' +
     '<button type="button" class="btn" data-bring="' + k + '" data-closeafter="1">I\'ll bring it home</button><button type="button" class="btn" data-havek="' + k + '" data-closeafter="1">I already have it</button></div>' +
     '<div class="other-apps"><span class="small">Or search on</span>' + D.apps.filter(a => a.key !== app.key).map(a => '<a href="' + esc(orderUrl(k, a)) + '" target="_blank" rel="noopener" data-order="' + k + '" data-closeafter="1">' + esc(a.label) + "</a>").join("") + "</div>" +
-    '<p class="small">Order opens the app\'s search for "' + esc(p.buy) + '"; you place the order there. It shows as ordered in Shopping until you tick it as arrived.</p>';
+    '<p class="small">Order opens the app\'s search for "' + esc(p.buy) + '"; you place the order there. It appears under shopping searches; tick it only after you receive it.</p>';
   const g = $("#get");
   if (typeof g.showModal === "function") { if (!g.open) g.showModal(); } else g.setAttribute("open", "");
 }
@@ -1198,7 +1240,7 @@ let pickSlotKey = null;
 function openPicker(sl) {
   pickSlotKey = sl;
   $("#pick-in").innerHTML = '<div class="dlg-top"><h2 id="pick-title">Add to ' + SLOT[sl].toLowerCase() + '</h2><button class="close" type="button" data-close="pick" aria-label="Close">×</button></div>' +
-    '<div class="toolbar"><input type="search" id="pk-q" placeholder="Search dishes" aria-label="Search dishes"><label class="toggle"><input type="checkbox" id="pk-ready"> Ready to cook</label></div><ul class="pick-list" id="pk-list"></ul>';
+    '<div class="toolbar"><input type="search" id="pk-q" placeholder="Search dishes" aria-label="Search dishes"><label class="toggle"><input type="checkbox" id="pk-ready"> Ingredients available</label></div><ul class="pick-list" id="pk-list"></ul>';
   renderPickList();
   const g = $("#pick"); if (typeof g.showModal === "function") { if (!g.open) g.showModal(); } else g.setAttribute("open", "");
   $("#pk-q").focus();
@@ -1226,6 +1268,8 @@ function render() {
 }
 function selectTab(name, remember) {
   currentTab = name;
+  $("#nav-jump").value = name;
+  if (!$("#dlg").open) document.title = "Kitchen From Zero";
   TABS.forEach(n => { const t = $("#tab-" + n); t.setAttribute("aria-selected", String(n === name)); t.tabIndex = n === name ? 0 : -1; $("#panel-" + n).hidden = n !== name; });
   const t = $("#tab-" + name), bar_ = $("#tabs");
   if (remember && bar_.getBoundingClientRect().top <= 1) window.scrollTo(0, bar_.offsetTop + 1);
@@ -1241,6 +1285,8 @@ function closeD(id) { const d = $("#" + id); if (typeof d.close === "function" &
 const now = () => Math.floor(Date.now() / 1000);
 document.addEventListener("change", e => {
   const t = e.target;
+  if (t.id === "nav-jump") { selectTab(t.value, true); return; }
+  if (t.dataset.step != null) { const steps = checkedSteps[dlgId] || []; checkedSteps[dlgId] = t.checked ? [...new Set([...steps, +t.dataset.step])] : steps.filter(i => i !== +t.dataset.step); return; }
   if (t.dataset.done) { const id = t.dataset.done, on = t.checked, ts = now(); apply(s => { if (on) { s.done[id] = ts; s.days[todayStr()] = 1; } else delete s.done[id]; }); }
   else if (t.dataset.eat) {
     const sl = t.dataset.eat, ds = selDate, wk = isoWeek(parseYmd(ds)), key = eatKey(ds, sl), on = t.checked, ts = now();
@@ -1261,7 +1307,7 @@ document.addEventListener("change", e => {
   }
   else if (t.id === "lab-date") { const v = t.value; apply(s => { if (v) s.labs._date = v; else delete s.labs._date; }); }
   else if (t.id === "set-manual") { const on = t.checked; apply(s => { if (on) s.set.manual = true; else delete s.set.manual; }); }
-  else if (["c-course", "c-diet", "c-time", "r-cuis", "r-course", "r-diet", "r-app", "r-hide", "r-sort"].includes(t.id)) render();
+  else if (["c-course", "c-diet", "c-time", "r-cuis", "r-course", "r-diet", "r-app", "r-hide", "r-sort", "r-time"].includes(t.id)) render();
   else if (["s-course", "s-cuis", "s-diet", "s-ready", "s-quick", "s-new"].includes(t.id)) shuffle();
 });
 document.addEventListener("input", e => { const id = e.target.id; if (id === "r-q" || id === "p-q" || id === "c-q") render(); else if (id === "pk-q") renderPickList(); });
@@ -1269,7 +1315,12 @@ document.addEventListener("click", e => {
   const t = e.target; if (!t.closest) return;
   const c = sel => t.closest(sel);
   let el;
-  if ((el = c("[data-order]"))) { const k = el.dataset.order; apply(s => { s.basket[k] = { via: "order", ts: now() }; }); if (el.dataset.closeafter) closeD("get"); return; }
+  if (c("#r-clear")) { ["r-q","r-cuis","r-course","r-diet","r-app","r-sort","r-time"].forEach(id => $("#"+id).value=""); $("#r-hide").checked=false; renderRecipes(); return; }
+  if (c("#bk-download")) { const blob = new Blob([JSON.stringify(S,null,2)],{type:"application/json"}); const url=URL.createObjectURL(blob); const a=document.createElement("a"); a.href=url; a.download="kitchen-backup-"+todayStr()+".json"; a.click(); setTimeout(()=>URL.revokeObjectURL(url),1000); return; }
+  if ((el = c("[data-jump]"))) { const target=document.getElementById(el.dataset.jump); target.scrollIntoView({block:"start"}); target.focus({preventScroll:true}); return; }
+  if (c("#recipe-link")) { const url=new URL(location.href); url.hash="recipe/"+dlgId; try { navigator.clipboard.writeText(url.href).then(()=>$("#dlg-live").textContent="Recipe link copied.",()=>$("#dlg-live").textContent=url.href); } catch(e) { $("#dlg-live").textContent=url.href; } return; }
+  if (c("#ask-local")) { askLocal(); return; }
+  if ((el = c("[data-order]"))) { const k = el.dataset.order; apply(s => { s.basket[k] = { via: "search", ts: now() }; }); if (el.dataset.closeafter) closeD("get"); return; }
   if ((el = c("[data-bring]"))) { const k = el.dataset.bring; apply(s => { s.basket[k] = { via: "bring", ts: now() }; }); if (el.dataset.closeafter) closeD("get"); return; }
   if ((el = c("[data-havek]"))) { const k = el.dataset.havek; apply(s => setPantry(s, k, 0)); closeD("get"); return; }
   if ((el = c("[data-get]"))) { openGet(el.dataset.get); return; }
@@ -1307,7 +1358,8 @@ document.addEventListener("click", e => {
   }
   if ((el = c("#bk-load"))) {
     let x = null; try { x = JSON.parse($("#bk-in").value); } catch (err) {}
-    if (!x || typeof x !== "object" || !KEYS.some(k => x[k] && typeof x[k] === "object")) { $("#bk-msg").textContent = "That isn't Kitchen From Zero data. Copy it again from the other copy."; return; }
+    const error = KitchenCore.validImport(x, [...Object.keys(R), ...Object.keys(X)], Object.keys(PDEF));
+    if (error) { $("#bk-msg").textContent = error; return; }
     if (!el.dataset.armed) { el.dataset.armed = "1"; el.textContent = "Tap again to replace everything here"; return; }
     const nx = norm(x); apply(s => { KEYS.forEach(k => { s[k] = JSON.parse(JSON.stringify(nx[k])); }); });
     $("#bk-msg").textContent = "Loaded.";
@@ -1324,7 +1376,7 @@ document.addEventListener("click", e => {
   if ((el = c("[data-cuis]"))) { cookCuis = el.dataset.cuis; renderCook(); return; }
   if (c("#s-go")) { shuffle(); return; }
   if (c("#s-add")) { const id = surId, sl = $("#s-slot").value, r = R[id]; const add = [[id, 1]]; if (needsCarb(r)) add.push(["phulka-soft-chapati", 1]); editPlan(todayStr(), p => { p.m[sl] = (p.m[sl] || []).concat(add); }); $("#s-add").textContent = "Added to today"; return; }
-  if ((el = c("[data-serv]"))) { const d = +el.dataset.serv; dlgServ = Math.max(0.5, Math.min(20, dlgServ + d * (dlgServ < 1 || (dlgServ === 1 && d < 0) ? 0.5 : 1))); openRecipe(dlgId, true); return; }
+  if ((el = c("[data-serv]"))) { const d = +el.dataset.serv; dlgServ = Math.max(0.5, Math.min(20, dlgServ + d * (dlgServ < 1 || (dlgServ === 1 && d < 0) ? 0.5 : 1))); openRecipe(dlgId, true); $("#dlg-live").textContent="Ingredients updated for "+nice(dlgServ)+" servings. Cooking time does not scale automatically."; return; }
   if ((el = c("[data-ntot]"))) { dlgTotal = el.dataset.ntot === "1"; openRecipe(dlgId, true); return; }
   if (c("#dlg-add")) { const id = dlgId, sl = $("#dlg-slot").value, ds = $("#dlg-date").value, k = Math.max(0.5, dlgServ / planOf(ds).n); editPlan(ds, p => { (p.m[sl] = p.m[sl] || []).push([id, Math.round(k * 2) / 2]); }); $("#dlg-added").textContent = "Added to " + SLOT[sl].toLowerCase() + ($("#dlg-date").selectedIndex ? " on " + $("#dlg-date").selectedOptions[0].text : " today"); return; }
   if ((el = c("[data-setp]"))) { const d = +el.dataset.setp; apply(s => { s.set.people = Math.max(1, Math.min(12, setv("people") + d)); }); return; }
@@ -1352,12 +1404,14 @@ document.addEventListener("keydown", e => {
   const j = e.key === "ArrowRight" ? (i + 1) % TABS.length : e.key === "ArrowLeft" ? (i + TABS.length - 1) % TABS.length : -1;
   if (j >= 0) { e.preventDefault(); selectTab(TABS[j], true); $("#tab-" + TABS[j]).focus(); }
 });
-$("#dlg").addEventListener("close", () => { dlgId = null; const el = document.querySelector(".tab[aria-selected=true]"); if (el) el.focus({ preventScroll: true }); });
-window.addEventListener("hashchange", () => { const h = location.hash.slice(1); if (TABS.includes(h) && h !== currentTab) selectTab(h, false); });
+$("#dlg").addEventListener("close", () => { dlgId = null; document.title="Kitchen From Zero"; if (location.hash.startsWith("#recipe/")) history.replaceState(null,"","#"+currentTab); const el = recipeOpener?.isConnected ? recipeOpener : document.querySelector(".tab[aria-selected=true]"); if (el) el.focus({ preventScroll: true }); });
+window.addEventListener("hashchange", () => { const h=location.hash.slice(1); if(h.startsWith("recipe/") && R[h.slice(7)]) openRecipe(h.slice(7)); else if(TABS.includes(h)) { closeD("dlg"); selectTab(h,false); } });
 document.addEventListener("visibilitychange", () => { if (document.hidden && dirty) { clearTimeout(timer); flush(); } else if (!document.hidden && selDate < todayStr()) { selDate = todayStr(); render(); } });
 
 const h0 = (location.hash || "").slice(1);
-selectTab(TABS.includes(h0) ? h0 : lsGet("kfz.tab", "today"), false);
+const lastTab=lsGet("kfz.tab", "today");
+selectTab(TABS.includes(h0) ? h0 : h0.startsWith("recipe/") ? "recipes" : TABS.includes(lastTab) ? lastTab : "today", false);
+if(h0.startsWith("recipe/") && R[h0.slice(7)]) openRecipe(h0.slice(7));
 connect();
 /*PWA_JS*/
 </script>

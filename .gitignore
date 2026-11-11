@@ -4,3 +4,6 @@ books/
 *.pdf
 .DS_Store
 dist/
+.env
+.env.*
+.venv/

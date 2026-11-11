@@ -195,7 +195,7 @@ CHAPTER_SHORT = {"Breads and rice": "Breads and rice", "Breakfasts": "Breakfasts
 recipes = []
 
 # ------------------------------------------------------------------ Book 2 cards
-for c in json.load(open(ROOT / "data" / "b2_cards.json")):
+for c in json.load(open(ROOT / "data" / "b2_cards.json", encoding="utf-8")):
     ch = c["chips"]
     base = {
         "book": 2, "page": c["page"], "chapter": c["chapter"], "time": ch.get("TIME", ""),
@@ -236,7 +236,7 @@ B1_META = {
     "Chicken + Paneer for Five": ("party-chicken-paneer-biryani", "Two biryanis from one shared base", "",
                                   "5 (3 chicken, 2 paneer)", "4 burners"),
 }
-for m in json.load(open(ROOT / "data" / "b1_masters.json")):
+for m in json.load(open(ROOT / "data" / "b1_masters.json", encoding="utf-8")):
     rid, sub, prot, serving, uses = B1_META[m["title"]]
     for g in m["ingredients"]:
         g["group"] = g["group"].replace("\x00 chicken, \x00 paneer", "two-thirds chicken, one-third paneer")
@@ -671,12 +671,15 @@ REFERENCE = {
                "Steam sprouts 4–5 minutes before eating."],
 }
 
+from editorial import enrich
+recipes = enrich(recipes)
+
 data = {"recipes": recipes,
         "pantry": [{"key": k, "label": l, "group": g, "def": d, "buy": BUY.get(k, re.sub(r"\s*\(.*", "", l).lower())}
                    for k, l, g, d in PANTRY],
         "soft": sorted(SOFT), "track": TRACK, "week": WEEK, "ref": REFERENCE, "extras": extras,
         "targets": TARGETS, "apps": ORDER_APPS, "audit": AUDIT, "healthSources": HEALTH_SOURCES}
-json.dump(data, open(ROOT / "data" / "data.json", "w"), ensure_ascii=False, separators=(",", ":"))
+json.dump(data, open(ROOT / "data" / "data.json", "w", encoding="utf-8", newline="\n"), ensure_ascii=False, separators=(",", ":"))
 print(len(recipes), "recipes;", sum(len(s["rows"]) for s in TRACK), "track rows;",
       round(len(json.dumps(data, ensure_ascii=False)) / 1024), "KB")
 for r in recipes:
