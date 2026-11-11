@@ -31,8 +31,9 @@ s = json.dumps(d, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/
 t = (ROOT / "src" / "template.html").read_text(encoding="utf-8")
 assert t.count("/*DATA*/") == 1 and t.count("<!--PWA-->") == 1 and t.count("/*PWA_JS*/") == 1
 core = (ROOT / "src" / "core.js").read_text(encoding="utf-8")
+core += '\n' + (ROOT / 'src' / 'household.js').read_text(encoding='utf-8')
 assert t.count("/*CORE_JS*/") == 1
-page = t.replace("/*DATA*/", s).replace("/*CORE_JS*/", core)
+page = t.replace("/*DATA*/", s).replace("/*CORE_JS*/", core).replace("/*HOUSEHOLD_UI*/", (ROOT / "src/household-ui.js").read_text(encoding="utf-8"))
 site = page.replace("<!--PWA-->", PWA_HEAD).replace("/*PWA_JS*/", PWA_JS)
 art = page.replace("<!--PWA-->\n", "").replace("\n/*PWA_JS*/", "")
 (ROOT / "index.html").write_text(site, encoding="utf-8", newline="\n")

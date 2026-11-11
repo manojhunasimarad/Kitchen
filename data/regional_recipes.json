@@ -1,0 +1,756 @@
+[
+  {
+    "id": "badanekayi-yennegai",
+    "title": "Badanekayi yennegai (stuffed brinjal)",
+    "aliases": [
+      "brinjal yennagai",
+      "ennegayi",
+      "badanekai",
+      "eggplant",
+      "ಬದನೆಕಾಯಿ ಎಣ್ಣೆಗಾಯಿ"
+    ],
+    "sub": "brinjal yennagai · ennegayi · badanekai",
+    "region": "North Karnataka",
+    "course": "side",
+    "yield_": 2,
+    "yield": 2,
+    "servingLabel": "half the curry; eat with rotti or rice",
+    "time": "45–60 min estimated",
+    "uses": "1 burner, lidded heavy pan and mixer",
+    "keeps": "Cook for this meal; refrigerate promptly if saving any.",
+    "intro": "North Karnataka-style fresh-coconut and onion variant. Peanuts and sesame are essential here; this is not Tamil ennai kathirikai. Sauce water is a starting amount, adjusted by tenderness.",
+    "ingredients": [
+      {
+        "group": "Brinjals and tempering",
+        "items": [
+          {
+            "id": "brinjal",
+            "key": "brinjal",
+            "name": "Small tender purple brinjals",
+            "q": "300 g",
+            "grams": 300,
+            "note": "whole tender baby brinjals; use weight, count varies"
+          },
+          {
+            "id": "oil",
+            "key": "oil",
+            "name": "Cooking oil",
+            "q": "6 tsp",
+            "grams": 27,
+            "note": ""
+          },
+          {
+            "id": "mustard",
+            "key": "mustard",
+            "name": "Mustard seeds",
+            "q": "1 tsp",
+            "grams": 2,
+            "note": ""
+          },
+          {
+            "id": "garlic",
+            "key": "garlic",
+            "name": "Garlic, crushed",
+            "q": "2 cloves",
+            "grams": 8,
+            "note": ""
+          },
+          {
+            "id": "leaves",
+            "key": "curryleaves",
+            "name": "Curry leaves, dried after rinsing",
+            "q": "8 leaves",
+            "grams": 1,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "group": "Fresh-coconut stuffing",
+        "items": [
+          {
+            "id": "peanuts",
+            "key": "peanuts",
+            "name": "Peanuts",
+            "q": "18 g",
+            "grams": 18,
+            "note": ""
+          },
+          {
+            "id": "sesame",
+            "key": "sesame",
+            "name": "White sesame seeds",
+            "q": "2 tsp",
+            "grams": 6,
+            "note": ""
+          },
+          {
+            "id": "coconut",
+            "key": "coconut",
+            "name": "Fresh grated coconut",
+            "q": "40 g",
+            "grams": 40,
+            "note": "fresh, not dried copra"
+          },
+          {
+            "id": "onion",
+            "key": "onion",
+            "name": "Onion, finely chopped",
+            "q": "100 g",
+            "grams": 100,
+            "note": ""
+          },
+          {
+            "id": "cumin",
+            "key": "cumin",
+            "name": "Cumin seeds",
+            "q": "½ tsp",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "chilli",
+            "key": "greenchilli",
+            "name": "Green chillies, chopped",
+            "q": "2",
+            "grams": 6,
+            "note": ""
+          },
+          {
+            "id": "ginger",
+            "key": "ginger",
+            "name": "Ginger, grated",
+            "q": "3 g",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "herb",
+            "key": "coriander",
+            "name": "Coriander leaves, chopped",
+            "q": "5 g",
+            "grams": 5,
+            "note": ""
+          },
+          {
+            "id": "sambar",
+            "key": "sambarpowder",
+            "name": "Sambar powder",
+            "q": "3 tsp",
+            "grams": 8,
+            "note": "blend heat/salt vary"
+          },
+          {
+            "id": "turmeric",
+            "key": "turmeric",
+            "name": "Turmeric",
+            "q": "½ tsp",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "tamarind",
+            "key": "tamarind",
+            "name": "Seedless tamarind pulp",
+            "q": "5 g",
+            "grams": 5,
+            "note": "not concentrated bottled paste"
+          },
+          {
+            "id": "jaggery",
+            "key": "jaggery",
+            "name": "Jaggery",
+            "q": "1 tsp",
+            "grams": 4,
+            "note": ""
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "½ tsp",
+            "grams": 3,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "group": "Water",
+        "items": [
+          {
+            "id": "soak",
+            "key": "water",
+            "name": "Warm water for tamarind",
+            "q": "120 ml",
+            "grams": 0,
+            "note": ""
+          },
+          {
+            "id": "grind",
+            "key": "water",
+            "name": "Water for grinding, start with",
+            "q": "30 ml",
+            "grams": 0,
+            "note": ""
+          },
+          {
+            "id": "simmer",
+            "key": "water",
+            "name": "Water for simmering, start with",
+            "q": "180 ml",
+            "grams": 0,
+            "note": ""
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Prepare. Rinse {{brinjal}} brinjals. Cut two crossing slits from the rounded end towards the stalk, keeping the crown joined. Inspect inside; discard damaged fruit. Hold in water while making the paste, then drain and pat dry.",
+      "Extract. Soften {{tamarind}} tamarind in {{soak}} warm water for 10 minutes. Squeeze and strain; retain the liquid, discard seeds or fibres.",
+      "Roast. In a dry pan on low heat, stir {{peanuts}} peanuts until nutty; roast {{sesame}} sesame separately until fragrant. Cool before grinding.",
+      "Grind. Powder the cooled nuts and seeds. Blend with {{coconut}} fresh coconut, {{cumin}} cumin, {{chilli}} chillies, {{ginger}} ginger and {{herb}} coriander, adding {{grind}} water gradually. Stop at a thick, spoonable paste.",
+      "Combine. Mix in {{onion}} onion, {{sambar}} sambar powder, {{turmeric}} turmeric, {{jaggery}} jaggery, {{salt}} salt and enough tamarind liquid to keep the stuffing thick. Reserve remaining liquid. Do not taste uncooked spice paste to assess final seasoning.",
+      "Stuff. Gently ease paste into each slit without snapping the crown. Retain every spoon of leftover paste for the gravy.",
+      "Temper. Heat {{oil}} oil on medium in a heavy lidded pan. Add {{mustard}} mustard; when it crackles, add {{garlic}} garlic and {{leaves}} curry leaves carefully. Lower heat if garlic darkens.",
+      "Simmer. Set brinjals in one layer. Turn gently for 2–3 minutes. Add leftover stuffing, reserved tamarind liquid and {{simmer}} water. Cover and simmer gently for about 20–30 minutes; turn and scrape the base every few minutes.",
+      "Check. A knife should enter the thick flesh beside the crown easily. If firm or the gravy catches, add a small splash of water and cook longer. Stop when the flesh is soft and the sauce coats it; oil separation alone is not doneness. Adjust seasoning after cooking."
+    ],
+    "sources": [
+      {
+        "title": "Udupi Recipes: stuffed brinjal",
+        "url": "https://udupi-recipes.com/2016/11/stuffed-brinjal-recipe-chapati-rotti-side-dish.html",
+        "scope": "Primary fresh-coconut, onion and sambar-powder variant; ingredient weights, two-person portioning and time range adapted.",
+        "checked": "2026-11-11"
+      },
+      {
+        "title": "Hebbar’s Kitchen: ennegayi",
+        "url": "https://hebbarskitchen.com/ennegayi-recipe-badanekai-yennegai/",
+        "scope": "Compared small-brinjal selection, cross-slitting, stuffing and simmering. Its dried-coconut/red-chilli variant is different, not merged here.",
+        "checked": "2026-11-11"
+      },
+      {
+        "title": "Konkani Food Recipes: yennegai",
+        "url": "https://www.konkanifoodrecipes.com/recipes/north-karantaka-style-stuffed-eggplant-badanekai-yennegai",
+        "scope": "Corroborates keeping the crown intact, thick stuffing, water adjustment and gentle turning; its masala differs.",
+        "checked": "2026-11-11"
+      }
+    ],
+    "allergens": [
+      "peanut",
+      "sesame"
+    ],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "timing": {
+      "cookMinutes": [
+        45,
+        60
+      ],
+      "prerequisiteMinutes": [
+        0,
+        0
+      ],
+      "prerequisites": [],
+      "basis": "Editorial raw-start estimate including preparation; not measured",
+      "note": "Includes preparation for the listed base batch. Extra batches, larger quantities and equipment can add time."
+    },
+    "tips": [],
+    "serve": "Phulka, jolada rotti or freshly cooked rice. Those quantities and cooking times are additional.",
+    "note": "Ingredient weights/portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis."
+  },
+  {
+    "id": "ven-pongal",
+    "title": "Khara pongal (ven pongal)",
+    "aliases": [
+      "ghee pongal",
+      "savory pongal",
+      "ಹುಗ್ಗಿ"
+    ],
+    "sub": "ghee pongal · savory pongal · ಹುಗ್ಗಿ",
+    "region": "South Indian",
+    "course": "breakfast",
+    "yield_": 2,
+    "yield": 2,
+    "servingLabel": "half the pot; sides additional",
+    "time": "40–60 min estimated",
+    "uses": "3 L stovetop pressure cooker, burner and small tempering pan",
+    "keeps": "Cook for this meal; refrigerate promptly if saving any.",
+    "intro": "A rice-forward, softly mashed pongal. The estimated raw-start time includes natural pressure release and tempering. Confirm pressure-cooker availability before choosing this version.",
+    "ingredients": [
+      {
+        "group": "Rice and dal",
+        "items": [
+          {
+            "id": "rice",
+            "key": "rice",
+            "name": "Raw short-grain white rice",
+            "q": "100 g",
+            "grams": 100,
+            "note": ""
+          },
+          {
+            "id": "dal",
+            "key": "moongdal",
+            "name": "Husked split yellow moong dal",
+            "q": "60 g",
+            "grams": 60,
+            "note": ""
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Cooking water",
+            "q": "750 ml",
+            "grams": 0,
+            "note": ""
+          },
+          {
+            "id": "ginger",
+            "key": "ginger",
+            "name": "Ginger, finely chopped",
+            "q": "5 g",
+            "grams": 5,
+            "note": ""
+          },
+          {
+            "id": "cumin-cook",
+            "key": "cumin",
+            "name": "Cumin for cooking",
+            "q": "½ tsp",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "hing",
+            "key": "hing",
+            "name": "Hing",
+            "q": "⅛ tsp",
+            "grams": 0.3,
+            "note": "check label for wheat"
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "½ tsp",
+            "grams": 3,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "group": "Tempering",
+        "items": [
+          {
+            "id": "ghee",
+            "key": "ghee",
+            "name": "Ghee",
+            "q": "2 tbsp",
+            "grams": 28,
+            "note": ""
+          },
+          {
+            "id": "cumin",
+            "key": "cumin",
+            "name": "Cumin for tempering",
+            "q": "1 tsp",
+            "grams": 2,
+            "note": ""
+          },
+          {
+            "id": "pepper",
+            "key": "pepper",
+            "name": "Black pepper, lightly crushed",
+            "q": "½ tsp",
+            "grams": 1.2,
+            "note": ""
+          },
+          {
+            "id": "nuts",
+            "key": "cashews",
+            "name": "Cashews, broken",
+            "q": "15 g",
+            "grams": 15,
+            "note": ""
+          },
+          {
+            "id": "leaves",
+            "key": "curryleaves",
+            "name": "Curry leaves, dried after rinsing",
+            "q": "10 leaves",
+            "grams": 1,
+            "note": ""
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Roast and rinse. Pick over {{dal}} dal. Dry-roast on low until fragrant, not brown. Cool briefly; rinse with {{rice}} rice and drain.",
+      "Load. Add grains, {{water}} water, {{ginger}} ginger, {{cumin-cook}} cumin, {{hing}} hing and {{salt}} salt to the cooker. Follow its minimum liquid and foaming-food fill limits; never scale past those limits.",
+      "Pressure-cook. Close according to the manufacturer. The source gives roughly 11–12 minutes at pressure; cooker and dal age vary. Maintain the cooker’s required operating heat, then turn off. This is not a universal whistle count.",
+      "Release. Wait for pressure to fall naturally and the indicator to confirm zero pressure before opening. Allow roughly 10–20 minutes, longer if needed; never force the lid.",
+      "Texture. Both grains should mash readily. If still firm, add liquid if needed and cook further using the cooker instructions. Mash lightly; thin thick pongal with hot water until soft and spoonable, not separate like pulao.",
+      "Temper. In a small pan heat {{ghee}} ghee. Sizzle {{cumin}} cumin; add {{nuts}} cashews until pale gold, then {{pepper}} pepper and {{leaves}} curry leaves carefully. Stop before spices burn.",
+      "Finish. Stir the tempering into the hot grains. Rest loosely covered for 5 minutes; loosen with hot water if it thickens. Serve hot."
+    ],
+    "sources": [
+      {
+        "title": "Dassana’s Veg Recipes: ven pongal",
+        "url": "https://www.vegrecipesofindia.com/ven-pongal-recipe-khara-pongal-recipe/",
+        "scope": "Primary rice/dal quantities and texture-based method; the source serves three, while this app defines two larger portions. Cooker time varies.",
+        "checked": "2026-11-11"
+      },
+      {
+        "title": "Hebbar’s Kitchen: ven pongal",
+        "url": "https://hebbarskitchen.com/ven-pongal-recipe-khara-pongal/",
+        "scope": "Compared roasting, tempering and soft consistency. Its equal-rice-and-dal, higher-ghee version is a different variant.",
+        "checked": "2026-11-11"
+      }
+    ],
+    "allergens": [
+      "milk",
+      "cashew",
+      "possible wheat in hing"
+    ],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "timing": {
+      "cookMinutes": [
+        40,
+        60
+      ],
+      "prerequisiteMinutes": [
+        0,
+        0
+      ],
+      "prerequisites": [],
+      "basis": "Editorial raw-start estimate including preparation; not measured",
+      "note": "Includes preparation for the listed base batch. Extra batches, larger quantities and equipment can add time."
+    },
+    "tips": [],
+    "serve": "",
+    "note": "Ingredient weights/portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis."
+  },
+  {
+    "id": "kesari-bath",
+    "title": "Kesari Bath (rava sweet)",
+    "aliases": [
+      "kesari bhath",
+      "rava kesari",
+      "sheera",
+      "ಕೇಸರಿ ಬಾತ್"
+    ],
+    "sub": "kesari bhath · rava kesari · sheera",
+    "region": "South Indian",
+    "course": "sweet",
+    "yield_": 3,
+    "yield": 3,
+    "servingLabel": "one small dessert portion",
+    "time": "25–35 min estimated",
+    "uses": "1 burner and heavy deep pan",
+    "keeps": "Cook for this meal; refrigerate promptly if saving any.",
+    "intro": "A small-portion Karnataka sweet, not a high-protein meal or a weight-loss claim. This version uses the Dassana water/sugar ratio, not the richer Hebbar ratio.",
+    "ingredients": [
+      {
+        "group": "Sweet",
+        "items": [
+          {
+            "id": "rava",
+            "key": "rava",
+            "name": "Fine rava / semolina",
+            "q": "80 g",
+            "grams": 80,
+            "note": ""
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water",
+            "q": "360 ml",
+            "grams": 0,
+            "note": ""
+          },
+          {
+            "id": "sugar",
+            "key": "sugar",
+            "name": "Sugar",
+            "q": "60 g",
+            "grams": 60,
+            "note": ""
+          },
+          {
+            "id": "ghee-nut",
+            "key": "ghee",
+            "name": "Ghee for nuts",
+            "q": "½ tbsp",
+            "grams": 7,
+            "note": ""
+          },
+          {
+            "id": "ghee-finish",
+            "key": "ghee",
+            "name": "Ghee to finish",
+            "q": "1½ tbsp",
+            "grams": 21,
+            "note": ""
+          },
+          {
+            "id": "nuts",
+            "key": "cashews",
+            "name": "Cashews, broken",
+            "q": "15 g",
+            "grams": 15,
+            "note": ""
+          },
+          {
+            "id": "raisins",
+            "key": "raisins",
+            "name": "Raisins",
+            "q": "½ tbsp",
+            "grams": 5,
+            "note": ""
+          },
+          {
+            "id": "cardamom",
+            "key": "cardamom",
+            "name": "Ground cardamom",
+            "q": "¼ tsp",
+            "grams": 0.5,
+            "note": ""
+          },
+          {
+            "id": "saffron",
+            "key": "saffron",
+            "name": "Saffron",
+            "q": "12 strands",
+            "grams": 0.02,
+            "note": "optional; omit for an uncoloured sweet",
+            "optional": true
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Roast. Stir {{rava}} fine rava in a dry heavy pan on low for about 5–6 minutes, until fragrant without darkening. Transfer to a plate.",
+      "Nuts. Melt {{ghee-nut}} ghee in the pan. Fry {{nuts}} cashews until pale gold; lift onto a plate. Keep the ghee in the pan.",
+      "Liquid. Add {{water}} water cautiously, then {{sugar}} sugar and {{raisins}} raisins. Add {{saffron}} saffron if using. Stir until dissolved and bring to a gentle boil.",
+      "Combine. Reduce heat. Sprinkle in the roasted rava in several additions while stirring continuously with a long-handled spoon. Keep hands and face away from hot splashes.",
+      "Cook. Mix in {{ghee-finish}} ghee and {{cardamom}} cardamom. Cover and cook on the lowest heat for 3–4 minutes, stirring to prevent catching.",
+      "Check. The granules should be fully swollen with no hard pale centres. If gritty, add a little hot water and cook longer. Fold in the nuts and serve warm; it firms as it cools."
+    ],
+    "sources": [
+      {
+        "title": "Dassana’s Veg Recipes: Kesari Bath",
+        "url": "https://www.vegrecipesofindia.com/kesari-bhath-recipe/",
+        "scope": "Primary 80 g rava, 60 g sugar, 1.5 cups water method; uses the low end of its ghee range. App defines three dessert portions and converts volume to ml.",
+        "checked": "2026-11-11"
+      },
+      {
+        "title": "Hebbar’s Kitchen: rava kesari",
+        "url": "https://hebbarskitchen.com/rava-kesari-recipe-kesari-bath-recipe/",
+        "scope": "Compared roasting and lump prevention. Its lower-water, higher-sugar/ghee version is different and not combined with the primary ratios.",
+        "checked": "2026-11-11"
+      }
+    ],
+    "allergens": [
+      "wheat",
+      "milk",
+      "cashew"
+    ],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "timing": {
+      "cookMinutes": [
+        25,
+        35
+      ],
+      "prerequisiteMinutes": [
+        0,
+        0
+      ],
+      "prerequisites": [],
+      "basis": "Editorial raw-start estimate including preparation; not measured",
+      "note": "Includes preparation for the listed base batch. Extra batches, larger quantities and equipment can add time."
+    },
+    "tips": [],
+    "serve": "",
+    "note": "Ingredient weights/portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis."
+  },
+  {
+    "id": "cabbage-pakoda",
+    "title": "Cabbage pakoda (besan fritters)",
+    "aliases": [
+      "cabbage pakora",
+      "patta gobhi pakode",
+      "cabbage bhajiya"
+    ],
+    "sub": "cabbage pakora · patta gobhi pakode · cabbage bhajiya",
+    "region": "South Indian",
+    "course": "snack",
+    "yield_": 2,
+    "yield": 2,
+    "servingLabel": "half the batch of small fritters",
+    "time": "30–45 min estimated",
+    "uses": "1 burner, deep frying pan, slotted spoon and oil thermometer",
+    "keeps": "Cook for this meal; refrigerate promptly if saving any.",
+    "intro": "Besan-only cabbage fritters. This is a fried snack, not a low-oil recipe. Nutrition assumes 20 g oil absorbed by the whole batch solely for estimation; actual uptake may differ substantially.",
+    "ingredients": [
+      {
+        "group": "Batter",
+        "items": [
+          {
+            "id": "cabbage",
+            "key": "cabbage",
+            "name": "Cabbage, finely shredded",
+            "q": "90 g",
+            "grams": 90,
+            "note": ""
+          },
+          {
+            "id": "onion",
+            "key": "onion",
+            "name": "Onion, finely chopped",
+            "q": "40 g",
+            "grams": 40,
+            "note": ""
+          },
+          {
+            "id": "besan",
+            "key": "besan",
+            "name": "Besan / gram flour",
+            "q": "65 g",
+            "grams": 65,
+            "note": ""
+          },
+          {
+            "id": "chilli",
+            "key": "greenchilli",
+            "name": "Green chilli, finely chopped",
+            "q": "1",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "ginger",
+            "key": "ginger",
+            "name": "Ginger, grated",
+            "q": "3 g",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "herb",
+            "key": "coriander",
+            "name": "Coriander leaves",
+            "q": "3 g",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "turmeric",
+            "key": "turmeric",
+            "name": "Turmeric",
+            "q": "¼ tsp",
+            "grams": 0.5,
+            "note": ""
+          },
+          {
+            "id": "powder",
+            "key": "chilli",
+            "name": "Red chilli powder",
+            "q": "¼ tsp",
+            "grams": 0.5,
+            "note": ""
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "¼ tsp",
+            "grams": 1.5,
+            "note": ""
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water, add gradually up to",
+            "q": "60 ml",
+            "grams": 0,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "group": "Frying",
+        "items": [
+          {
+            "id": "oil",
+            "key": "oil",
+            "name": "Neutral oil for the pan",
+            "q": "500 ml",
+            "grams": 460,
+            "note": "pan quantity, not consumption; actual absorbed oil is unknown",
+            "nutritionGrams": 20,
+            "scaleMode": "pan"
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Prepare. Rinse vegetables and drain thoroughly. Finely shred {{cabbage}} cabbage; chop {{onion}} onion and {{chilli}} chilli. Keep water away from the hot-oil area.",
+      "Mix. Combine vegetables with {{besan}} besan, {{ginger}} ginger, {{herb}} coriander, {{turmeric}} turmeric, {{powder}} chilli powder and {{salt}} salt.",
+      "Hydrate. Add water a spoon at a time, up to {{water}} initially. Vegetables release moisture, so stop once a thick mixture clings to a spoon. It should drop in small mounds, not pour as a thin batter.",
+      "Heat oil. Use {{oil}} as a pan-size guide, enough for frying while keeping the deep pan well below half full. Heat on medium to about 180 °C. Never leave it unattended or add water to oil.",
+      "Test. Lower one small spoonful close to the oil surface using a dry spoon. It should rise with steady bubbles. Reduce heat if it darkens before the middle cooks; recheck temperature.",
+      "Fry. Add a few small, loose spoonfuls without crowding. Let the coating set, then turn gently. Fry until evenly golden; open the first fritter and check for a cooked, non-pasty centre and tender cabbage.",
+      "Finish. Lift with a slotted spoon and drain on kitchen paper. Let oil return to temperature before each batch; total time depends on pan size. Serve hot with a separately prepared chutney."
+    ],
+    "sources": [
+      {
+        "title": "Dassana’s Veg Recipes: cabbage pakoda",
+        "url": "https://www.vegrecipesofindia.com/cabbage-pakora-recipe-cabbage-pakora/",
+        "scope": "Primary besan-only batter, incremental water and cooked-centre checks; cup amounts converted to approximate weights. Optional sesame and hing omitted.",
+        "checked": "2026-11-11"
+      },
+      {
+        "title": "Hebbar’s Kitchen: lachhedar cabbage pakoda",
+        "url": "https://hebbarskitchen.com/cabbage-pakoda-recipe-cabbage-bhajiya/",
+        "scope": "Compared batch frying and moisture control. Its three-flour dry mixture is a different variant; those flour ratios are not used here.",
+        "checked": "2026-11-11"
+      }
+    ],
+    "allergens": [
+      "check besan label for cross-contact"
+    ],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "timing": {
+      "cookMinutes": [
+        30,
+        45
+      ],
+      "prerequisiteMinutes": [
+        0,
+        0
+      ],
+      "prerequisites": [],
+      "basis": "Editorial raw-start estimate including preparation; not measured",
+      "note": "Includes preparation for the listed base batch. Extra batches, larger quantities and equipment can add time."
+    },
+    "tips": [],
+    "serve": "",
+    "note": "Ingredient weights/portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis. Frying oil is not scaled with servings; choose a suitable pan and fry extra batches. Do not copy the pan’s oil quantity into estimated intake."
+  }
+]

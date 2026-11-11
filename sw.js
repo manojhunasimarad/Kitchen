@@ -2,7 +2,7 @@
    The app is one HTML file, so caching it (plus the icons and fonts) makes the whole app work offline.
    Pages: network first, falling back to the cache, so you get updates when online and the last copy offline.
    Icons and fonts: cache first. */
-const VERSION = "kfz-145eb514e1";
+const VERSION = "kfz-71370d12b9";
 const SHELL = ["./", "./index.html", "./manifest.webmanifest", "./icons/icon-192.png", "./icons/icon-512.png",
   "./icons/maskable-512.png", "./icons/icon-180.png", "./icons/icon-32.png"];
 

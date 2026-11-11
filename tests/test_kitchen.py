@@ -15,7 +15,7 @@ class RecipeTests(unittest.TestCase):
         cls.data=json.loads((ROOT/'data/data.json').read_text(encoding='utf-8'))
         cls.recipes={r['id']:r for r in cls.data['recipes']}
     def test_structural_contract(self):
-        self.assertEqual(len(self.recipes),109)
+        self.assertEqual(len(self.recipes),113)
         pantry={p['key'] for p in self.data['pantry']}
         for r in self.recipes.values():
             self.assertTrue(r['steps']);self.assertTrue(r['ingredients']);self.assertGreater(r['yield'],0)
@@ -32,6 +32,22 @@ class RecipeTests(unittest.TestCase):
         self.assertNotIn('2 cups',r['ingredients'][0]['items'][0]['note'])
         self.assertNotIn('30 g',' '.join(r['steps']))
         self.assertNotIn('7 tbsp',json.dumps(self.recipes['moong-dal-chilla']))
+    def test_regional_sources_and_method_amounts(self):
+        import re
+        from nutrition import add, rounded, scaled
+        for r in self.recipes.values():
+            if not r.get('contentReview'): continue
+            self.assertGreaterEqual(len(r['sources']),2)
+            self.assertFalse(r['review']['kitchenTested'])
+            items={i['id']:i for g in r['ingredients'] for i in g['items']}
+            used=set(re.findall(r'\{\{([a-z0-9-]+)\}\}', ' '.join(r['stepTemplates'])))
+            self.assertEqual(used,set(items),r['id'])
+            self.assertNotIn('{{',' '.join(r['steps']))
+            totals={}
+            for i in items.values():
+                if i['key']!='water': add(totals,i['key'],i.get('nutritionGrams',i['grams']))
+            self.assertEqual(r['nutr'],rounded(scaled(totals,1/r['yield'])))
+
     def test_retrieval_prioritizes_preparation(self):
         r=self.recipes['moong-dal-chilla']
         self.assertTrue(any(d['id'].startswith('prep-') for d in retrieve(r,'What should I prepare first?')))

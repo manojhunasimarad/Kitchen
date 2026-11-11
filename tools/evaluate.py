@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parent.parent
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--node',default='node');parser.add_argument('--output');args=parser.parse_args()
-    commands=[[sys.executable,'-X','utf8','-m','unittest','discover','-s','tests','-v'],[args.node,'--test','tests/core.test.cjs']]
+    commands=[[sys.executable,'-X','utf8','-m','unittest','discover','-s','tests','-v'],[args.node,'--test','tests/core.test.cjs','tests/household.test.cjs']]
     results=[]
     for cmd in commands:
         p=subprocess.run(cmd,cwd=ROOT,capture_output=True,text=True,encoding='utf-8')

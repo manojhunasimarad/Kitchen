@@ -323,6 +323,7 @@ input[type="text"], input[type="date"] { font: 400 15px var(--font-body); color:
 #dlg-live { min-height:1.5em; }
 @media(max-width:600px) { .nav-jump {display:flex;align-items:center;gap:10px;} .chip {white-space:normal;} .btn.sm {min-height:40px;} .top .lede {font-size:14px;} }
 @media print { .tabs,.top,.recipe-tools,.actbar,.toolbar,footer {display:none!important;} dialog[open] {position:static;max-height:none;width:100%;border:0;} .dlg-in {overflow:visible;} }
+.member-row {display:flex;flex-wrap:wrap;gap:10px;margin:12px 0;padding-bottom:10px;border-bottom:1px solid var(--line);}.member-row label {display:flex;align-items:center;gap:8px;}.member-row input[type="text"]{max-width:220px;}.household-dish{padding:14px 0;border-bottom:1px solid var(--line);}.household-dish .recipe-tools{margin-top:10px;}
 #recipe-method, #recipe-ingredients { scroll-margin-top: 85px; }
 </style>
 </head>
@@ -331,7 +332,7 @@ input[type="text"], input[type="date"] { font: 400 15px var(--font-body); color:
   <header class="top">
     <p class="eyebrow">Companion to Restaurant-Grade Biryani at Home and Everyday Indian Meals at Home</p>
     <h1>Kitchen From Zero</h1>
-    <p class="lede">Plan the day, tap what you want to cook with, or let it surprise you. 109 recipes from Indian, Continental, Italian, Indo-Chinese, Mexican, Middle Eastern and East Asian kitchens, with nutrition for every serving.</p>
+    <p class="lede">Plan the day, tap what you want to cook with, or let it surprise you. Regional and international recipes from Indian, Continental, Italian, Indo-Chinese, Mexican, Middle Eastern and East Asian kitchens, with nutrition for every serving.</p>
     <div class="meters">
       <div class="meter"><div class="m-top"><span class="m-name">Protein today</span><span class="m-num" id="m-p-n"></span></div><div class="track"><i id="m-p-b"></i></div></div>
       <div class="meter"><div class="m-top"><span class="m-name">Ingredients available</span><span class="m-num" id="m-ready-n"></span></div><div class="track"><i id="m-ready-b"></i></div></div>
@@ -368,7 +369,7 @@ input[type="text"], input[type="date"] { font: 400 15px var(--font-body); color:
     <section class="kot" id="kot" aria-label="Day plan"></section>
     <div class="actbar">
       <button class="btn primary" type="button" id="day-surprise">Surprise me with a whole day</button>
-      <button class="btn" type="button" id="day-reset">Back to the default week</button>
+      <button class="btn" type="button" id="day-reset">Reset this day’s shared menu</button>
     </div>
     <div class="nutri" id="day-nutri"></div>
   </section>
@@ -478,7 +479,7 @@ const NUT = [["kcal", "Energy", "kcal"], ["p", "Protein", "g"], ["c", "Carbs", "
   ["na", "Sodium", "mg"], ["vc", "Vitamin C", "mg"], ["b12", "Vitamin B12", "µg"]];
 const NUTK = NUT.map(n => n[0]);
 const SESS = {
-  1: [{ name: "One cook", when: "late morning", slots: ["b", "l", "d"], note: "Keep breakfast quick or hands-free. Cook lunch and dinner together, eat lunch fresh, and pack dinner piping hot into a preheated insulated box. Without a fridge, never leave cooked food sitting out." }],
+  1: [{ name: "One cooking session", when: "late morning", slots: ["b", "l", "d"], note: "Keep breakfast quick or hands-free. Cook lunch and dinner together, eat lunch fresh, and pack dinner piping hot into a preheated insulated box. Without a fridge, never leave cooked food sitting out." }],
   2: [{ name: "Morning cook", when: "breakfast and lunch box", slots: ["b", "l"], note: "Pack lunch piping hot into a preheated insulated box." },
       { name: "Evening cook", when: "dinner", slots: ["d"], note: "Eat within 2 hours of cooking." }],
   3: [{ name: "Breakfast", when: "cook fresh", slots: ["b"], note: "" }, { name: "Lunch", when: "cook fresh", slots: ["l"], note: "" },
@@ -510,12 +511,13 @@ const fmtDay = d => d.toLocaleDateString("en-IN", { weekday: "short", day: "nume
 const todayStr = () => ymd(new Date());
 
 /* ---------- state ---------- */
-const SETDEF = { people: 1, sessions: 2, app: "instamart", kcal: D.targets.kcal, p: D.targets.p };
+const SETDEF = { people: 5, sessions: 2, app: "instamart", kcal: D.targets.kcal, p: D.targets.p };
 const KEYS = ["done", "week", "pantry", "days", "set", "plan", "basket", "pick", "me", "wlog", "labs"];
 function blank() { const s = { v: 2 }; KEYS.forEach(k => { s[k] = {}; }); return s; }
 function norm(x) {
   const s = blank();
   if (x && typeof x === "object") KEYS.forEach(k => { if (x[k] && typeof x[k] === "object") s[k] = JSON.parse(JSON.stringify(x[k])); });
+  if (!s.set.household) s.set.household = KitchenHousehold.clone(KitchenHousehold.defaults);
   return s;
 }
 let S = norm(lsGet("kfz.state", null));
@@ -524,11 +526,17 @@ const preOps = [];
 const setv = k => (S.set[k] != null ? S.set[k] : SETDEF[k]);
 
 function apply(op) {
+  const opened=[...document.querySelectorAll('details[id][open]')].map(d=>d.id), scroll=window.scrollY;
+  const active=document.activeElement;
+  const focusKey=active?.id ? '#'+CSS.escape(active.id) : [...(active?.attributes||[])].filter(a=>a.name.startsWith('data-')).map(a=>'['+a.name+'='+JSON.stringify(a.value)+']').join('');
   op(S);
   if (first) preOps.push(op);
   lsSet("kfz.state", S);
   if (mode === "db") queueSave(); else setStatus("local");
   render();
+  opened.forEach(id=>{const d=document.getElementById(id);if(d)d.open=true;});
+  if(focusKey)document.querySelector(focusKey)?.focus({preventScroll:true});
+  window.scrollTo(0,scroll);
 }
 function setStatus(k) {
   if (storageFailed && k !== "saved" && k !== "saving") k = "unsaved";
@@ -598,11 +606,11 @@ function setPantry(s, k, v) { s.pantry[k] = v; if (v === 0) delete s.basket[k]; 
 
 /* ---------- plan ---------- */
 const dish = id => R[id] || X[id];
-function defaultPlan(ds) { const d = D.week[dayIdx(parseYmd(ds))]; return { s: setv("sessions"), n: setv("people"), m: JSON.parse(JSON.stringify(d.dishes)) }; }
+function defaultPlan(ds) { return { s: setv("sessions"), n: 5, m: {b:[["besan-chilla",1]],l:[["dal-tadka",1],["rice-cooked-right",1]],d:[["paneer-bhurji",1],["phulka-soft-chapati",1]]} }; }
 const planOf = ds => S.plan[ds] || defaultPlan(ds);
 function editPlan(ds, fn) {
   apply(s => {
-    if (!s.plan[ds]) { const d = D.week[dayIdx(parseYmd(ds))]; s.plan[ds] = { s: (s.set.sessions || SETDEF.sessions), n: (s.set.people || SETDEF.people), m: JSON.parse(JSON.stringify(d.dishes)) }; }
+    if (!s.plan[ds]) s.plan[ds] = defaultPlan(ds);
     fn(s.plan[ds]);
     const cut = new Date(); cut.setDate(cut.getDate() - 14); const cs = ymd(cut);
     Object.keys(s.plan).forEach(k => { if (k < cs) delete s.plan[k]; });
@@ -611,11 +619,9 @@ function editPlan(ds, fn) {
 const eatKey = (ds, sl) => DAYS[dayIdx(parseYmd(ds))].toLowerCase() + "-" + sl;
 const eaten = (ds, sl) => !!((S.week[isoWeek(parseYmd(ds))] || {})[eatKey(ds, sl)]);
 function nsum(parts) { const t = {}; NUTK.forEach(k => { t[k] = 0; }); parts.forEach(([n, f]) => NUTK.forEach(k => { t[k] += (n[k] || 0) * f; })); return t; }
-function slotNutr(p, sl) { return nsum((p.m[sl] || []).filter(([id]) => dish(id)).map(([id, k]) => [dish(id).nutr, k])); }
+function slotNutr(p, sl) { return H.personNutrition(p,sl,S.set.nutritionPerson||'v1',allDishes(),household()); }
 function dayNutr(ds, onlyEaten) {
-  const p = planOf(ds), parts = [];
-  SLOTS.forEach(sl => { if (onlyEaten && !eaten(ds, sl)) return; (p.m[sl] || []).forEach(([id, k]) => { if (dish(id)) parts.push([dish(id).nutr, k]); }); });
-  return nsum(parts);
+  const p=planOf(ds);return nsum(SLOTS.filter(sl=>!onlyEaten||eaten(ds,sl)).map(sl=>[slotNutr(p,sl),1]));
 }
 const ACT = [["sed", "Mostly sitting, little exercise", 1.2], ["light", "Light exercise 1–3 days a week", 1.375], ["mod", "Moderate exercise 3–5 days a week", 1.55], ["very", "Hard exercise 6–7 days a week", 1.725]];
 const GOALS = [["lose", "Lose fat", 0.8, 2.0], ["recomp", "Lose fat and build muscle", 0.9, 1.8], ["maintain", "Stay where I am", 1.0, 1.2], ["gain", "Build muscle", 1.1, 1.8]];
@@ -672,7 +678,7 @@ function renderHeader() {
   const rc = D.recipes.filter(r => S.done["r-" + r.id]).length;
   $("#m-rec-n").textContent = rc + " of " + D.recipes.length; bar($("#m-rec-b"), rc, D.recipes.length);
   const ep = Math.round(dayNutr(todayStr(), true).p);
-  $("#m-p-n").textContent = ep + " of " + target("p") + " g"; bar($("#m-p-b"), ep, target("p"));
+  $("#m-p-n").textContent = ep + " of " + target("p") + " g ("+household().members.find(m=>m.id===(S.set.nutritionPerson||'v1')).name+")"; bar($("#m-p-b"), ep, target("p"));
   const rd = readyCount();
   $("#m-ready-n").textContent = rd + (pantryTouched() ? " dishes" : " suggested"); bar($("#m-ready-b"), rd, D.recipes.length);
   const today = todayStr(); let n = 0;
@@ -684,49 +690,7 @@ function renderHeader() {
 
 /* ---------- today ---------- */
 let selDate = todayStr();
-function renderToday() {
-  const t0 = new Date();
-  let h = "";
-  for (let i = 0; i < 7; i++) {
-    const d = new Date(t0); d.setDate(t0.getDate() + i); const ds = ymd(d);
-    h += '<button type="button" class="date" id="date-' + ds + '" data-date="' + ds + '" aria-pressed="' + (ds === selDate) + '"><span>' + (i === 0 ? "Today" : DAYS[dayIdx(d)]) + "</span><b>" + d.getDate() + "</b></button>";
-  }
-  $("#dates").innerHTML = h;
-  const p = planOf(selDate), date = parseYmd(selDate), wd = D.week[dayIdx(date)], n = p.n;
-  document.querySelectorAll("#seg-sess button").forEach(b => b.setAttribute("aria-pressed", String(+b.dataset.sess === p.s)));
-  $("#ppl-n").textContent = n;
-  const sessHTML = SESS[p.s].map(se => {
-    const meals = se.slots.map(sl => {
-      const list = p.m[sl] || [], on = eaten(selDate, sl), g = Math.round(slotNutr(p, sl).p);
-      const dl = list.map(([id, k], i) => {
-        const d = dish(id); if (!d) return "";
-        return '<li><span class="nm">' + (R[id] ? recBtn(id) : esc(d.title)) + '</span><span class="cnt"><button type="button" data-dish="' + sl + "|" + i + '|-1" aria-label="Fewer servings of ' + esc(d.title) + '">−</button>×' + nice(k) + '<button type="button" data-dish="' + sl + "|" + i + '|1" aria-label="More servings of ' + esc(d.title) + '">+</button></span><button type="button" class="x" data-rm="' + sl + "|" + i + '" aria-label="Remove ' + esc(d.title) + '">×</button></li>';
-      }).join("");
-      return '<div class="meal"><div class="meal-h"><input type="checkbox" id="eat-' + sl + '" data-eat="' + sl + '"' + (on ? " checked" : "") + ' aria-label="' + SLOT[sl] + ' eaten"><span class="slot">' + SLOT[sl] + '</span><span class="g">~' + g + " g protein each</span></div>" +
-        (dl ? '<ul class="dishes">' + dl + "</ul>" : '<p class="small" style="padding-left:30px">Nothing planned.</p>') +
-        '<div class="meal-acts"><button type="button" class="btn sm" data-add="' + sl + '">+ Add dish</button><button type="button" class="btn sm" data-shuffle="' + sl + '">Shuffle</button></div></div>';
-    }).join("");
-    const merged = {};
-    se.slots.forEach(sl => (p.m[sl] || []).forEach(([id, k]) => { if (R[id]) merged[id] = (merged[id] || 0) + k * n; }));
-    const ids = Object.keys(merged);
-    const mins = ids.reduce((a, id) => a + (R[id].minutes || 0), 0);
-    const miss = []; ids.forEach(id => status(R[id]).missing.forEach(t => { const k = firstMissing(t); if (!miss.includes(k)) miss.push(k); }));
-    const cookList = ids.map(id => esc(R[id].title) + " ×" + nice(merged[id])).join(", ");
-    return '<div class="sess"><div class="sess-h"><h3>' + esc(se.name) + "</h3><span>" + esc(se.when) + (mins ? " · about " + mins + " min" : "") + "</span></div>" + meals +
-      (cookList && n > 1 ? '<p class="sess-note"><b>Cook for ' + n + ":</b> " + cookList + "</p>" : "") +
-      (se.note ? '<p class="sess-note">' + esc(se.note) + "</p>" : "") +
-      (miss.length ? '<div class="miss"><span class="small">Missing:</span>' + missChips(miss) + "</div>" : "") + "</div>";
-  }).join("");
-  const planned = dayNutr(selDate), eatenN = dayNutr(selDate, true);
-  $("#kot").innerHTML = '<div class="kot-head"><span>Kitchen order' + (S.me && S.me.name ? " for " + esc(S.me.name) : "") + " · " + esc(fmtDay(date)) + "</span>" + (selDate === todayStr() ? '<span class="stamp">Today</span>' : "") + "</div>" +
-    '<p class="kot-title">' + esc(date.toLocaleDateString("en-IN", { weekday: "long" })) + "</p>" +
-    '<p class="kot-sub">Cooking ' + ["", "once", "twice", "three times"][p.s] + " · " + n + (n === 1 ? " person" : " people") + (S.plan[selDate] ? " · your plan" : " · default week") + ". Tick each meal as you eat it.</p>" +
-    sessHTML +
-    '<div class="kot-foot"><span class="mono"><b>Protein</b>~' + Math.round(eatenN.p) + " eaten of ~" + Math.round(planned.p) + " g planned each (target " + target("p") + " g)</span>" +
-    (!S.plan[selDate] ? "<span><b>Buy</b>" + esc(wd.buy.join(", ")) + "</span><span><b>Night before</b>" + esc(wd.night) + "</span>" : "") + "</div>";
-  $("#day-reset").hidden = !S.plan[selDate];
-  $("#day-nutri").innerHTML = nutriHTML(planned, "Planned for " + (selDate === todayStr() ? "today" : fmtDay(date)) + ", per person", true);
-}
+/*HOUSEHOLD_UI*/
 function nutriHTML(t, title, daily, mult) {
   const m = mult || 1;
   const big = [["kcal", "kcal"], ["p", "protein"], ["c", "carbs"], ["f", "fat"]].map(([k, l]) => "<div><b>" + fmtN(t[k] * m, k) + (k === "kcal" ? "" : " g") + "</b><span>" + l + "</span></div>").join("");
@@ -849,7 +813,7 @@ function renderRecipes() {
     if ($("#r-time").value && !KitchenCore.withinTime(r, +$("#r-time").value)) return false;
     if (hide && S.done["r-" + r.id]) return false;
     if (q) {
-      const hay = (r.title + " " + r.sub + " " + r.cuisine + " " + r.chapter + " " + r.ingredients.flatMap(g => g.items.map(i => i.name)).join(" ")).toLowerCase();
+      const hay = (r.title + " " + (r.aliases||[]).join(" ") + " " + r.sub + " " + r.cuisine + " " + r.chapter + " " + r.ingredients.flatMap(g => g.items.map(i => i.name)).join(" ")).toLowerCase();
       if (!q.split(/\s+/).every(w => hay.includes(w))) return false;
     }
     return true;
@@ -886,7 +850,7 @@ function planNeeds(days) {
   const need = {}, t0 = new Date();
   for (let i = 0; i < days; i++) {
     const d = new Date(t0); d.setDate(t0.getDate() + i); const ds = ymd(d), p = planOf(ds);
-    SLOTS.forEach(sl => { if (i === 0 && eaten(ds, sl)) return; (p.m[sl] || []).forEach(([id]) => { const r = R[id]; if (!r) return; r.strict.forEach(t => { if (!hasTok(t)) { const k = firstMissing(t); (need[k] = need[k] || []).includes(r.title) || need[k].push(r.title); } }); }); });
+    SLOTS.forEach(sl => { if (i === 0 && eaten(ds, sl)) return; (p.m[sl] || []).forEach(([id,k]) => { const r = R[id]; if (!r || !mealServings(p,sl,r,k)) return; r.strict.forEach(t => { if (!hasTok(t)) { const k = firstMissing(t); (need[k] = need[k] || []).includes(r.title) || need[k].push(r.title); } }); }); });
   }
   return need;
 }
@@ -899,7 +863,7 @@ function renderShop() {
   const ordered = Object.keys(S.basket).filter(k => (S.basket[k].via === "order" || S.basket[k].via === "search") && PDEF[k]);
   const restock = D.pantry.filter(p => pstate(p.key) === 1 && !S.basket[p.key]).map(p => p.key);
   const sec = (title, sub, body) => '<section class="sec"><h2>' + title + '</h2><p class="small">' + sub + "</p>" + body + "</section>";
-  $("#shop-out").innerHTML =
+  $("#shop-out").innerHTML = '<section><h2>Attendance-based cooking quantities</h2><p class="small">For today and tomorrow; only assigned eaters contribute. Pantry quantities are not recorded, so this is total cooking need, not an exact net purchase list.</p>'+[0,1].map(offset=>{const d=new Date();d.setDate(d.getDate()+offset);const ds=ymd(d),p=planOf(ds);return '<h3>'+esc(fmtDay(d))+'</h3>'+SLOTS.filter(sl=>offset!==0||!eaten(ds,sl)).map(sl=>'<h4>'+SLOT[sl]+'</h4>'+householdQuantities(p,sl,ds)).join('');}).join('')+'</section>' +
     sec("Needed for your plan", "Missing for meals planned today and tomorrow (" + esc(appOf().label) + " is your order app; change it in Settings).",
       ks.length ? '<ul class="rows">' + ks.map(k => '<li class="row"><span class="lbl"><span class="plain">' + esc(PDEF[k].label) + '</span><span class="sm">For ' + esc(need[k].slice(0, 3).join(", ")) + '</span></span><span class="meta">' + getButtons(k) + "</span></li>").join("") + "</ul>" : '<p class="empty">Required ingredient types are in your pantry. Check quantities and preparation before cooking.</p>') +
     sec("To bring home", "Tick when you've bought it; the pantry marks it Have.",
@@ -1125,8 +1089,8 @@ function renderMe() {
 function renderSetup() {
   const sync = { unsaved: "The browser could not save your latest changes. Export a backup now; keep this tab open until your data is safe.", saved: "Synced to your Claude account. Open this same link on your phone and laptop, signed in to the same account, and everything stays in step.", saving: "Syncing…", local: "Saved in this browser on this device. Clearing browser data removes this copy. Export a backup to move or protect it.", error: "Account sync failed. Keep a backup; this session has switched to device-only storage.", loading: "Checking…" }[syncNote];
   $("#setup").innerHTML =
-    '<h2>Settings</h2><p class="banner"><b>Sync:</b> ' + esc(sync) + "</p>" +
-    '<label class="f">People you usually cook for<span class="hint">Recipes open at this many servings, and each day starts with it. Change a single day on Today.</span><div class="stepper"><button class="rbtn" type="button" data-setp="-1" aria-label="Fewer people">−</button><b>' + setv("people") + '</b><button class="rbtn" type="button" data-setp="1" aria-label="More people">+</button></div></label>' +
+    householdSetupHTML() + '<label class="f">Person shown in the top nutrition meter<select id="nutrition-person">'+household().members.map(m=>'<option value="'+m.id+'"'+((S.set.nutritionPerson||'v1')===m.id?' selected':'')+'>'+esc(m.name)+'</option>').join('')+'</select></label>' + '<h2>Settings</h2><p class="banner"><b>Sync:</b> ' + esc(sync) + "</p>" +
+    '<label class="f">Default standalone recipe preview servings<span class="hint">Meal quantities use the five household members and attendance on Today. This control only sets the initial recipe preview.</span><div class="stepper"><button class="rbtn" type="button" data-setp="-1" aria-label="Fewer people">−</button><b>' + setv("people") + '</b><button class="rbtn" type="button" data-setp="1" aria-label="More people">+</button></div></label>' +
     '<div class="f"><b>How many times you usually cook a day</b><span class="hint">Groups the day into cooking sessions. Change a single day on Today.</span><div class="seg" role="group" aria-label="Default cooking times">' + [1, 2, 3].map(n => '<button type="button" data-setsess="' + n + '" aria-pressed="' + (setv("sessions") === n) + '">' + ["", "Once", "Twice", "3 times"][n] + "</button>").join("") + "</div></div>" +
     '<label class="f" for="set-app">Order app<span class="hint">"Order" opens this app\'s search for the item. You place the order there.</span><select id="set-app">' + D.apps.map(a => '<option value="' + a.key + '"' + (a.key === setv("app") ? " selected" : "") + ">" + esc(a.label) + "</option>").join("") + "</select></label>" +
     '<div class="f"><b>Move your data</b><span class="hint">The Claude link and the offline website keep separate copies of your plan, pantry, profile and results. Copy your data on one and paste it into Settings on the other.</span>' +
@@ -1140,7 +1104,7 @@ function renderSetup() {
 
 function preparationHTML(r) {
   const t=r.timing, raw=KitchenCore.timing(r,false), prepared=KitchenCore.timing(r,true);
-  return '<section class="prep-note"><h3>Before you start</h3><p>'+esc(r.review?.status || "Recipe review pending")+'</p><p><b>From raw ingredients:</b> '+esc(raw.text)+'</p>'+(t?.prerequisites?.length ? '<p><b>After preparation:</b> '+esc(prepared.text)+'</p><ul>'+t.prerequisites.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>' : '')+'<p>'+esc(t?.note || 'Read the whole method before cooking.')+'</p><p class="small">Estimates apply to the base recipe. Allow time for extra batches and your equipment. Quantities in method text refer to the base recipe.</p>'+(r.dependencies?.length ? '<p>Component recipes:</p><div class="recipe-tools">'+r.dependencies.map(id=>'<button class="btn" type="button" data-open="'+id+'">'+esc(R[id].title)+'</button>').join('')+'</div>' : '')+'</section>';
+  return '<section class="prep-note"><h3>Before you start</h3><p>'+esc(r.review?.status || "Recipe review pending")+'</p><p><b>From raw ingredients:</b> '+esc(raw.text)+'</p>'+(t?.prerequisites?.length ? '<p><b>After preparation:</b> '+esc(prepared.text)+'</p><ul>'+t.prerequisites.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>' : '')+'<p>'+esc(t?.note || 'Read the whole method before cooking.')+'</p><p class="small">Estimates apply to the base batch; extra batches and equipment change timing. ' + (r.stepTemplates ? 'Method quantities update with servings.' : 'Legacy method quantities refer to the base recipe.') + '</p>'+(r.dependencies?.length ? '<p>Component recipes:</p><div class="recipe-tools">'+r.dependencies.map(id=>'<button class="btn" type="button" data-open="'+id+'">'+esc(R[id].title)+'</button>').join('')+'</div>' : '')+'</section>';
 }
 function sourceHTML(r) { return '<details class="recipe-details"><summary>Recipe review and sources</summary><p>'+esc(r.review?.status || 'Not reviewed')+'. Not a kitchen-tested guarantee.</p>'+(r.sources?.length ? r.sources.map(x=>'<p><a href="'+esc(x.url)+'" target="_blank" rel="noopener">'+esc(x.title)+'</a> — '+esc(x.scope)+'</p>').join('') : '<p>No external recipe-level verification is attached yet. Book page references are provenance, not independent validation.</p>')+'</details>'; }
 function assistantHTML(r) {
@@ -1160,6 +1124,7 @@ async function askLocal() {
 let dlgId = null, dlgServ = 1, dlgTotal = false, recipeOpener = null;
 const checkedSteps = {};
 function stepHTML(r, s, i) {
+  s = KitchenCore.stepText(r,i,dlgServ);
   const m = s.match(/^([^.]{2,48}\.)\s+([\s\S]*)$/);
   const meta = r.stepMeta && r.stepMeta[i] ? '<span class="sm">' + esc(r.stepMeta[i]) + "</span>" : "";
   return '<li><label class="step-check"><input type="checkbox" data-step="' + i + '" aria-label="Complete step ' + (i + 1) + '"' + ((checkedSteps[r.id] || []).includes(i) ? " checked" : "") + '><span>' + meta + (m ? "<b>" + esc(m[1]) + "</b> " + esc(m[2]) : esc(s)) + "</span></label></li>";
@@ -1182,7 +1147,7 @@ function openRecipe(id, keepServ) {
   let ing;
   if (r.plainIng) ing = (f !== 1 ? '<p class="small">Listed for ' + nice(r.yield || 1) + (r.yield > 1 ? " servings" : " serving") + "; multiply by " + nice(f) + ".</p>" : "") + '<ul class="plain">' + r.ingredients[0].items.map(i => "<li>" + esc(i.name) + "</li>").join("") + "</ul>";
   else ing = '<div class="tbl-wrap"><table class="ing"><thead><tr><th>Ingredient</th><th style="text-align:right">For ' + nice(dlgServ) + "</th></tr></thead><tbody>" +
-    r.ingredients.map(g => (g.group ? '<tr class="grp"><td colspan="2">' + esc(g.group) + "</td></tr>" : "") + g.items.map(i => "<tr><td>" + esc(i.name) + (i.note ? ' <span class="nt">· ' + esc(i.note) + "</span>" : "") + '</td><td class="q">' + esc(scaleQ(i.q, f)) + "</td></tr>").join("")).join("") + "</tbody></table></div>";
+    r.ingredients.map(g => (g.group ? '<tr class="grp"><td colspan="2">' + esc(g.group) + "</td></tr>" : "") + g.items.map(i => "<tr><td>" + esc(i.name) + (i.note ? ' <span class="nt">· ' + esc(i.note) + "</span>" : "") + '</td><td class="q">' + esc(KitchenCore.ingredientQuantity(i, f)) + "</td></tr>").join("")).join("") + "</tbody></table></div>";
   const sec = (title, body) => body ? '<section class="sec"><h3>' + title + "</h3>" + body + "</section>" : "";
   const def = r.course === "breakfast" ? "b" : (new Date().getHours() < 15 ? "l" : "d");
   $("#dlg-in").innerHTML =
@@ -1200,7 +1165,7 @@ function openRecipe(id, keepServ) {
     preparationHTML(r) +
     '<div id="recipe-ingredients" tabindex="-1">' + sec("Ingredients", ing) + '</div>' +
     '<div id="recipe-method" tabindex="-1">' +
-    sec("Method", r.steps.length ? (f !== 1 ? '<p class="small">Amounts in the method are for ' + nice(r.yield || 1) + (r.yield > 1 ? " servings" : " serving") + "; scale them the same way.</p>" : "") + '<ol class="method">' + r.steps.map((s, i) => stepHTML(r, s, i)).join("") + "</ol>" : "") +
+    sec("Method", r.steps.length ? (!r.stepTemplates && f !== 1 ? '<p class="small">Amounts in the method are for ' + nice(r.yield || 1) + (r.yield > 1 ? " servings" : " serving") + "; scale them the same way.</p>" : "") + '<ol class="method">' + r.steps.map((s, i) => stepHTML(r, s, i)).join("") + "</ol>" : "") +
     '</div><details class="recipe-details" id="recipe-nutrition"><summary>Nutrition estimates</summary>' +
     '<div class="nutri"><div class="toolbar"><div class="seg" role="group" aria-label="Nutrition view"><button type="button" id="nutrition-serving" data-ntot="0" aria-pressed="' + !dlgTotal + '">Per serving</button><button type="button" id="nutrition-total" data-ntot="1" aria-pressed="' + dlgTotal + '">All ' + nice(dlgServ) + "</button></div></div>" + nutriHTML(r.nutr, dlgTotal ? "For " + nice(dlgServ) + " servings" : "Per serving (" + (r.servingLabel || "1 serving") + ")", false, dlgTotal ? dlgServ : 1) + "</div>" + '</details>' +
     sec("Checks", (r.cues || []).length ? '<ul class="plain">' + r.cues.map(c => "<li>" + esc(c) + "</li>").join("") + "</ul>" : "") +
@@ -1209,7 +1174,7 @@ function openRecipe(id, keepServ) {
     sec("Variations and tips", (r.var || []).length ? '<ul class="plain">' + r.var.map(v => "<li>" + esc(v) + "</li>").join("") + "</ul>" : "") +
     (r.serve ? '<p class="intro-p"><b>Serve with:</b> ' + esc(r.serve) + "</p>" : "") +
     (r.note ? '<p class="intro-p muted">' + esc(r.note) + "</p>" : "") +
-    sourceHTML(r) + assistantHTML(r) +
+    (r.allergens?.length ? '<p class="banner"><b>Allergen notes:</b> '+esc(r.allergens.join(", "))+'</p>' : "") + sourceHTML(r) + assistantHTML(r) +
     '<p class="ref">' + (r.book ? "Full recipe: " + (r.book === 1 ? "Restaurant-Grade Biryani at Home" : "Everyday Indian Meals at Home") + ", p. " + r.page : "App recipe") + "</p>";
   const dlg = $("#dlg");
   if (previous) {
@@ -1285,6 +1250,8 @@ function closeD(id) { const d = $("#" + id); if (typeof d.close === "function" &
 const now = () => Math.floor(Date.now() / 1000);
 document.addEventListener("change", e => {
   const t = e.target;
+  if (changeHousehold(t)) return;
+  if (t.id === "nutrition-person") {apply(s=>s.set.nutritionPerson=t.value);return;}
   if (t.id === "nav-jump") { selectTab(t.value, true); return; }
   if (t.dataset.step != null) { const steps = checkedSteps[dlgId] || []; checkedSteps[dlgId] = t.checked ? [...new Set([...steps, +t.dataset.step])] : steps.filter(i => i !== +t.dataset.step); return; }
   if (t.dataset.done) { const id = t.dataset.done, on = t.checked, ts = now(); apply(s => { if (on) { s.done[id] = ts; s.days[todayStr()] = 1; } else delete s.done[id]; }); }
@@ -1315,6 +1282,8 @@ document.addEventListener("click", e => {
   const t = e.target; if (!t.closest) return;
   const c = sel => t.closest(sel);
   let el;
+  if ((el=c('[data-hh-suggest]'))) {suggestHousehold(el.dataset.hhSuggest);return;}
+  if ((el=c('[data-hh-open]'))) {const [sl,id]=el.dataset.hhOpen.split('|'),p=planOf(selDate),r=dish(id),k=(p.m[sl]||[]).find(x=>x[0]===id)?.[1]||1,n=mealServings(p,sl,r,k);if(!n)return;openRecipe(id);dlgServ=n;openRecipe(id,true);$('#dlg-slot').value=sl;$('#dlg-date').value=selDate;return;}
   if (c("#r-clear")) { ["r-q","r-cuis","r-course","r-diet","r-app","r-sort","r-time"].forEach(id => $("#"+id).value=""); $("#r-hide").checked=false; renderRecipes(); return; }
   if (c("#bk-download")) { const blob = new Blob([JSON.stringify(S,null,2)],{type:"application/json"}); const url=URL.createObjectURL(blob); const a=document.createElement("a"); a.href=url; a.download="kitchen-backup-"+todayStr()+".json"; a.click(); setTimeout(()=>URL.revokeObjectURL(url),1000); return; }
   if ((el = c("[data-jump]"))) { const target=document.getElementById(el.dataset.jump); target.scrollIntoView({block:"start"}); target.focus({preventScroll:true}); return; }
@@ -1336,11 +1305,8 @@ document.addEventListener("click", e => {
   if ((el = c("[data-rm]"))) { const [sl, i] = el.dataset.rm.split("|"); editPlan(selDate, p => { p.m[sl].splice(+i, 1); }); return; }
   if ((el = c("[data-add]"))) { openPicker(el.dataset.add); return; }
   if ((el = c("[data-pickadd]"))) { const id = el.dataset.pickadd, sl = pickSlotKey; editPlan(selDate, p => { (p.m[sl] = p.m[sl] || []).push([id, 1]); }); closeD("pick"); return; }
-  if ((el = c("[data-shuffle]"))) { const sl = el.dataset.shuffle, pl = planOf(selDate), avoid = SLOTS.flatMap(s => (pl.m[s] || []).map(x => x[0])), pick = pickSlot(sl, pl.s, true, avoid); editPlan(selDate, p => { p.m[sl] = pick; }); return; }
-  if (c("#day-surprise")) {
-    const sess = planOf(selDate).s, b = pickSlot("b", sess, true), l = pickSlot("l", sess, true), d = pickSlot("d", sess, true, [l[0][0]]);
-    const m = { b, l, d }; editPlan(selDate, p => { p.m = m; }); return;
-  }
+  if ((el = c("[data-shuffle]"))) {suggestHousehold(el.dataset.shuffle);return;}
+  if (c("#day-plan") || c("#day-surprise")) {SLOTS.forEach(sl=>suggestHousehold(sl));return;}
   if (c("#day-reset")) { const ds = selDate; apply(s => { delete s.plan[ds]; }); return; }
   if ((el = c("[data-pickk]"))) {
     const k = el.dataset.pickk;
@@ -1378,7 +1344,7 @@ document.addEventListener("click", e => {
   if (c("#s-add")) { const id = surId, sl = $("#s-slot").value, r = R[id]; const add = [[id, 1]]; if (needsCarb(r)) add.push(["phulka-soft-chapati", 1]); editPlan(todayStr(), p => { p.m[sl] = (p.m[sl] || []).concat(add); }); $("#s-add").textContent = "Added to today"; return; }
   if ((el = c("[data-serv]"))) { const d = +el.dataset.serv; dlgServ = Math.max(0.5, Math.min(20, dlgServ + d * (dlgServ < 1 || (dlgServ === 1 && d < 0) ? 0.5 : 1))); openRecipe(dlgId, true); $("#dlg-live").textContent="Ingredients updated for "+nice(dlgServ)+" servings. Cooking time does not scale automatically."; return; }
   if ((el = c("[data-ntot]"))) { dlgTotal = el.dataset.ntot === "1"; openRecipe(dlgId, true); return; }
-  if (c("#dlg-add")) { const id = dlgId, sl = $("#dlg-slot").value, ds = $("#dlg-date").value, k = Math.max(0.5, dlgServ / planOf(ds).n); editPlan(ds, p => { (p.m[sl] = p.m[sl] || []).push([id, Math.round(k * 2) / 2]); }); $("#dlg-added").textContent = "Added to " + SLOT[sl].toLowerCase() + ($("#dlg-date").selectedIndex ? " on " + $("#dlg-date").selectedOptions[0].text : " today"); return; }
+  if (c("#dlg-add")) { const id = dlgId, sl = $("#dlg-slot").value, ds = $("#dlg-date").value, k = Math.max(0.5, dlgServ / (mealServings(planOf(ds),sl,r,1)||1)); editPlan(ds, p => { (p.m[sl] = p.m[sl] || []).push([id, Math.round(k * 2) / 2]); }); $("#dlg-added").textContent = "Added to " + SLOT[sl].toLowerCase() + ($("#dlg-date").selectedIndex ? " on " + $("#dlg-date").selectedOptions[0].text : " today"); return; }
   if ((el = c("[data-setp]"))) { const d = +el.dataset.setp; apply(s => { s.set.people = Math.max(1, Math.min(12, setv("people") + d)); }); return; }
   if ((el = c("[data-setsess]"))) { const v = +el.dataset.setsess; apply(s => { s.set.sessions = v; }); return; }
   if ((el = c("[data-stage]"))) { const i = +el.dataset.stage; openStages = openStages.includes(i) ? openStages.filter(x => x !== i) : openStages.concat(i); lsSet("kfz.open", openStages); renderTrack(); document.getElementById("stage-" + i).querySelector(".step-h").focus(); return; }

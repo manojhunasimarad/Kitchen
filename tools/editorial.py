@@ -30,6 +30,11 @@ DEPENDENCIES = {
 
 def enrich(recipes):
     for r in recipes:
+        if r.get("contentReview"):
+            r["review"] = dict(r["contentReview"])
+            r["dependencies"] = []
+            r["methodSteps"] = [{"id": f"step-{i+1}", "instruction": text} for i,text in enumerate(r["steps"])]
+            continue
         r["review"] = {"status": "Needs cooking validation", "version": 1, "kitchenTested": False}
         r["sources"] = []
         r["dependencies"] = DEPENDENCIES.get(r["id"], [])

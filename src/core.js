@@ -37,6 +37,12 @@
     }).join("");
   }
   function pantryAvailable(state) { return state === 0 || state === 1; }
+  const ingredientQuantity = (item, factor) => item.scaleMode === 'pan' ? item.q : scaleQuantity(item.q, factor);
+  function stepText(recipe,index,servings) {
+    if (!recipe.stepTemplates) return recipe.steps[index];
+    const items=Object.fromEntries(recipe.ingredients.flatMap(g=>g.items).map(item=>[item.id,item]));
+    return recipe.stepTemplates[index].replace(/\{\{([a-z0-9-]+)\}\}/g,(_,id)=>ingredientQuantity(items[id],servings/(recipe.yield||1)));
+  }
   function writeStorage(storage, key, data) {
     try { storage.setItem(key, JSON.stringify(data)); return {ok:true}; }
     catch (error) { return {ok:false, error:String(error.name || "StorageError")}; }
@@ -69,11 +75,30 @@
     }
     if (x.set.people != null && !(Number.isInteger(x.set.people) && x.set.people >= 1 && x.set.people <= 12)) return "People must be between 1 and 12.";
     if (x.set.sessions != null && ![1,2,3].includes(x.set.sessions)) return "Invalid cooking sessions.";
+    if(x.set.nutritionPerson&&!['v1','v2','e1','n1','n2'].includes(x.set.nutritionPerson))return 'Invalid nutrition person.';
+    if (x.set.household) {
+      const H=typeof module!=='undefined'&&module.exports ? require('./household.js') : root.KitchenHousehold;
+      const error=H.validateProfile(x.set.household);if(error)return error;
+    }
     for (const [date,p] of Object.entries(x.plan)) {
       if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || !object(p) || !object(p.m) || ![1,2,3].includes(p.s) || !Number.isInteger(p.n) || p.n < 1 || p.n > 12) return "Invalid meal plan.";
       for (const [slot, dishes] of Object.entries(p.m)) {
         if (!["b","l","d"].includes(slot) || !Array.isArray(dishes)) return "Invalid meal slot.";
         if (!dishes.every(row => Array.isArray(row) && row.length === 2 && recipeIds.includes(row[0]) && Number.isFinite(row[1]) && row[1] > 0 && row[1] <= 40)) return "Unknown dish or invalid serving quantity.";
+      }
+      if(p.attendance) {
+        if(!object(p.attendance))return 'Invalid attendance.';
+        for(const [slot,entries] of Object.entries(p.attendance)) {
+          if(!['b','l','d'].includes(slot)||!object(entries))return 'Invalid attendance.';
+          for(const [id,m] of Object.entries(entries))if(!['v1','v2','e1','n1','n2'].includes(id)||!object(m)||typeof m.eating!=='boolean'||![0.5,1,1.5,2].includes(m.portions)||!/^([01]\d|2[0-3]):[0-5]\d$/.test(m.time))return 'Invalid member meal entry.';
+        }
+      }
+      if(p.assignments) {
+        if(!object(p.assignments))return 'Invalid dish assignments.';
+        for(const [slot,dishes] of Object.entries(p.assignments)) {
+          if(!['b','l','d'].includes(slot)||!object(dishes))return 'Invalid dish assignments.';
+          for(const [id,people] of Object.entries(dishes))if(!recipeIds.includes(id)||!Array.isArray(people)||new Set(people).size!==people.length||people.some(p=>!['v1','v2','e1','n1','n2'].includes(p)))return 'Invalid dish recipients.';
+        }
       }
     }
     for (const v of Object.values(x.done)) if (!Number.isFinite(v)) return "Invalid progress entry.";
@@ -81,7 +106,7 @@
     for (const v of Object.values(x.labs)) if (!object(v) && typeof v !== "string") return "Invalid profile record.";
     return null;
   }
-  const api = {scaleQuantity, format, pantryAvailable, writeStorage, timing, withinTime, validImport};
+  const api = {scaleQuantity, ingredientQuantity, stepText, format, pantryAvailable, writeStorage, timing, withinTime, validImport};
   if (typeof module !== "undefined" && module.exports) module.exports = api;
   else root.KitchenCore = api;
 })(typeof globalThis !== "undefined" ? globalThis : this);

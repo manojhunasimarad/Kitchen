@@ -29,7 +29,7 @@ No Python packages, API key, account, or model download are required. The server
 - Recipe links use `#recipe/RECIPE_ID`; serving changes retain meal/day selections and focus.
 - Cooking view adds ingredient/method jump buttons, step checkboxes and collapsed nutrition.
 - Mobile section selector and larger serving buttons improve navigation.
-- Twelve pilot recipes have explicit preparation metadata, component links and review status. All 109 recipes carry honest review status; none is labelled kitchen-tested.
+- Twelve pilot recipes have explicit preparation metadata, component links and review status. All recipes carry honest review status; none is labelled kitchen-tested.
 - Time filters use only documented raw-start totals. Unknown prerequisites do not qualify as quick recipes. Times remain source-derived estimates, not calibrated predictions.
 - Scoped service-worker cleanup and UTF-8 builds improve local and offline reliability.
 
@@ -82,3 +82,7 @@ Before pushing, review `git diff` and run the build/tests. Commit the source cha
 - [Ollama local chat API](https://docs.ollama.com/api/chat)
 - [FoodSafety.gov temperature guidance](https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures)
 - [Dassana's chilla technique](https://www.vegrecipesofindia.com/moong-dal-chilla-recipe/) — a different variant/yield; limited technique corroboration only.
+
+## Household update
+
+See [HOUSEHOLD.md](HOUSEHOLD.md) for attendance, diets, quantities, kitchen capacity and the limits of workload estimates. Regional recipes live in `data/regional_recipes.json`; `tools/regional_recipes.py` validates and compiles them. `src/household.js` contains pure calculations and `src/household-ui.js` the interface, both embedded by the builder.

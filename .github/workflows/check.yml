@@ -14,5 +14,5 @@ jobs:
       - run: python tools/build_data.py
       - run: python tools/build_page.py
       - run: python -m unittest discover -s tests -v
-      - run: node --test tests/core.test.cjs
+      - run: node --test tests/core.test.cjs tests/household.test.cjs
       - run: git diff --exit-code -- data/data.json index.html sw.js

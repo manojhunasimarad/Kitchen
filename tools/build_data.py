@@ -41,6 +41,9 @@ PANTRY = [
     ("cauliflower", "Cauliflower", "Vegetables and herbs", 2), ("bhindi", "Bhindi (okra)", "Vegetables and herbs", 2),
     ("mushrooms", "Mushrooms", "Vegetables and herbs", 2), ("capsicum", "Capsicum", "Vegetables and herbs", 2),
     ("peas", "Green peas", "Vegetables and herbs", 2), ("cucumber", "Cucumber", "Vegetables and herbs", 2),
+    ("brinjal", "Small brinjals (badanekayi / eggplant)", "Vegetables and herbs", 2),
+    ("cardamom", "Green cardamom", "Spices and masalas", 2),
+    ("raisins", "Raisins", "Dals, beans and nuts", 2),
     ("sambarveg", "Sambar vegetables (drumstick, pumpkin, brinjal)", "Vegetables and herbs", 2),
     ("coconut", "Coconut (fresh or desiccated)", "Vegetables and herbs", 2),
     ("springonion", "Spring onions", "Vegetables and herbs", 2),
@@ -430,6 +433,9 @@ for w in WORLD:
          "tags": tags, "nutr": rounded(scaled(tot, 1 / y))}
     r["strict"] = [n for n in needs if n not in SOFT]
     recipes.append(r)
+
+from regional_recipes import load_regional
+recipes.extend(load_regional(KEYS))
 
 for r in recipes:
     r["proteinNum"] = round(r["nutr"]["p"])

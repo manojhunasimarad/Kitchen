@@ -2,6 +2,18 @@
 
 See the [product audit and architecture roadmap](docs/PRODUCT-ARCHITECTURE-PLAN.html) for the proposed next phases.
 
+## Household and regional recipes
+
+The Today planner now supports five members (two vegetarian, one eggetarian, two non-vegetarian),
+attendance/portions/eating times for each meal, dish recipients, per-person nutrition estimates,
+and quantities based on those recipients. Settings includes two cooks, four stove burners,
+one induction, one air fryer, one sandwich maker, a fridge and 3 L + 5 L pressure cookers.
+Mixer availability still needs confirmation. See [the household guide](docs/HOUSEHOLD.md).
+
+Four source-compared regional adaptations add yennegai, khara pongal, Kesari Bath and cabbage
+pakoda. Their method amounts scale with servings; their sources, variant differences and
+unmeasured timing ranges are explicit. They are not labelled kitchen-tested.
+
 ## Local reliability and cooking preview
 
 The local update adds tested fractional scaling, received-stock availability, visible save failures,
@@ -18,9 +30,9 @@ instructions. No model is installed or trained. Recipes and times have not been 
 kitchen trials. The descriptions below document the original feature set; the local development
 guide records current limitations and the next implementation phases.
 
-A phone-first kitchen planner for a small kitchen with no fridge or oven: two stoves, a pressure cooker, an air fryer and a sandwich maker. It started as a companion to two home cookbooks, *Restaurant-Grade Biryani at Home* (Book 1) and *Everyday Indian Meals at Home* (Book 2), and adds 32 recipes from other cuisines written for the same kitchen.
+A phone-first planner customized for a five-person household: two cooks, two stoves with four burners, induction, 3 L and 5 L pressure cookers, an air fryer, a sandwich maker and a fridge. It started as a companion to two home cookbooks, *Restaurant-Grade Biryani at Home* (Book 1) and *Everyday Indian Meals at Home* (Book 2), and adds 32 recipes from other cuisines written for the same kitchen.
 
-109 recipes across seven cuisines: Indian, Continental, Italian, Indo-Chinese, Mexican, Middle Eastern and East Asian. Every serving has its nutrition worked out.
+113 recipes across seven cuisines: Indian, Continental, Italian, Indo-Chinese, Mexican, Middle Eastern and East Asian. Every serving has its nutrition worked out.
 
 ![Today on a laptop](docs/screenshots/desktop-today.png)
 
@@ -32,7 +44,7 @@ A phone-first kitchen planner for a small kitchen with no fridge or oven: two st
 | **Cook** | Tap the ingredients you want to cook with. When one isn't in your pantry, it asks whether to **order it** (opens Swiggy Instamart, Zepto, Blinkit or BigBasket search) or **bring it home**. Dishes from every cuisine that use your picks are listed as ready, one item short or two short. |
 | **Surprise me** | Shuffles a random dish that matches your filters: meal, cuisine, diet, only what you can cook now, 30 minutes or less, not cooked yet. Add it to today with one tap. |
 | **Me** | Your profile (name, sex, age, height, weight, waist, activity, training days, goal) and a **diet calculator**: BMI and waist with Indian cut-offs, BMR (Mifflin-St Jeor), maintenance calories, a calorie target for your goal, protein (1.2–2.0 g/kg of a healthy-range weight), carbs, fat, fibre, water, and vitamin and mineral needs by sex and age (ICMR-NIN 2020). These targets drive the rest of the app. Also a **weight log** with a trend line, **blood tests** (haemoglobin, ferritin, vitamin D, B12, glucose, HbA1c, cholesterol, triglycerides, TSH, uric acid, creatinine, zinc) with typical ranges you can replace with your lab's, food advice and recipes for anything out of range, and a **hair-fall guide** that checks your plan and results and rates common remedies by evidence. |
-| **Recipes** | All 109 recipes, searchable and sortable by protein, iron, calories or time. Each recipe has a **servings** control that rescales the ingredients and nutrition, plus "Add to plan" and the full method. |
+| **Recipes** | All recipes, searchable and sortable by protein, iron, calories or time. Each recipe has a **servings** control that rescales the ingredients and nutrition, plus "Add to plan" and the full method. |
 | **Pantry** | 108 staples, each marked Have, Low or Out. |
 | **Shopping** | Items your plan needs today and tomorrow (with Order and Bring buttons), what you're bringing home, what's on order, and what's running low. *Copy list* puts the list on the clipboard. |
 | **Track** | 15 stages and 92 tick-offs, from setting curd to the master biryanis and a World kitchen stage. |
@@ -50,7 +62,9 @@ A phone-first kitchen planner for a small kitchen with no fridge or oven: two st
   <img src="docs/screenshots/phone-me-blood-tests.png" width="250" alt="Food advice from blood tests">
 </p>
 
-## How the recipes were checked
+## Historical recipe-checking claims
+
+The following describes the original 109-recipe version. It is not certification of the current collection. Current external-review scopes are attached to individual recipes; no kitchen trials have been recorded.
 
 - **Against the books:** all 77 book recipes were compared line by line with the two PDFs (ingredient names, quantities, method text). They match. The Book 1 variations and sides are correctly halved from the book's 2-serving amounts. Eight ingredient rows the book has but the app had left out were added.
 - **Consistency and food safety:** all 109 recipes were checked automatically for ingredients missing from the list or never used, salt per serving, air-fryer temperatures, marinating longer than 2 hours without a fridge, doneness checks, rice and rajma safety, and leftovers.
