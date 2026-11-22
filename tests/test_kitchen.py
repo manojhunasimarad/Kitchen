@@ -35,6 +35,16 @@ class RecipeTests(unittest.TestCase):
             if r['diet']=='veg': self.assertFalse(any(s<=meat|{'eggs'} for s in sole),r['id'])
             if r['diet']=='egg': self.assertFalse(any(s<=meat for s in sole),r['id'])
         for x in self.data['extras']: self.assertIsNone(banned.search(x['title']),x['id'])
+    def test_prep_guides(self):
+        import re
+        guides=self.data['prep']; self.assertGreaterEqual(len(guides),6)
+        self.assertEqual(len({g['id'] for g in guides}),len(guides))
+        for g in guides:
+            self.assertTrue(g['steps']) ; self.assertTrue(g['sources'],g['id'])
+            for s in g['sources']: self.assertTrue(s['url'].startswith('https://')); self.assertTrue(s['scope'])
+            if g.get('match'): re.compile(g['match'])
+        linked=[r['id'] for r in self.recipes.values() if any(k in json.dumps(r['ingredients']).lower() for g in guides for k in g['keywords'])]
+        self.assertGreater(len(linked),50)
     def test_pilot_and_time_uncertainty(self):
         self.assertEqual(len(PILOT),12)
         self.assertEqual(self.recipes['moong-dal-chilla']['timing']['prerequisiteMinutes'],[180,240])

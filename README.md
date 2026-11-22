@@ -29,6 +29,18 @@ the phone. Each day has its own menu,
 Shuffle and Surprise pick random dishes for the people eating, ⟳ swaps one dish, and missing ingredients,
 night-before prep and per-person nutrition update as you change the plan.
 
+How often you cook changes the menu, not just the grouping. **Three times:** everything is cooked fresh, so the full
+weekly menu applies. **Twice:** breakfast and the lunch box are made together in the morning, so breakfast is swapped
+for one ready within 30 minutes and lunch for a dish that packs well; dinner is fresh. **Once:** breakfast is ready
+in 20 minutes with no soaking, and lunch and dinner come from one pot, so the morning cooking amounts are doubled and
+there is one batch to cook instead of two. Each cooking session lists what to cook and how many servings. A day you
+haven't edited switches to that mode's default menu; a day you have edited keeps your dishes and only swaps the ones
+that don't fit.
+
+**Prep skills** (in the menu) explains using the pull-cord hand chopper (how many pulls for coarse, fine or purée),
+chopping and slicing onions, peeling and mincing garlic, peeling ginger with a spoon, getting corn off the cob, and
+handling herbs and green chillies, each with sources. Recipes show **Prep help** links to the guides they need.
+
 ## Food rules
 
 The collection never uses beef, pork (bacon, ham, lard, sausages and similar), gelatine or alcohol in cooking;

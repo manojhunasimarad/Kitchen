@@ -33,6 +33,16 @@ An example with all five present gives 5 servings of rice, 1 assigned egg portio
 portions. If one non-vegetarian is absent, the meat becomes 1 portion and rice becomes 4.
 If one vegetarian requests half a portion, rice becomes 3.5. Attendance is independent per meal.
 
+## Cooking once, twice or three times
+
+The choice changes the menu. Three times: every meal is cooked fresh and the weekly menu applies. Twice: the morning
+session makes breakfast and the lunch box, so breakfast must be ready within 30 minutes and lunch must pack well
+(dishes marked as holding); dinner is cooked fresh. Once: breakfast must take 20 minutes or less with no soaking, and
+dinner is the same pot as lunch, so cooking amounts double and Shuffle, ⟳ and edits on lunch carry over to dinner.
+With a fridge, dinner's share is cooled and refrigerated within 2 hours and reheated until steaming hot; without one,
+it is packed piping hot into an insulated box. Untouched days switch to the mode's default menu; edited days keep
+their dishes and only swap those that don't fit.
+
 ## Cooking-time estimates
 
 Resource allocation uses the configured cooks, burner/induction slots, air fryer, sandwich

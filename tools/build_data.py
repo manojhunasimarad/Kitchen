@@ -684,7 +684,9 @@ data = {"recipes": recipes,
         "pantry": [{"key": k, "label": l, "group": g, "def": d, "buy": BUY.get(k, re.sub(r"\s*\(.*", "", l).lower())}
                    for k, l, g, d in PANTRY],
         "soft": sorted(SOFT), "track": TRACK, "week": WEEK, "ref": REFERENCE, "extras": extras,
-        "targets": TARGETS, "apps": ORDER_APPS, "audit": AUDIT, "healthSources": HEALTH_SOURCES}
+        "targets": TARGETS, "apps": ORDER_APPS, "audit": AUDIT, "healthSources": HEALTH_SOURCES,
+        # Prep skills (chopping, peeling, the pull-cord chopper), linked from recipes by ingredient name.
+        "prep": json.loads((ROOT / "data" / "prep_guides.json").read_text(encoding="utf-8"))}
 json.dump(data, open(ROOT / "data" / "data.json", "w", encoding="utf-8", newline="\n"), ensure_ascii=False, separators=(",", ":"))
 print(len(recipes), "recipes;", sum(len(s["rows"]) for s in TRACK), "track rows;",
       round(len(json.dumps(data, ensure_ascii=False)) / 1024), "KB")

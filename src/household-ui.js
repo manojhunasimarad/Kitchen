@@ -26,10 +26,21 @@ function pickWeighted(list, rng) {
   for (let i = 0; i < list.length; i++) { v -= w[i]; if (v <= 0) return list[i]; }
   return list[list.length - 1];
 }
-function chooseDish(sl, diet, sessions, rng, avoid, preferReady) {
+/* How often you cook shapes the menu:
+   once  — one session: a breakfast ready in 20 minutes without soaking, and lunch and dinner from one batch;
+   twice — breakfast and the lunch box together in the morning: breakfast within 30 minutes, a lunch that packs well;
+   three times — everything is cooked fresh, so any dish fits. */
+const soaks = r => /soak|overnight/i.test(r.time || '');
+function breakfastFits(r, s) { if (!isMain(r, 'b')) return true; if (s === 1) return !!r.minutes && r.minutes <= 20 && !soaks(r); if (s === 2) return !!r.minutes && r.minutes <= 30; return true; }
+const lunchFits = (r, s) => !isMain(r, 'l') || s === 3 || !!r.holds;
+const sameRows = (a, b) => JSON.stringify(a || []) === JSON.stringify(b || []);
+const linkedDinner = q => q.s === 1 && (q.m.l || []).length > 0 && sameRows(q.m.l, q.m.d);
+function chooseDish(sl, diet, sessions, rng, avoid, preferReady, prefer) {
   const h = household(), holds = (sl === 'l' && sessions <= 2) || (sl === 'd' && sessions === 1);
   const base = D.recipes.filter(r => isMain(r, sl) && dishDiet(r) === diet && !(avoid || []).includes(r.id) && !H.equipmentIssues(r, h).length);
-  const tiers = [r => (!holds || r.holds) && (!preferReady || !status(r).missing.length), r => !holds || r.holds, () => true];
+  const fits = r => (!holds || r.holds) && (sl !== 'b' || breakfastFits(r, sessions));
+  const liked = prefer || (() => true);
+  const tiers = [r => fits(r) && liked(r) && (!preferReady || !status(r).missing.length), r => fits(r) && liked(r), fits, r => !holds || r.holds, () => true];
   for (const f of tiers) { const l = base.filter(f); if (l.length) return pickWeighted(l, rng); }
   return null;
 }
@@ -63,7 +74,9 @@ function defaultMenu(ds, sessions) {
     const mains = rows.map(([id]) => dish(id)).filter(r => isMain(r, sl));
     const uncovered = H.attendees(probe, sl, h).filter(mem => !mains.some(r => H.compatible(mem, r)));
     if (uncovered.length) {
-      const r = chooseDish(sl, 'veg', sessions, rng, weekIds, false);
+      // a meal that already has rice or rotis gets a curry or dal, not another rice dish
+      const hasCarb = rows.some(([id]) => CARBS.includes(id) || (R[id] && R[id].course === 'side' && /rice|phulka|roti|chapati|paratha/i.test(R[id].title)));
+      const r = chooseDish(sl, 'veg', sessions, rng, weekIds, false, hasCarb ? (x => needsCarb(x)) : null);
       if (r) {
         rows.unshift([r.id, 1]); weekIds.push(r.id);
         if (needsCarb(r) && !rows.some(([id]) => CARBS.includes(id))) rows.push([CARBS[rng() < 0.5 ? 0 : 1], 1]);
@@ -71,18 +84,63 @@ function defaultMenu(ds, sessions) {
     }
     m[sl] = rows;
   });
-  defaultCache[key] = JSON.stringify(m);
-  return m;
+  const q = { s: sessions, m, assignments: {} };
+  fitToSessions(q, ds, null);
+  defaultCache[key] = JSON.stringify(q.m);
+  return q.m;
+}
+/* Swap any dish that doesn't suit how often you cook; when cooking once, dinner is lunch's batch. */
+function fitToSessions(q, ds, fallback) {
+  const s = q.s, rng = seeded(ds + '|sessions' + s), h = household(), clone = H.clone;
+  const used = () => SLOTS.flatMap(sl => (q.m[sl] || []).map(x => x[0]));
+  const swapUnfit = (sl, ok) => {
+    q.m[sl] = (q.m[sl] || []).map(row => {
+      const r = R[row[0]]; if (!r || ok(r, s)) return row;
+      const here = used(), alt = pickWeighted(D.recipes.filter(x => x.course === r.course && dishDiet(x) === dishDiet(r) && ok(x, s) && !here.includes(x.id) && !H.equipmentIssues(x, h).length), rng);
+      if (!alt) return row;
+      const a = q.assignments?.[sl]; if (a && a[r.id]) { a[alt.id] = a[r.id]; delete a[r.id]; }
+      return [alt.id, row[1]];
+    });
+    if ((q.m[sl] || []).some(([id]) => R[id] && needsCarb(R[id])) && !(q.m[sl] || []).some(([id]) => CARBS.includes(id))) q.m[sl].push([CARBS[rng() < 0.5 ? 0 : 1], 1]);
+  };
+  swapUnfit('b', breakfastFits);
+  swapUnfit('l', lunchFits);
+  if (s === 1) { q.m.d = clone(q.m.l || []); (q.assignments ||= {}).d = clone(q.assignments?.l || {}); }
+  else if (fallback && (q.m.l || []).length && sameRows(q.m.l, q.m.d)) { q.m.d = clone(fallback.d || []); if (q.assignments) delete q.assignments.d; }
+}
+function setSessions(v) {
+  const ds = selDate, edited = !!S.plan[ds];
+  editPlan(ds, q => {
+    q.s = v;
+    // Untouched menus switch to that mode's default; menus you've edited are adjusted dish by dish.
+    if (!edited || q.auto) { q.m = defaultMenu(ds, v); q.assignments = {}; q.auto = true; return; }
+    fitToSessions(q, ds, defaultMenu(ds, v));
+  });
+}
+/* Edit one meal; when cooking once and dinner is lunch's batch, keep the two in step. */
+function editMeal(sl, fn) {
+  editPlan(selDate, q => {
+    const linked = linkedDinner(q);
+    fn(q); delete q.auto;
+    if (linked && (sl === 'l' || sl === 'd')) { const to = sl === 'l' ? 'd' : 'l'; q.m[to] = H.clone(q.m[sl] || []); (q.assignments ||= {})[to] = H.clone(q.assignments?.[sl] || {}); }
+  });
 }
 function shuffleMeal(sl) {
-  const p = planOf(selDate), avoid = SLOTS.filter(s => s !== sl).flatMap(s => (p.m[s] || []).map(x => x[0])).concat((p.m[sl] || []).map(x => x[0]));
-  const meal = buildMeal(p, sl, Math.random, avoid, true);
-  editPlan(selDate, q => { q.m[sl] = meal.rows; (q.assignments ||= {})[sl] = meal.assign; });
+  const p = planOf(selDate), together = linkedDinner(p) && (sl === 'l' || sl === 'd'), from = together ? 'l' : sl;
+  const avoid = SLOTS.flatMap(s => (p.m[s] || []).map(x => x[0]));
+  const meal = buildMeal(p, from, Math.random, avoid, true);
+  editPlan(selDate, q => {
+    delete q.auto; q.m[from] = meal.rows; (q.assignments ||= {})[from] = meal.assign;
+    if (together) { q.m.d = H.clone(meal.rows); q.assignments.d = H.clone(meal.assign); }
+  });
 }
 function surpriseDay() {
   const p = planOf(selDate), used = [], menu = {}, assign = {};
-  SLOTS.forEach(sl => { const meal = buildMeal(p, sl, Math.random, used, true); menu[sl] = meal.rows; assign[sl] = meal.assign; used.push(...meal.rows.map(x => x[0])); });
-  editPlan(selDate, q => { q.m = menu; q.assignments = assign; });
+  SLOTS.forEach(sl => {
+    if (sl === 'd' && p.s === 1) { menu.d = H.clone(menu.l); assign.d = H.clone(assign.l); return; }
+    const meal = buildMeal(p, sl, Math.random, used, true); menu[sl] = meal.rows; assign[sl] = meal.assign; used.push(...meal.rows.map(x => x[0]));
+  });
+  editPlan(selDate, q => { q.m = menu; q.assignments = assign; delete q.auto; });
 }
 function swapDish(sl, i) {
   const p = planOf(selDate), row = (p.m[sl] || [])[i]; if (!row) return;
@@ -90,16 +148,16 @@ function swapDish(sl, i) {
   let list;
   if (X[row[0]]) list = D.extras.filter(x => x.id !== row[0] && dishDiet(x) === dishDiet(old) && !here.includes(x.id));
   else if (CARBS.includes(row[0])) list = CARBS.filter(id => id !== row[0]).map(id => R[id]);
-  else list = D.recipes.filter(r => r.id !== row[0] && r.course === old.course && dishDiet(r) === dishDiet(old) && !here.includes(r.id) && !H.equipmentIssues(r, h).length);
+  else list = D.recipes.filter(r => r.id !== row[0] && r.course === old.course && dishDiet(r) === dishDiet(old) && !here.includes(r.id) && !H.equipmentIssues(r, h).length && (sl !== 'b' || breakfastFits(r, p.s)) && (sl !== 'l' || lunchFits(r, p.s)));
   const ready = list.filter(r => !R[r.id] || !status(r).missing.length);
   const pick = pickWeighted(ready.length ? ready : list, Math.random); if (!pick) return;
-  editPlan(selDate, q => {
+  editMeal(sl, q => {
     const it = q.m[sl][i]; if (!it) return; const from = it[0]; it[0] = pick.id;
     const a = q.assignments?.[sl]; if (a && a[from]) { a[pick.id] = a[from]; delete a[from]; }
   });
 }
 function removeDish(sl, i) {
-  editPlan(selDate, q => { const it = q.m[sl][+i]; if (!it) return; q.m[sl].splice(+i, 1); if (q.assignments?.[sl]) delete q.assignments[sl][it[0]]; });
+  editMeal(sl, q => { const it = q.m[sl][+i]; if (!it) return; q.m[sl].splice(+i, 1); if (q.assignments?.[sl]) delete q.assignments[sl][it[0]]; });
 }
 /* What to do the night before: soaking for tomorrow's dishes, and setting curd when tomorrow uses it. */
 function nightBefore(ds) {
@@ -145,8 +203,10 @@ function mealHTML(p, sl, me) {
   const g = Math.round(H.personNutrition(p, sl, me.id, allDishes(), h).p || 0);
   const covered = m => rows.some(([id, k]) => dish(id) && isMain(dish(id), sl) && H.recipients(p, sl, dish(id), h).some(x => x.id === m.id));
   const uncovered = rows.length ? attending.filter(m => !covered(m)) : [];
+  const fromLunch = sl === 'd' && linkedDinner(p);
   return '<div class="meal"><div class="meal-h"><input type="checkbox" id="eat-' + sl + '" data-eat="' + sl + '"' + (on ? ' checked' : '') + ' aria-label="' + SLOT[sl] + ' eaten"><span class="slot">' + SLOT[sl] + '</span><span class="g">' + (attending.some(m => m.id === me.id) ? '~' + g + ' g protein · ' + esc(shortName(me.name)) : attending.length + ' eating') + '</span></div>' +
     whoHTML(p, sl) +
+    (fromLunch ? '<p class="link-line">Same pot as lunch: cooked once in the morning, so its servings are in the morning cooking amounts. Changes to lunch apply here too.</p>' : '') +
     (!attending.length ? '<p class="small">Nobody is eating this meal, so nothing is cooked for it.</p>' :
       (rows.length ? '<ul class="dishes">' + rows.map(([id, k], i) => dishHTML(p, sl, id, k, i)).join('') + '</ul>' : '<p class="small">Nothing planned.</p>') +
       (uncovered.length ? '<p class="warn-line">No main dish for ' + uncovered.map(m => esc(shortName(m.name))).join(', ') + '. Shuffle or add one.</p>' : '') +
@@ -191,9 +251,12 @@ function renderToday() {
   const sessions = SESS[p.s].map(se => {
     const ids = [...new Set(se.slots.flatMap(sl => (p.m[sl] || []).filter(([id, k]) => R[id] && mealServings(p, sl, R[id], k) > 0).map(x => x[0])))];
     const miss = []; ids.forEach(id => status(R[id]).missing.forEach(t => { const k = firstMissing(t); if (!miss.includes(k)) miss.push(k); }));
+    const cook = Object.entries(H.totals(p, allDishes(), h, se.slots)).filter(([id]) => R[id]).map(([id, n]) => esc(R[id].title) + ' <b>' + nice(n) + '</b>');
+    const note = p.s === 1 ? (h.fridge ? 'Breakfast is quick, and lunch and dinner come from one pot. Eat lunch fresh; cool dinner’s share and refrigerate it within 2 hours, then reheat until steaming hot all the way through.' : se.note) : se.note;
     return '<div class="sess"><div class="sess-h"><h3>' + esc(se.name) + '</h3><span>' + esc(se.when) + '</span></div>' + workloadHTML(p, se.slots) +
+      (cook.length ? '<p class="cook-line"><span class="lbl-s">Cook</span> ' + cook.join(' · ') + ' <span class="small">servings</span></p>' : '') +
       se.slots.map(sl => mealHTML(p, sl, me)).join('') +
-      (se.note ? '<p class="sess-note">' + esc(se.note) + '</p>' : '') +
+      (note ? '<p class="sess-note">' + esc(note) + '</p>' : '') +
       (miss.length ? '<div class="miss"><span class="small">Missing:</span>' + missChips(miss) + '</div>' : '') +
       householdQuantities(p, se.slots) + '</div>';
   }).join('');
@@ -202,11 +265,11 @@ function renderToday() {
   const night = nightBefore(selDate), counts = h.members.reduce((o, m) => (o[m.diet] = (o[m.diet] || 0) + 1, o), {});
   $('#kot').innerHTML = '<div class="kot-head"><span>Kitchen order · ' + esc(fmtDay(date)) + '</span>' + (selDate === todayStr() ? '<span class="stamp">Today</span>' : '') + '</div>' +
     '<p class="kot-title">' + esc(date.toLocaleDateString('en-IN', { weekday: 'long' })) + '</p>' +
-    '<p class="kot-sub">Cooking ' + ['', 'once', 'twice', 'three times'][p.s] + ' · ' + h.members.length + ' people (' + ['veg', 'egg', 'nonveg'].filter(d => counts[d]).map(d => counts[d] + ' ' + { veg: 'veg', egg: 'egg', nonveg: 'non-veg' }[d]).join(', ') + ') · ' + (S.plan[selDate] ? 'your plan' : 'default menu') + '. Tap names to mark who is eating.</p>' +
+    '<p class="kot-sub">' + ['', 'Cooking once: quick breakfast, one pot for lunch and dinner', 'Cooking twice: quick breakfast and a packable lunch in the morning, dinner fresh', 'Cooking three times: everything fresh'][p.s] + ' · ' + h.members.length + ' people (' + ['veg', 'egg', 'nonveg'].filter(d => counts[d]).map(d => counts[d] + ' ' + { veg: 'veg', egg: 'egg', nonveg: 'non-veg' }[d]).join(', ') + ') · ' + (S.plan[selDate] && !S.plan[selDate].auto ? 'your plan' : 'default menu') + '. Tap names to mark who is eating.</p>' +
     sessions +
     '<div class="kot-foot"><span class="mono"><b>Protein</b>~' + Math.round(eat.p) + ' eaten of ~' + Math.round(plan.p) + ' g planned for ' + esc(shortName(me.name)) + ' (target ' + target('p') + ' g)</span>' +
     (night ? '<span><b>Night before</b>' + esc(night) + '</span>' : '') + '</div>';
-  $('#day-reset').hidden = !S.plan[selDate];
+  $('#day-reset').hidden = !S.plan[selDate] || !!S.plan[selDate].auto;
   $('#day-nutri').innerHTML = dayPanelHTML(p, selDate);
 }
 
@@ -227,7 +290,7 @@ function changeHousehold(t) {
       if (t.dataset.portion) m.portions = +t.value; if (t.dataset.mealtime && t.value) m.time = t.value; a[id] = m; });
     return true;
   }
-  if (t.dataset.recipient) { const [sl, id, person] = t.dataset.recipient.split('|'), p = planOf(selDate), r = dish(id); let ids = H.recipients(p, sl, r, household()).map(m => m.id); ids = t.checked ? [...new Set([...ids, person])] : ids.filter(x => x !== person); editPlan(selDate, p => { ((p.assignments ||= {})[sl] ||= {})[id] = ids; }); return true; }
+  if (t.dataset.recipient) { const [sl, id, person] = t.dataset.recipient.split('|'), p = planOf(selDate), r = dish(id); let ids = H.recipients(p, sl, r, household()).map(m => m.id); ids = t.checked ? [...new Set([...ids, person])] : ids.filter(x => x !== person); editMeal(sl, p => { ((p.assignments ||= {})[sl] ||= {})[id] = ids; }); return true; }
   if (t.dataset.memberName || t.dataset.memberDiet || t.dataset.kitchen) {
     const h = H.clone(household());
     if (t.dataset.kitchen) { const k = t.dataset.kitchen; h[k] = ['fridge', 'mixer'].includes(k) ? t.checked : k === 'approach' ? t.value : +t.value; }
