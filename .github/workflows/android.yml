@@ -4,7 +4,8 @@ name: Android app
 on:
   push:
     branches: [main, android-app]
-    paths: ['index.html', 'android/**', '.github/workflows/android.yml']
+    # Only when the app shell changes: the app loads the live site, so website changes need no new APK.
+    paths: ['android/**', '.github/workflows/android.yml']
   workflow_dispatch:
 permissions:
   contents: write
@@ -15,8 +16,8 @@ jobs:
   apk:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-java@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '17'
