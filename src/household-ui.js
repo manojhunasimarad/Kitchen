@@ -40,7 +40,7 @@ function chooseDish(sl, diet, sessions, rng, avoid, preferReady, prefer) {
   const base = D.recipes.filter(r => isMain(r, sl) && dishDiet(r) === diet && !(avoid || []).includes(r.id) && !H.equipmentIssues(r, h).length);
   const fits = r => (!holds || r.holds) && (sl !== 'b' || breakfastFits(r, sessions));
   const liked = prefer || (() => true);
-  const tiers = [r => fits(r) && liked(r) && (!preferReady || !status(r).missing.length), r => fits(r) && liked(r), fits, r => !holds || r.holds, () => true];
+  const tiers = [r => fits(r) && liked(r) && budgetOk(r) && (!preferReady || !status(r).missing.length), r => fits(r) && liked(r) && budgetOk(r), r => fits(r) && liked(r), fits, r => !holds || r.holds, () => true];
   for (const f of tiers) { const l = base.filter(f); if (l.length) return pickWeighted(l, rng); }
   return null;
 }
@@ -149,7 +149,7 @@ function swapDish(sl, i) {
   if (X[row[0]]) list = D.extras.filter(x => x.id !== row[0] && dishDiet(x) === dishDiet(old) && !here.includes(x.id));
   else if (CARBS.includes(row[0])) list = CARBS.filter(id => id !== row[0]).map(id => R[id]);
   else list = D.recipes.filter(r => r.id !== row[0] && r.course === old.course && dishDiet(r) === dishDiet(old) && !here.includes(r.id) && !H.equipmentIssues(r, h).length && (sl !== 'b' || breakfastFits(r, p.s)) && (sl !== 'l' || lunchFits(r, p.s)));
-  const ready = list.filter(r => !R[r.id] || !status(r).missing.length);
+  const ready = list.filter(r => !R[r.id] || (!status(r).missing.length && budgetOk(r)));
   const pick = pickWeighted(ready.length ? ready : list, Math.random); if (!pick) return;
   editMeal(sl, q => {
     const it = q.m[sl][i]; if (!it) return; const from = it[0]; it[0] = pick.id;
@@ -271,6 +271,7 @@ function renderToday() {
     (night ? '<span><b>Night before</b>' + esc(night) + '</span>' : '') + '</div>';
   $('#day-reset').hidden = !S.plan[selDate] || !!S.plan[selDate].auto;
   $('#day-nutri').innerHTML = dayPanelHTML(p, selDate);
+  $('#check-card').innerHTML = checkCardHTML();
 }
 
 /* ---------- Settings: household ---------- */

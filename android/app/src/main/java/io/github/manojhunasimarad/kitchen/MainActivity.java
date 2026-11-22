@@ -10,6 +10,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.provider.AlarmClock;
 import android.provider.MediaStore;
 import android.view.View;
 import android.view.Window;
@@ -31,6 +32,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.Calendar;
 
 /**
  * Kitchen From Zero as an Android app.
@@ -69,8 +72,24 @@ public class MainActivity extends Activity {
         web.setWebChromeClient(new WebChromeClient());
         web.setWebViewClient(new Client());
 
-        if (state != null && web.restoreState(state) != null) return;
-        web.loadUrl(HOME);
+        Reminders.schedule(this);
+        if (state != null && web.restoreState(state) != null) { openCheckIfAsked(getIntent()); return; }
+        web.loadUrl(wantsCheck(getIntent()) ? HOME + "#check" : HOME);
+    }
+
+    static boolean wantsCheck(Intent i) { return i != null && "check".equals(i.getStringExtra("open")); }
+
+    void openCheckIfAsked(Intent i) {
+        if (!wantsCheck(i)) return;
+        i.removeExtra("open");
+        web.evaluateJavascript("window.openCheck ? openCheck() : (location.hash = 'check')", null);
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
+        openCheckIfAsked(intent);
     }
 
     private boolean isNight() {
@@ -210,6 +229,35 @@ public class MainActivity extends Activity {
         @JavascriptInterface
         public void setDark(boolean dark) {
             runOnUiThread(() -> { setBars(dark); web.setBackgroundColor(dark ? DARK_BG : LIGHT_BG); });
+        }
+
+        @JavascriptInterface
+        public void setReminders(String json) {
+            Reminders.save(MainActivity.this, json);
+            boolean on = json.contains("\"on\":true");
+            if (on && Build.VERSION.SDK_INT >= 33
+                    && checkSelfPermission(android.Manifest.permission.POST_NOTIFICATIONS) != android.content.pm.PackageManager.PERMISSION_GRANTED
+                    && !getSharedPreferences(Reminders.PREFS, MODE_PRIVATE).getBoolean("asked", false)) {
+                getSharedPreferences(Reminders.PREFS, MODE_PRIVATE).edit().putBoolean("asked", true).apply();
+                runOnUiThread(() -> requestPermissions(new String[]{android.Manifest.permission.POST_NOTIFICATIONS}, 7));
+            }
+        }
+
+        @JavascriptInterface
+        public void addClockAlarm(int hour, int minute, String label) {
+            runOnUiThread(() -> {
+                ArrayList<Integer> days = new ArrayList<>();
+                for (int d = Calendar.SUNDAY; d <= Calendar.SATURDAY; d++) days.add(d);
+                Intent i = new Intent(AlarmClock.ACTION_SET_ALARM)
+                    .putExtra(AlarmClock.EXTRA_HOUR, hour)
+                    .putExtra(AlarmClock.EXTRA_MINUTES, minute)
+                    .putExtra(AlarmClock.EXTRA_MESSAGE, label)
+                    .putExtra(AlarmClock.EXTRA_DAYS, days)
+                    .putExtra(AlarmClock.EXTRA_SKIP_UI, false);
+                try { startActivity(i); } catch (Exception e) {
+                    Toast.makeText(MainActivity.this, "Couldn't open the Clock app", Toast.LENGTH_SHORT).show();
+                }
+            });
         }
 
         @JavascriptInterface

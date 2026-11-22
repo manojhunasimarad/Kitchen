@@ -41,6 +41,17 @@ that don't fit.
 chopping and slicing onions, peeling and mincing garlic, peeling ginger with a spoon, getting corn off the cob, and
 handling herbs and green chillies, each with sources. Recipes show **Prep help** links to the guides they need.
 
+## Pantry check, use-it-first and budget mode
+
+Twice a day (08:00 and 19:30 by default; change in Settings) the Android app shows a **Pantry check** notification.
+Tap it, or the card at the top of Today, to tick Have, Low or Out for fresh food and for what today's and tomorrow's
+meals need. The app records when fresh items arrive (when they go from Out to Have) and lists them under **Use these
+first** as they approach their usual fridge life, with dishes you can cook from them. Fridge times come from
+FoodSafety.gov and university extension charts (`data/shelf_life.json`) and are guidance only. Settings can also add
+the times as daily alarms in the phone's Clock app, or as Google Calendar reminders on the website.
+**Budget mode** makes Shuffle, Surprise and swaps avoid dishes that need a pricey item you don't have; the pricey list
+is editable and those items are marked ₹ in Shopping.
+
 ## Food rules
 
 The collection never uses beef, pork (bacon, ham, lard, sausages and similar), gelatine or alcohol in cooking;

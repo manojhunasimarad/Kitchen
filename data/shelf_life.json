@@ -1,0 +1,250 @@
+{
+  "sources": {
+    "fsgov": {
+      "title": "FoodSafety.gov: cold food storage chart",
+      "url": "https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts"
+    },
+    "clemson": {
+      "title": "Clemson HGIC: refrigerator and freezer storage times",
+      "url": "https://hgic.clemson.edu/factsheet/food-storage-refrigerator-freezer/"
+    },
+    "osu": {
+      "title": "Ohio State Extension: food storage times (HYG-5403)",
+      "url": "https://ohioline.osu.edu/factsheet/HYG-5403"
+    },
+    "uky": {
+      "title": "University of Kentucky Extension: home food storage (FCS3-595)",
+      "url": "https://publications.ca.uky.edu/sites/publications.ca.uky.edu/files/FCS3595.pdf"
+    },
+    "paneer": {
+      "title": "Asian Journal of Dairy and Food Research: paneer shelf life",
+      "url": "https://arccjournals.com/journal/asian-journal-of-dairy-and-food-research/DR-1805"
+    },
+    "udel": {
+      "title": "University of Delaware Extension: refrigerator storage periods",
+      "url": "https://udel.edu/academics/colleges/canr/cooperative-extension/fact-sheets/keep-food-safe-guide-to-refrigerator-storage-periods1"
+    },
+    "ufifas": {
+      "title": "UF/IFAS Extension: refrigerator storage for produce",
+      "url": "https://journals.flvc.org/edis/article/download/121163/119872/181559"
+    },
+    "uvm": {
+      "title": "University of Vermont Extension: storing home produce",
+      "url": "https://uvm.edu/sites/default/files/storagecharthomeproduce.pdf"
+    },
+    "wsda": {
+      "title": "Washington State Dept. of Agriculture: produce basics",
+      "url": "https://cms.agr.wa.gov/WSDAKentico/farm-to-school/9-2_WA-grown_Produce_Basics_Chart.pdf"
+    }
+  },
+  "items": {
+    "chicken": {
+      "days": 1,
+      "range": "1–2 days",
+      "place": "fridge",
+      "src": "fsgov",
+      "note": "Cook it or freeze it."
+    },
+    "chickenbl": {
+      "days": 1,
+      "range": "1–2 days",
+      "place": "fridge",
+      "src": "fsgov",
+      "note": "Cook it or freeze it."
+    },
+    "mince": {
+      "days": 1,
+      "range": "1–2 days",
+      "place": "fridge",
+      "src": "fsgov",
+      "note": "Cook it or freeze it."
+    },
+    "fish": {
+      "days": 1,
+      "range": "1–2 days",
+      "place": "fridge",
+      "src": "fsgov",
+      "note": "Cook it or freeze it."
+    },
+    "prawns": {
+      "days": 3,
+      "range": "3–5 days",
+      "place": "fridge",
+      "src": "fsgov",
+      "note": ""
+    },
+    "mutton": {
+      "days": 3,
+      "range": "3–5 days",
+      "place": "fridge",
+      "src": "fsgov",
+      "note": ""
+    },
+    "paneer": {
+      "days": 3,
+      "range": "fresh for about 3 days",
+      "place": "fridge",
+      "src": "paneer",
+      "note": "Keep it covered; it loses freshness after about 3 days."
+    },
+    "milk": {
+      "days": 5,
+      "range": "5–7 days",
+      "place": "fridge",
+      "src": "clemson",
+      "note": "Pouch milk: follow the date on the packet."
+    },
+    "curd": {
+      "days": 7,
+      "range": "7–10 days",
+      "place": "fridge",
+      "src": "osu",
+      "note": ""
+    },
+    "cream": {
+      "days": 3,
+      "range": "3–4 days once opened",
+      "place": "fridge",
+      "src": "uky",
+      "note": ""
+    },
+    "cheese": {
+      "days": 14,
+      "range": "about 2 weeks once grated or opened",
+      "place": "fridge",
+      "src": "osu",
+      "note": ""
+    },
+    "eggs": {
+      "days": 21,
+      "range": "3–5 weeks",
+      "place": "fridge",
+      "src": "fsgov",
+      "note": ""
+    },
+    "spinach": {
+      "days": 3,
+      "range": "3–5 days",
+      "place": "fridge",
+      "src": "udel",
+      "note": ""
+    },
+    "coriander": {
+      "days": 3,
+      "range": "3–5 days (treat like leafy greens)",
+      "place": "fridge",
+      "src": "udel",
+      "note": ""
+    },
+    "mint": {
+      "days": 3,
+      "range": "3–5 days (treat like leafy greens)",
+      "place": "fridge",
+      "src": "udel",
+      "note": ""
+    },
+    "mushrooms": {
+      "days": 3,
+      "range": "2–7 days",
+      "place": "fridge",
+      "src": "wsda",
+      "note": ""
+    },
+    "bhindi": {
+      "days": 2,
+      "range": "2–3 days",
+      "place": "fridge",
+      "src": "ufifas",
+      "note": ""
+    },
+    "brinjal": {
+      "days": 2,
+      "range": "1–5 days",
+      "place": "fridge",
+      "src": "uvm",
+      "note": ""
+    },
+    "sweetcorn": {
+      "days": 1,
+      "range": "1–2 days for fresh cobs",
+      "place": "fridge",
+      "src": "ufifas",
+      "note": "Frozen sweet corn keeps much longer."
+    },
+    "tomato": {
+      "days": 3,
+      "range": "until ripe at room temperature; 2–3 days once cut",
+      "place": "room",
+      "src": "uvm",
+      "note": ""
+    },
+    "capsicum": {
+      "days": 3,
+      "range": "3–5 days",
+      "place": "fridge",
+      "src": "ufifas",
+      "note": ""
+    },
+    "cucumber": {
+      "days": 3,
+      "range": "3–5 days",
+      "place": "fridge",
+      "src": "ufifas",
+      "note": ""
+    },
+    "peas": {
+      "days": 3,
+      "range": "3–5 days",
+      "place": "fridge",
+      "src": "ufifas",
+      "note": ""
+    },
+    "cauliflower": {
+      "days": 3,
+      "range": "3–5 days",
+      "place": "fridge",
+      "src": "ufifas",
+      "note": ""
+    },
+    "springonion": {
+      "days": 3,
+      "range": "3–5 days",
+      "place": "fridge",
+      "src": "ufifas",
+      "note": ""
+    },
+    "beans": {
+      "days": 7,
+      "range": "about 1 week",
+      "place": "fridge",
+      "src": "ufifas",
+      "note": ""
+    },
+    "cabbage": {
+      "days": 7,
+      "range": "1–2 weeks",
+      "place": "fridge",
+      "src": "ufifas",
+      "note": ""
+    },
+    "carrot": {
+      "days": 14,
+      "range": "2–3 weeks",
+      "place": "fridge",
+      "src": "ufifas",
+      "note": ""
+    }
+  },
+  "pricey": [
+    "mutton",
+    "prawns",
+    "fish",
+    "cheese",
+    "cream",
+    "mushrooms",
+    "paneer",
+    "cashews",
+    "saffron",
+    "butter"
+  ]
+}

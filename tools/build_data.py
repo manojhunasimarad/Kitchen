@@ -686,7 +686,9 @@ data = {"recipes": recipes,
         "soft": sorted(SOFT), "track": TRACK, "week": WEEK, "ref": REFERENCE, "extras": extras,
         "targets": TARGETS, "apps": ORDER_APPS, "audit": AUDIT, "healthSources": HEALTH_SOURCES,
         # Prep skills (chopping, peeling, the pull-cord chopper), linked from recipes by ingredient name.
-        "prep": json.loads((ROOT / "data" / "prep_guides.json").read_text(encoding="utf-8"))}
+        "prep": json.loads((ROOT / "data" / "prep_guides.json").read_text(encoding="utf-8")),
+        # How long fresh items usually keep, and which items cost the most; drives "use it up" and budget mode.
+        "shelf": json.loads((ROOT / "data" / "shelf_life.json").read_text(encoding="utf-8"))}
 json.dump(data, open(ROOT / "data" / "data.json", "w", encoding="utf-8", newline="\n"), ensure_ascii=False, separators=(",", ":"))
 print(len(recipes), "recipes;", sum(len(s["rows"]) for s in TRACK), "track rows;",
       round(len(json.dumps(data, ensure_ascii=False)) / 1024), "KB")

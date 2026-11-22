@@ -75,6 +75,12 @@
     }
     if (x.set.people != null && !(Number.isInteger(x.set.people) && x.set.people >= 1 && x.set.people <= 12)) return "People must be between 1 and 12.";
     if (x.set.sessions != null && ![1,2,3].includes(x.set.sessions)) return "Invalid cooking sessions.";
+    const ymdRe=/^\d{4}-\d{2}-\d{2}$/, hmRe=/^\d{2}:\d{2}$/;
+    if (x.set.since != null && (!object(x.set.since) || Object.entries(x.set.since).some(([k,d]) => !pantryKeys.includes(k) || !ymdRe.test(d)))) return "Invalid purchase dates.";
+    if (x.set.checks != null && (!object(x.set.checks) || Object.entries(x.set.checks).some(([d,l]) => !ymdRe.test(d) || !Array.isArray(l) || l.some(h => !hmRe.test(h))))) return "Invalid pantry checks.";
+    if (x.set.reminders != null && (!object(x.set.reminders) || typeof x.set.reminders.on !== "boolean" || !Array.isArray(x.set.reminders.times) || x.set.reminders.times.length > 4 || x.set.reminders.times.some(h => !hmRe.test(h)))) return "Invalid reminders.";
+    if (x.set.pricey != null && (!Array.isArray(x.set.pricey) || x.set.pricey.some(k => !pantryKeys.includes(k)))) return "Invalid pricey list.";
+    if (x.set.budget != null && typeof x.set.budget !== "boolean") return "Invalid budget setting.";
     if(x.set.nutritionPerson&&!['v1','v2','e1','n1','n2'].includes(x.set.nutritionPerson))return 'Invalid nutrition person.';
     if (x.set.household) {
       const H=typeof module!=='undefined'&&module.exports ? require('./household.js') : root.KitchenHousehold;
