@@ -22,10 +22,24 @@ add the repository secrets `ANDROID_KEYSTORE_B64` (the keystore, base64-encoded)
 
 ## Phone layout, dark mode and the Today planner
 
-On phones the sections sit in a bottom bar (Today, Cook, Recipes, Shopping, More). The header button and
-Settings → Appearance switch between Auto, Light and Dark; Auto follows the phone. Each day has its own menu,
+A top bar shows the current section with search and an appearance button; the menu lists every section, grouped
+as Plan, Cook, Stock and You (on wide screens it stays open as a sidebar). On phones a bottom bar also gives one-tap
+access to Today, Cook, Recipes, Shopping and the menu. Appearance switches between Auto, Light and Dark; Auto follows
+the phone. Each day has its own menu,
 Shuffle and Surprise pick random dishes for the people eating, ⟳ swaps one dish, and missing ingredients,
 night-before prep and per-person nutrition update as you change the plan.
+
+## Food rules
+
+The collection never uses beef, pork (bacon, ham, lard, sausages and similar), gelatine or alcohol in cooking;
+`tests/test_kitchen.py` fails the build if any recipe or quick add-on mentions them, and checks that dishes labelled
+vegetarian or egg don't need meat, fish or (for vegetarian) eggs. Non-vegetarian dishes use chicken, mutton, fish and
+prawns only. Cheese recipes note that strict vegetarians should pick cheese marked with the green vegetarian dot.
+
+Source-compared additions (November 2026): cheese corn balls (air fryer or fried, with a tip for leftover corn-cheese
+sandwich filling), corn cheese sandwich, butter garlic sweet corn and garlic bread on a tawa or in the air fryer,
+each compared with at least two of Hebbar's Kitchen, Dassana's Veg Recipes, Cook with Kushi, Swasthi's Recipes,
+Tarla Dalal, Ranveer Brar and RecipeTin Eats. They are not kitchen-tested.
 
 ## Household and regional recipes
 
@@ -57,7 +71,7 @@ guide records current limitations and the next implementation phases.
 
 A phone-first planner customized for a five-person household: two cooks, two stoves with four burners, induction, 3 L and 5 L pressure cookers, an air fryer, a sandwich maker and a fridge. It started as a companion to two home cookbooks, *Restaurant-Grade Biryani at Home* (Book 1) and *Everyday Indian Meals at Home* (Book 2), and adds 32 recipes from other cuisines written for the same kitchen.
 
-113 recipes across seven cuisines: Indian, Continental, Italian, Indo-Chinese, Mexican, Middle Eastern and East Asian. Every serving has its nutrition worked out.
+117 recipes across seven cuisines: Indian, Continental, Italian, Indo-Chinese, Mexican, Middle Eastern and East Asian. Every serving has its nutrition worked out.
 
 ![Today on a laptop](docs/screenshots/desktop-today.png)
 

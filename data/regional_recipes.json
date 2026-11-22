@@ -752,5 +752,772 @@
     "tips": [],
     "serve": "",
     "note": "Ingredient weights/portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis. Frying oil is not scaled with servings; choose a suitable pan and fry extra batches. Do not copy the pan’s oil quantity into estimated intake."
+  },
+  {
+    "id": "cheese-corn-balls",
+    "title": "Cheese corn balls",
+    "aliases": [
+      "corn cheese balls",
+      "cheesy corn balls",
+      "sweet corn cheese balls"
+    ],
+    "sub": "crisp crumb outside, melting cheese inside · air fryer or deep-fried",
+    "region": "",
+    "cuisine": "Indian",
+    "course": "snack",
+    "tags": [
+      "airfryer-option"
+    ],
+    "yield_": 2,
+    "yield": 2,
+    "servingLabel": "about 5 small balls",
+    "time": "35–50 min + boiling potato and corn",
+    "uses": "Air fryer (or a deep pan for frying), mixing bowl, freezer",
+    "keeps": "Best eaten hot; they turn chewy as they cool. Shaped, coated balls can wait in the freezer until you cook them.",
+    "intro": "Mashed potato binds sweet corn and cheese into a dough; a cornflour slurry and bread crumbs make the shell that stops the cheese leaking. Chilling before cooking is what keeps them whole.",
+    "ingredients": [
+      {
+        "group": "Mixture",
+        "items": [
+          {
+            "id": "corn",
+            "key": "sweetcorn",
+            "name": "Sweet corn kernels, cooked and drained dry",
+            "q": "120 g (¾ cup)",
+            "grams": 120,
+            "note": "steam or boil until tender; raw kernels can burst"
+          },
+          {
+            "id": "potato",
+            "key": "potato",
+            "name": "Potato, boiled, peeled and mashed smooth",
+            "q": "150 g (1 large)",
+            "grams": 150,
+            "note": "cool it fully first"
+          },
+          {
+            "id": "cheese",
+            "key": "cheese",
+            "name": "Cheese, grated",
+            "q": "60 g (½ cup)",
+            "grams": 60,
+            "note": "processed cheese holds best; mozzarella melts faster"
+          },
+          {
+            "id": "onion",
+            "key": "onion",
+            "name": "Onion, very finely chopped",
+            "q": "25 g",
+            "grams": 25,
+            "note": "optional",
+            "optional": true
+          },
+          {
+            "id": "chilli",
+            "key": "greenchilli",
+            "name": "Green chilli, finely chopped",
+            "q": "1",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "garlic",
+            "key": "garlic",
+            "name": "Garlic, grated",
+            "q": "2 cloves",
+            "grams": 6,
+            "note": ""
+          },
+          {
+            "id": "coriander",
+            "key": "coriander",
+            "name": "Coriander leaves, chopped",
+            "q": "1 tbsp",
+            "grams": 4,
+            "note": ""
+          },
+          {
+            "id": "flakes",
+            "key": "chilli",
+            "name": "Chilli flakes",
+            "q": "½ tsp",
+            "grams": 1,
+            "note": "optional",
+            "optional": true
+          },
+          {
+            "id": "pepper",
+            "key": "pepper",
+            "name": "Black pepper, crushed",
+            "q": "¼ tsp",
+            "grams": 0.6,
+            "note": ""
+          },
+          {
+            "id": "oregano",
+            "key": "herbs",
+            "name": "Dried oregano or mixed herbs",
+            "q": "½ tsp",
+            "grams": 0.5,
+            "note": "optional",
+            "optional": true
+          },
+          {
+            "id": "crumbs",
+            "key": "bread",
+            "name": "Dry bread crumbs, for binding",
+            "q": "2 tbsp",
+            "grams": 15,
+            "note": ""
+          },
+          {
+            "id": "cornflour",
+            "key": "cornflour",
+            "name": "Cornflour, for binding",
+            "q": "1 tbsp",
+            "grams": 8,
+            "note": ""
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "¼ tsp",
+            "grams": 1.5,
+            "note": "less than usual; the cheese is salty"
+          }
+        ]
+      },
+      {
+        "group": "Coating",
+        "items": [
+          {
+            "id": "slurry",
+            "key": "cornflour",
+            "name": "Cornflour, for the slurry",
+            "q": "3 tbsp",
+            "grams": 24,
+            "note": "Hebbar uses half cornflour, half maida"
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water, for the slurry",
+            "q": "90 ml",
+            "grams": 0,
+            "note": ""
+          },
+          {
+            "id": "panko",
+            "key": "bread",
+            "name": "Panko or dry bread crumbs, for coating",
+            "q": "¾ cup",
+            "grams": 50,
+            "note": "about 30 g sticks to the balls",
+            "nutritionGrams": 30
+          }
+        ]
+      },
+      {
+        "group": "Cooking",
+        "items": [
+          {
+            "id": "oil",
+            "key": "oil",
+            "name": "Oil, to brush or spray",
+            "q": "1 tsp",
+            "grams": 5,
+            "note": "for the air fryer"
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Make the mixture. In a bowl, mash {{potato}} potato with {{corn}} corn, {{cheese}} cheese, {{onion}} onion, {{chilli}} green chilli, {{garlic}} garlic and {{coriander}} coriander. Season with {{flakes}} chilli flakes, {{pepper}} pepper, {{oregano}} oregano and {{salt}} salt.",
+      "Bind. Add {{crumbs}} bread crumbs and {{cornflour}} cornflour and mix with your hand until it holds together like soft dough. Sticky or wet? Add a spoon more crumbs. Cracking? Add a few drops of water.",
+      "Shape. Wet your palms lightly and roll the mixture into about 10 smooth, lime-sized balls with no cracks. For a bigger melting centre, press a small cube of cheese into each and seal it well.",
+      "Coat. Whisk {{slurry}} cornflour with {{water}} water into a thin, smooth slurry. Dip each ball in it, then roll in {{panko}} panko. For a sturdier shell, dip and roll a second time.",
+      "Chill (20 min). Freeze the coated balls on a plate for 20 minutes so the cheese is cold when the crust starts to set.",
+      "Air fry (10–15 min). Preheat the air fryer to 180 °C. Place the balls in one layer with space between them, brush or spray with {{oil}} oil and cook 10–15 minutes, turning halfway, until golden and crisp. Check the first batch from 10 minutes.",
+      "Or deep-fry. Heat oil in a deep pan on medium; a small test piece should rise steadily, not shoot up browning. Fry a few balls at a time, turning gently once the crust has set, until golden. Oil that's too cool lets the cheese escape. Drain on paper.",
+      "Serve hot with ketchup or green chutney."
+    ],
+    "tips": [
+      {
+        "title": "Using leftover corn-cheese sandwich filling",
+        "text": "Use about 1 cup of filling in place of the corn, cheese, onion and chilli. Add the potato, crumbs and cornflour, taste before adding salt, and add crumbs until it holds its shape."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Hebbar’s Kitchen: corn cheese balls",
+        "url": "https://hebbarskitchen.com/corn-cheese-balls-recipe/",
+        "scope": "Corn and mashed-potato base, cheese centre, cornflour slurry with panko coating, and 20 minutes in the freezer before frying. Its added spices and capsicum are left optional here.",
+        "checked": "2026-11-22"
+      },
+      {
+        "title": "Dassana’s Veg Recipes: cheese corn balls",
+        "url": "https://www.vegrecipesofindia.com/corn-cheese-balls-recipe/",
+        "scope": "Use cooked, well-drained corn (raw kernels can burst); processed cheese holds best and mozzarella alone may burst; less salt; oil test and keeping oil medium-hot; baked and reader-reported 180 °C air-fryer times.",
+        "checked": "2026-11-22"
+      },
+      {
+        "title": "Cook with Kushi: corn potato cheese balls",
+        "url": "https://www.cookwithkushi.com/corn-potato-cheese-balls/",
+        "scope": "Air fryer preheated to 180 °C, single layer, oil spray, 10–13 minutes until crisp; freezing coated balls ahead.",
+        "checked": "2026-11-22"
+      }
+    ],
+    "allergens": [
+      "milk (cheese, butter); strict vegetarians should pick cheese marked with the green vegetarian dot",
+      "wheat (bread crumbs)"
+    ],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "timing": {
+      "cookMinutes": [
+        35,
+        50
+      ],
+      "prerequisiteMinutes": [
+        20,
+        30
+      ],
+      "prerequisites": [
+        "Boil or pressure-cook the potato and the corn, drain well and let both cool completely."
+      ],
+      "basis": "Editorial estimate including 20 minutes in the freezer; not measured",
+      "note": "Air-fryer time varies by model and load; cook in batches without crowding."
+    },
+    "serve": "Ketchup, green chutney or a chilli sauce.",
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis."
+  },
+  {
+    "id": "corn-cheese-sandwich",
+    "title": "Corn cheese sandwich",
+    "aliases": [
+      "cheese corn sandwich",
+      "sweet corn sandwich",
+      "grilled corn sandwich"
+    ],
+    "sub": "sandwich maker or tawa · the filling doubles as cheese corn balls",
+    "region": "",
+    "cuisine": "Indian",
+    "course": "breakfast",
+    "tags": [
+      "sandwich"
+    ],
+    "yield_": 2,
+    "yield": 2,
+    "servingLabel": "1 sandwich (2 slices)",
+    "time": "15–20 min",
+    "uses": "Sandwich maker (or tawa), 1 burner to cook the corn",
+    "keeps": "Eat fresh; packed sandwiches are best within 2–3 hours. Keep leftover filling covered in the fridge and use it within a day.",
+    "intro": "Sweet corn, a little onion and capsicum, and cheese, toasted until the bread is crisp and the cheese runs. Dry the corn well, or the bread turns soggy.",
+    "ingredients": [
+      {
+        "group": "Filling",
+        "items": [
+          {
+            "id": "corn",
+            "key": "sweetcorn",
+            "name": "Sweet corn kernels, cooked and drained dry",
+            "q": "100 g (⅔ cup)",
+            "grams": 100,
+            "note": ""
+          },
+          {
+            "id": "cheese",
+            "key": "cheese",
+            "name": "Cheese, grated",
+            "q": "50 g",
+            "grams": 50,
+            "note": "mozzarella, processed or cheddar"
+          },
+          {
+            "id": "onion",
+            "key": "onion",
+            "name": "Onion, finely chopped",
+            "q": "30 g",
+            "grams": 30,
+            "note": ""
+          },
+          {
+            "id": "capsicum",
+            "key": "capsicum",
+            "name": "Capsicum, finely chopped",
+            "q": "30 g",
+            "grams": 30,
+            "note": "optional",
+            "optional": true
+          },
+          {
+            "id": "chilli",
+            "key": "greenchilli",
+            "name": "Green chilli, finely chopped",
+            "q": "1",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "coriander",
+            "key": "coriander",
+            "name": "Coriander leaves, chopped",
+            "q": "1 tbsp",
+            "grams": 4,
+            "note": ""
+          },
+          {
+            "id": "pepper",
+            "key": "pepper",
+            "name": "Black pepper, crushed",
+            "q": "¼ tsp",
+            "grams": 0.6,
+            "note": ""
+          },
+          {
+            "id": "oregano",
+            "key": "herbs",
+            "name": "Oregano or mixed herbs",
+            "q": "½ tsp",
+            "grams": 0.5,
+            "note": "optional",
+            "optional": true
+          },
+          {
+            "id": "flakes",
+            "key": "chilli",
+            "name": "Chilli flakes",
+            "q": "¼ tsp",
+            "grams": 0.5,
+            "note": "optional",
+            "optional": true
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "a pinch",
+            "grams": 0.5,
+            "note": "the cheese is salty"
+          }
+        ]
+      },
+      {
+        "group": "Sandwich",
+        "items": [
+          {
+            "id": "bread",
+            "key": "bread",
+            "name": "Bread slices",
+            "q": "4",
+            "grams": 112,
+            "note": "white, brown or multigrain"
+          },
+          {
+            "id": "butter",
+            "key": "butter",
+            "name": "Butter, softened, for the outside",
+            "q": "2 tsp",
+            "grams": 10,
+            "note": ""
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Cook the corn. Boil or steam {{corn}} corn until tender, drain, and spread it on a plate to steam dry. Wet corn makes soggy sandwiches.",
+      "Mix the filling. Combine the corn with {{cheese}} cheese, {{onion}} onion, {{capsicum}} capsicum, {{chilli}} green chilli and {{coriander}} coriander. Season with {{pepper}} pepper, {{oregano}} oregano, {{flakes}} chilli flakes and salt ({{salt}}).",
+      "Fill. Spread the filling evenly over half of the {{bread}} bread slices, right to the edges, and close with the rest. Butter the outsides thinly with {{butter}} butter.",
+      "Toast in the sandwich maker (3–5 min). Preheat it, then toast until the bread is golden and the cheese has melted.",
+      "Or on a tawa. Cook on medium-low with a lid on for 2–3 minutes a side, pressing gently, so the cheese melts before the bread browns.",
+      "Cut and serve hot with ketchup or green chutney."
+    ],
+    "tips": [
+      {
+        "title": "Leftover filling",
+        "text": "Turn it into cheese corn balls: add mashed potato, bread crumbs and cornflour to bind (see that recipe)."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Hebbar’s Kitchen: corn cheese sandwich",
+        "url": "https://hebbarskitchen.com/corn-sandwich-recipe-cheese-sandwich/",
+        "scope": "Cooked sweet corn with onion, capsicum, pepper and cheddar or mozzarella, grilled in a sandwich grill; a tawa also works.",
+        "checked": "2026-11-22"
+      },
+      {
+        "title": "Dassana’s Veg Recipes: corn sandwich",
+        "url": "https://www.vegrecipesofindia.com/corn-sandwich/",
+        "scope": "Fresh or canned corn; cheddar, mozzarella or processed cheese, or none.",
+        "checked": "2026-11-22"
+      },
+      {
+        "title": "Swasthi’s Recipes: corn sandwich",
+        "url": "https://www.indianhealthyrecipes.com/corn-cheese-sandwich-recipe/",
+        "scope": "Evaporating moisture from the corn; packed sandwiches keep for 2–3 hours.",
+        "checked": "2026-11-22"
+      }
+    ],
+    "allergens": [
+      "milk (cheese, butter); strict vegetarians should pick cheese marked with the green vegetarian dot",
+      "wheat (bread)"
+    ],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "timing": {
+      "cookMinutes": [
+        15,
+        20
+      ],
+      "prerequisiteMinutes": [
+        0,
+        0
+      ],
+      "prerequisites": [],
+      "basis": "Editorial raw-start estimate for two sandwiches; not measured",
+      "note": "Extra sandwiches add about 4 minutes per batch in the sandwich maker."
+    },
+    "serve": "Ketchup or green chutney.",
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis."
+  },
+  {
+    "id": "butter-garlic-corn",
+    "title": "Butter garlic sweet corn",
+    "aliases": [
+      "butter corn",
+      "garlic corn",
+      "corn cup",
+      "buttered sweet corn",
+      "masala corn"
+    ],
+    "sub": "street-style corn cup · 10 minutes",
+    "region": "",
+    "cuisine": "Indian",
+    "course": "snack",
+    "tags": [],
+    "yield_": 2,
+    "yield": 2,
+    "servingLabel": "1 cup",
+    "time": "10–15 min",
+    "uses": "1 burner, small pan",
+    "keeps": "Eat hot, straight away.",
+    "intro": "Boiled sweet corn tossed in garlic butter with pepper, lemon and coriander. Cook the garlic only until it smells sweet; browned garlic turns bitter.",
+    "ingredients": [
+      {
+        "group": "Corn",
+        "items": [
+          {
+            "id": "corn",
+            "key": "sweetcorn",
+            "name": "Sweet corn kernels",
+            "q": "240 g (1½ cups)",
+            "grams": 240,
+            "note": "fresh or frozen"
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water, for boiling",
+            "q": "750 ml",
+            "grams": 0,
+            "note": ""
+          },
+          {
+            "id": "boilsalt",
+            "key": "salt",
+            "name": "Salt, for the boiling water",
+            "q": "½ tsp",
+            "grams": 3,
+            "note": "most is drained away",
+            "nutritionGrams": 0.5
+          }
+        ]
+      },
+      {
+        "group": "Garlic butter",
+        "items": [
+          {
+            "id": "butter",
+            "key": "butter",
+            "name": "Butter",
+            "q": "1 tbsp",
+            "grams": 15,
+            "note": ""
+          },
+          {
+            "id": "garlic",
+            "key": "garlic",
+            "name": "Garlic, finely chopped",
+            "q": "3 cloves",
+            "grams": 9,
+            "note": ""
+          },
+          {
+            "id": "pepper",
+            "key": "pepper",
+            "name": "Black pepper, crushed",
+            "q": "¼ tsp",
+            "grams": 0.6,
+            "note": ""
+          },
+          {
+            "id": "flakes",
+            "key": "chilli",
+            "name": "Chilli flakes or chilli powder",
+            "q": "¼ tsp",
+            "grams": 0.5,
+            "note": "optional",
+            "optional": true
+          },
+          {
+            "id": "chaat",
+            "key": "chaat",
+            "name": "Chaat masala",
+            "q": "½ tsp",
+            "grams": 1,
+            "note": "optional, for masala corn",
+            "optional": true
+          },
+          {
+            "id": "lemon",
+            "key": "lemon",
+            "name": "Lemon juice",
+            "q": "1 tsp",
+            "grams": 5,
+            "note": ""
+          },
+          {
+            "id": "coriander",
+            "key": "coriander",
+            "name": "Coriander leaves, chopped",
+            "q": "1 tbsp",
+            "grams": 4,
+            "note": ""
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "a pinch",
+            "grams": 0.5,
+            "note": ""
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Boil. Bring {{water}} water to a boil with {{boilsalt}} salt, add {{corn}} corn and cook until tender: about 3–5 minutes for fresh kernels, 2–3 for frozen. Drain well.",
+      "Garlic butter (30 s). Melt {{butter}} butter in a pan on low-medium. Add {{garlic}} garlic and stir for 20–30 seconds, just until fragrant, not brown.",
+      "Toss (1 min). Add the corn and toss for a minute so it soaks up the butter. Season with {{pepper}} pepper, {{flakes}} chilli flakes, {{chaat}} chaat masala and salt ({{salt}}).",
+      "Finish. Turn off the heat, add {{lemon}} lemon juice and {{coriander}} coriander, and serve hot in cups."
+    ],
+    "tips": [],
+    "sources": [
+      {
+        "title": "Hebbar’s Kitchen: butter sweet corn, 3 ways",
+        "url": "https://hebbarskitchen.com/butter-sweet-corn-recipe-3-ways/",
+        "scope": "Boil corn in salted water, toss with butter and pepper; masala variation with chilli powder and chaat masala.",
+        "checked": "2026-11-22"
+      },
+      {
+        "title": "Tarla Dalal: buttered sweet corn",
+        "url": "https://www.tarladalal.com/buttered-sweet-corn-recipe-buttered-american-corn-36419r",
+        "scope": "Indian street-style buttered corn, seasoned and finished with lemon.",
+        "checked": "2026-11-22"
+      },
+      {
+        "title": "RecipeTin Eats: corn ribs with garlic butter",
+        "url": "https://www.recipetineats.com/corn-ribs/",
+        "scope": "Garlic cooked in melted butter for about 20 seconds before tossing with corn.",
+        "checked": "2026-11-22"
+      }
+    ],
+    "allergens": [
+      "milk (butter)"
+    ],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "timing": {
+      "cookMinutes": [
+        10,
+        15
+      ],
+      "prerequisiteMinutes": [
+        0,
+        0
+      ],
+      "prerequisites": [],
+      "basis": "Editorial raw-start estimate; not measured",
+      "note": ""
+    },
+    "serve": "On its own, or as a side with sandwiches, cheese corn balls or soup.",
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis."
+  },
+  {
+    "id": "tawa-garlic-bread",
+    "title": "Garlic bread (tawa or air fryer)",
+    "aliases": [
+      "garlic toast",
+      "butter garlic bread",
+      "garlic cheese toast",
+      "cheese garlic bread"
+    ],
+    "sub": "no oven · cheese optional",
+    "region": "",
+    "cuisine": "Continental",
+    "course": "side",
+    "tags": [
+      "airfryer-option"
+    ],
+    "yield_": 2,
+    "yield": 2,
+    "servingLabel": "2 slices",
+    "time": "10–15 min",
+    "uses": "Tawa or frying pan with a lid, or the air fryer",
+    "keeps": "Eat hot; it softens as it cools.",
+    "intro": "Sandwich bread spread with garlic butter and toasted until crisp. Add grated cheese on top for garlic cheese toast.",
+    "ingredients": [
+      {
+        "group": "Garlic butter",
+        "items": [
+          {
+            "id": "butter",
+            "key": "butter",
+            "name": "Butter, softened",
+            "q": "2 tbsp",
+            "grams": 30,
+            "note": ""
+          },
+          {
+            "id": "garlic",
+            "key": "garlic",
+            "name": "Garlic, very finely chopped or grated",
+            "q": "4 cloves",
+            "grams": 12,
+            "note": ""
+          },
+          {
+            "id": "coriander",
+            "key": "coriander",
+            "name": "Coriander or parsley, finely chopped",
+            "q": "1 tbsp",
+            "grams": 4,
+            "note": ""
+          },
+          {
+            "id": "oregano",
+            "key": "herbs",
+            "name": "Oregano or mixed herbs",
+            "q": "½ tsp",
+            "grams": 0.5,
+            "note": "optional",
+            "optional": true
+          },
+          {
+            "id": "flakes",
+            "key": "chilli",
+            "name": "Chilli flakes",
+            "q": "¼ tsp",
+            "grams": 0.5,
+            "note": "optional",
+            "optional": true
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "a pinch",
+            "grams": 0.3,
+            "note": "skip if the butter is salted",
+            "optional": true
+          }
+        ]
+      },
+      {
+        "group": "Bread",
+        "items": [
+          {
+            "id": "bread",
+            "key": "bread",
+            "name": "Bread slices",
+            "q": "4",
+            "grams": 112,
+            "note": "sandwich bread, pav or baguette slices"
+          },
+          {
+            "id": "cheese",
+            "key": "cheese",
+            "name": "Mozzarella, grated",
+            "q": "40 g",
+            "grams": 40,
+            "note": "optional, for garlic cheese toast; not counted in nutrition",
+            "optional": true,
+            "nutritionGrams": 0
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Make garlic butter. Mash {{butter}} butter with {{garlic}} garlic, {{coriander}} coriander, {{oregano}} oregano, {{flakes}} chilli flakes and salt ({{salt}}).",
+      "Spread. Spread it evenly over one side of each {{bread}} slice, right to the edges. Cut into halves or fingers if you like.",
+      "Tawa (3–4 min). Heat the tawa on medium-low. Toast the slices buttered side down for 1–2 minutes until golden, then flip and toast the other side for a minute.",
+      "Cheesy version. After flipping, sprinkle {{cheese}} cheese on the buttered side, cover with a lid and cook on low until the cheese melts.",
+      "Air fryer instead. Preheat to 180 °C and cook in one layer, buttered side up, for about 3–5 minutes until golden; check from 3 minutes, since thin bread browns fast."
+    ],
+    "tips": [],
+    "sources": [
+      {
+        "title": "Dassana’s Veg Recipes: garlic bread on tawa",
+        "url": "https://www.vegrecipesofindia.com/garlic-bread-recipe-on-tawa/",
+        "scope": "Garlic butter spread on bread and toasted in a pan on the stovetop, no oven.",
+        "checked": "2026-11-22"
+      },
+      {
+        "title": "Hebbar’s Kitchen: garlic cheese toast on tawa",
+        "url": "https://hebbarskitchen.com/garlic-cheese-toast-reciipe-tawa/",
+        "scope": "Softened butter with fresh garlic and pepper; mozzarella on top, covered on the tawa to melt.",
+        "checked": "2026-11-22"
+      },
+      {
+        "title": "Ranveer Brar: garlic bread on tawa",
+        "url": "https://ranveerbrar.com/recipes/garlic-bread/",
+        "scope": "Garlic butter seasoned with coriander, oregano, black pepper and chilli flakes.",
+        "checked": "2026-11-22"
+      }
+    ],
+    "allergens": [
+      "milk (butter, optional cheese)",
+      "wheat (bread)"
+    ],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "timing": {
+      "cookMinutes": [
+        10,
+        15
+      ],
+      "prerequisiteMinutes": [
+        0,
+        0
+      ],
+      "prerequisites": [],
+      "basis": "Editorial raw-start estimate; not measured",
+      "note": "The air-fryer time is an app adaptation; check early."
+    },
+    "serve": "With soup, pasta, butter garlic corn or a salad.",
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis."
   }
 ]

@@ -262,7 +262,7 @@ WORLD = [
 
     dict(id="egg-pepper-pasta", title="Egg and pepper pasta (carbonara-style)", cuisine="Italian", course="main",
          diet="egg", time="20 min", uses="2 burners", serving="1 plate", keeps="Eat hot",
-         intro="Eggs and cheese turned into a silky sauce, with lots of black pepper. No cream, no bacon. The sauce "
+         intro="Eggs and cheese turned into a silky sauce, with lots of black pepper. No cream. The sauce "
                "is cooked gently until it thickens, so the eggs are safely cooked but not scrambled.",
          ing=[("Pasta", [I("pasta", "Spaghetti", "90 g", 90), I("water", "Water for boiling", "1.5 L", 0),
                          I("salt", "Salt for the water", "2 tsp", 12)]),

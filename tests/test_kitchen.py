@@ -15,7 +15,7 @@ class RecipeTests(unittest.TestCase):
         cls.data=json.loads((ROOT/'data/data.json').read_text(encoding='utf-8'))
         cls.recipes={r['id']:r for r in cls.data['recipes']}
     def test_structural_contract(self):
-        self.assertEqual(len(self.recipes),113)
+        self.assertEqual(len(self.recipes),117)
         pantry={p['key'] for p in self.data['pantry']}
         for r in self.recipes.values():
             self.assertTrue(r['steps']);self.assertTrue(r['ingredients']);self.assertGreater(r['yield'],0)
@@ -23,6 +23,18 @@ class RecipeTests(unittest.TestCase):
             for t in r['needs']+r['strict']: self.assertTrue(set(t.split('|'))<=pantry)
             for d in r['dependencies']: self.assertIn(d,self.recipes)
             self.assertEqual(len(r['steps']),len(r['methodSteps']))
+    def test_household_food_rules(self):
+        """No beef, pork or alcohol anywhere; diet labels must match what the recipe needs."""
+        import re
+        banned=re.compile(r'\b(beef|pork|bacon|ham|lard|sausages?|salami|pepperoni|prosciutto|pancetta|chorizo|veal|gelatine?|wine|beer|rum|brandy|whisky|vodka|sake|mirin|liqueur)\b',re.I)
+        meat={'chicken','chickenbl','mince','fish','prawns','mutton'}
+        for r in self.recipes.values():
+            text=json.dumps({k:r.get(k) for k in ('title','sub','intro','ingredients','steps','tips','var','serve','note')},ensure_ascii=False)
+            self.assertIsNone(banned.search(text),r['id'])
+            sole=[set(t.split('|')) for t in r['needs']]
+            if r['diet']=='veg': self.assertFalse(any(s<=meat|{'eggs'} for s in sole),r['id'])
+            if r['diet']=='egg': self.assertFalse(any(s<=meat for s in sole),r['id'])
+        for x in self.data['extras']: self.assertIsNone(banned.search(x['title']),x['id'])
     def test_pilot_and_time_uncertainty(self):
         self.assertEqual(len(PILOT),12)
         self.assertEqual(self.recipes['moong-dal-chilla']['timing']['prerequisiteMinutes'],[180,240])

@@ -27,10 +27,12 @@ def load_regional(pantry_keys):
             assert match[1] in items, (r['id'], match[1])
             return items[match[1]]['q']
         r['steps'] = [REFERENCE.sub(resolve, step) for step in r['stepTemplates']]
-        r.update(book=0, page=None, cuisine='Indian', chapter='Regional source-reviewed recipes',
+        # Every recipe here is vegetarian; cuisine defaults to Indian unless the entry says otherwise.
+        assert r.get('diet', 'veg') == 'veg', r['id']
+        r.update(book=0, page=None, cuisine=r.get('cuisine', 'Indian'), chapter='Regional source-reviewed recipes',
                  diet='veg', oil='', var=[], cues=[], why='', batch=False,
                  needs=needs, strict=list(needs), nutr=rounded(scaled(total, 1 / r['yield'])),
                  serving=r['servingLabel'], minutes=r['timing']['cookMinutes'][1])
         # Source-comparison is not a quick-time or kitchen-tested certificate.
-        r['tags'] = ['cooker'] if 'pressure cooker' in r['uses'].lower() else []
+        r['tags'] = list(r.get('tags', [])) + (['cooker'] if 'pressure cooker' in r['uses'].lower() else [])
     return recipes
