@@ -1,4 +1,4 @@
-# Five-person household planner
+# Household planner
 
 The default household has two vegetarians, one eggetarian and two non-vegetarians. Names and
 diets are editable in Settings. The kitchen has two cooks, four stove burners, one induction,
@@ -7,18 +7,25 @@ Mixer availability is unconfirmed: enable it only if available.
 
 ## Daily use
 
-1. In Today, choose the date, then open **Who is eating?** for breakfast, lunch and dinner.
-2. Select attendees, their portion factors (0.5 / 1 / 1.5 / 2) and eating times.
-3. Choose **Suggest for these eaters**, or add dishes manually.
-4. Open **Dish recipients** to assign individual dishes. A vegetarian cannot be assigned egg
+1. In Today, choose the date. Each day starts from the weekly menu (a different menu each
+   weekday). Where that menu has no main a vegetarian or the eggetarian can eat, a vegetarian
+   main is added, picked the same way every time for that date until you change the day.
+2. Tap names under each meal to mark who is eating. **Portions and eating times** sets portion
+   factors (0.5 / 1 / 1.5 / 2) and times per person.
+3. **Shuffle** picks a new random meal for the people eating; **⟳** swaps a single dish for
+   another of the same kind; **Surprise me with a whole day** reshuffles everything. Shuffles
+   prefer dishes whose ingredients are in your pantry and that suit your equipment.
+4. Tap a dish's servings line to choose who gets it. A vegetarian cannot be assigned egg
    or meat; an eggetarian cannot be assigned meat. Non-vegetarians can also eat shared veg/egg.
-5. **Cook these portions** opens the recipe with the calculated total servings. The four new
+5. Tapping a dish name opens the recipe at the calculated total servings. The four new
    regional recipes scale method amounts too. Legacy method amounts still need manual scaling.
-6. Open ingredient quantities and per-person nutrition. Shopping shows cooking quantities for
+6. Each cooking session shows missing ingredients (tap to order or bring), its workload and the
+   quantities to cook. The panel under the ticket shows each person's planned calories and
+   protein; tap a person for their full nutrient bars. Shopping lists cooking quantities for
    today and tomorrow, omitting finished meals today and dishes with no assigned eaters.
 
 Settings offers either a shared vegetarian meal (fewest separate dishes) or a shared base with
-egg and meat additions. In the mixed template, the egg addition initially goes to the eggetarian,
+egg and meat additions; Shuffle and Surprise follow this choice. In the mixed template, the egg addition initially goes to the eggetarian,
 and the chicken addition to the non-vegetarians. Change recipients if someone wants both.
 Keep vegetarian utensils and ready-to-eat food separate from raw meat handling.
 

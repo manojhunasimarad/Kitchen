@@ -2,6 +2,31 @@
 
 See the [product audit and architecture roadmap](docs/PRODUCT-ARCHITECTURE-PLAN.html) for the proposed next phases.
 
+## Android app
+
+Install **[KitchenFromZero.apk](https://github.com/manojhunasimarad/Kitchen/raw/apk/KitchenFromZero.apk)** on your phone
+(allow "Install unknown apps" for your browser or Files app when Android asks). The app opens this website, so every fix
+published here reaches the app without reinstalling. It works offline after the first open; if the phone has never been
+online with it, a copy bundled in the APK is used. Grocery "Order" links open the shop's own app, Share list and
+Download backup use Android's share sheet and Downloads folder, the back button closes sheets first, and the screen
+stays on while a recipe is open.
+
+Data saved in the app is separate from data saved in Chrome. Move it with Settings → *Copy my data* on one and
+*Replace my data with this* on the other.
+
+The APK is built by `.github/workflows/android.yml` from `android/` and published on the `apk` branch. Without
+signing secrets it is signed with the build machine's temporary key, so installing a newer APK may require uninstalling
+the old one first (back up your data before you do). To sign every build with the same key, create a keystore once and
+add the repository secrets `ANDROID_KEYSTORE_B64` (the keystore, base64-encoded), `ANDROID_KEYSTORE_PASSWORD`,
+`ANDROID_KEY_ALIAS` and `ANDROID_KEY_PASSWORD`.
+
+## Phone layout, dark mode and the Today planner
+
+On phones the sections sit in a bottom bar (Today, Cook, Recipes, Shopping, More). The header button and
+Settings → Appearance switch between Auto, Light and Dark; Auto follows the phone. Each day has its own menu,
+Shuffle and Surprise pick random dishes for the people eating, ⟳ swaps one dish, and missing ingredients,
+night-before prep and per-person nutrition update as you change the plan.
+
 ## Household and regional recipes
 
 The Today planner now supports five members (two vegetarian, one eggetarian, two non-vegetarian),
@@ -86,7 +111,7 @@ Daily targets: calories and protein are yours to set (defaults 2200 kcal and 110
 
 ## Using it
 
-**Website (works offline):** https://manojhunasimarad.github.io/Kitchen/
+**Website (works offline):** https://manojhunasimarad.github.io/Kitchen/ · **Android app:** see above
 
 Open it once with internet and it saves itself on the device. After that it opens with no connection: everything works except the grocery-app Order links. To use it like an app:
 

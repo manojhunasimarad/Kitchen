@@ -7,3 +7,11 @@ dist/
 .env
 .env.*
 .venv/
+
+# Android build output, the bundled site copy (copied in CI) and any local signing key
+android/.gradle/
+android/build/
+android/app/build/
+android/app/src/main/assets/
+android/local.properties
+android/*.jks

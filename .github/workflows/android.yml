@@ -1,0 +1,80 @@
+name: Android app
+# Builds the Android app (a thin shell around the GitHub Pages site, with a bundled offline copy)
+# and publishes the APK on the `apk` branch: https://github.com/manojhunasimarad/Kitchen/raw/apk/KitchenFromZero.apk
+on:
+  push:
+    branches: [main, android-app]
+    paths: ['index.html', 'android/**', '.github/workflows/android.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: android-apk
+  cancel-in-progress: true
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
+      - name: Bundle the offline copy of the site
+        run: |
+          mkdir -p android/app/src/main/assets/www
+          cp index.html android/app/src/main/assets/www/index.html
+      - name: Signing key from repository secrets (optional)
+        env:
+          ANDROID_KEYSTORE_B64: ${{ secrets.ANDROID_KEYSTORE_B64 }}
+        run: |
+          if [ -n "$ANDROID_KEYSTORE_B64" ]; then
+            echo "$ANDROID_KEYSTORE_B64" | base64 -d > android/release.jks
+            echo "Signing with the release key from repository secrets."
+          else
+            echo "No ANDROID_KEYSTORE_B64 secret: signing with this machine's debug key."
+          fi
+      - name: Build the APK
+        env:
+          VERSION_CODE: ${{ github.run_number }}
+          KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: gradle -p android assembleRelease --no-daemon --stacktrace
+      - name: Check and collect the APK
+        run: |
+          APK=android/app/build/outputs/apk/release/app-release.apk
+          BT=$(ls -d "$ANDROID_HOME"/build-tools/* | sort -V | tail -1)
+          "$BT/apksigner" verify --print-certs "$APK"
+          "$BT/aapt2" dump badging "$APK" | head -5
+          cp "$APK" KitchenFromZero.apk
+          sha256sum KitchenFromZero.apk | tee KitchenFromZero.apk.sha256
+      - uses: actions/upload-artifact@v4
+        with:
+          name: KitchenFromZero-apk
+          path: |
+            KitchenFromZero.apk
+            KitchenFromZero.apk.sha256
+      - name: Publish the APK on the apk branch
+        env:
+          TOKEN: ${{ github.token }}
+        run: |
+          mkdir /tmp/apk
+          cp KitchenFromZero.apk KitchenFromZero.apk.sha256 /tmp/apk/
+          cd /tmp/apk
+          {
+            echo "# Kitchen From Zero for Android"
+            echo
+            echo "Built from \`${GITHUB_SHA::7}\` on \`${GITHUB_REF_NAME}\` (build ${GITHUB_RUN_NUMBER})."
+            echo
+            echo "On your phone, open [KitchenFromZero.apk](https://github.com/${GITHUB_REPOSITORY}/raw/apk/KitchenFromZero.apk) and install it."
+          } > README.md
+          git init -q -b apk
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -qm "Android APK from ${GITHUB_SHA::7}"
+          git push -qf "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git" apk

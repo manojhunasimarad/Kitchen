@@ -1,0 +1,49 @@
+plugins {
+    id "com.android.application"
+}
+
+// Optional permanent signing key: put release.jks in android/ (CI writes it from repository secrets).
+// Without it the APK is signed with the build machine's debug key.
+def releaseKey = rootProject.file("release.jks")
+def buildNumber = (System.getenv("VERSION_CODE") ?: "1") as int
+
+android {
+    namespace "io.github.manojhunasimarad.kitchen"
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "io.github.manojhunasimarad.kitchen"
+        minSdk 24
+        targetSdk 34
+        versionCode buildNumber
+        versionName "1." + buildNumber
+    }
+
+    signingConfigs {
+        release {
+            if (releaseKey.exists()) {
+                storeFile releaseKey
+                storePassword System.getenv("KEYSTORE_PASSWORD")
+                keyAlias System.getenv("KEY_ALIAS") ?: "kitchen"
+                keyPassword System.getenv("KEY_PASSWORD") ?: System.getenv("KEYSTORE_PASSWORD")
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig releaseKey.exists() ? signingConfigs.release : signingConfigs.debug
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    lint {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
