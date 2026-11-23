@@ -418,6 +418,8 @@ label.who-chip input { width: 16px; height: 16px; }
 .guide-steps li { padding: 8px 4px; }
 .prep-links { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
 .prep-links .chip { cursor: pointer; background: none; font-size: 12px; padding: 4px 8px; }
+.plan-note { margin: 8px 0; padding: 8px 10px; font-size: 13px; border-radius: 8px; border: 1px solid var(--accent-fill); border-left-width: 4px; background: var(--paper); }
+.past-line { margin: 4px 0; font-size: 13px; color: var(--muted); }
 .link-line { margin: 2px 0; font-size: 13px; color: var(--muted); border-left: 3px solid var(--accent-fill); padding-left: 8px; }
 .cook-line { margin: 2px 0 4px; font-size: 14px; line-height: 1.6; }
 .cook-line b { font-family: var(--font-mono); font-size: 13px; }
@@ -513,11 +515,16 @@ label.who-chip input { width: 16px; height: 16px; }
   <section class="panel" id="panel-today" role="tabpanel" aria-labelledby="tab-today" hidden>
     <div class="dates" id="dates"></div>
     <div class="toolbar">
+      <span class="toolbar" style="gap:8px"><span class="lbl-s">Cooking for</span>
+      <span class="seg" role="group" aria-label="When you are cooking" id="seg-when">
+        <button type="button" data-when="now">Now</button><button type="button" data-when="today">Today</button><button type="button" data-when="tomorrow">Tomorrow</button>
+      </span></span>
       <span class="toolbar" style="gap:8px"><span class="lbl-s">Cooking</span>
       <span class="seg" role="group" aria-label="How many times you cook this day" id="seg-sess">
         <button type="button" data-sess="1">Once</button><button type="button" data-sess="2">Twice</button><button type="button" data-sess="3">3 times</button>
-      </span></span>
+      </span><button type="button" class="btn sm" id="sess-usual" hidden></button></span>
     </div>
+    <p class="plan-note" id="plan-note" role="status" hidden></p>
     <div id="check-card"></div>
     <section class="kot" id="kot" aria-label="Day plan"></section>
     <div class="actbar">
@@ -771,10 +778,11 @@ function setPantry(s, k, v) { const was = k in s.pantry ? s.pantry[k] : PDEF[k].
 /* ---------- plan ---------- */
 const dish = id => R[id] || X[id];
 function defaultPlan(ds) { const s = setv("sessions"); return { s, n: household().members.length, m: defaultMenu(ds, s) }; }
-const planOf = ds => S.plan[ds] || defaultPlan(ds);
+const planOf = ds => S.plan[ds] ? followDefault(S.plan[ds], ds) : defaultPlan(ds);
 function editPlan(ds, fn) {
   apply(s => {
-    if (!s.plan[ds]) s.plan[ds] = Object.assign(defaultPlan(ds), { auto: true });
+    if (!s.plan[ds]) s.plan[ds] = Object.assign(defaultPlan(ds), { auto: true, sDefault: setv("sessions") });
+    else followDefault(s.plan[ds], ds);
     fn(s.plan[ds]);
     const cut = new Date(); cut.setDate(cut.getDate() - 14); const cs = ymd(cut);
     Object.keys(s.plan).forEach(k => { if (k < cs) delete s.plan[k]; });
@@ -1325,7 +1333,7 @@ function openRecipe(id, keepServ) {
     '<div class="toolbar"><span class="lbl-s">Servings</span><div class="stepper"><button class="rbtn" type="button" id="serv-less" data-serv="-1" aria-label="Fewer servings">−</button><b id="dlg-serv">' + nice(dlgServ) + '</b><button class="rbtn" type="button" id="serv-more" data-serv="1" aria-label="More servings">+</button></div>' +
     '<label class="toggle"><input type="checkbox" id="dlg-cooked" data-done="r-' + esc(id) + '"' + (on ? " checked" : "") + "> I've cooked this</label></div>" +
     '<div class="actbar"><select id="dlg-slot" aria-label="Meal">' + SLOTS.map(s => "<option value=\"" + s + '"' + (s === def ? " selected" : "") + ">" + SLOT[s] + "</option>").join("") + '</select><select id="dlg-date" aria-label="Day">' +
-    [0, 1, 2, 3, 4, 5, 6].map(i => { const d = new Date(); d.setDate(d.getDate() + i); return '<option value="' + ymd(d) + '">' + (i ? fmtDay(d) : "Today") + "</option>"; }).join("") + '</select><button type="button" class="btn" id="dlg-add">Add to plan</button><span class="small" id="dlg-added" aria-live="polite"></span></div>' +
+    [0, 1, 2, 3, 4, 5, 6].map(i => { const d = new Date(); d.setDate(d.getDate() + i); return '<option value="' + ymd(d) + '">' + (i ? fmtDay(d) : "Today") + "</option>"; }).join("") + '</select><select id="dlg-how" aria-label="How to fit it in"><option value="replace">Instead of that meal\'s main</option><option value="add">Alongside what\'s planned</option></select><button type="button" class="btn primary" id="dlg-add">Cook this</button><span class="small" id="dlg-added" aria-live="polite"></span></div>' +
     sec("From your pantry " + (st.missing.length ? '<span class="chip out">' + st.missing.length + " missing</span>" : '<span class="chip have">Ingredients available</span>'), '<div class="needs">' + needs + "</div>") +
     (r.intro ? '<p class="intro-p">' + esc(r.intro) + "</p>" : "") +
     (r.parentIntro ? '<p class="intro-p muted">' + esc(r.parentIntro) + "</p>" : "") +
@@ -1513,7 +1521,9 @@ document.addEventListener("click", e => {
   if (c("#dlg-x")) { closeD("dlg"); return; }
   if (t.tagName === "DIALOG") { closeD(t.id); return; }
   if ((el = c(".tab"))) { selectTab(el.id.slice(4), true); return; }
-  if ((el = c("[data-date]"))) { selDate = el.dataset.date; renderToday(); return; }
+  if ((el = c("[data-date]"))) { selDate = el.dataset.date; const t = new Date(); t.setDate(t.getDate() + 1); cookWhen = selDate === todayStr() ? "today" : selDate === ymd(t) ? "tomorrow" : ""; planNote = ""; renderToday(); return; }
+  if ((el = c("[data-when]"))) { setCookWhen(el.dataset.when); return; }
+  if (c("#sess-usual")) { makeUsualSessions(); return; }
   if ((el = c("[data-sess]"))) { setSessions(+el.dataset.sess); return; }
   if ((el = c("[data-dish]"))) { const [sl, i, d] = el.dataset.dish.split("|"); editMeal(sl, p => { const it = p.m[sl][+i]; if (it) it[1] = Math.max(0.5, Math.min(8, it[1] + (+d) * (it[1] < 1 || (it[1] === 1 && +d < 0) ? 0.5 : 1))); }); return; }
   if ((el = c("[data-rm]"))) { const [sl, i] = el.dataset.rm.split("|"); removeDish(sl, +i); return; }
@@ -1558,7 +1568,7 @@ document.addEventListener("click", e => {
   if (c("#s-add")) { const id = surId, sl = $("#s-slot").value, r = R[id]; const add = [[id, 1]]; if (needsCarb(r)) add.push(["phulka-soft-chapati", 1]); editPlan(todayStr(), p => { p.m[sl] = (p.m[sl] || []).concat(add); delete p.auto; }); $("#s-add").textContent = "Added to today"; return; }
   if ((el = c("[data-serv]"))) { const d = +el.dataset.serv; dlgServ = Math.max(0.5, Math.min(20, dlgServ + d * (dlgServ < 1 || (dlgServ === 1 && d < 0) ? 0.5 : 1))); openRecipe(dlgId, true); $("#dlg-live").textContent="Ingredients updated for "+nice(dlgServ)+" servings. Cooking time does not scale automatically."; return; }
   if ((el = c("[data-ntot]"))) { dlgTotal = el.dataset.ntot === "1"; openRecipe(dlgId, true); return; }
-  if (c("#dlg-add")) { const id = dlgId, r = R[id], sl = $("#dlg-slot").value, ds = $("#dlg-date").value, k = Math.max(0.5, dlgServ / (mealServings(planOf(ds), sl, r, 1) || 1)); editPlan(ds, p => { (p.m[sl] = p.m[sl] || []).push([id, Math.round(k * 2) / 2]); delete p.auto; }); $("#dlg-added").textContent = "Added to " + SLOT[sl].toLowerCase() + ($("#dlg-date").selectedIndex ? " on " + $("#dlg-date").selectedOptions[0].text : " today"); return; }
+  if (c("#dlg-add")) { const id = dlgId, r = R[id], sl = $("#dlg-slot").value, ds = $("#dlg-date").value, how = $("#dlg-how").value, k = Math.max(0.5, dlgServ / (mealServings(planOf(ds), sl, r, 1) || 1)); const note = planDish(ds, sl, id, Math.round(k * 2) / 2, how); selDate = ds; const t = new Date(); t.setDate(t.getDate() + 1); cookWhen = ds === todayStr() ? "today" : ds === ymd(t) ? "tomorrow" : ""; $("#dlg-added").textContent = note; return; }
   if ((el = c("[data-setp]"))) { const d = +el.dataset.setp; apply(s => { s.set.people = Math.max(1, Math.min(12, setv("people") + d)); }); return; }
   if ((el = c("[data-setsess]"))) { const v = +el.dataset.setsess; apply(s => { s.set.sessions = v; }); return; }
   if ((el = c("[data-stage]"))) { const i = +el.dataset.stage; openStages = openStages.includes(i) ? openStages.filter(x => x !== i) : openStages.concat(i); lsSet("kfz.open", openStages); renderTrack(); document.getElementById("stage-" + i).querySelector(".step-h").focus(); return; }

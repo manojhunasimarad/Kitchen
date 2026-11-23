@@ -41,6 +41,26 @@ that don't fit.
 chopping and slicing onions, peeling and mincing garlic, peeling ginger with a spoon, getting corn off the cob, and
 handling herbs and green chillies, each with sources. Recipes show **Prep help** links to the guides they need.
 
+## Cooking now, today, tomorrow or on a chosen day
+
+**Cooking for: Now · Today · Tomorrow** sits above the cooking-times switch on Today. **Now** leaves out meals whose
+time has passed (30 minutes after the eating time), and for what's left swaps any dish that won't be ready in time
+or needs something missing from the pantry for a similar one that fits (same diet, same cuisine where possible); a
+note lists every swap. After the last meal of the day, Now shows tomorrow and tonight's soaking. **Tomorrow** shows
+tomorrow's plan with tonight's prep. Any other day is one tap on the date strip.
+
+To decide a dish yourself, open it and use **Cook this**: pick the day (today to a week ahead), the meal and whether it
+goes **instead of that meal's main** (rice or rotis are added or dropped to suit it) or **alongside**. Servings,
+shopping, night-before soaking and the cooking sessions update, and the dish is pinned so changing how often you cook
+won't swap it. Ragi mudde, bhatura, poori and holige bring their usual partner (saaru or chole).
+
+Switching **Once / Twice / 3 times** is reversible: your own breakfast and dinner come back when you switch back, and a
+note says what changed. **Cook … every day** makes the current choice the default for days you haven't changed.
+
+Regional additions: Andhra/Telangana variety rices (capsicum, sweet corn, tomato, pulihora, kobbari annam, pudina,
+carrot), pachi pulusu and pesarattu; Karnataka ragi mudde, akki rotti, neer dosa, uppittu, ragi ambali (ganji), bele
+holige, kattina saaru and North Karnataka madli; Maharashtrian misal; Kerala avial; poori and atta bhatura.
+
 ## Pantry check, use-it-first and budget mode
 
 Twice a day (08:00 and 19:30 by default; change in Settings) the Android app shows a **Pantry check** notification.
@@ -113,7 +133,7 @@ guide records current limitations and the next implementation phases.
 
 A phone-first planner customized for a five-person household: two cooks, two stoves with four burners, induction, 3 L and 5 L pressure cookers, an air fryer, a sandwich maker and a fridge. It started as a companion to two home cookbooks, *Restaurant-Grade Biryani at Home* (Book 1) and *Everyday Indian Meals at Home* (Book 2), and adds 32 recipes from other cuisines written for the same kitchen.
 
-128 recipes across seven cuisines: Indian, Continental, Italian, Indo-Chinese, Mexican, Middle Eastern and East Asian. Every serving has its nutrition worked out.
+149 recipes across seven cuisines: Indian, Continental, Italian, Indo-Chinese, Mexican, Middle Eastern and East Asian. Every serving has its nutrition worked out.
 
 ![Today on a laptop](docs/screenshots/desktop-today.png)
 

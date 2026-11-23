@@ -445,7 +445,7 @@ for r in recipes:
     r["protein"] = f'~{round(r["nutr"]["p"])} g'
     # dishes that stay good packed hot in an insulated box (curries, dals, rice one-pots)
     r["holds"] = r["course"] == "main" and not ({"airfryer", "sandwich"} & set(r["tags"])) and \
-        not re.search(r"salad|noodle|pasta|spaghetti|penne|omelette|pizza|wrap|quesadilla|toast", r["title"], re.I)
+        not re.search(r"salad|noodle|pasta|spaghetti|penne|omelette|pizza|wrap|quesadilla|toast|mudde", r["title"], re.I)
 
 ids = [r["id"] for r in recipes]
 assert len(ids) == len(set(ids)), [i for i in ids if ids.count(i) > 1]

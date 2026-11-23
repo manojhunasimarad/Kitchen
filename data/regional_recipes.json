@@ -3771,5 +3771,3887 @@
     },
     "serve": "Rotis with dal, or curd rice.",
     "yield_": 3
+  },
+  {
+    "region": "Andhra & Telangana",
+    "cuisine": "Indian",
+    "tags": [],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "course": "main",
+    "yield": 3,
+    "servingLabel": "about 1½ cups",
+    "keeps": "Fridge up to 1 day; reheat until steaming hot. Packs well in a lunch box.",
+    "timing": {
+      "cookMinutes": [
+        35,
+        40
+      ],
+      "prerequisiteMinutes": [
+        0,
+        0
+      ],
+      "prerequisites": [],
+      "basis": "Editorial raw-start estimate; not measured",
+      "note": "With rice already cooked and cooled, about 15–20 minutes."
+    },
+    "id": "capsicum-rice",
+    "title": "Capsicum rice (Andhra style)",
+    "aliases": [
+      "capsicum rice",
+      "bell pepper rice",
+      "capsicum annam",
+      "క్యాప్సికమ్ రైస్",
+      "క్యాప్సికం అన్నం"
+    ],
+    "sub": "bell pepper rice · lunch-box variety rice",
+    "time": "35–40 min (15 min with cooked rice)",
+    "uses": "Pressure cooker for the rice and a kadai, 1–2 burners",
+    "intro": "Common Telugu-home lunch-box rice: capsicum and onion fried with a peanut and dal tempering and spice powders, then tossed with cooled rice.",
+    "ingredients": [
+      {
+        "group": "Rice",
+        "items": [
+          {
+            "id": "rice",
+            "key": "rice",
+            "name": "Sona masoori rice, rinsed",
+            "q": "1 cup / 200 g",
+            "grams": 200,
+            "note": "or 3 cups cooked rice, cooled"
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water for the rice",
+            "q": "about 2 cups / 450 ml",
+            "grams": 0,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "group": "Tempering",
+        "items": [
+          {
+            "id": "oil",
+            "key": "oil",
+            "name": "Oil (groundnut or sesame)",
+            "q": "1½ tbsp",
+            "grams": 20,
+            "note": ""
+          },
+          {
+            "id": "mustard",
+            "key": "mustard",
+            "name": "Mustard seeds",
+            "q": "1 tsp",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "chana",
+            "key": "chanadal",
+            "name": "Chana dal",
+            "q": "1 tbsp",
+            "grams": 12,
+            "note": ""
+          },
+          {
+            "id": "urad",
+            "key": "uraddal",
+            "name": "Urad dal",
+            "q": "1 tsp",
+            "grams": 5,
+            "note": ""
+          },
+          {
+            "id": "peanuts",
+            "key": "peanuts",
+            "name": "Peanuts",
+            "q": "3 tbsp / 30 g",
+            "grams": 30,
+            "note": ""
+          },
+          {
+            "id": "curry",
+            "key": "curryleaves",
+            "name": "Curry leaves",
+            "q": "1 sprig",
+            "grams": 2,
+            "note": ""
+          },
+          {
+            "id": "gchilli",
+            "key": "greenchilli",
+            "name": "Green chillies, slit",
+            "q": "2",
+            "grams": 6,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "group": "Capsicum masala",
+        "items": [
+          {
+            "id": "onion",
+            "key": "onion",
+            "name": "Onion, thinly sliced",
+            "q": "1 medium",
+            "grams": 100,
+            "note": ""
+          },
+          {
+            "id": "garlic",
+            "key": "garlic",
+            "name": "Garlic, crushed",
+            "q": "3 cloves",
+            "grams": 9,
+            "note": ""
+          },
+          {
+            "id": "capsicum",
+            "key": "capsicum",
+            "name": "Green capsicum, cut into thin strips",
+            "q": "2 medium / 250 g",
+            "grams": 250,
+            "note": ""
+          },
+          {
+            "id": "turmeric",
+            "key": "turmeric",
+            "name": "Turmeric",
+            "q": "¼ tsp",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "chillip",
+            "key": "chilli",
+            "name": "Red chilli powder",
+            "q": "1 tsp",
+            "grams": 2.5,
+            "note": ""
+          },
+          {
+            "id": "dhania",
+            "key": "coriander_p",
+            "name": "Coriander powder",
+            "q": "1 tsp",
+            "grams": 2.5,
+            "note": ""
+          },
+          {
+            "id": "garam",
+            "key": "garam",
+            "name": "Garam masala",
+            "q": "½ tsp",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "1¼ tsp",
+            "grams": 7,
+            "note": ""
+          },
+          {
+            "id": "lemon",
+            "key": "lemon",
+            "name": "Lemon juice",
+            "q": "1 tbsp",
+            "grams": 15,
+            "note": ""
+          },
+          {
+            "id": "coriander",
+            "key": "coriander",
+            "name": "Coriander leaves, chopped",
+            "q": "2 tbsp",
+            "grams": 6,
+            "note": ""
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Cook the rice (15–20 min). Pressure cook {{rice}} rice with {{water}} water for 2–3 whistles, or use 3 cups of leftover rice. Spread it on a plate to cool so the grains stay separate.",
+      "Tempering (3 min). Heat {{oil}} oil; add {{mustard}} mustard seeds and, when they splutter, {{chana}} chana dal, {{urad}} urad dal and {{peanuts}} peanuts. Fry until the dals turn golden, then add {{curry}} curry leaves and {{gchilli}} green chillies.",
+      "Masala (8 min). Add {{onion}} onion and {{garlic}} garlic and fry until the onion softens. Add {{capsicum}} capsicum and stir-fry on medium-high heat for 4–5 minutes; keep a little crunch.",
+      "Spices (1 min). Lower the heat; add {{turmeric}} turmeric, {{chillip}} chilli powder, {{dhania}} coriander powder, {{garam}} garam masala and {{salt}} salt and stir for 30 seconds without burning.",
+      "Mix (2 min). Add the cooled rice, fold gently until coloured all through, and switch off. Finish with {{lemon}} lemon juice and {{coriander}} coriander leaves."
+    ],
+    "tips": [
+      "Use day-old or cooled rice; hot, fresh rice turns mushy when tossed.",
+      "For more protein, serve with curd, or a boiled egg or chicken fry for those who eat them."
+    ],
+    "serve": "Curd or raita, papad, or a boiled egg on the side.",
+    "sources": [
+      {
+        "title": "Swasthi's Recipes: capsicum rice",
+        "url": "https://www.indianhealthyrecipes.com/capsicum-rice-recipe-capsicum-pulao/",
+        "scope": "1 cup uncooked rice or 3 cups cooked rice, with onion, green chilli, capsicum masala and lemon juice.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Subbus Kitchen: Andhra tomato capsicum rice",
+        "url": "https://www.subbuskitchen.com/andhra-tomato-capsicum-rice-recipe/",
+        "scope": "Capsicum rice as a popular rice variety in Andhra Pradesh, made spicy.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Swiggy Instamart: capsicum rice",
+        "url": "https://swiggy.com/instamart/recipe/capsicum-rice",
+        "scope": "Cooked, cooled rice tossed with a tempering of spices, chana dal and curry leaves and stir-fried capsicum; suits leftover rice.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "yield_": 3
+  },
+  {
+    "region": "Andhra & Telangana",
+    "cuisine": "Indian",
+    "tags": [],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "course": "main",
+    "yield": 3,
+    "servingLabel": "about 1½ cups",
+    "keeps": "Fridge up to 1 day; reheat until steaming hot. Packs well in a lunch box.",
+    "timing": {
+      "cookMinutes": [
+        30,
+        35
+      ],
+      "prerequisiteMinutes": [
+        0,
+        0
+      ],
+      "prerequisites": [],
+      "basis": "Editorial raw-start estimate; not measured",
+      "note": "With rice already cooked and cooled, about 15–20 minutes."
+    },
+    "id": "corn-rice",
+    "title": "Sweet corn rice",
+    "aliases": [
+      "corn rice",
+      "corn pulao",
+      "sweet corn pulao",
+      "mokkajonna annam",
+      "మొక్కజొన్న అన్నం",
+      "కార్న్ రైస్"
+    ],
+    "sub": "corn pulao · one pot in the cooker",
+    "time": "30–35 min",
+    "uses": "Pressure cooker, 1 burner",
+    "intro": "A mild one-pot pulao with sweet corn, mint and a little whole spice, cooked straight in the pressure cooker. Popular in lunch boxes across Andhra, Telangana and Bengaluru.",
+    "ingredients": [
+      {
+        "group": "Base",
+        "items": [
+          {
+            "id": "oil",
+            "key": "oil",
+            "name": "Oil",
+            "q": "1 tbsp",
+            "grams": 13,
+            "note": ""
+          },
+          {
+            "id": "ghee",
+            "key": "ghee",
+            "name": "Ghee",
+            "q": "2 tsp",
+            "grams": 9,
+            "note": ""
+          },
+          {
+            "id": "whole",
+            "key": "wholespice",
+            "name": "Bay leaf, 2 cloves, 1 inch cinnamon",
+            "q": "1 set",
+            "grams": 2,
+            "note": ""
+          },
+          {
+            "id": "cumin",
+            "key": "cumin",
+            "name": "Cumin seeds",
+            "q": "1 tsp",
+            "grams": 2,
+            "note": ""
+          },
+          {
+            "id": "onion",
+            "key": "onion",
+            "name": "Onion, thinly sliced",
+            "q": "1 medium",
+            "grams": 100,
+            "note": ""
+          },
+          {
+            "id": "gchilli",
+            "key": "greenchilli",
+            "name": "Green chillies, slit",
+            "q": "2",
+            "grams": 6,
+            "note": ""
+          },
+          {
+            "id": "ginger",
+            "key": "ginger",
+            "name": "Ginger, crushed",
+            "q": "1 inch",
+            "grams": 5,
+            "note": ""
+          },
+          {
+            "id": "garlic",
+            "key": "garlic",
+            "name": "Garlic, crushed",
+            "q": "3 cloves",
+            "grams": 9,
+            "note": ""
+          },
+          {
+            "id": "mint",
+            "key": "mint",
+            "name": "Mint leaves",
+            "q": "¼ cup / 10 g",
+            "grams": 10,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "group": "Rice and corn",
+        "items": [
+          {
+            "id": "corn",
+            "key": "sweetcorn",
+            "name": "Sweet corn kernels (fresh or frozen)",
+            "q": "1 cup / 150 g",
+            "grams": 150,
+            "note": ""
+          },
+          {
+            "id": "rice",
+            "key": "rice",
+            "name": "Sona masoori rice, rinsed and drained",
+            "q": "1 cup / 200 g",
+            "grams": 200,
+            "note": "basmati also works"
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water",
+            "q": "about 2 cups / 420 ml",
+            "grams": 0,
+            "note": "less if using basmati"
+          },
+          {
+            "id": "garam",
+            "key": "garam",
+            "name": "Garam masala",
+            "q": "½ tsp",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "1¼ tsp",
+            "grams": 7,
+            "note": ""
+          },
+          {
+            "id": "lemon",
+            "key": "lemon",
+            "name": "Lemon juice",
+            "q": "2 tsp",
+            "grams": 10,
+            "note": ""
+          },
+          {
+            "id": "coriander",
+            "key": "coriander",
+            "name": "Coriander leaves, chopped",
+            "q": "2 tbsp",
+            "grams": 6,
+            "note": ""
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Base (6 min). In the pressure cooker heat {{oil}} oil and {{ghee}} ghee; add {{whole}} whole spices and {{cumin}} cumin. Add {{onion}} onion and {{gchilli}} green chillies and fry until light golden, then {{ginger}} ginger and {{garlic}} garlic for a minute, then {{mint}} mint until wilted.",
+      "Corn and rice (2 min). Add {{corn}} sweet corn and the drained {{rice}} rice and stir gently for a minute so the grains are coated.",
+      "Cook (15 min). Add {{water}} water, {{garam}} garam masala and {{salt}} salt; taste the water, it should be slightly salty. Pressure cook for 2 whistles on medium and let the pressure drop by itself.",
+      "Finish. Fluff with a fork, then add {{lemon}} lemon juice and {{coriander}} coriander leaves."
+    ],
+    "tips": [
+      "Leftover rice works too: fry the base and corn, add the spices and salt, and toss in 3 cups of cooled rice.",
+      "Serve with curd, a dal or egg curry to raise the protein."
+    ],
+    "serve": "Raita, dal or a curry.",
+    "sources": [
+      {
+        "title": "Dassana's Veg Recipes: corn pulao",
+        "url": "https://www.vegrecipesofindia.com/corn-pulao-recipe-corn-rice/",
+        "scope": "1 cup (about 210 g) rice with 1.5 cups sweet corn kernels and 2 tbsp oil, serves 3, about 35 minutes.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Swasthi's Recipes: corn pulao",
+        "url": "https://www.indianhealthyrecipes.com/corn-pulao-recipe/",
+        "scope": "One-pot sweet corn pulao with fresh or frozen corn, spices and mint; serve with yogurt or raita.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Hebbar's Kitchen: corn pulao",
+        "url": "https://hebbarskitchen.com/sweet-corn-pulao-recipe-sweet-corn-pulav/",
+        "scope": "Flavoured rice with a generous amount of sweet corn, suited to lunch boxes, with dal or raita.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "yield_": 3
+  },
+  {
+    "region": "Andhra & Telangana",
+    "cuisine": "Indian",
+    "tags": [],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "course": "main",
+    "yield": 3,
+    "servingLabel": "about 1½ cups",
+    "keeps": "Fridge up to 1 day; reheat until steaming hot. Packs well in a lunch box.",
+    "timing": {
+      "cookMinutes": [
+        35,
+        40
+      ],
+      "prerequisiteMinutes": [
+        0,
+        0
+      ],
+      "prerequisites": [],
+      "basis": "Editorial raw-start estimate; not measured",
+      "note": "With rice already cooked and cooled, about 15–20 minutes."
+    },
+    "id": "tomato-rice-andhra",
+    "title": "Tomato rice (Andhra style)",
+    "aliases": [
+      "tomato rice",
+      "tomato annam",
+      "tomato pulihora",
+      "thakkali sadam",
+      "టమాటో అన్నం",
+      "టమాటా రైస్"
+    ],
+    "sub": "tomato annam · spicy lunch-box rice",
+    "time": "35–40 min (20 min with cooked rice)",
+    "uses": "Pressure cooker for the rice and a kadai, 1–2 burners",
+    "intro": "Ripe tomatoes cooked down with onion, ginger-garlic and chilli into a thick masala, then mixed with cooled rice. Andhra homes make it spicier than the Tamil version.",
+    "ingredients": [
+      {
+        "group": "Rice",
+        "items": [
+          {
+            "id": "rice",
+            "key": "rice",
+            "name": "Sona masoori rice, rinsed",
+            "q": "1 cup / 200 g",
+            "grams": 200,
+            "note": "or 3 cups cooked rice, cooled"
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water for the rice",
+            "q": "about 2 cups / 450 ml",
+            "grams": 0,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "group": "Tempering",
+        "items": [
+          {
+            "id": "oil",
+            "key": "oil",
+            "name": "Oil (groundnut or sesame)",
+            "q": "1½ tbsp",
+            "grams": 20,
+            "note": ""
+          },
+          {
+            "id": "mustard",
+            "key": "mustard",
+            "name": "Mustard seeds",
+            "q": "1 tsp",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "chana",
+            "key": "chanadal",
+            "name": "Chana dal",
+            "q": "1 tbsp",
+            "grams": 12,
+            "note": ""
+          },
+          {
+            "id": "urad",
+            "key": "uraddal",
+            "name": "Urad dal",
+            "q": "1 tsp",
+            "grams": 5,
+            "note": ""
+          },
+          {
+            "id": "peanuts",
+            "key": "peanuts",
+            "name": "Peanuts",
+            "q": "3 tbsp / 25 g",
+            "grams": 25,
+            "note": ""
+          },
+          {
+            "id": "curry",
+            "key": "curryleaves",
+            "name": "Curry leaves",
+            "q": "1 sprig",
+            "grams": 2,
+            "note": ""
+          },
+          {
+            "id": "gchilli",
+            "key": "greenchilli",
+            "name": "Green chillies, slit",
+            "q": "2",
+            "grams": 6,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "group": "Tomato masala",
+        "items": [
+          {
+            "id": "onion",
+            "key": "onion",
+            "name": "Onion, finely chopped",
+            "q": "1 medium",
+            "grams": 100,
+            "note": ""
+          },
+          {
+            "id": "ginger",
+            "key": "ginger",
+            "name": "Ginger, grated",
+            "q": "1 inch",
+            "grams": 5,
+            "note": ""
+          },
+          {
+            "id": "garlic",
+            "key": "garlic",
+            "name": "Garlic, crushed",
+            "q": "3 cloves",
+            "grams": 9,
+            "note": ""
+          },
+          {
+            "id": "tomato",
+            "key": "tomato",
+            "name": "Ripe tomatoes, chopped",
+            "q": "3 medium / 300 g",
+            "grams": 300,
+            "note": ""
+          },
+          {
+            "id": "turmeric",
+            "key": "turmeric",
+            "name": "Turmeric",
+            "q": "¼ tsp",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "chillip",
+            "key": "chilli",
+            "name": "Red chilli powder",
+            "q": "1–1½ tsp",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "dhania",
+            "key": "coriander_p",
+            "name": "Coriander powder",
+            "q": "1 tsp",
+            "grams": 2.5,
+            "note": ""
+          },
+          {
+            "id": "garam",
+            "key": "garam",
+            "name": "Garam masala",
+            "q": "½ tsp",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "1¼ tsp",
+            "grams": 7,
+            "note": ""
+          },
+          {
+            "id": "coriander",
+            "key": "coriander",
+            "name": "Coriander leaves, chopped",
+            "q": "3 tbsp",
+            "grams": 9,
+            "note": ""
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Cook the rice (15–20 min). Pressure cook {{rice}} rice with {{water}} water for 2–3 whistles, or use 3 cups of leftover rice. Spread it on a plate to cool so the grains stay separate.",
+      "Tempering (3 min). Heat {{oil}} oil; add {{mustard}} mustard seeds, then {{chana}} chana dal, {{urad}} urad dal and {{peanuts}} peanuts and fry until golden. Add {{curry}} curry leaves and {{gchilli}} green chillies.",
+      "Onion (5 min). Add {{onion}} onion and fry until soft, then {{ginger}} ginger and {{garlic}} garlic for a minute.",
+      "Tomato masala (10 min). Add {{tomato}} tomatoes, {{turmeric}} turmeric and {{salt}} salt; cover and cook until mushy, then uncover and cook until the oil separates. Stir in {{chillip}} chilli powder, {{dhania}} coriander powder and {{garam}} garam masala.",
+      "Mix (2 min). Fold in the cooled rice until evenly red and switch off. Add {{coriander}} coriander leaves; it tastes better after 10 minutes."
+    ],
+    "tips": [
+      "Cook the tomatoes until the oil leaves the sides; a wet masala makes the rice soggy in a lunch box."
+    ],
+    "serve": "Curd, raita, papad, or a boiled egg or omelette on the side.",
+    "sources": [
+      {
+        "title": "Swasthi's Recipes: tomato rice",
+        "url": "https://www.indianhealthyrecipes.com/tomato-rice-recipe/",
+        "scope": "Rice with ripe tomatoes, onion, green chilli and spices; precooked rice can be used.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Sailu's Food: simple and quick tomato rice",
+        "url": "https://www.sailusfood.com/simple-quick-tomato-rice",
+        "scope": "Andhra one-pot tomato rice, serves 4, about 40 minutes.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Dassana's Veg Recipes: tomato rice",
+        "url": "https://www.vegrecipesofindia.com/tomato-rice-recipe-easy-tomato-rice/",
+        "scope": "South Indian tomato rice; leftover rice can be mixed into the tomato masala; served with raita or papad.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "yield_": 3
+  },
+  {
+    "region": "Andhra & Telangana",
+    "cuisine": "Indian",
+    "tags": [],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "course": "main",
+    "yield": 3,
+    "servingLabel": "about 1½ cups",
+    "keeps": "Keeps well for a lunch box or travel; fridge up to 2 days, reheat until steaming hot.",
+    "timing": {
+      "cookMinutes": [
+        40,
+        45
+      ],
+      "prerequisiteMinutes": [
+        0,
+        0
+      ],
+      "prerequisites": [],
+      "basis": "Editorial raw-start estimate; not measured",
+      "note": "With rice already cooked and cooled, about 15–20 minutes."
+    },
+    "id": "pulihora",
+    "title": "Pulihora (Andhra tamarind rice)",
+    "aliases": [
+      "pulihora",
+      "chintapandu pulihora",
+      "tamarind rice",
+      "puliyogare",
+      "pulihora andhra",
+      "పులిహోర"
+    ],
+    "sub": "chintapandu pulihora · festival and travel rice",
+    "time": "40–45 min",
+    "uses": "Pressure cooker for the rice and a kadai, 1–2 burners",
+    "intro": "Telugu tamarind rice: cooled rice folded through a thick tempered tamarind mixture with peanuts, dals, chillies and curry leaves. The flavour improves after it rests.",
+    "ingredients": [
+      {
+        "group": "Rice",
+        "items": [
+          {
+            "id": "rice",
+            "key": "rice",
+            "name": "Sona masoori rice, rinsed",
+            "q": "1 cup / 200 g",
+            "grams": 200,
+            "note": "or 3 cups cooked rice, cooled"
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water for the rice",
+            "q": "about 2 cups / 450 ml",
+            "grams": 0,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "group": "Tamarind",
+        "items": [
+          {
+            "id": "tamarind",
+            "key": "tamarind",
+            "name": "Tamarind, seedless",
+            "q": "lemon-sized / 30 g",
+            "grams": 30,
+            "note": ""
+          },
+          {
+            "id": "hotwater",
+            "key": "water",
+            "name": "Hot water to soak",
+            "q": "¾ cup / 180 ml",
+            "grams": 0,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "group": "Tempering",
+        "items": [
+          {
+            "id": "oil",
+            "key": "oil",
+            "name": "Sesame or groundnut oil",
+            "q": "2½ tbsp",
+            "grams": 32,
+            "note": ""
+          },
+          {
+            "id": "mustard",
+            "key": "mustard",
+            "name": "Mustard seeds",
+            "q": "1 tsp",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "chana",
+            "key": "chanadal",
+            "name": "Chana dal",
+            "q": "1½ tbsp",
+            "grams": 18,
+            "note": ""
+          },
+          {
+            "id": "urad",
+            "key": "uraddal",
+            "name": "Urad dal",
+            "q": "2 tsp",
+            "grams": 8,
+            "note": ""
+          },
+          {
+            "id": "peanuts",
+            "key": "peanuts",
+            "name": "Peanuts",
+            "q": "¼ cup / 40 g",
+            "grams": 40,
+            "note": ""
+          },
+          {
+            "id": "redch",
+            "key": "redchilli",
+            "name": "Dry red chillies, broken",
+            "q": "4",
+            "grams": 2,
+            "note": ""
+          },
+          {
+            "id": "gchilli",
+            "key": "greenchilli",
+            "name": "Green chillies, slit",
+            "q": "3",
+            "grams": 9,
+            "note": ""
+          },
+          {
+            "id": "curry",
+            "key": "curryleaves",
+            "name": "Curry leaves",
+            "q": "2 sprigs",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "hing",
+            "key": "hing",
+            "name": "Hing",
+            "q": "¼ tsp",
+            "grams": 0.5,
+            "note": ""
+          },
+          {
+            "id": "turmeric",
+            "key": "turmeric",
+            "name": "Turmeric",
+            "q": "½ tsp",
+            "grams": 1.5,
+            "note": ""
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "1½ tsp",
+            "grams": 8,
+            "note": ""
+          },
+          {
+            "id": "jaggery",
+            "key": "jaggery",
+            "name": "Jaggery, grated",
+            "q": "1 tsp",
+            "grams": 5,
+            "note": "optional",
+            "optional": true
+          },
+          {
+            "id": "methi",
+            "key": "methi_s",
+            "name": "Fenugreek seeds, roasted and powdered",
+            "q": "¼ tsp",
+            "grams": 1,
+            "note": "optional",
+            "optional": true
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Cook the rice (15–20 min). Pressure cook {{rice}} rice with {{water}} water for 2–3 whistles, or use 3 cups of leftover rice. Spread it on a plate to cool so the grains stay separate. Rub 1 tsp of the oil and a pinch of the turmeric through the warm rice.",
+      "Tamarind (15 min, while the rice cooks). Soak {{tamarind}} tamarind in {{hotwater}} hot water, squeeze well and strain to a thick extract.",
+      "Tempering (4 min). Heat {{oil}} oil; add {{mustard}} mustard seeds, then {{chana}} chana dal, {{urad}} urad dal and {{peanuts}} peanuts and fry until golden. Add {{redch}} red chillies, {{gchilli}} green chillies, {{curry}} curry leaves, {{hing}} hing and {{turmeric}} turmeric.",
+      "Pulusu (6 min). Pour in the tamarind extract with {{salt}} salt and {{jaggery}} jaggery; simmer, stirring, until thick and glossy and the raw tamarind smell is gone. Stir in {{methi}} fenugreek powder.",
+      "Mix and rest. Fold the tamarind mixture through the cooled rice a little at a time, tasting for sourness and salt. Rest 30 minutes before eating if you can."
+    ],
+    "tips": [
+      "The thick tamarind mixture keeps a week in the fridge in a clean jar; mix 2 tbsp with each cup of cooked rice for a 5-minute lunch.",
+      "Pair with curd or a boiled egg; pulihora alone is low in protein."
+    ],
+    "serve": "Curd, a boiled egg or vada.",
+    "sources": [
+      {
+        "title": "Swasthi's Recipes: pulihora",
+        "url": "https://indianhealthyrecipes.com/pulihora-recipe-andhra-pulihora/",
+        "scope": "Traditional Andhra pulihora; the tempered mixture is folded into the rice and served with garelu or yogurt.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Cook's Hideout: chintapandu pulihora",
+        "url": "https://www.cookshideout.com/tamarind-rice-recipe",
+        "scope": "Andhra-style tamarind rice made for festivals and offerings; called puliyogare or puliyodharai elsewhere.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Archana's Kitchen: Andhra-style pulihora",
+        "url": "https://archanaskitchen.com/andhra-style-pulihora-recipe-spicy-tangy-tamarind-rice",
+        "scope": "Precooked, day-old rice with separate grains gives the best texture; carries well for lunch boxes and travel.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "yield_": 3
+  },
+  {
+    "region": "Andhra & Telangana",
+    "cuisine": "Indian",
+    "tags": [],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "course": "main",
+    "yield": 3,
+    "servingLabel": "about 1½ cups",
+    "keeps": "Best the same day; refrigerate within 2 hours and eat within 1 day.",
+    "timing": {
+      "cookMinutes": [
+        30,
+        35
+      ],
+      "prerequisiteMinutes": [
+        0,
+        0
+      ],
+      "prerequisites": [],
+      "basis": "Editorial raw-start estimate; not measured",
+      "note": "With rice already cooked and cooled, about 15–20 minutes."
+    },
+    "id": "kobbari-annam",
+    "title": "Kobbari annam (coconut rice)",
+    "aliases": [
+      "coconut rice",
+      "kobbari annam",
+      "thengai sadam",
+      "tenginakayi anna",
+      "కొబ్బరి అన్నం"
+    ],
+    "sub": "coconut rice · quick with leftover rice",
+    "time": "30–35 min (15 min with cooked rice)",
+    "uses": "Pressure cooker for the rice and a kadai, 1–2 burners",
+    "intro": "Fresh grated coconut lightly toasted in a dal and cashew tempering, then mixed into rice. A festival staple that is also one of the quickest uses of leftover rice.",
+    "ingredients": [
+      {
+        "group": "Rice",
+        "items": [
+          {
+            "id": "rice",
+            "key": "rice",
+            "name": "Sona masoori rice, rinsed",
+            "q": "1 cup / 200 g",
+            "grams": 200,
+            "note": "or 3 cups cooked rice, cooled"
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water for the rice",
+            "q": "about 2 cups / 450 ml",
+            "grams": 0,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "group": "Tempering",
+        "items": [
+          {
+            "id": "oil",
+            "key": "oil",
+            "name": "Coconut or groundnut oil",
+            "q": "1 tbsp",
+            "grams": 13,
+            "note": ""
+          },
+          {
+            "id": "mustard",
+            "key": "mustard",
+            "name": "Mustard seeds",
+            "q": "1 tsp",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "chana",
+            "key": "chanadal",
+            "name": "Chana dal",
+            "q": "1 tbsp",
+            "grams": 12,
+            "note": ""
+          },
+          {
+            "id": "urad",
+            "key": "uraddal",
+            "name": "Urad dal",
+            "q": "1 tsp",
+            "grams": 5,
+            "note": ""
+          },
+          {
+            "id": "nuts",
+            "key": "peanuts",
+            "name": "Peanuts or cashews",
+            "q": "2 tbsp / 20 g",
+            "grams": 20,
+            "note": ""
+          },
+          {
+            "id": "redch",
+            "key": "redchilli",
+            "name": "Dry red chilli",
+            "q": "1",
+            "grams": 0.5,
+            "note": ""
+          },
+          {
+            "id": "gchilli",
+            "key": "greenchilli",
+            "name": "Green chillies, slit",
+            "q": "2",
+            "grams": 6,
+            "note": ""
+          },
+          {
+            "id": "ginger",
+            "key": "ginger",
+            "name": "Ginger, finely chopped",
+            "q": "½ inch",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "curry",
+            "key": "curryleaves",
+            "name": "Curry leaves",
+            "q": "1 sprig",
+            "grams": 2,
+            "note": ""
+          },
+          {
+            "id": "hing",
+            "key": "hing",
+            "name": "Hing",
+            "q": "a pinch",
+            "grams": 0.2,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "group": "Coconut",
+        "items": [
+          {
+            "id": "coconut",
+            "key": "coconut",
+            "name": "Fresh coconut, grated",
+            "q": "¾ cup / 75 g",
+            "grams": 75,
+            "note": ""
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "1 tsp",
+            "grams": 6,
+            "note": ""
+          },
+          {
+            "id": "coriander",
+            "key": "coriander",
+            "name": "Coriander leaves, chopped",
+            "q": "1 tbsp",
+            "grams": 3,
+            "note": "optional",
+            "optional": true
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Cook the rice (15–20 min). Pressure cook {{rice}} rice with {{water}} water for 2–3 whistles, or use 3 cups of leftover rice. Spread it on a plate to cool so the grains stay separate.",
+      "Tempering (3 min). Heat {{oil}} oil; add {{mustard}} mustard seeds, then {{chana}} chana dal, {{urad}} urad dal and {{nuts}} nuts and fry until golden. Add {{redch}} red chilli, {{gchilli}} green chillies, {{ginger}} ginger, {{curry}} curry leaves and {{hing}} hing.",
+      "Coconut (2 min). Add {{coconut}} coconut and {{salt}} salt and stir on low heat for 1–2 minutes, just until fragrant; don't let it brown.",
+      "Mix. Add the cooled rice, fold gently and switch off. Top with {{coriander}} coriander."
+    ],
+    "tips": [
+      "Use fresh or frozen grated coconut; desiccated coconut tastes flat here.",
+      "Eat within the day: fresh coconut sours if the rice sits warm for long."
+    ],
+    "serve": "Potato fry, dal, or a kurma; curd on the side.",
+    "sources": [
+      {
+        "title": "Aahaaram: kobbari annam",
+        "url": "https://aahaaramonline.com/kobbari-annam-coconut-rice-or-thengai-sadam/",
+        "scope": "1 cup raw rice to 1 cup grated coconut, cooked rice cooled before mixing; called kobbari annam in Telugu.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Cooking From Heart: coconut rice",
+        "url": "https://cookingfromheart.com/coconut-rice-kobbari-annam-thengai-sadam/",
+        "scope": "2 cups cooked rice with ¾ cup grated fresh coconut, green and red chillies and peanuts.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Swasthi's Recipes: coconut rice",
+        "url": "https://indianhealthyrecipes.com/coconut-rice-recipe/",
+        "scope": "Fresh grated coconut, tempering spices, curry leaves, chillies, ginger and hing with rice.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "yield_": 3
+  },
+  {
+    "region": "Andhra & Telangana",
+    "cuisine": "Indian",
+    "tags": [],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "course": "main",
+    "yield": 3,
+    "servingLabel": "about 1½ cups",
+    "keeps": "Fridge up to 1 day; reheat until steaming hot. Packs well in a lunch box.",
+    "timing": {
+      "cookMinutes": [
+        35,
+        40
+      ],
+      "prerequisiteMinutes": [
+        0,
+        0
+      ],
+      "prerequisites": [],
+      "basis": "Editorial raw-start estimate; not measured",
+      "note": "With rice already cooked and cooled, about 15–20 minutes."
+    },
+    "id": "pudina-rice",
+    "title": "Pudina rice (mint rice)",
+    "aliases": [
+      "pudina rice",
+      "mint rice",
+      "pudina pulao",
+      "pudina annam",
+      "పుదీనా అన్నం",
+      "పుదీనా రైస్"
+    ],
+    "sub": "mint pulao · one pot in the cooker",
+    "time": "35–40 min",
+    "uses": "Pressure cooker, 1 burner; grind or very finely chop the mint",
+    "intro": "Mint, coriander, chilli, ginger and garlic pounded to a green paste and cooked with rice and peas in one pot. A common tiffin-box rice in Telugu homes.",
+    "ingredients": [
+      {
+        "group": "Green paste",
+        "items": [
+          {
+            "id": "mint",
+            "key": "mint",
+            "name": "Mint leaves, packed",
+            "q": "1 cup / 30 g",
+            "grams": 30,
+            "note": ""
+          },
+          {
+            "id": "coriander",
+            "key": "coriander",
+            "name": "Coriander leaves",
+            "q": "½ cup / 15 g",
+            "grams": 15,
+            "note": ""
+          },
+          {
+            "id": "gchilli",
+            "key": "greenchilli",
+            "name": "Green chillies",
+            "q": "2",
+            "grams": 6,
+            "note": ""
+          },
+          {
+            "id": "ginger",
+            "key": "ginger",
+            "name": "Ginger",
+            "q": "1 inch",
+            "grams": 5,
+            "note": ""
+          },
+          {
+            "id": "garlic",
+            "key": "garlic",
+            "name": "Garlic",
+            "q": "4 cloves",
+            "grams": 12,
+            "note": ""
+          },
+          {
+            "id": "coconut",
+            "key": "coconut",
+            "name": "Fresh coconut, grated",
+            "q": "3 tbsp / 20 g",
+            "grams": 20,
+            "note": "optional",
+            "optional": true
+          }
+        ]
+      },
+      {
+        "group": "Rice",
+        "items": [
+          {
+            "id": "oil",
+            "key": "oil",
+            "name": "Oil",
+            "q": "1 tbsp",
+            "grams": 13,
+            "note": ""
+          },
+          {
+            "id": "ghee",
+            "key": "ghee",
+            "name": "Ghee",
+            "q": "1 tsp",
+            "grams": 5,
+            "note": ""
+          },
+          {
+            "id": "whole",
+            "key": "wholespice",
+            "name": "Bay leaf, 2 cloves, 1 inch cinnamon",
+            "q": "1 set",
+            "grams": 2,
+            "note": ""
+          },
+          {
+            "id": "onion",
+            "key": "onion",
+            "name": "Onion, sliced",
+            "q": "1 medium",
+            "grams": 100,
+            "note": ""
+          },
+          {
+            "id": "peas",
+            "key": "peas",
+            "name": "Green peas (fresh or frozen)",
+            "q": "½ cup / 70 g",
+            "grams": 70,
+            "note": ""
+          },
+          {
+            "id": "rice",
+            "key": "rice",
+            "name": "Sona masoori rice, rinsed and drained",
+            "q": "1 cup / 200 g",
+            "grams": 200,
+            "note": ""
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water",
+            "q": "about 2 cups / 420 ml",
+            "grams": 0,
+            "note": ""
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "1¼ tsp",
+            "grams": 7,
+            "note": ""
+          },
+          {
+            "id": "lemon",
+            "key": "lemon",
+            "name": "Lemon juice",
+            "q": "2 tsp",
+            "grams": 10,
+            "note": ""
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Green paste (5 min). Grind {{mint}} mint, {{coriander}} coriander, {{gchilli}} green chillies, {{ginger}} ginger, {{garlic}} garlic and {{coconut}} coconut with a splash of water, or chop very finely with the hand chopper.",
+      "Base (6 min). In the pressure cooker heat {{oil}} oil and {{ghee}} ghee; add {{whole}} whole spices and {{onion}} onion and fry until light golden. Add the green paste and fry 2–3 minutes until it smells cooked.",
+      "Cook (15 min). Add {{peas}} peas, the drained {{rice}} rice, {{water}} water and {{salt}} salt. Pressure cook for 2 whistles on medium and let the pressure drop by itself.",
+      "Finish. Fluff gently and add {{lemon}} lemon juice."
+    ],
+    "tips": [
+      "Use only leaves; mint stems turn the rice bitter.",
+      "Add 100 g paneer cubes or soya chunks with the peas for a high-protein version."
+    ],
+    "serve": "Raita, onion-cucumber salad, or egg or chicken curry for non-vegetarians.",
+    "sources": [
+      {
+        "title": "Swasthi's Recipes: pudina rice",
+        "url": "https://indianhealthyrecipes.com/pudina-rice-recipe-pudina-rice/",
+        "scope": "One-pot method: mint, coriander, green chilli, ginger, garlic and coconut or onion ground and sautéed, then rice cooked in it.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Dassana's Veg Recipes: pudina rice",
+        "url": "https://www.vegrecipesofindia.com/mint-rice-recipe/",
+        "scope": "One-pot mint rice with onion and tomato; green peas and potatoes optional; served with raita or curd.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Whisk Affair: pudina rice",
+        "url": "https://www.whiskaffair.com/pudina-pulao-recipe-mint-pulao-recipe/",
+        "scope": "Mint rice made in Tamil Nadu, Karnataka and Andhra Pradesh; use tender leaves and discard thick stems.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "yield_": 3
+  },
+  {
+    "region": "Andhra & Telangana",
+    "cuisine": "Indian",
+    "tags": [],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "course": "main",
+    "yield": 3,
+    "servingLabel": "about 1½ cups",
+    "keeps": "Fridge up to 1 day; reheat until steaming hot. Packs well in a lunch box.",
+    "timing": {
+      "cookMinutes": [
+        30,
+        35
+      ],
+      "prerequisiteMinutes": [
+        0,
+        0
+      ],
+      "prerequisites": [],
+      "basis": "Editorial raw-start estimate; not measured",
+      "note": "With rice already cooked and cooled, about 15–20 minutes."
+    },
+    "id": "carrot-rice",
+    "title": "Carrot rice",
+    "aliases": [
+      "carrot rice",
+      "carrot annam",
+      "carrot pulao",
+      "క్యారెట్ రైస్",
+      "క్యారెట్ అన్నం"
+    ],
+    "sub": "mild lunch-box rice with leftover rice",
+    "time": "30–35 min (15 min with cooked rice)",
+    "uses": "Pressure cooker for the rice and a kadai, 1–2 burners",
+    "intro": "Grated carrot sautéed in a South Indian tempering with peanuts and a little spice powder, then tossed with cooled rice. Mild, quick and good cold or warm.",
+    "ingredients": [
+      {
+        "group": "Rice",
+        "items": [
+          {
+            "id": "rice",
+            "key": "rice",
+            "name": "Sona masoori rice, rinsed",
+            "q": "1 cup / 200 g",
+            "grams": 200,
+            "note": "or 3 cups cooked rice, cooled"
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water for the rice",
+            "q": "about 2 cups / 450 ml",
+            "grams": 0,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "group": "Tempering",
+        "items": [
+          {
+            "id": "oil",
+            "key": "oil",
+            "name": "Oil (groundnut or sesame)",
+            "q": "1½ tbsp",
+            "grams": 20,
+            "note": ""
+          },
+          {
+            "id": "mustard",
+            "key": "mustard",
+            "name": "Mustard seeds",
+            "q": "1 tsp",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "chana",
+            "key": "chanadal",
+            "name": "Chana dal",
+            "q": "1 tbsp",
+            "grams": 12,
+            "note": ""
+          },
+          {
+            "id": "urad",
+            "key": "uraddal",
+            "name": "Urad dal",
+            "q": "1 tsp",
+            "grams": 5,
+            "note": ""
+          },
+          {
+            "id": "peanuts",
+            "key": "peanuts",
+            "name": "Peanuts",
+            "q": "3 tbsp / 25 g",
+            "grams": 25,
+            "note": ""
+          },
+          {
+            "id": "curry",
+            "key": "curryleaves",
+            "name": "Curry leaves",
+            "q": "1 sprig",
+            "grams": 2,
+            "note": ""
+          },
+          {
+            "id": "gchilli",
+            "key": "greenchilli",
+            "name": "Green chillies, slit",
+            "q": "2",
+            "grams": 6,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "group": "Carrot masala",
+        "items": [
+          {
+            "id": "onion",
+            "key": "onion",
+            "name": "Onion, sliced",
+            "q": "1 small",
+            "grams": 80,
+            "note": ""
+          },
+          {
+            "id": "ginger",
+            "key": "ginger",
+            "name": "Ginger, grated",
+            "q": "½ inch",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "carrot",
+            "key": "carrot",
+            "name": "Carrots, grated",
+            "q": "2 medium / 160 g",
+            "grams": 160,
+            "note": ""
+          },
+          {
+            "id": "peas",
+            "key": "peas",
+            "name": "Green peas",
+            "q": "¼ cup / 35 g",
+            "grams": 35,
+            "note": "optional",
+            "optional": true
+          },
+          {
+            "id": "turmeric",
+            "key": "turmeric",
+            "name": "Turmeric",
+            "q": "a pinch",
+            "grams": 0.5,
+            "note": ""
+          },
+          {
+            "id": "sambar",
+            "key": "sambarpowder",
+            "name": "Sambar powder or garam masala",
+            "q": "1 tsp",
+            "grams": 2.5,
+            "note": ""
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "1 tsp",
+            "grams": 6,
+            "note": ""
+          },
+          {
+            "id": "lemon",
+            "key": "lemon",
+            "name": "Lemon juice",
+            "q": "2 tsp",
+            "grams": 10,
+            "note": ""
+          },
+          {
+            "id": "coriander",
+            "key": "coriander",
+            "name": "Coriander leaves, chopped",
+            "q": "2 tbsp",
+            "grams": 6,
+            "note": ""
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Cook the rice (15–20 min). Pressure cook {{rice}} rice with {{water}} water for 2–3 whistles, or use 3 cups of leftover rice. Spread it on a plate to cool so the grains stay separate.",
+      "Tempering (3 min). Heat {{oil}} oil; add {{mustard}} mustard seeds, then {{chana}} chana dal, {{urad}} urad dal and {{peanuts}} peanuts and fry until golden. Add {{curry}} curry leaves and {{gchilli}} green chillies.",
+      "Carrots (6 min). Add {{onion}} onion and {{ginger}} ginger and fry until soft. Add {{carrot}} carrots, {{peas}} peas, {{turmeric}} turmeric and {{salt}} salt and cook 4–5 minutes until the raw smell goes.",
+      "Mix. Sprinkle {{sambar}} spice powder, add the cooled rice and fold gently. Finish with {{lemon}} lemon juice and {{coriander}} coriander."
+    ],
+    "tips": [
+      "Peel the carrots before grating for a brighter colour.",
+      "Serve with dal, curd or fried eggs to make it a full meal."
+    ],
+    "serve": "Raita, dal or eggs.",
+    "sources": [
+      {
+        "title": "Dassana's Veg Recipes: carrot rice",
+        "url": "https://www.vegrecipesofindia.com/carrot-rice-recipe/",
+        "scope": "South Indian style: cooked rice mixed with sautéed carrots, spices and nuts; works with leftover rice; lunch-box friendly.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Swasthi's Recipes: carrot rice",
+        "url": "https://www.indianhealthyrecipes.com/carrot-rice-recipe/",
+        "scope": "Carrot rice with minimal spices and precooked rice, served with yogurt or raita; suits office lunch boxes.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Indian Veggie Delight: carrot rice",
+        "url": "https://www.indianveggiedelight.com/carrot-rice/",
+        "scope": "3 cups cooked rice from 1 cup raw, with grated carrot; sambar powder gives a South Indian touch.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "yield_": 3
+  },
+  {
+    "cuisine": "Indian",
+    "tags": [],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "tips": [
+      "Pair with a protein-rich saaru (bassaru, kattina saaru, hurali saaru) or chicken saaru for non-vegetarians; mudde alone is low in protein."
+    ],
+    "timing": {
+      "cookMinutes": [
+        20,
+        25
+      ],
+      "prerequisiteMinutes": [
+        0,
+        0
+      ],
+      "prerequisites": [],
+      "basis": "Editorial raw-start estimate; not measured",
+      "note": ""
+    },
+    "id": "ragi-mudde",
+    "title": "Ragi mudde (finger millet balls)",
+    "aliases": [
+      "ragi mudde",
+      "ragi ball",
+      "ragi sangati",
+      "ragi kali",
+      "ರಾಗಿ ಮುದ್ದೆ",
+      "రాగి సంగటి"
+    ],
+    "sub": "ragi ball · eat with saaru",
+    "region": "Karnataka",
+    "course": "main",
+    "yield": 3,
+    "servingLabel": "1 ball (about 1/3 of the batch)",
+    "time": "20–25 min",
+    "uses": "Heavy-bottomed pot and a wooden stick, 1 burner",
+    "keeps": "Best hot. Cover and eat within a few hours; refrigerate leftovers within 2 hours.",
+    "intro": "Southern Karnataka's everyday ragi ball: ragi flour cooked in boiling water, beaten smooth with a wooden stick and shaped while warm. Swallowed in bites with a spicy saaru.",
+    "ingredients": [
+      {
+        "group": "Mudde",
+        "items": [
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water",
+            "q": "2½ cups / 600 ml",
+            "grams": 0,
+            "note": ""
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "½ tsp",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "ghee",
+            "key": "ghee",
+            "name": "Ghee",
+            "q": "1 tsp",
+            "grams": 5,
+            "note": "optional",
+            "optional": true
+          },
+          {
+            "id": "ragi",
+            "key": "ragi",
+            "name": "Ragi flour",
+            "q": "1 cup / 150 g",
+            "grams": 150,
+            "note": ""
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Boil (5 min). Bring {{water}} water to a rolling boil with {{salt}} salt and {{ghee}} ghee in a heavy pot; take out ½ cup of the hot water and keep it aside.",
+      "Add the flour (1 min). Tip {{ragi}} ragi flour into the centre in one heap; don't stir. Cover and cook on low for 3–4 minutes so steam cooks the flour.",
+      "Beat (5 min). Uncover and beat hard with a wooden stick or the back of a ladle until there are no lumps; add a little of the reserved hot water if it is too stiff. Cover and cook on low 4–5 minutes more, until it smells cooked and doesn't stick to a wet finger.",
+      "Shape. Wet your palms with water and roll the hot dough into 3 smooth balls."
+    ],
+    "serve": "Bassaru, soppu saaru, kattina saaru or chicken saaru.",
+    "sources": [
+      {
+        "title": "Swasthi's Recipes: ragi mudde",
+        "url": "https://www.indianhealthyrecipes.com/ragi-mudde-ragi-sankati/",
+        "scope": "Soft ragi mudde under 25 minutes; mudde is ragi flour and water, while Andhra ragi sankati adds rice.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Archana's Kitchen: ragi mudde",
+        "url": "https://archanaskitchen.com/ragi-mudde-recipe",
+        "scope": "1 cup ragi flour, 2½ cups hot water, ghee and salt; served with chicken saaru or soppu saaru.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Hebbar's Kitchen: ragi mudde",
+        "url": "https://hebbarskitchen.com/ragi-mudde-recipe-ragi-ball-recipe/",
+        "scope": "Rural Karnataka staple with spicy saaru or bassaru; use a heavy-bottomed vessel.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "yield_": 3
+  },
+  {
+    "cuisine": "Indian",
+    "tags": [],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "tips": [
+      "Patting on baking paper and flipping onto a hot tawa is easier than cooling the tawa each time.",
+      "Serve with curd or an egg bhurji to add protein."
+    ],
+    "timing": {
+      "cookMinutes": [
+        30,
+        35
+      ],
+      "prerequisiteMinutes": [
+        0,
+        0
+      ],
+      "prerequisites": [],
+      "basis": "Editorial raw-start estimate; not measured",
+      "note": ""
+    },
+    "id": "akki-rotti",
+    "title": "Akki rotti (rice flour rotti)",
+    "aliases": [
+      "akki rotti",
+      "akki roti",
+      "rice roti",
+      "masala akki rotti",
+      "ಅಕ್ಕಿ ರೊಟ್ಟಿ"
+    ],
+    "sub": "Karnataka breakfast flatbread",
+    "region": "Karnataka",
+    "course": "breakfast",
+    "yield": 3,
+    "servingLabel": "2 rottis",
+    "time": "30–35 min",
+    "uses": "Tawa, 1 burner",
+    "keeps": "Best hot off the tawa.",
+    "intro": "Hand-patted rice flour flatbread with onion, carrot, coconut, chilli and dill or coriander, cooked crisp on a tawa. A Karnataka breakfast with chutney and butter.",
+    "ingredients": [
+      {
+        "group": "Dough",
+        "items": [
+          {
+            "id": "ricefl",
+            "key": "ricefl",
+            "name": "Fine rice flour",
+            "q": "1½ cups / 200 g",
+            "grams": 200,
+            "note": ""
+          },
+          {
+            "id": "onion",
+            "key": "onion",
+            "name": "Onion, finely chopped",
+            "q": "1 small",
+            "grams": 70,
+            "note": ""
+          },
+          {
+            "id": "carrot",
+            "key": "carrot",
+            "name": "Carrot, grated",
+            "q": "1 small / 60 g",
+            "grams": 60,
+            "note": ""
+          },
+          {
+            "id": "coconut",
+            "key": "coconut",
+            "name": "Fresh coconut, grated",
+            "q": "3 tbsp / 20 g",
+            "grams": 20,
+            "note": ""
+          },
+          {
+            "id": "gchilli",
+            "key": "greenchilli",
+            "name": "Green chillies, finely chopped",
+            "q": "2",
+            "grams": 6,
+            "note": ""
+          },
+          {
+            "id": "cumin",
+            "key": "cumin",
+            "name": "Cumin seeds",
+            "q": "1 tsp",
+            "grams": 2,
+            "note": ""
+          },
+          {
+            "id": "coriander",
+            "key": "coriander",
+            "name": "Coriander or dill leaves, chopped",
+            "q": "3 tbsp",
+            "grams": 9,
+            "note": ""
+          },
+          {
+            "id": "curry",
+            "key": "curryleaves",
+            "name": "Curry leaves, chopped",
+            "q": "1 sprig",
+            "grams": 2,
+            "note": ""
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "¾ tsp",
+            "grams": 4.5,
+            "note": ""
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Warm water",
+            "q": "about ¾ cup / 180 ml",
+            "grams": 0,
+            "note": ""
+          },
+          {
+            "id": "oil",
+            "key": "oil",
+            "name": "Oil for the tawa",
+            "q": "2 tbsp",
+            "grams": 26,
+            "note": ""
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Dough (5 min). Mix {{ricefl}} rice flour with {{onion}} onion, {{carrot}} carrot, {{coconut}} coconut, {{gchilli}} green chillies, {{cumin}} cumin, {{coriander}} coriander, {{curry}} curry leaves and {{salt}} salt. Add {{water}} warm water a little at a time to a soft, non-sticky dough; divide into 6 balls.",
+      "Pat (2 min each). Grease a cool tawa or a sheet of baking paper with a little of the {{oil}} oil and pat one ball thin with wet fingers; make a few holes and put a drop of oil in each.",
+      "Cook (4 min each). Cook on medium heat, covered for the first minute, until the base is golden; flip and cook 1–2 minutes. Cool the tawa under running water between rottis if you pat them directly on it."
+    ],
+    "serve": "Coconut chutney, chutney pudi and butter.",
+    "sources": [
+      {
+        "title": "Dassana's Veg Recipes: akki roti",
+        "url": "https://www.vegrecipesofindia.com/akki-roti-recipe",
+        "scope": "Karnataka breakfast flatbread of rice flour, vegetables, coconut, herbs and spices; akki means rice.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Swasthi's Recipes: akki roti",
+        "url": "https://indianhealthyrecipes.com/akki-roti-recipe-akki-rotti",
+        "scope": "1 cup fine rice flour with finely chopped onion; fine flour keeps the rotti from turning hard.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Karnataka Tourism: akki rotti",
+        "url": "https://karnatakatourism.org/experiences/akki-rotti",
+        "scope": "Fine rice flour mixed with onion, carrot, curry leaves, coconut, coriander, cumin and green chilli.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "yield_": 3
+  },
+  {
+    "cuisine": "Indian",
+    "tags": [],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "tips": [
+      "Serve with egg curry or chicken curry for non-vegetarians, or a chana or veg kurma, to make it a full meal."
+    ],
+    "timing": {
+      "cookMinutes": [
+        20,
+        25
+      ],
+      "prerequisiteMinutes": [
+        240,
+        360
+      ],
+      "prerequisites": [
+        "Rinse the rice and soak it for 4–6 hours, then grind."
+      ],
+      "basis": "Editorial raw-start estimate; not measured",
+      "note": "Soak the rice the night before or in the morning for dinner."
+    },
+    "id": "neer-dosa",
+    "title": "Neer dosa",
+    "aliases": [
+      "neer dosa",
+      "neer dose",
+      "water dosa",
+      "ನೀರ್ ದೋಸೆ"
+    ],
+    "sub": "Mangalorean rice crepes · no fermenting",
+    "region": "Karnataka",
+    "course": "breakfast",
+    "yield": 3,
+    "servingLabel": "4 dosas",
+    "time": "20–25 min + 4–6 h soaking",
+    "uses": "Mixer and a dosa tawa, 1 burner",
+    "keeps": "Batter keeps 1 day in the fridge; cook dosas fresh.",
+    "intro": "Thin, lacy coastal Karnataka crepes from a watery batter of soaked rice and coconut. No dal and no fermentation, so the batter is ready as soon as it's ground.",
+    "ingredients": [
+      {
+        "group": "Batter",
+        "items": [
+          {
+            "id": "rice",
+            "key": "rice",
+            "name": "Sona masoori or other raw rice",
+            "q": "1 cup / 200 g",
+            "grams": 200,
+            "note": "soaked 4–6 hours"
+          },
+          {
+            "id": "coconut",
+            "key": "coconut",
+            "name": "Fresh coconut, grated",
+            "q": "¼ cup / 25 g",
+            "grams": 25,
+            "note": "optional",
+            "optional": true
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water",
+            "q": "about 2½ cups / 600 ml",
+            "grams": 0,
+            "note": "batter should be as thin as milk"
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "¾ tsp",
+            "grams": 4.5,
+            "note": ""
+          },
+          {
+            "id": "oil",
+            "key": "oil",
+            "name": "Oil for the tawa",
+            "q": "1 tbsp",
+            "grams": 13,
+            "note": ""
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Grind (5 min). Drain the soaked {{rice}} rice and grind with {{coconut}} coconut and 1 cup of the {{water}} water to a very smooth batter. Stir in the rest of the water and {{salt}} salt; it should be watery like milk.",
+      "Cook (1–2 min each). Heat a tawa until hot, wipe with a little of the {{oil}} oil, stir the batter and pour a ladleful from the edge in a circle, filling gaps. Cover and cook 1 minute until the top is set and the edges lift; don't flip.",
+      "Fold and repeat. Fold into quarters and place side by side, not stacked while hot. Stir the batter before each dosa."
+    ],
+    "serve": "Coconut chutney, sambar, egg curry or chicken curry.",
+    "sources": [
+      {
+        "title": "Swasthi's Recipes: neer dosa",
+        "url": "https://indianhealthyrecipes.com/neer-dosa-recipe/",
+        "scope": "1 cup aged rice soaked about 4 hours; no lentils and no fermentation; optional coconut.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Dassana's Veg Recipes: neer dosa",
+        "url": "https://www.vegrecipesofindia.com/neer-dosa-recipe/",
+        "scope": "Mangalorean thin lacy crepes; pour the batter rather than spreading it with the ladle.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Sailu's Food: neer dosa",
+        "url": "https://www.sailusfood.com/neer-dosa-recipe",
+        "scope": "Mangalore-style rice and coconut dosa; place cooked dosas side by side, not stacked, so they don't stick.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "yield_": 3
+  },
+  {
+    "cuisine": "Indian",
+    "tags": [],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "tips": [
+      "Use 1 cup rava to 3 cups water for soft hotel-style uppittu, 2½ cups for a drier one."
+    ],
+    "timing": {
+      "cookMinutes": [
+        20,
+        25
+      ],
+      "prerequisiteMinutes": [
+        0,
+        0
+      ],
+      "prerequisites": [],
+      "basis": "Editorial raw-start estimate; not measured",
+      "note": ""
+    },
+    "id": "uppittu",
+    "title": "Uppittu (Karnataka rava upma)",
+    "aliases": [
+      "uppittu",
+      "upma",
+      "rava upma",
+      "khara bath",
+      "uppit",
+      "ಉಪ್ಪಿಟ್ಟು",
+      "ఉప్మా"
+    ],
+    "sub": "rava upma · quick breakfast",
+    "region": "Karnataka",
+    "course": "breakfast",
+    "yield": 3,
+    "servingLabel": "about 1 cup",
+    "time": "20–25 min",
+    "uses": "Kadai, 1 burner",
+    "keeps": "Best fresh; it firms up as it cools.",
+    "intro": "Soft Karnataka-style upma: roasted rava cooked in a dal and mustard tempering with onion, vegetables, ginger and chilli, finished with ghee and lemon. Served with kesari bath as chow chow bath.",
+    "ingredients": [
+      {
+        "group": "Uppittu",
+        "items": [
+          {
+            "id": "rava",
+            "key": "rava",
+            "name": "Rava (medium semolina)",
+            "q": "1 cup / 170 g",
+            "grams": 170,
+            "note": ""
+          },
+          {
+            "id": "oil",
+            "key": "oil",
+            "name": "Oil",
+            "q": "1½ tbsp",
+            "grams": 20,
+            "note": ""
+          },
+          {
+            "id": "mustard",
+            "key": "mustard",
+            "name": "Mustard seeds",
+            "q": "1 tsp",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "urad",
+            "key": "uraddal",
+            "name": "Urad dal",
+            "q": "1 tsp",
+            "grams": 5,
+            "note": ""
+          },
+          {
+            "id": "chana",
+            "key": "chanadal",
+            "name": "Chana dal",
+            "q": "1 tsp",
+            "grams": 5,
+            "note": ""
+          },
+          {
+            "id": "peanuts",
+            "key": "peanuts",
+            "name": "Peanuts or cashews",
+            "q": "2 tbsp / 20 g",
+            "grams": 20,
+            "note": ""
+          },
+          {
+            "id": "curry",
+            "key": "curryleaves",
+            "name": "Curry leaves",
+            "q": "1 sprig",
+            "grams": 2,
+            "note": ""
+          },
+          {
+            "id": "gchilli",
+            "key": "greenchilli",
+            "name": "Green chillies, slit",
+            "q": "2",
+            "grams": 6,
+            "note": ""
+          },
+          {
+            "id": "ginger",
+            "key": "ginger",
+            "name": "Ginger, chopped",
+            "q": "½ inch",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "onion",
+            "key": "onion",
+            "name": "Onion, chopped",
+            "q": "1 medium",
+            "grams": 100,
+            "note": ""
+          },
+          {
+            "id": "veg",
+            "key": "beans",
+            "name": "Beans, carrot or peas, finely chopped",
+            "q": "½ cup / 60 g",
+            "grams": 60,
+            "note": ""
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water",
+            "q": "3 cups / 720 ml",
+            "grams": 0,
+            "note": ""
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "1 tsp",
+            "grams": 6,
+            "note": ""
+          },
+          {
+            "id": "ghee",
+            "key": "ghee",
+            "name": "Ghee",
+            "q": "1 tbsp",
+            "grams": 13,
+            "note": ""
+          },
+          {
+            "id": "lemon",
+            "key": "lemon",
+            "name": "Lemon juice",
+            "q": "1 tbsp",
+            "grams": 15,
+            "note": ""
+          },
+          {
+            "id": "coriander",
+            "key": "coriander",
+            "name": "Coriander leaves",
+            "q": "2 tbsp",
+            "grams": 6,
+            "note": ""
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Roast (5 min). Dry-roast {{rava}} rava on low heat until it smells toasty, without browning; tip it out.",
+      "Tempering (5 min). Heat {{oil}} oil; add {{mustard}} mustard, {{urad}} urad dal, {{chana}} chana dal and {{peanuts}} peanuts and fry golden. Add {{curry}} curry leaves, {{gchilli}} green chillies, {{ginger}} ginger, {{onion}} onion and {{veg}} vegetables and cook until soft.",
+      "Cook (8 min). Add {{water}} water and {{salt}} salt and bring to a rolling boil. Lower the heat and pour in the rava in a thin stream, stirring all the time so no lumps form. Cover and cook 3–4 minutes on low.",
+      "Finish. Stir in {{ghee}} ghee, {{lemon}} lemon juice and {{coriander}} coriander."
+    ],
+    "serve": "Coconut chutney, kesari bath, or a boiled egg on the side.",
+    "sources": [
+      {
+        "title": "Swasthi's Recipes: upma",
+        "url": "https://www.indianhealthyrecipes.com/upma-recipe/",
+        "scope": "Rava upma with curry leaves, chillies, lentils and tempering spices; Karnataka restaurant-style uses more water and ghee.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Chitra's Food Book: rava uppittu",
+        "url": "https://chitrasfoodbook.com/rava-uppittu-recipe-karnataka-hotel/",
+        "scope": "Karnataka hotel-style uppittu: dry-roasted rava, chana dal, peanuts or cashews, and about 4 cups water.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Wikipedia: upma",
+        "url": "https://en.wikipedia.org/wiki/Upma",
+        "scope": "Called uppittu in Karnataka; served with kesari bath as chow chow bath.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "yield_": 3
+  },
+  {
+    "cuisine": "Indian",
+    "tags": [],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "tips": [
+      "A stiff dough and properly hot oil keep pooris from soaking up oil."
+    ],
+    "timing": {
+      "cookMinutes": [
+        30,
+        35
+      ],
+      "prerequisiteMinutes": [
+        0,
+        0
+      ],
+      "prerequisites": [],
+      "basis": "Editorial raw-start estimate; not measured",
+      "note": ""
+    },
+    "id": "poori",
+    "title": "Poori (whole-wheat puri)",
+    "aliases": [
+      "poori",
+      "puri",
+      "atta poori",
+      "ಪೂರಿ",
+      "పూరీ"
+    ],
+    "sub": "deep-fried atta bread",
+    "course": "side",
+    "yield": 3,
+    "region": "",
+    "servingLabel": "4 pooris",
+    "time": "30–35 min",
+    "uses": "Kadai for deep frying, 1 burner",
+    "keeps": "Best hot; they go flat as they cool.",
+    "intro": "Small whole-wheat puris from a stiff atta dough, fried until they puff. Served with potato sagu, chole or kurma. Deep-fried, so keep it for an occasional meal.",
+    "ingredients": [
+      {
+        "group": "Dough",
+        "items": [
+          {
+            "id": "atta",
+            "key": "atta",
+            "name": "Whole-wheat atta",
+            "q": "2 cups / 240 g",
+            "grams": 240,
+            "note": ""
+          },
+          {
+            "id": "rava",
+            "key": "rava",
+            "name": "Fine rava (for crispness)",
+            "q": "2 tbsp / 20 g",
+            "grams": 20,
+            "note": "optional",
+            "optional": true
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "½ tsp",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "oil",
+            "key": "oil",
+            "name": "Oil for the dough",
+            "q": "1 tbsp",
+            "grams": 13,
+            "note": ""
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water",
+            "q": "about ½ cup / 120 ml",
+            "grams": 0,
+            "note": "for a stiff dough"
+          },
+          {
+            "id": "fryoil",
+            "key": "oil",
+            "name": "Oil for deep frying",
+            "q": "enough for a kadai, about 500 ml",
+            "grams": 500,
+            "note": "about 30 g is absorbed per batch",
+            "nutritionGrams": 30,
+            "scaleMode": "pan"
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Dough (10 min). Mix {{atta}} atta, {{rava}} rava, {{salt}} salt and {{oil}} oil, then knead with {{water}} water to a stiff, smooth dough. Rest 10 minutes covered.",
+      "Roll (10 min). Divide into 12 balls and roll each to about 4 inches, evenly thick, greasing instead of dusting with flour.",
+      "Fry (10 min). Heat {{fryoil}} oil until a bit of dough rises at once. Slide in one poori, press gently with a slotted spoon until it puffs, flip, and fry until light golden. Drain."
+    ],
+    "serve": "Potato sagu, chole, veg kurma or egg curry.",
+    "sources": [
+      {
+        "title": "Dassana's Veg Recipes: poori",
+        "url": "https://www.vegrecipesofindia.com/poori-a-kind-of-fried-indian-bread/",
+        "scope": "Dough of whole wheat flour, salt and water, optional oil or ghee; unleavened; fine rava for crispness.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Swasthi's Recipes: poori",
+        "url": "https://indianhealthyrecipes.com/poori-recipe-puri-recipe/",
+        "scope": "Traditional puri uses wheat flour; restaurants mix in maida and semolina.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Tarla Dalal: puri",
+        "url": "https://www.tarladalal.com/puris--how-to-make-pooris--4394r",
+        "scope": "Whole wheat flour, oil and salt kneaded stiff, rested 10–15 minutes, deep-fried.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "yield_": 3
+  },
+  {
+    "cuisine": "Indian",
+    "tags": [],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "tips": [
+      "Deep-fried and heavy: a weekend brunch, not an everyday meal. Chole supplies the protein."
+    ],
+    "timing": {
+      "cookMinutes": [
+        40,
+        45
+      ],
+      "prerequisiteMinutes": [
+        60,
+        120
+      ],
+      "prerequisites": [
+        "Knead the curd dough and rest it 1–2 hours."
+      ],
+      "basis": "Editorial raw-start estimate; not measured",
+      "note": "Make the dough in the morning for a lunch or evening chole bhature."
+    },
+    "id": "atta-bhatura",
+    "title": "Atta bhatura (for chole bhatura)",
+    "aliases": [
+      "bhatura",
+      "bhature",
+      "chole bhature",
+      "chole bhatura",
+      "batura",
+      "wheat bhatura"
+    ],
+    "sub": "whole-wheat bhature with curd · no yeast",
+    "course": "side",
+    "yield": 3,
+    "region": "Punjab",
+    "servingLabel": "2 bhaturas",
+    "time": "40–45 min + 1–2 h rest",
+    "uses": "Kadai for deep frying, 1 burner",
+    "keeps": "Best hot.",
+    "intro": "Punjabi fried bread made here with atta, curd and a little rava instead of maida, rested so it puffs soft. Pair with the app's chole for chole bhature.",
+    "ingredients": [
+      {
+        "group": "Dough",
+        "items": [
+          {
+            "id": "atta",
+            "key": "atta",
+            "name": "Whole-wheat atta",
+            "q": "2 cups / 300 g",
+            "grams": 300,
+            "note": ""
+          },
+          {
+            "id": "rava",
+            "key": "rava",
+            "name": "Fine rava",
+            "q": "¼ cup / 40 g",
+            "grams": 40,
+            "note": ""
+          },
+          {
+            "id": "curd",
+            "key": "curd",
+            "name": "Curd",
+            "q": "¼ cup / 60 g",
+            "grams": 60,
+            "note": ""
+          },
+          {
+            "id": "sugar",
+            "key": "sugar",
+            "name": "Sugar",
+            "q": "1 tsp",
+            "grams": 4,
+            "note": ""
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "½ tsp",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "oil",
+            "key": "oil",
+            "name": "Oil for the dough",
+            "q": "1 tbsp",
+            "grams": 13,
+            "note": ""
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Lukewarm water",
+            "q": "about ½ cup / 120 ml",
+            "grams": 0,
+            "note": ""
+          },
+          {
+            "id": "fryoil",
+            "key": "oil",
+            "name": "Oil for deep frying",
+            "q": "enough for a kadai, about 500 ml",
+            "grams": 500,
+            "note": "about 30 g is absorbed per batch",
+            "nutritionGrams": 30,
+            "scaleMode": "pan"
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Dough (10 min). Mix {{atta}} atta, {{rava}} rava, {{curd}} curd, {{sugar}} sugar, {{salt}} salt and {{oil}} oil; knead with {{water}} lukewarm water to a soft dough. Cover and rest 1–2 hours.",
+      "Roll (10 min). Divide into 6 balls and roll each into an oval about ¼ inch thick.",
+      "Fry (15 min). Heat {{fryoil}} oil until very hot. Fry one bhatura at a time, pressing gently so it puffs; flip and fry until golden. Drain."
+    ],
+    "serve": "Chole, onion and pickle.",
+    "sources": [
+      {
+        "title": "Nisha Madhulika: atta bhatura",
+        "url": "https://nishamadhulika.com/en/1961-atta_bhatura_recipe.html",
+        "scope": "2 cups (300 g) wheat flour, ¼ cup curd, ¼ cup semolina, salt, sugar and a little soda; replaces maida with atta.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Dassana's Veg Recipes: bhatura",
+        "url": "https://www.vegrecipesofindia.com/bhatura-recipe-bhature-bhatura/",
+        "scope": "Leavened fried bread served with chana masala; can be made with whole wheat flour, maida or a mix.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Yummy Tummy Aarthi: whole wheat bhatura",
+        "url": "https://www.yummytummyaarthi.com/whole-wheat-bhatura-recipe-no-yeast",
+        "scope": "Whole-wheat bhatura with curd instead of maida, rested 30 minutes, no yeast.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "yield_": 3
+  },
+  {
+    "cuisine": "Indian",
+    "tags": [],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "tips": [
+      "Add the curd only after it has cooled, or it can split."
+    ],
+    "timing": {
+      "cookMinutes": [
+        15,
+        20
+      ],
+      "prerequisiteMinutes": [
+        0,
+        0
+      ],
+      "prerequisites": [],
+      "basis": "Editorial raw-start estimate; not measured",
+      "note": ""
+    },
+    "id": "ragi-ambali",
+    "title": "Ragi ambali (ragi ganji)",
+    "aliases": [
+      "ragi ambali",
+      "ambali",
+      "ragi ganji",
+      "ganji",
+      "ragi ambli",
+      "ragi kanji",
+      "ರಾಗಿ ಅಂಬಲಿ",
+      "రాగి జావ"
+    ],
+    "sub": "savoury ragi and buttermilk drink",
+    "region": "Karnataka",
+    "course": "snack",
+    "yield": 2,
+    "servingLabel": "1 tall glass",
+    "time": "15–20 min + cooling",
+    "uses": "Small pot, 1 burner",
+    "keeps": "Fridge up to 1 day; stir before drinking.",
+    "intro": "Ragi flour cooked thin in water, cooled, then thinned with curd and seasoned with salt, cumin and onion. A cooling Karnataka drink for breakfast or a hot afternoon. For the sweet version, use milk and jaggery instead of curd.",
+    "ingredients": [
+      {
+        "group": "Ambali",
+        "items": [
+          {
+            "id": "ragi",
+            "key": "ragi",
+            "name": "Ragi flour",
+            "q": "3 tbsp / 30 g",
+            "grams": 30,
+            "note": ""
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water",
+            "q": "1½ cups / 360 ml",
+            "grams": 0,
+            "note": ""
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "½ tsp",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "curd",
+            "key": "curd",
+            "name": "Curd",
+            "q": "1 cup / 240 g",
+            "grams": 240,
+            "note": ""
+          },
+          {
+            "id": "cumin",
+            "key": "cumin_p",
+            "name": "Roasted cumin powder",
+            "q": "½ tsp",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "onion",
+            "key": "onion",
+            "name": "Small onion, finely chopped",
+            "q": "2 tbsp / 20 g",
+            "grams": 20,
+            "note": "optional",
+            "optional": true
+          },
+          {
+            "id": "coriander",
+            "key": "coriander",
+            "name": "Coriander or curry leaves",
+            "q": "1 tbsp",
+            "grams": 3,
+            "note": "optional",
+            "optional": true
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Cook (8 min). Whisk {{ragi}} ragi flour into ½ cup of the {{water}} water until smooth. Boil the rest of the water, pour in the ragi mix and stir on low heat 5–6 minutes until glossy and thick enough to coat a spoon. Add {{salt}} salt.",
+      "Cool. Let it cool until lukewarm or cold; it thickens as it cools.",
+      "Mix. Whisk in {{curd}} curd and thin with water to drinking consistency. Stir in {{cumin}} cumin, {{onion}} onion and {{coriander}} coriander."
+    ],
+    "serve": "On its own, or beside akki rotti or a light lunch.",
+    "sources": [
+      {
+        "title": "Organic Mandya: ragi ambali",
+        "url": "https://organicmandya.com/blogs/recipes/ragi-ambali",
+        "scope": "Thin savoury Karnataka drink: ragi flour cooked in water, cooled, then diluted curd added; no milk or jaggery.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Indian Veggie Delight: ragi ambli",
+        "url": "https://www.indianveggiedelight.com/ragi-ambli-ragi-ambali-recipe",
+        "scope": "Also called ragi ganji; salted version uses buttermilk and tempering, sweet version (ragi malt) uses milk and jaggery.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Whisk Affair: ragi ambli",
+        "url": "https://www.whiskaffair.com/salted-ragi-kanji-recipe/",
+        "scope": "Ragi ambli, ragi kanji or ragi ganji: finger millet flour and buttermilk, popular in Karnataka.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "yield_": 2
+  },
+  {
+    "cuisine": "Indian",
+    "tags": [],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "tips": [
+      "Serve with dal (mudda pappu) and rice so the meal has protein."
+    ],
+    "timing": {
+      "cookMinutes": [
+        10,
+        15
+      ],
+      "prerequisiteMinutes": [
+        15,
+        20
+      ],
+      "prerequisites": [
+        "Soak the tamarind in warm water for 15–20 minutes."
+      ],
+      "basis": "Editorial raw-start estimate; not measured",
+      "note": ""
+    },
+    "id": "pachi-pulusu",
+    "title": "Pachi pulusu (raw tamarind rasam)",
+    "aliases": [
+      "pachi pulusu",
+      "pacchi pulusu",
+      "raw rasam",
+      "pachchi pulusu",
+      "పచ్చి పులుసు"
+    ],
+    "sub": "uncooked Telangana tamarind rasam",
+    "region": "Andhra & Telangana",
+    "course": "side",
+    "yield": 4,
+    "servingLabel": "about ¾ cup",
+    "time": "10–15 min + 15–20 min soaking",
+    "uses": "Small pan for the tempering, 1 burner",
+    "keeps": "Make and eat the same day.",
+    "intro": "Telangana's no-boil rasam: thin tamarind water with raw onion, roasted chilli, a little jaggery and a hot tempering poured over. Mixed with rice, usually beside a plain dal.",
+    "ingredients": [
+      {
+        "group": "Pulusu",
+        "items": [
+          {
+            "id": "tamarind",
+            "key": "tamarind",
+            "name": "Tamarind",
+            "q": "small lemon-sized / 20 g",
+            "grams": 20,
+            "note": ""
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Warm water",
+            "q": "2½ cups / 600 ml",
+            "grams": 0,
+            "note": ""
+          },
+          {
+            "id": "onion",
+            "key": "onion",
+            "name": "Onion, finely chopped",
+            "q": "1 small",
+            "grams": 70,
+            "note": ""
+          },
+          {
+            "id": "gchilli",
+            "key": "greenchilli",
+            "name": "Green chillies, finely chopped",
+            "q": "2",
+            "grams": 6,
+            "note": ""
+          },
+          {
+            "id": "jaggery",
+            "key": "jaggery",
+            "name": "Jaggery, grated",
+            "q": "2 tsp",
+            "grams": 10,
+            "note": ""
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "1 tsp",
+            "grams": 6,
+            "note": ""
+          },
+          {
+            "id": "coriander",
+            "key": "coriander",
+            "name": "Coriander leaves",
+            "q": "2 tbsp",
+            "grams": 6,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "group": "Tempering",
+        "items": [
+          {
+            "id": "oil",
+            "key": "oil",
+            "name": "Oil",
+            "q": "2 tsp",
+            "grams": 9,
+            "note": ""
+          },
+          {
+            "id": "mustard",
+            "key": "mustard",
+            "name": "Mustard seeds",
+            "q": "½ tsp",
+            "grams": 1.5,
+            "note": ""
+          },
+          {
+            "id": "cumin",
+            "key": "cumin",
+            "name": "Cumin seeds",
+            "q": "½ tsp",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "redch",
+            "key": "redchilli",
+            "name": "Dry red chillies",
+            "q": "2",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "curry",
+            "key": "curryleaves",
+            "name": "Curry leaves",
+            "q": "1 sprig",
+            "grams": 2,
+            "note": ""
+          },
+          {
+            "id": "hing",
+            "key": "hing",
+            "name": "Hing",
+            "q": "a pinch",
+            "grams": 0.2,
+            "note": ""
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Tamarind (15 min). Soak {{tamarind}} tamarind in {{water}} warm water, squeeze well and strain.",
+      "Mix. Add {{onion}} onion, {{gchilli}} green chillies, {{jaggery}} jaggery, {{salt}} salt and {{coriander}} coriander; crush the onion a little with your fingers so it releases flavour.",
+      "Tempering (2 min). Heat {{oil}} oil; add {{mustard}} mustard, {{cumin}} cumin, {{redch}} red chillies, {{curry}} curry leaves and {{hing}} hing, and pour over the pulusu. Taste for sour, sweet and salt."
+    ],
+    "serve": "Rice with plain dal; papad.",
+    "sources": [
+      {
+        "title": "Wikipedia: pachi pulusu",
+        "url": "https://en.wikipedia.org/wiki/Pachi_pulusu",
+        "scope": "Unheated tamarind soup from Telangana and Andhra; tamarind, onions, chillies, jaggery; spicier and more watery than regular pulusu.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Archana's Kitchen: Andhra pachi pulusu",
+        "url": "https://www.archanaskitchen.com/andhra-style-pachi-pulusu-recipe-raw-tamarind-rasam-recipe",
+        "scope": "Raw tamarind rasam of Andhra and Telangana, about 15 minutes, served with steamed rice.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Hebbar's Kitchen: pachi pulusu",
+        "url": "https://hebbarskitchen.com/wprm_print/pachi-pulusu-recipe-raw-tamarind-rasam-vankaya-pachi-pulusu",
+        "scope": "Raw tamarind rasam; a tempering is poured over and it is eaten with hot rice.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "yield_": 4
+  },
+  {
+    "cuisine": "Indian",
+    "tags": [],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "tips": [
+      "Serve a small portion with milk for a sweet with some protein."
+    ],
+    "timing": {
+      "cookMinutes": [
+        25,
+        35
+      ],
+      "prerequisiteMinutes": [
+        0,
+        0
+      ],
+      "prerequisites": [],
+      "basis": "Editorial raw-start estimate; not measured",
+      "note": ""
+    },
+    "id": "madli",
+    "title": "Madli / malida (chapati jaggery sweet)",
+    "aliases": [
+      "madli",
+      "madali",
+      "maledi",
+      "malida",
+      "malida laddu",
+      "maledi undi",
+      "ಮಾದ್ಲಿ"
+    ],
+    "sub": "North Karnataka sweet from chapatis",
+    "region": "North Karnataka",
+    "course": "sweet",
+    "yield": 4,
+    "servingLabel": "about ½ cup",
+    "time": "25–35 min (10 min with leftover chapatis)",
+    "uses": "Tawa and a mixer, 1 burner",
+    "keeps": "Airtight jar up to a week; travels well.",
+    "intro": "Hubballi-Dharwad's chapati sweet: crisp chapatis powdered with jaggery, sesame, poppy seeds and cardamom, eaten with ghee or milk, or pressed into laddus (maledi undi). A good use of leftover chapatis.",
+    "ingredients": [
+      {
+        "group": "Madli",
+        "items": [
+          {
+            "id": "atta",
+            "key": "atta",
+            "name": "Whole-wheat atta (or 4 leftover chapatis)",
+            "q": "1 cup / 130 g",
+            "grams": 130,
+            "note": ""
+          },
+          {
+            "id": "rava",
+            "key": "rava",
+            "name": "Fine rava",
+            "q": "2 tbsp / 20 g",
+            "grams": 20,
+            "note": ""
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water",
+            "q": "about ⅓ cup / 80 ml",
+            "grams": 0,
+            "note": ""
+          },
+          {
+            "id": "jaggery",
+            "key": "jaggery",
+            "name": "Jaggery, grated",
+            "q": "½ cup / 90 g",
+            "grams": 90,
+            "note": ""
+          },
+          {
+            "id": "sesame",
+            "key": "sesame",
+            "name": "White sesame seeds, roasted",
+            "q": "2 tsp",
+            "grams": 6,
+            "note": ""
+          },
+          {
+            "id": "coconut",
+            "key": "coconut",
+            "name": "Dry or fresh coconut, grated",
+            "q": "2 tbsp / 12 g",
+            "grams": 12,
+            "note": "optional",
+            "optional": true
+          },
+          {
+            "id": "cardamom",
+            "key": "cardamom",
+            "name": "Cardamom powder",
+            "q": "½ tsp",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "ghee",
+            "key": "ghee",
+            "name": "Ghee",
+            "q": "2 tbsp",
+            "grams": 26,
+            "note": ""
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Chapatis (15 min). Knead {{atta}} atta and {{rava}} rava with {{water}} water to a stiff dough; roll 4 thick chapatis and cook them on a tawa until crisp and dry on low heat. Skip this with leftover chapatis: just toast them crisp.",
+      "Powder (3 min). Break the chapatis into pieces and grind to a coarse powder; add {{jaggery}} jaggery and pulse again.",
+      "Mix. Stir in {{sesame}} sesame, {{coconut}} coconut and {{cardamom}} cardamom. Serve with {{ghee}} ghee drizzled over, or warm the ghee and press the mix into small laddus."
+    ],
+    "serve": "With ghee or warm milk.",
+    "sources": [
+      {
+        "title": "Udupi Recipes: madli",
+        "url": "https://udupi-recipes.com/madli-madali-a-north-karnataka-sweet",
+        "scope": "North Karnataka (Hubballi-Dharwad) sweet: powdered chapati with jaggery and cardamom, served with milk or ghee; wheat flour, rava, sesame and poppy seeds.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "The Mad Scientist's Kitchen: maledi undi",
+        "url": "https://themadscientistskitchen.com/?p=42376",
+        "scope": "Maledi undi (madli) from Uttara Karnataka, made from leftover chapatis, jaggery, coconut, poppy seeds and cardamom.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Vahrehvah: malida laddu",
+        "url": "https://vahrehvah.com/malida-laddu-1",
+        "scope": "Telangana malida laddu combining chapati pieces with jaggery, nuts, cardamom and ghee.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "yield_": 4
+  },
+  {
+    "cuisine": "Indian",
+    "tags": [],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "tips": [
+      "The filling must be smooth with no whole dal, or the holige tears while rolling.",
+      "Very sweet: one holige is a serving; have it with kattina saaru and rice for a festival meal."
+    ],
+    "timing": {
+      "cookMinutes": [
+        60,
+        75
+      ],
+      "prerequisiteMinutes": [
+        0,
+        60
+      ],
+      "prerequisites": [
+        "Optional: soak the chana dal 1 hour so it cooks faster."
+      ],
+      "basis": "Editorial raw-start estimate; not measured",
+      "note": "Keep the dal cooking water: it makes kattina saaru."
+    },
+    "id": "bele-holige",
+    "title": "Bele holige (obbattu)",
+    "aliases": [
+      "holige",
+      "obbattu",
+      "bele obbattu",
+      "bobbatlu",
+      "puran poli",
+      "ಹೋಳಿಗೆ",
+      "బొబ్బట్లు"
+    ],
+    "sub": "sweet chana dal flatbread · festival sweet",
+    "region": "Karnataka",
+    "course": "sweet",
+    "yield": 8,
+    "servingLabel": "1 holige",
+    "time": "1–1¼ hours",
+    "uses": "Pressure cooker, mixer and a tawa, 2 burners",
+    "keeps": "Room temperature 1 day, fridge 3–4 days; warm on a tawa with ghee.",
+    "intro": "Karnataka's Ugadi sweet: a soft atta dough wrapped round a smooth chana dal and jaggery filling and rolled thin. This version uses atta; many homes use maida for a thinner holige. Save the dal water for kattina saaru.",
+    "ingredients": [
+      {
+        "group": "Filling (hoorna)",
+        "items": [
+          {
+            "id": "chana",
+            "key": "chanadal",
+            "name": "Chana dal",
+            "q": "1 cup / 200 g",
+            "grams": 200,
+            "note": ""
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water to cook the dal",
+            "q": "3 cups / 720 ml",
+            "grams": 0,
+            "note": "keep the drained water"
+          },
+          {
+            "id": "turmeric",
+            "key": "turmeric",
+            "name": "Turmeric",
+            "q": "a pinch",
+            "grams": 0.5,
+            "note": ""
+          },
+          {
+            "id": "jaggery",
+            "key": "jaggery",
+            "name": "Jaggery, grated",
+            "q": "1 cup / 180 g",
+            "grams": 180,
+            "note": ""
+          },
+          {
+            "id": "cardamom",
+            "key": "cardamom",
+            "name": "Cardamom powder",
+            "q": "½ tsp",
+            "grams": 1,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "group": "Dough",
+        "items": [
+          {
+            "id": "atta",
+            "key": "atta",
+            "name": "Whole-wheat atta",
+            "q": "1 cup / 130 g",
+            "grams": 130,
+            "note": ""
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "a pinch",
+            "grams": 0.5,
+            "note": ""
+          },
+          {
+            "id": "dwater",
+            "key": "water",
+            "name": "Water for the dough",
+            "q": "about ½ cup / 120 ml",
+            "grams": 0,
+            "note": ""
+          },
+          {
+            "id": "oil",
+            "key": "oil",
+            "name": "Oil (to knead and soak the dough)",
+            "q": "3 tbsp",
+            "grams": 40,
+            "note": ""
+          },
+          {
+            "id": "ghee",
+            "key": "ghee",
+            "name": "Ghee to serve",
+            "q": "4 tsp",
+            "grams": 18,
+            "note": "optional",
+            "optional": true
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Dough (10 min, then rest 30 min). Knead {{atta}} atta and {{salt}} salt with {{dwater}} water to a soft, sticky dough; knead in half the {{oil}} oil, pour the rest over and rest at least 30 minutes.",
+      "Dal (20 min). Pressure cook {{chana}} chana dal with {{water}} water and {{turmeric}} turmeric for 3–4 whistles until soft but not mushy. Drain well and keep the water for kattina saaru.",
+      "Filling (15 min). Cook the dal with {{jaggery}} jaggery on medium, stirring, until the jaggery melts and the mix thickens and leaves the pan. Add {{cardamom}} cardamom, cool and grind smooth without water. Make 8 balls.",
+      "Fill and roll (20 min). Flatten a lime-sized piece of dough on an oiled sheet, place a filling ball, close it, and roll or pat thin, using oil not flour.",
+      "Cook (3 min each). Cook on a medium-hot tawa until golden spots appear on both sides. Serve with {{ghee}} ghee."
+    ],
+    "serve": "Ghee or milk; kattina saaru on the side.",
+    "sources": [
+      {
+        "title": "Organic Mandya: bele holige",
+        "url": "https://organicmandya.com/blogs/recipes/bele-holige",
+        "scope": "Thin Karnataka sweet flatbread filled with cooked chana dal, jaggery and cardamom; dough rests under oil; also bobbatlu in Telugu.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Dassana's Veg Recipes: bobbatlu / holige",
+        "url": "https://www.vegrecipesofindia.com/puran-poli-recipe-bobbatlu-holige-recipe/",
+        "scope": "Chana dal pressure cooked, ground with jaggery and cardamom; half atta, half maida dough; stuffing must be fine and smooth.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Hebbar's Kitchen: holige",
+        "url": "https://hebbarskitchen.com/holige-recipe-bele-obbattu-puran-poli/",
+        "scope": "1 cup chana dal with 1 cup jaggery and cardamom; leftover dal water can make obbattu saaru.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "yield_": 8
+  },
+  {
+    "cuisine": "Indian",
+    "tags": [],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "tips": [],
+    "timing": {
+      "cookMinutes": [
+        20,
+        25
+      ],
+      "prerequisiteMinutes": [
+        0,
+        0
+      ],
+      "prerequisites": [],
+      "basis": "Editorial raw-start estimate; not measured",
+      "note": ""
+    },
+    "id": "kattina-saaru",
+    "title": "Kattina saaru (holige saaru)",
+    "aliases": [
+      "kattina saaru",
+      "katina saaru",
+      "holige saaru",
+      "obbattu saaru",
+      "hoorna saaru",
+      "ಕಟ್ಟಿನ ಸಾರು"
+    ],
+    "sub": "sweet-spicy dal-water saaru · North Karnataka",
+    "region": "North Karnataka",
+    "course": "soup",
+    "yield": 4,
+    "servingLabel": "about 1 cup",
+    "time": "20–25 min (with dal water ready)",
+    "uses": "Pot, 1 burner",
+    "keeps": "Fridge 2 days; reheat until boiling.",
+    "intro": "The festival saaru made from the water drained after cooking chana dal for holige (the kattu), with a spoon of the sweet filling, tamarind, jaggery and saaru spices. Without holige, cook ¼ cup chana dal for it.",
+    "ingredients": [
+      {
+        "group": "Saaru",
+        "items": [
+          {
+            "id": "kattu",
+            "key": "water",
+            "name": "Drained chana dal water (kattu)",
+            "q": "3 cups / 720 ml",
+            "grams": 0,
+            "note": "from cooking dal for holige"
+          },
+          {
+            "id": "chana",
+            "key": "chanadal",
+            "name": "Cooked chana dal or holige filling",
+            "q": "¼ cup / 50 g",
+            "grams": 50,
+            "note": "use 50 g raw dal, cooked, if not making holige"
+          },
+          {
+            "id": "tamarind",
+            "key": "tamarind",
+            "name": "Tamarind",
+            "q": "a small piece / 10 g",
+            "grams": 10,
+            "note": ""
+          },
+          {
+            "id": "jaggery",
+            "key": "jaggery",
+            "name": "Jaggery",
+            "q": "1 tbsp / 15 g",
+            "grams": 15,
+            "note": ""
+          },
+          {
+            "id": "powder",
+            "key": "sambarpowder",
+            "name": "Saaru or sambar powder",
+            "q": "1½ tsp",
+            "grams": 4,
+            "note": ""
+          },
+          {
+            "id": "tomato",
+            "key": "tomato",
+            "name": "Tomato, chopped",
+            "q": "1",
+            "grams": 100,
+            "note": ""
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "1 tsp",
+            "grams": 6,
+            "note": ""
+          },
+          {
+            "id": "coriander",
+            "key": "coriander",
+            "name": "Coriander leaves",
+            "q": "2 tbsp",
+            "grams": 6,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "group": "Tempering",
+        "items": [
+          {
+            "id": "ghee",
+            "key": "ghee",
+            "name": "Ghee or oil",
+            "q": "2 tsp",
+            "grams": 9,
+            "note": ""
+          },
+          {
+            "id": "mustard",
+            "key": "mustard",
+            "name": "Mustard seeds",
+            "q": "½ tsp",
+            "grams": 1.5,
+            "note": ""
+          },
+          {
+            "id": "cumin",
+            "key": "cumin",
+            "name": "Cumin seeds",
+            "q": "½ tsp",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "garlic",
+            "key": "garlic",
+            "name": "Garlic, crushed",
+            "q": "4 cloves",
+            "grams": 12,
+            "note": "optional",
+            "optional": true
+          },
+          {
+            "id": "redch",
+            "key": "redchilli",
+            "name": "Dry red chillies",
+            "q": "2",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "curry",
+            "key": "curryleaves",
+            "name": "Curry leaves",
+            "q": "1 sprig",
+            "grams": 2,
+            "note": ""
+          },
+          {
+            "id": "hing",
+            "key": "hing",
+            "name": "Hing",
+            "q": "a pinch",
+            "grams": 0.2,
+            "note": ""
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Base (5 min). Mash {{chana}} cooked dal or filling into {{kattu}} dal water. Soak {{tamarind}} tamarind in a little hot water and squeeze in the pulp.",
+      "Boil (10 min). Add {{tomato}} tomato, {{powder}} saaru powder, {{jaggery}} jaggery and {{salt}} salt and boil 8–10 minutes until the tomato is soft; it should be thin, sweet, sour and spicy.",
+      "Tempering (2 min). Heat {{ghee}} ghee; add {{mustard}} mustard, {{cumin}} cumin, {{garlic}} garlic, {{redch}} red chillies, {{curry}} curry leaves and {{hing}} hing and pour into the saaru. Add {{coriander}} coriander."
+    ],
+    "serve": "Rice, holige, or ragi mudde.",
+    "sources": [
+      {
+        "title": "itslife: kattina saaru",
+        "url": "https://itslife.in/?p=26119",
+        "scope": "Kattina saaru, also called hoornada saaru, made in Karnataka homes for festivals; about 25 minutes plus making the hoorna.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Archana's Kitchen: obbattu saaru",
+        "url": "https://archanaskitchen.com/karnataka-style-obbattu-saaru-recipe",
+        "scope": "Sweet and spicy chana dal rasam (holige saaru) served with rice and palya.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Smitha Kalluraya: holige saaru",
+        "url": "https://smithakalluraya.com/holige-saaru-obbattu-saaru-recipe/",
+        "scope": "Holige saaru made for festivals like Ugadi alongside holige; similar to bassaru.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "yield_": 4
+  },
+  {
+    "cuisine": "Indian",
+    "tags": [],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "tips": [
+      "Sprouted moong works if you don't have matki.",
+      "Top with a little farsan or mixture only if you like; it adds fried calories."
+    ],
+    "timing": {
+      "cookMinutes": [
+        35,
+        40
+      ],
+      "prerequisiteMinutes": [
+        720,
+        1440
+      ],
+      "prerequisites": [
+        "Soak matki 8 hours or overnight, drain and keep covered 12–24 hours to sprout. Or buy ready sprouts."
+      ],
+      "basis": "Editorial raw-start estimate; not measured",
+      "note": "With ready sprouts, it's 35–40 minutes."
+    },
+    "id": "misal",
+    "title": "Misal (Maharashtrian matki usal)",
+    "aliases": [
+      "misal",
+      "misal pav",
+      "kolhapuri misal",
+      "puneri misal",
+      "matki misal",
+      "मिसळ"
+    ],
+    "sub": "spicy sprouted moth bean curry · with pav",
+    "region": "Maharashtra",
+    "course": "breakfast",
+    "yield": 4,
+    "servingLabel": "about 1 cup with toppings",
+    "time": "35–40 min + soaking and sprouting",
+    "uses": "Pressure cooker and a kadai, 2 burners",
+    "keeps": "Usal keeps 2 days in the fridge; add toppings when serving.",
+    "intro": "Maharashtra's breakfast street food: a spicy sprouted matki curry with a thin red tarri, topped with onion, tomato, coriander and lemon, eaten with pav. High in protein and fibre.",
+    "ingredients": [
+      {
+        "group": "Usal",
+        "items": [
+          {
+            "id": "matki",
+            "key": "matki",
+            "name": "Matki (moth beans), sprouted",
+            "q": "1 cup dry / 180 g",
+            "grams": 180,
+            "note": ""
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water",
+            "q": "3 cups / 720 ml",
+            "grams": 0,
+            "note": ""
+          },
+          {
+            "id": "oil",
+            "key": "oil",
+            "name": "Oil",
+            "q": "2 tbsp",
+            "grams": 26,
+            "note": ""
+          },
+          {
+            "id": "mustard",
+            "key": "mustard",
+            "name": "Mustard seeds",
+            "q": "1 tsp",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "onion",
+            "key": "onion",
+            "name": "Onion, chopped",
+            "q": "1 large",
+            "grams": 150,
+            "note": ""
+          },
+          {
+            "id": "garlic",
+            "key": "garlic",
+            "name": "Garlic, crushed",
+            "q": "5 cloves",
+            "grams": 15,
+            "note": ""
+          },
+          {
+            "id": "ginger",
+            "key": "ginger",
+            "name": "Ginger, crushed",
+            "q": "1 inch",
+            "grams": 5,
+            "note": ""
+          },
+          {
+            "id": "coconut",
+            "key": "coconut",
+            "name": "Dry or fresh coconut, grated",
+            "q": "3 tbsp / 20 g",
+            "grams": 20,
+            "note": ""
+          },
+          {
+            "id": "tomato",
+            "key": "tomato",
+            "name": "Tomato, chopped",
+            "q": "1",
+            "grams": 100,
+            "note": ""
+          },
+          {
+            "id": "turmeric",
+            "key": "turmeric",
+            "name": "Turmeric",
+            "q": "½ tsp",
+            "grams": 1.5,
+            "note": ""
+          },
+          {
+            "id": "chillip",
+            "key": "kashmiri",
+            "name": "Kashmiri chilli powder",
+            "q": "2 tsp",
+            "grams": 5,
+            "note": ""
+          },
+          {
+            "id": "garam",
+            "key": "garam",
+            "name": "Garam masala or goda masala",
+            "q": "1 tsp",
+            "grams": 2.5,
+            "note": ""
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "1½ tsp",
+            "grams": 9,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "group": "To serve",
+        "items": [
+          {
+            "id": "onion2",
+            "key": "onion",
+            "name": "Onion, finely chopped",
+            "q": "1 small",
+            "grams": 70,
+            "note": ""
+          },
+          {
+            "id": "lemon",
+            "key": "lemon",
+            "name": "Lemon wedges",
+            "q": "1",
+            "grams": 30,
+            "note": ""
+          },
+          {
+            "id": "coriander",
+            "key": "coriander",
+            "name": "Coriander leaves",
+            "q": "3 tbsp",
+            "grams": 9,
+            "note": ""
+          },
+          {
+            "id": "pav",
+            "key": "bread",
+            "name": "Pav or bread",
+            "q": "8 pav",
+            "grams": 320,
+            "note": "optional",
+            "optional": true
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Cook the sprouts (10 min). Pressure cook {{matki}} sprouted matki with 1 cup of the {{water}} water and a pinch of the salt for 1 whistle; they should hold their shape.",
+      "Masala (10 min). Heat {{oil}} oil; add {{mustard}} mustard, then {{onion}} onion, {{garlic}} garlic and {{ginger}} ginger and fry golden. Add {{coconut}} coconut and fry 2 minutes, then {{tomato}} tomato, {{turmeric}} turmeric, {{chillip}} chilli powder and {{garam}} garam masala until the oil separates.",
+      "Simmer (10 min). Add the matki with its water, the rest of the water and {{salt}} salt; simmer 8–10 minutes. The red oily gravy on top is the tarri.",
+      "Serve. Ladle into bowls and top with {{onion2}} onion, {{coriander}} coriander and {{lemon}} lemon; eat with {{pav}} pav."
+    ],
+    "serve": "Pav or chapati, onion and lemon.",
+    "sources": [
+      {
+        "title": "Dassana's Veg Recipes: misal pav",
+        "url": "https://www.vegrecipesofindia.com/misal-pav-recipe",
+        "scope": "Usal of moth bean (matki) sprouts topped with onions, tomatoes, farsan, lemon and coriander, served with pav; mixed sprouts can be used.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Swasthi's Recipes: misal pav",
+        "url": "https://www.indianhealthyrecipes.com/web-stories/kolhapuri-misal-pav",
+        "scope": "Popular Maharashtrian street food: sprouts curry topped with onions and farsan, served with pav.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Tarla Dalal: misal pav",
+        "url": "https://www.tarladalal.com/misal-pav-or-how-to-make-misal-pav-37212r",
+        "scope": "Matki soaked overnight and tied in muslin to sprout, about 12 hours.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "yield_": 4
+  },
+  {
+    "cuisine": "Indian",
+    "tags": [],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "tips": [
+      "A too-hot tawa or runny batter turns pesarattu brown and limp; keep the heat medium-high."
+    ],
+    "timing": {
+      "cookMinutes": [
+        25,
+        30
+      ],
+      "prerequisiteMinutes": [
+        240,
+        360
+      ],
+      "prerequisites": [
+        "Soak whole green moong with a little rice 4–6 hours or overnight, then grind."
+      ],
+      "basis": "Editorial raw-start estimate; not measured",
+      "note": "This is whole green moong (with the green skin), not split yellow moong dal."
+    },
+    "id": "pesarattu",
+    "title": "Pesarattu (green moong dosa)",
+    "aliases": [
+      "pesarattu",
+      "pesara attu",
+      "green moong dosa",
+      "moong dosa",
+      "upma pesarattu",
+      "పెసరట్టు"
+    ],
+    "sub": "Andhra high-protein breakfast dosa",
+    "region": "Andhra & Telangana",
+    "course": "breakfast",
+    "yield": 3,
+    "servingLabel": "3 pesarattu",
+    "time": "25–30 min + 4–6 h soaking",
+    "uses": "Mixer and a dosa tawa, 1 burner",
+    "keeps": "Batter keeps 1 day in the fridge.",
+    "intro": "Andhra's protein-rich breakfast crepe of soaked whole green moong ground with ginger, chilli and cumin, no fermentation. Topped with onion; in Andhra hotels served with upma inside (upma pesarattu) and ginger chutney.",
+    "ingredients": [
+      {
+        "group": "Batter",
+        "items": [
+          {
+            "id": "moong",
+            "key": "wmoong",
+            "name": "Whole green moong (with skin)",
+            "q": "1 cup / 195 g",
+            "grams": 195,
+            "note": "not split yellow moong dal"
+          },
+          {
+            "id": "rice",
+            "key": "rice",
+            "name": "Raw rice",
+            "q": "2 tbsp / 25 g",
+            "grams": 25,
+            "note": "for crispness"
+          },
+          {
+            "id": "ginger",
+            "key": "ginger",
+            "name": "Ginger",
+            "q": "1 inch",
+            "grams": 5,
+            "note": ""
+          },
+          {
+            "id": "gchilli",
+            "key": "greenchilli",
+            "name": "Green chillies",
+            "q": "2",
+            "grams": 6,
+            "note": ""
+          },
+          {
+            "id": "cumin",
+            "key": "cumin",
+            "name": "Cumin seeds",
+            "q": "1 tsp",
+            "grams": 2,
+            "note": ""
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "¾ tsp",
+            "grams": 4.5,
+            "note": ""
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water to grind",
+            "q": "about ¾ cup / 180 ml",
+            "grams": 0,
+            "note": ""
+          },
+          {
+            "id": "onion",
+            "key": "onion",
+            "name": "Onion, finely chopped (topping)",
+            "q": "1 small",
+            "grams": 70,
+            "note": ""
+          },
+          {
+            "id": "oil",
+            "key": "oil",
+            "name": "Oil for the tawa",
+            "q": "2 tbsp",
+            "grams": 26,
+            "note": ""
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Grind (5 min). Drain the soaked {{moong}} moong and {{rice}} rice and grind with {{ginger}} ginger, {{gchilli}} green chillies, {{cumin}} cumin and {{water}} water to a smooth, pourable batter like dosa batter. Add {{salt}} salt.",
+      "Spread (1 min). Heat the tawa on medium-high, wipe with oil, pour a ladleful in the centre and spread thin in circles. Sprinkle some {{onion}} onion and press it in.",
+      "Cook (3 min each). Drizzle with {{oil}} oil and cook until the base is golden and crisp; flip for 30 seconds if you like, then fold."
+    ],
+    "serve": "Ginger chutney (allam pachadi), coconut chutney or upma.",
+    "sources": [
+      {
+        "title": "Swasthi's Recipes: pesarattu",
+        "url": "https://www.indianhealthyrecipes.com/andhra-pesarattu-whole-moong-dosa/",
+        "scope": "1 cup whole green moong with ginger, cumin and green chillies; served with allam pachadi and rava upma in Andhra hotels.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Dassana's Veg Recipes: pesarattu",
+        "url": "https://www.vegrecipesofindia.com/moong-dal-dosa-pesarattu-a-cripsy-dosa-made-from-moong-dal/",
+        "scope": "Andhra breakfast from soaked, ground whole green moong; soak 4–6 hours or overnight; served with chutney or upma.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Tarla Dalal: pesarattu",
+        "url": "https://www.tarladalal.com/Pesarattu-1688r",
+        "scope": "1 cup whole moong with ¼ cup raw rice soaked 4 hours; rice adds crispness.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "yield_": 3
+  },
+  {
+    "cuisine": "Indian",
+    "tags": [],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "tips": [
+      "Don't boil after adding curd."
+    ],
+    "timing": {
+      "cookMinutes": [
+        30,
+        35
+      ],
+      "prerequisiteMinutes": [
+        0,
+        0
+      ],
+      "prerequisites": [],
+      "basis": "Editorial raw-start estimate; not measured",
+      "note": ""
+    },
+    "id": "avial",
+    "title": "Avial (Kerala mixed vegetables in coconut and curd)",
+    "aliases": [
+      "avial",
+      "aviyal",
+      "kerala avial",
+      "അവിയൽ"
+    ],
+    "sub": "Kerala sadya mixed vegetables",
+    "region": "Kerala",
+    "course": "side",
+    "yield": 4,
+    "servingLabel": "about ¾ cup",
+    "time": "30–35 min",
+    "uses": "Pot and a mixer, 1 burner",
+    "keeps": "Fridge 1–2 days; reheat gently so the curd doesn't split.",
+    "intro": "Kerala's sadya favourite: batons of mixed vegetables cooked just tender, coated in a coarse coconut, cumin and green chilli paste with curd, finished with raw coconut oil and curry leaves.",
+    "ingredients": [
+      {
+        "group": "Vegetables",
+        "items": [
+          {
+            "id": "veg",
+            "key": "sambarveg",
+            "name": "Mixed vegetables in batons (drumstick, raw banana, ash gourd, carrot, beans, yam)",
+            "q": "4 cups / 450 g",
+            "grams": 450,
+            "note": ""
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water",
+            "q": "½ cup / 120 ml",
+            "grams": 0,
+            "note": ""
+          },
+          {
+            "id": "turmeric",
+            "key": "turmeric",
+            "name": "Turmeric",
+            "q": "¼ tsp",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "1 tsp",
+            "grams": 6,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "group": "Coconut paste",
+        "items": [
+          {
+            "id": "coconut",
+            "key": "coconut",
+            "name": "Fresh coconut, grated",
+            "q": "¾ cup / 75 g",
+            "grams": 75,
+            "note": ""
+          },
+          {
+            "id": "gchilli",
+            "key": "greenchilli",
+            "name": "Green chillies",
+            "q": "3",
+            "grams": 9,
+            "note": ""
+          },
+          {
+            "id": "cumin",
+            "key": "cumin",
+            "name": "Cumin seeds",
+            "q": "½ tsp",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "curd",
+            "key": "curd",
+            "name": "Curd, slightly sour",
+            "q": "½ cup / 120 g",
+            "grams": 120,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "group": "Finish",
+        "items": [
+          {
+            "id": "oil",
+            "key": "oil",
+            "name": "Coconut oil",
+            "q": "1½ tbsp",
+            "grams": 20,
+            "note": ""
+          },
+          {
+            "id": "curry",
+            "key": "curryleaves",
+            "name": "Curry leaves",
+            "q": "2 sprigs",
+            "grams": 3,
+            "note": ""
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Vegetables (15 min). Cook {{veg}} vegetables with {{water}} water, {{turmeric}} turmeric and {{salt}} salt, covered, on medium until just tender; add the quicker ones (carrot, beans) after 5 minutes.",
+      "Paste (3 min). Grind {{coconut}} coconut, {{gchilli}} green chillies and {{cumin}} cumin coarsely with a splash of water.",
+      "Coat (5 min). Add the paste and cook 3–4 minutes, stirring gently. Off the heat, fold in whisked {{curd}} curd.",
+      "Finish. Drizzle {{oil}} coconut oil and add {{curry}} curry leaves; cover for 5 minutes before serving."
+    ],
+    "serve": "Rice and sambar, or adai.",
+    "sources": [
+      {
+        "title": "Dassana's Veg Recipes: avial",
+        "url": "https://www.vegrecipesofindia.com/avial-recipe/",
+        "scope": "Traditional Kerala mixed-vegetable dish, also made in Tamil Nadu and Karnataka.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Kerala Tourism: avial",
+        "url": "https://www.keralatourism.org/kerala-food/avial-vegetarian-dish/109",
+        "scope": "Part of the Kerala sadya; vegetables include carrot, beans and raw banana.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Yummy Tummy Aarthi: avial",
+        "url": "https://www.yummytummyaarthi.com/wprm_print/avial-recipe-kerala-aviyal-recipe",
+        "scope": "Finished with a tempering of mustard and curry leaves; served with steamed rice.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "yield_": 4
   }
 ]

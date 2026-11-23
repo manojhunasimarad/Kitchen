@@ -60,7 +60,14 @@ function buildMeal(p, sl, rng, avoid, preferReady) {
     if (e) add(e, eggFor);
   }
   if (rows.some(([id]) => needsCarb(R[id]))) rows.push([CARBS[rng() < 0.5 ? 0 : 1], 1]);
+  addPairs(rows);
   return { rows, assign };
+}
+/* Dishes that are eaten with a particular partner: mudde with saaru, bhatura with chole, holige with its saaru. */
+const PAIRS = { 'ragi-mudde': 'hurali-saaru', 'atta-bhatura': 'chole', 'bele-holige': 'kattina-saaru', 'poori': 'chole' };
+function addPairs(rows) {
+  rows.slice().forEach(([id]) => { const mate = PAIRS[id]; if (mate && R[mate] && !rows.some(r => r[0] === mate)) rows.push([mate, 1]); });
+  return rows;
 }
 /* Default day: the book's weekly menu, completed so vegetarians and the eggetarian always get a main. */
 const defaultCache = {};
@@ -95,7 +102,7 @@ function fitToSessions(q, ds, fallback) {
   const used = () => SLOTS.flatMap(sl => (q.m[sl] || []).map(x => x[0]));
   const swapUnfit = (sl, ok) => {
     q.m[sl] = (q.m[sl] || []).map(row => {
-      const r = R[row[0]]; if (!r || ok(r, s)) return row;
+      const r = R[row[0]]; if (!r || ok(r, s) || (q.pin?.[sl] || []).includes(row[0])) return row;
       const here = used(), alt = pickWeighted(D.recipes.filter(x => x.course === r.course && dishDiet(x) === dishDiet(r) && ok(x, s) && !here.includes(x.id) && !H.equipmentIssues(x, h).length), rng);
       if (!alt) return row;
       const a = q.assignments?.[sl]; if (a && a[r.id]) { a[alt.id] = a[r.id]; delete a[r.id]; }
@@ -108,13 +115,128 @@ function fitToSessions(q, ds, fallback) {
   if (s === 1) { q.m.d = clone(q.m.l || []); (q.assignments ||= {}).d = clone(q.assignments?.l || {}); }
   else if (fallback && (q.m.l || []).length && sameRows(q.m.l, q.m.d)) { q.m.d = clone(fallback.d || []); if (q.assignments) delete q.assignments.d; }
 }
+/* Switching back and forth is reversible: q.base keeps the dishes you chose (or the default) before
+   they were fitted to a cooking mode, so going Once → 3 times brings your own breakfast and dinner back.
+   A meal you edit after a switch becomes the new base for that meal. */
 function setSessions(v) {
-  const ds = selDate, edited = !!S.plan[ds];
+  const ds = selDate, edited = !!S.plan[ds], before = H.clone(planOf(ds));
   editPlan(ds, q => {
-    q.s = v;
-    // Untouched menus switch to that mode's default; menus you've edited are adjusted dish by dish.
-    if (!edited || q.auto) { q.m = defaultMenu(ds, v); q.assignments = {}; q.auto = true; return; }
-    fitToSessions(q, ds, defaultMenu(ds, v));
+    q.sChosen = true;
+    if (!edited || q.auto) { q.s = v; q.m = defaultMenu(ds, v); q.assignments = {}; q.auto = true; delete q.base; delete q.fitted; }
+    else {
+      const base = q.base ? H.clone(q.base) : { m: {}, a: {} }, linked = linkedDinner(q);
+      SLOTS.forEach(sl => {
+        const touched = !q.fitted || !sameRows(q.fitted[sl], q.m[sl]) || !base.m[sl];
+        // when cooking once, dinner is a copy of lunch, not a dinner you chose
+        if (sl === 'd' && linked && base.m.d) return;
+        if (touched) { base.m[sl] = H.clone(q.m[sl] || []); base.a[sl] = H.clone(q.assignments?.[sl] || {}); }
+      });
+      if (linked && !q.base) { base.m.d = H.clone(defaultMenu(ds, v).d || []); base.a.d = {}; }
+      q.s = v; q.m = H.clone(base.m); q.assignments = H.clone(base.a);
+      fitToSessions(q, ds, defaultMenu(ds, v));
+      q.base = base; q.fitted = H.clone(q.m);
+    }
+    planNote = sessionNote(before, q);
+  });
+}
+function sessionNote(before, after) {
+  const title = id => (dish(id) || {}).title, out = [];
+  SLOTS.forEach(sl => {
+    if (sl === 'd' && linkedDinner(after)) { out.push('dinner is lunch’s pot, so lunch is cooked in double'); return; }
+    const a = (before.m[sl] || []).map(x => x[0]), b = (after.m[sl] || []).map(x => x[0]);
+    const gone = a.filter(x => !b.includes(x)).map(title).filter(Boolean), added = b.filter(x => !a.includes(x)).map(title).filter(Boolean);
+    if (gone.length || added.length) out.push(SLOT[sl].toLowerCase() + ' ' + (gone.join(', ') || 'nothing') + ' → ' + (added.join(', ') || 'nothing'));
+  });
+  const why = ['', 'quick breakfast, one pot for lunch and dinner', 'quick breakfast and a lunch that packs, dinner fresh', 'everything cooked fresh'][after.s];
+  return ['', 'Cooking once', 'Cooking twice', 'Cooking 3 times'][after.s] + ' (' + why + '): ' +
+    (out.length ? out.join('; ') : 'these dishes already suit it, so only the cooking sessions changed') + '.';
+}
+/* Days you haven't touched follow the usual number of cooking times from Settings. */
+function followDefault(q, ds) {
+  const s = setv('sessions');
+  // sDefault marks a plan that was only stored because of an attendance tick, not a chosen mode
+  if (q && q.auto && !q.sChosen && q.sDefault === q.s && q.s !== s) { q.s = q.sDefault = s; q.m = defaultMenu(ds, s); q.assignments = {}; }
+  return q;
+}
+function makeUsualSessions() {
+  const v = planOf(selDate).s;
+  apply(s => { s.set.sessions = v; });
+  planNote = 'Days you haven’t changed now cook ' + ['', 'once', 'twice', '3 times'][v] + ' a day.';
+  renderToday();
+}
+
+/* ---------- cooking now, today or tomorrow ---------- */
+let cookWhen = 'today', planNote = '';
+const toMin = t => { const [h, m] = String(t || '0:0').split(':').map(Number); return h * 60 + (m || 0); };
+const nowMin = () => { const d = new Date(); return d.getHours() * 60 + d.getMinutes(); };
+const hhmm = m => String(Math.floor(m / 60) % 24).padStart(2, '0') + ':' + String(m % 60).padStart(2, '0');
+function slotTime(p, sl) {
+  const ts = H.attendees(p, sl, household()).map(m => toMin(m.time || H.times[sl]));
+  return ts.length ? Math.min(...ts) : toMin(H.times[sl]);
+}
+/* A meal counts as over 30 minutes after its eating time. */
+function pastSlots(p, ds, at = nowMin()) { return ds === todayStr() ? SLOTS.filter(sl => at > slotTime(p, sl) + 30) : []; }
+const hiddenSlots = (p, ds) => cookWhen === 'now' ? pastSlots(p, ds) : [];
+/* Best available time estimate: reviewed timings first, then the book's minutes; soaking dishes can't be made now. */
+function estMinutes(r) {
+  const t = KitchenCore.timing(r, false); if (t.max !== null) return t.max;
+  return soaks(r) || !r.minutes ? Infinity : r.minutes;
+}
+function cookingDeadline(p, sl, left) {
+  // dishes cooked in the same session must be ready for the earliest meal in it
+  const se = SESS[p.s].find(x => x.slots.includes(sl));
+  return Math.min(...se.slots.filter(x => left.includes(x)).map(x => slotTime(p, x)));
+}
+function setCookWhen(w) {
+  const t = new Date(); planNote = '';
+  if (w === 'tomorrow') { cookWhen = w; t.setDate(t.getDate() + 1); selDate = ymd(t); renderToday(); return; }
+  cookWhen = w; selDate = todayStr();
+  if (w !== 'now') { renderToday(); return; }
+  const p = planOf(selDate), gone = pastSlots(p, selDate), left = SLOTS.filter(sl => !gone.includes(sl) && H.attendees(p, sl, household()).length);
+  if (!left.length) {
+    cookWhen = 'tomorrow'; t.setDate(t.getDate() + 1); selDate = ymd(t);
+    planNote = 'Today’s meals are over, so this shows tomorrow. ' + (nightBefore(todayStr()) || '');
+    renderToday(); return;
+  }
+  fitToNow(left);
+}
+/* Cooking right now: keep what fits the time until the meal and what's in the pantry; swap the rest. */
+function fitToNow(left) {
+  const ds = selDate, p = planOf(ds), h = household(), at = nowMin(), checkPantry = pantryTouched();
+  const here = SLOTS.flatMap(s => (p.m[s] || []).map(x => x[0])), linked = linkedDinner(p), changes = [], stuck = [], notes = [];
+  left.forEach(sl => {
+    if (sl === 'd' && linked && left.includes('l')) return; // follows lunch
+    if (sl === 'd' && linked && eaten(ds, 'l')) { notes.push('Dinner is from lunch’s pot: reheat it until steaming hot all the way through.'); return; }
+    const minutes = cookingDeadline(p, sl, left) - at, budget = Math.max(20, minutes), free = minutes >= 150;
+    (p.m[sl] || []).forEach(([id], i) => {
+      const r = R[id]; if (!r || CARBS.includes(id)) return;
+      const slow = !free && estMinutes(r) > budget, short = checkPantry ? status(r).missing : [];
+      if (!slow && !short.length) return;
+      const list = D.recipes.filter(x => x.id !== id && x.course === r.course && dishDiet(x) === dishDiet(r) && !here.includes(x.id) &&
+        !H.equipmentIssues(x, h).length && (sl !== 'b' || breakfastFits(x, p.s)) && (sl !== 'l' || lunchFits(x, p.s)) &&
+        (free || estMinutes(x) <= budget) && (!checkPantry || !status(x).missing.length) && budgetOk(x));
+      // closest swap first: same cuisine and the same need for rice or rotis on the side
+      const near = list.filter(x => x.cuisine === r.cuisine && needsCarb(x) === needsCarb(r));
+      const pick = pickWeighted(near.length ? near : list, Math.random);
+      if (!pick) { stuck.push(r.title + (slow ? ' needs about ' + estMinutes(r) + ' min' : ' needs ' + short.map(tokLabel).join(', ').toLowerCase())); return; }
+      here.push(pick.id);
+      changes.push({ sl, i, from: id, to: pick.id, why: slow ? 'ready in ~' + estMinutes(pick) + ' min' : 'uses what you have' });
+    });
+  });
+  const head = 'Cooking now (' + hhmm(at) + '): ';
+  const done = left.length < 3 ? ' ' + SLOTS.filter(sl => !left.includes(sl)).map(sl => SLOT[sl]).join(' and ') + (3 - left.length === 1 ? ' is' : ' are') + ' over, so ' + (3 - left.length === 1 ? 'it is' : 'they are') + ' left out.' : '';
+  planNote = head + (changes.length ? changes.map(c => SLOT[c.sl].toLowerCase() + ' ' + R[c.from].title + ' → ' + R[c.to].title + ' (' + c.why + ')').join('; ') + '.' :
+    'what’s left today fits the time you have' + (checkPantry ? ' and your pantry.' : '. Tick your pantry for picks that use what you have.')) +
+    done + (stuck.length ? ' No quicker swap for: ' + stuck.join('; ') + '.' : '') + (notes.length ? ' ' + notes.join(' ') : '');
+  if (!changes.length) { renderToday(); return; }
+  editPlan(ds, q => {
+    const link = linkedDinner(q);
+    changes.forEach(c => {
+      const row = (q.m[c.sl] || [])[c.i]; if (!row || row[0] !== c.from) return; row[0] = c.to;
+      const a = q.assignments?.[c.sl]; if (a && a[c.from]) { a[c.to] = a[c.from]; delete a[c.from]; }
+      if (link && c.sl === 'l') { q.m.d = H.clone(q.m.l); (q.assignments ||= {}).d = H.clone(q.assignments?.l || {}); }
+    });
+    delete q.auto;
   });
 }
 /* Edit one meal; when cooking once and dinner is lunch's batch, keep the two in step. */
@@ -248,13 +370,22 @@ function renderToday() {
   $('#dates').innerHTML = dates;
   const p = planOf(selDate), date = parseYmd(selDate), me = mePerson();
   document.querySelectorAll('#seg-sess button').forEach(b => b.setAttribute('aria-pressed', String(+b.dataset.sess === p.s)));
-  const sessions = SESS[p.s].map(se => {
+  document.querySelectorAll('#seg-when button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.when === cookWhen)));
+  const usual = $('#sess-usual'); usual.hidden = p.s === setv('sessions'); usual.textContent = 'Cook ' + ['', 'once', 'twice', '3 times'][p.s] + ' every day';
+  const pn = $('#plan-note'); pn.hidden = !planNote; pn.textContent = planNote;
+  const hide = hiddenSlots(p, selDate);
+  const sessions = SESS[p.s].map(se0 => {
+    const se = Object.assign({}, se0, { slots: se0.slots.filter(sl => !hide.includes(sl)) });
+    if (!se.slots.length) return '<div class="sess"><div class="sess-h"><h3>' + esc(se.name) + '</h3><span>done</span></div><p class="past-line">' + se0.slots.map(sl => SLOT[sl]).join(' and ') + (se0.slots.length > 1 ? ' times have passed, so they aren’t' : ' time has passed, so it isn’t') + ' in the cooking list.</p></div>';
+    if (hide.includes('l') && se.slots.join() === 'd' && linkedDinner(p) && eaten(selDate, 'l'))
+      return '<div class="sess"><div class="sess-h"><h3>Dinner</h3><span>from the morning pot</span></div><p class="link-line">Nothing to cook: dinner is the second half of lunch’s pot. Reheat it until steaming hot all the way through.</p>' + mealHTML(p, 'd', me) + '</div>';
     const ids = [...new Set(se.slots.flatMap(sl => (p.m[sl] || []).filter(([id, k]) => R[id] && mealServings(p, sl, R[id], k) > 0).map(x => x[0])))];
     const miss = []; ids.forEach(id => status(R[id]).missing.forEach(t => { const k = firstMissing(t); if (!miss.includes(k)) miss.push(k); }));
     const cook = Object.entries(H.totals(p, allDishes(), h, se.slots)).filter(([id]) => R[id]).map(([id, n]) => esc(R[id].title) + ' <b>' + nice(n) + '</b>');
     const note = p.s === 1 ? (h.fridge ? 'Breakfast is quick, and lunch and dinner come from one pot. Eat lunch fresh; cool dinner’s share and refrigerate it within 2 hours, then reheat until steaming hot all the way through.' : se.note) : se.note;
     return '<div class="sess"><div class="sess-h"><h3>' + esc(se.name) + '</h3><span>' + esc(se.when) + '</span></div>' + workloadHTML(p, se.slots) +
       (cook.length ? '<p class="cook-line"><span class="lbl-s">Cook</span> ' + cook.join(' · ') + ' <span class="small">servings</span></p>' : '') +
+      (se.slots.length < se0.slots.length ? '<p class="past-line">' + se0.slots.filter(sl => hide.includes(sl)).map(sl => SLOT[sl]).join(' and ') + (se0.slots.filter(sl => hide.includes(sl)).length > 1 ? ' times have passed, so they aren’t' : ' time has passed, so it isn’t') + ' counted here.</p>' : '') +
       se.slots.map(sl => mealHTML(p, sl, me)).join('') +
       (note ? '<p class="sess-note">' + esc(note) + '</p>' : '') +
       (miss.length ? '<div class="miss"><span class="small">Missing:</span>' + missChips(miss) + '</div>' : '') +
@@ -262,12 +393,15 @@ function renderToday() {
   }).join('');
   const eat = nsum(SLOTS.filter(sl => eaten(selDate, sl)).map(sl => [H.personNutrition(p, sl, me.id, allDishes(), h), 1]));
   const plan = nsum(SLOTS.map(sl => [H.personNutrition(p, sl, me.id, allDishes(), h), 1]));
+  const tmr = new Date(); tmr.setDate(tmr.getDate() + 1);
+  const tonight = selDate === ymd(tmr) ? nightBefore(todayStr()) : '';
   const night = nightBefore(selDate), counts = h.members.reduce((o, m) => (o[m.diet] = (o[m.diet] || 0) + 1, o), {});
   $('#kot').innerHTML = '<div class="kot-head"><span>Kitchen order · ' + esc(fmtDay(date)) + '</span>' + (selDate === todayStr() ? '<span class="stamp">Today</span>' : '') + '</div>' +
     '<p class="kot-title">' + esc(date.toLocaleDateString('en-IN', { weekday: 'long' })) + '</p>' +
     '<p class="kot-sub">' + ['', 'Cooking once: quick breakfast, one pot for lunch and dinner', 'Cooking twice: quick breakfast and a packable lunch in the morning, dinner fresh', 'Cooking three times: everything fresh'][p.s] + ' · ' + h.members.length + ' people (' + ['veg', 'egg', 'nonveg'].filter(d => counts[d]).map(d => counts[d] + ' ' + { veg: 'veg', egg: 'egg', nonveg: 'non-veg' }[d]).join(', ') + ') · ' + (S.plan[selDate] && !S.plan[selDate].auto ? 'your plan' : 'default menu') + '. Tap names to mark who is eating.</p>' +
     sessions +
     '<div class="kot-foot"><span class="mono"><b>Protein</b>~' + Math.round(eat.p) + ' eaten of ~' + Math.round(plan.p) + ' g planned for ' + esc(shortName(me.name)) + ' (target ' + target('p') + ' g)</span>' +
+    (tonight ? '<span><b>Tonight</b>' + esc(tonight) + '</span>' : '') +
     (night ? '<span><b>Night before</b>' + esc(night) + '</span>' : '') + '</div>';
   $('#day-reset').hidden = !S.plan[selDate] || !!S.plan[selDate].auto;
   $('#day-nutri').innerHTML = dayPanelHTML(p, selDate);
@@ -303,4 +437,42 @@ function changeHousehold(t) {
 }
 function toggleAttendance(sl, id) {
   editPlan(selDate, p => { const a = ((p.attendance ||= {})[sl] ||= {}); const m = a[id] || { eating: true, portions: 1, time: H.times[sl] }; m.eating = !m.eating; a[id] = m; });
+}
+
+/* ---------- "I want to cook this on that day" ---------- */
+/* The dish takes the place of that meal's main for the same people, rice or rotis are added or dropped
+   to suit it, and the day's cooking amounts, shopping and night-before prep follow. The dish is pinned,
+   so changing how often you cook won't swap it away. */
+function planDish(ds, sl, id, k, how) {
+  const r = R[id], before = H.clone(planOf(ds)), h = household(); let replaced = [];
+  editPlan(ds, q => {
+    const rows = (q.m[sl] = q.m[sl] || []), d = dishDiet(r);
+    if (how === 'replace' && isMain(r, sl)) {
+      const same = rows.map((row, i) => [row, i]).filter(([row]) => R[row[0]] && isMain(R[row[0]], sl) && dishDiet(R[row[0]]) === d);
+      if (same.length) {
+        const [row] = same[0]; replaced = same.map(([x]) => x[0]);
+        const a = q.assignments?.[sl]; if (a) { if (a[row[0]]) a[id] = a[row[0]]; replaced.forEach(x => delete a[x]); }
+        q.m[sl] = rows.filter((x, i) => !same.slice(1).some(([, j]) => j === i)); q.m[sl][same[0][1]] = [id, k];
+      } else q.m[sl].push([id, k]);
+      const left = q.m[sl].map(x => R[x[0]]).filter(Boolean);
+      if (!left.some(needsCarb)) q.m[sl] = q.m[sl].filter(x => !CARBS.includes(x[0]));
+      else if (!q.m[sl].some(x => CARBS.includes(x[0]))) q.m[sl].push([CARBS[0], 1]);
+    } else { q.m[sl].push([id, k]); if (needsCarb(r) && !q.m[sl].some(x => CARBS.includes(x[0]))) q.m[sl].push([CARBS[0], 1]); }
+    addPairs(q.m[sl]);
+    ((q.pin ||= {})[sl] ||= []).includes(id) || q.pin[sl].push(id);
+    if (q.s === 1 && sl === 'l' && sameRows(before.m.l, before.m.d)) { q.m.d = H.clone(q.m.l); (q.assignments ||= {}).d = H.clone(q.assignments?.l || {}); }
+    delete q.auto;
+  });
+  const p = planOf(ds), when = ds === todayStr() ? 'today' : fmtDay(parseYmd(ds)), miss = status(r).missing.map(tokLabel);
+  const fits = (sl !== 'b' || breakfastFits(r, p.s)) && (sl !== 'l' || lunchFits(r, p.s));
+  const parts = [r.title + ' is ' + when + '’s ' + SLOT[sl].toLowerCase() +
+    (replaced.length ? ' in place of ' + replaced.map(x => R[x].title).join(' and ') : '') + '.'];
+  if (p.s === 1 && sl === 'l' && linkedDinner(p)) parts.push('Cooking once, so it is dinner too; cook ' + nice(mealServings(p, 'l', r, k) + mealServings(p, 'd', r, k)) + ' servings.');
+  else parts.push('Cook ' + nice(mealServings(p, sl, r, k)) + ' servings.');
+  if (!fits) parts.push(sl === 'b' ? 'It takes longer than your ' + ['', '20', '30'][p.s] + '-minute breakfast window when cooking ' + ['', 'once', 'twice'][p.s] + '; start earlier or switch this day to 3 times.' : 'It doesn’t pack as well as most lunch-box dishes; eat it fresh if you can, or switch this day to 3 times.');
+  if (soaks(r)) parts.push('It needs soaking: start the night before.');
+  if (miss.length) parts.push('Missing: ' + miss.join(', ').toLowerCase() + ' (on your shopping list).');
+  if (!H.attendees(p, sl, h).some(m => H.compatible(m, r))) parts.push('Nobody eating this meal can have it; tick who is eating on Today.');
+  planNote = parts.join(' ');
+  return planNote;
 }
