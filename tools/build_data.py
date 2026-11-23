@@ -19,6 +19,9 @@ PANTRY = [
     ("toor", "Toor dal", "Dals, beans and nuts", 0), ("moongdal", "Split yellow moong dal", "Dals, beans and nuts", 0),
     ("wmoong", "Whole green moong", "Dals, beans and nuts", 0), ("chanadal", "Chana dal", "Dals, beans and nuts", 0),
     ("uraddal", "Urad dal", "Dals, beans and nuts", 0), ("rajma", "Rajma", "Dals, beans and nuts", 2),
+    ("gpeas", "Dried green peas (vatana)", "Dals, beans and nuts", 2), ("kalachana", "Kala chana (black chickpeas)", "Dals, beans and nuts", 2),
+    ("lobia", "Alasande (black-eyed beans)", "Dals, beans and nuts", 2), ("hurali", "Horse gram (hurali)", "Dals, beans and nuts", 2),
+    ("masoor", "Masoor dal (red lentils)", "Dals, beans and nuts", 2), ("matki", "Matki (moth beans)", "Dals, beans and nuts", 2),
     ("kchana", "Kabuli chana", "Dals, beans and nuts", 2), ("soya", "Soya chunks", "Dals, beans and nuts", 0),
     ("rchana", "Roasted chana (putani)", "Dals, beans and nuts", 0), ("peanuts", "Raw peanuts", "Dals, beans and nuts", 0),
     ("cashews", "Cashews", "Dals, beans and nuts", 0), ("makhana", "Makhana", "Dals, beans and nuts", 2),
@@ -76,7 +79,7 @@ KEYS = {k for k, *_ in PANTRY}
 SOFT = {"coriander", "cream", "kasuri", "chaat", "sugar", "lemon", "saffron", "kewra", "springonion", "cashews",
         "redchilli", "mint", "herbs", "honey"}
 # what to type into a grocery app's search box, where the label isn't a good search
-BUY = {"atta": "whole wheat atta", "rice": "sona masoori rice", "chicken": "chicken curry cut",
+BUY = {"gpeas": "dried green peas", "kalachana": "kala chana", "lobia": "black eyed beans", "hurali": "horse gram", "masoor": "masoor dal", "matki": "moth beans", "atta": "whole wheat atta", "rice": "sona masoori rice", "chicken": "chicken curry cut",
        "chickenbl": "chicken breast boneless", "mince": "chicken keema", "fish": "seer fish", "sambarveg": "drumstick",
        "coconut": "grated coconut", "wholespice": "whole garam masala", "coriander_p": "coriander powder",
        "cumin_p": "roasted jeera powder", "herbs": "oregano seasoning", "currypaste": "thai red curry paste",

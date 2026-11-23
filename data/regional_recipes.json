@@ -1519,5 +1519,2257 @@
     },
     "serve": "With soup, pasta, butter garlic corn or a salad.",
     "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis."
+  },
+  {
+    "region": "",
+    "cuisine": "Indian",
+    "tags": [],
+    "tips": [
+      {
+        "title": "Cook once, eat twice",
+        "text": "Cook the whole soaked batch at once. Use half for this curry and turn the rest into green peas usli (sundal) or keep it in the fridge for 3–4 days."
+      },
+      {
+        "title": "Two nights of soaking",
+        "text": "Soaked pulses left at room temperature for long can ferment: if they smell sour or feel slimy, throw them out. Peas that have just started to sprout are fine and cook a little faster."
+      }
+    ],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "id": "dried-green-peas-masala",
+    "title": "Dried green peas masala (vatana curry)",
+    "aliases": [
+      "vatana curry",
+      "hara vatana",
+      "dried peas curry",
+      "pattani masala",
+      "batani curry"
+    ],
+    "sub": "soaked dried green peas in onion-tomato masala · rotis or rice",
+    "course": "main",
+    "yield": 6,
+    "servingLabel": "about 1 cup",
+    "time": "45–55 min + overnight soak",
+    "uses": "Pressure cooker, 1 burner",
+    "keeps": "Fridge 3–4 days in a closed box; reheat until steaming hot. Leftovers make ragda with mashed potato.",
+    "intro": "Dried green peas (hara vatana) are cheap, keep for months and give a filling, high-fibre curry. They must be soaked and pressure-cooked; in a pan they take an hour or more.",
+    "ingredients": [
+      {
+        "group": "Peas",
+        "items": [
+          {
+            "id": "peas",
+            "key": "gpeas",
+            "name": "Dried green peas",
+            "q": "300 g dry (about 700 g after soaking)",
+            "grams": 300,
+            "note": "soaked 8–12 hours"
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water, for cooking",
+            "q": "about 900 ml",
+            "grams": 0,
+            "note": ""
+          },
+          {
+            "id": "salt1",
+            "key": "salt",
+            "name": "Salt, for cooking",
+            "q": "½ tsp",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "turmeric1",
+            "key": "turmeric",
+            "name": "Turmeric, for cooking",
+            "q": "¼ tsp",
+            "grams": 1,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "group": "Masala",
+        "items": [
+          {
+            "id": "oil",
+            "key": "oil",
+            "name": "Oil",
+            "q": "2 tbsp",
+            "grams": 26,
+            "note": ""
+          },
+          {
+            "id": "cumin",
+            "key": "cumin",
+            "name": "Cumin seeds",
+            "q": "1 tsp",
+            "grams": 2,
+            "note": ""
+          },
+          {
+            "id": "onion",
+            "key": "onion",
+            "name": "Onions, finely chopped",
+            "q": "2 medium",
+            "grams": 220,
+            "note": ""
+          },
+          {
+            "id": "ggarlic",
+            "key": "garlic",
+            "name": "Garlic, grated",
+            "q": "4 cloves",
+            "grams": 12,
+            "note": ""
+          },
+          {
+            "id": "gginger",
+            "key": "ginger",
+            "name": "Ginger, grated",
+            "q": "1-inch piece",
+            "grams": 8,
+            "note": ""
+          },
+          {
+            "id": "gch",
+            "key": "greenchilli",
+            "name": "Green chilli, slit",
+            "q": "1",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "tomato",
+            "key": "tomato",
+            "name": "Tomatoes, chopped",
+            "q": "2 medium",
+            "grams": 200,
+            "note": ""
+          },
+          {
+            "id": "turmeric",
+            "key": "turmeric",
+            "name": "Turmeric",
+            "q": "¼ tsp",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "chillip",
+            "key": "chilli",
+            "name": "Red chilli powder",
+            "q": "1 tsp",
+            "grams": 2.5,
+            "note": ""
+          },
+          {
+            "id": "corp",
+            "key": "coriander_p",
+            "name": "Coriander powder",
+            "q": "1½ tsp",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "garam",
+            "key": "garam",
+            "name": "Garam masala",
+            "q": "½ tsp",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "salt2",
+            "key": "salt",
+            "name": "Salt",
+            "q": "1 tsp",
+            "grams": 6,
+            "note": "adjust"
+          },
+          {
+            "id": "coriander",
+            "key": "coriander",
+            "name": "Coriander leaves, chopped",
+            "q": "2 tbsp",
+            "grams": 6,
+            "note": ""
+          },
+          {
+            "id": "lemon",
+            "key": "lemon",
+            "name": "Lemon juice",
+            "q": "1 tsp",
+            "grams": 5,
+            "note": "optional",
+            "optional": true
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Check and rinse. Drain {{peas}} soaked peas, smell them (sour or slimy means discard), and rinse 2–3 times.",
+      "Pressure-cook (3–5 whistles). Cook the peas with {{water}} water (to cover by about 2 cm), {{salt1}} salt and {{turmeric1}} turmeric on medium for 3–4 whistles; let the pressure drop on its own. A pea should mash easily between your fingers; if not, cook 1–2 whistles more. Keep the cooking water.",
+      "Masala (12 min). Heat {{oil}} oil, add {{cumin}} cumin, then {{onion}} onion and fry until golden, 6–8 minutes. Add {{ggarlic}} garlic, {{gginger}} ginger and {{gch}} green chilli for 1 minute.",
+      "Tomatoes (5 min). Add {{tomato}} tomatoes, {{turmeric}} turmeric, {{chillip}} chilli powder, {{corp}} coriander powder and {{salt2}} salt; cook until soft and the oil starts to separate.",
+      "Simmer (10 min). Add the peas with enough cooking water for a thick gravy and simmer 8–10 minutes. Mash a ladleful against the pan to thicken.",
+      "Finish with {{garam}} garam masala, {{coriander}} coriander and {{lemon}} lemon juice."
+    ],
+    "sources": [
+      {
+        "title": "Saffron Trail: dried green peas (vatana) curry",
+        "url": "https://www.saffrontrail.com/?p=23912",
+        "scope": "Soaked dried green peas pressure-cooked, then finished with sautéed onion, tomato and curry powder; served with rice or rotis.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Tarla Dalal: dried green peas and tomato curry",
+        "url": "https://tarladalal.com/dried-green-peas-and-tomato-curry-38953r",
+        "scope": "Soak overnight; onions fried golden, ginger-garlic paste, tomatoes; about 4 whistles in the pressure cooker.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Dassana's Veg Recipes: ragda",
+        "url": "https://www.vegrecipesofindia.com/?p=1668",
+        "scope": "Dried green peas can replace white peas; cook soaked peas in a pressure cooker, since a pan can take an hour or more.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "timing": {
+      "cookMinutes": [
+        45,
+        55
+      ],
+      "prerequisiteMinutes": [
+        480,
+        720
+      ],
+      "prerequisites": [
+        "Soak the dried peas 8–12 hours (overnight)."
+      ],
+      "basis": "Editorial estimate; not measured",
+      "note": "Older peas take longer to soften."
+    },
+    "serve": "Phulka, chapati or rice, with onion and lemon.",
+    "yield_": 6
+  },
+  {
+    "region": "",
+    "cuisine": "Indian",
+    "tags": [],
+    "tips": [],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "id": "green-peas-usli",
+    "title": "Green peas usli (pattani sundal)",
+    "aliases": [
+      "batani usli",
+      "pattani sundal",
+      "peas sundal",
+      "dried peas sundal"
+    ],
+    "sub": "tempered dried peas with coconut · breakfast or snack",
+    "course": "snack",
+    "yield": 4,
+    "servingLabel": "about ¾ cup",
+    "time": "15 min with cooked peas",
+    "uses": "1 burner (plus pressure cooker if the peas aren't cooked yet)",
+    "keeps": "Best the same day; fridge up to 2 days.",
+    "intro": "A dry South Indian stir-fry of cooked dried peas with mustard, curry leaves and coconut. Fresh green peas are too wet for it; use dried peas.",
+    "ingredients": [
+      {
+        "group": "Usli",
+        "items": [
+          {
+            "id": "peas",
+            "key": "gpeas",
+            "name": "Dried green peas, soaked and pressure-cooked until just soft",
+            "q": "200 g dry (about 450 g cooked)",
+            "grams": 200,
+            "note": "drained well"
+          },
+          {
+            "id": "oil",
+            "key": "oil",
+            "name": "Oil (coconut oil is traditional)",
+            "q": "1 tbsp",
+            "grams": 13,
+            "note": ""
+          },
+          {
+            "id": "mustard",
+            "key": "mustard",
+            "name": "Mustard seeds",
+            "q": "1 tsp",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "urad",
+            "key": "uraddal",
+            "name": "Urad dal",
+            "q": "1 tsp",
+            "grams": 5,
+            "note": "optional",
+            "optional": true
+          },
+          {
+            "id": "hing",
+            "key": "hing",
+            "name": "Hing",
+            "q": "a pinch",
+            "grams": 0.2,
+            "note": ""
+          },
+          {
+            "id": "redch",
+            "key": "redchilli",
+            "name": "Dry red chillies, broken",
+            "q": "2",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "gch",
+            "key": "greenchilli",
+            "name": "Green chillies, slit",
+            "q": "2",
+            "grams": 6,
+            "note": ""
+          },
+          {
+            "id": "curry",
+            "key": "curryleaves",
+            "name": "Curry leaves",
+            "q": "1 sprig",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "coconut",
+            "key": "coconut",
+            "name": "Grated coconut",
+            "q": "¼ cup",
+            "grams": 20,
+            "note": ""
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "½ tsp",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "lemon",
+            "key": "lemon",
+            "name": "Lemon juice",
+            "q": "1 tsp",
+            "grams": 5,
+            "note": "optional",
+            "optional": true
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Peas. Use {{peas}} peas cooked until soft but whole (2–3 whistles after soaking), drained well. Wet peas make mushy usli.",
+      "Temper (1 min). Heat {{oil}} oil, add {{mustard}} mustard seeds; when they pop add {{urad}} urad dal, {{hing}} hing, {{redch}} red chillies, {{gch}} green chillies and {{curry}} curry leaves.",
+      "Toss (3 min). Add the peas and {{salt}} salt and toss on medium until hot and coated.",
+      "Finish. Turn off the heat, mix in {{coconut}} coconut and {{lemon}} lemon juice."
+    ],
+    "sources": [
+      {
+        "title": "Cook with Kushi: pattani sundal (batani usli)",
+        "url": "https://www.cookwithkushi.com/?p=5081",
+        "scope": "Soaked, pressure-cooked dried green peas tempered with mustard, urad dal, red and green chillies, hing and curry leaves, finished with coconut.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Chitra's Food Book: green peas sundal",
+        "url": "https://www.chitrasfoodbook.com/2017/10/pattani-sundal-recipe-green-peas-sundal.html",
+        "scope": "Dried green peas soaked about 8 hours, cooked, tempered and finished with coconut.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Cooking and Me: green peas sundal",
+        "url": "https://www.cookingandme.com/green-peas-sundal-navratri-sundal/",
+        "scope": "Use dried peas; fresh peas hold too much moisture for sundal.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "timing": {
+      "cookMinutes": [
+        10,
+        15
+      ],
+      "prerequisiteMinutes": [
+        480,
+        720
+      ],
+      "prerequisites": [
+        "Soak the peas overnight and pressure-cook until just soft."
+      ],
+      "basis": "Editorial estimate with cooked peas; not measured",
+      "note": ""
+    },
+    "serve": "On its own, with tea, or beside rice and rasam.",
+    "yield_": 4
+  },
+  {
+    "region": "",
+    "cuisine": "Indian",
+    "tags": [],
+    "tips": [
+      {
+        "title": "Old chana",
+        "text": "Chana past their best take much longer to soften; buy fresh stock and add whistles if needed."
+      }
+    ],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "id": "kala-chana-masala",
+    "title": "Kala chana masala (black chickpea curry)",
+    "aliases": [
+      "black chana",
+      "kala chana",
+      "black chickpeas curry",
+      "desi chana",
+      "kadale kaalu"
+    ],
+    "sub": "Punjabi-style black chickpea curry · high fibre",
+    "course": "main",
+    "yield": 4,
+    "servingLabel": "about 1 cup",
+    "time": "50–60 min + overnight soak",
+    "uses": "Pressure cooker, 1 burner",
+    "keeps": "Fridge 1–2 days (Dassana's advice); reheat until steaming.",
+    "intro": "Black chickpeas have thicker skins and stay firmer than kabuli chana; soak them well and pressure-cook longer.",
+    "ingredients": [
+      {
+        "group": "Chana",
+        "items": [
+          {
+            "id": "chana",
+            "key": "kalachana",
+            "name": "Kala chana (black chickpeas)",
+            "q": "1 cup / 170 g dry",
+            "grams": 170,
+            "note": "soaked 8–9 hours in 2½ cups water"
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water, for cooking",
+            "q": "about 600 ml",
+            "grams": 0,
+            "note": ""
+          },
+          {
+            "id": "salt1",
+            "key": "salt",
+            "name": "Salt, for cooking",
+            "q": "½ tsp",
+            "grams": 3,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "group": "Masala",
+        "items": [
+          {
+            "id": "oil",
+            "key": "oil",
+            "name": "Oil",
+            "q": "2 tbsp",
+            "grams": 26,
+            "note": ""
+          },
+          {
+            "id": "cumin",
+            "key": "cumin",
+            "name": "Cumin seeds",
+            "q": "1 tsp",
+            "grams": 2,
+            "note": ""
+          },
+          {
+            "id": "onion",
+            "key": "onion",
+            "name": "Onions, finely chopped",
+            "q": "2 medium",
+            "grams": 220,
+            "note": ""
+          },
+          {
+            "id": "ggarlic",
+            "key": "garlic",
+            "name": "Garlic, grated",
+            "q": "4 cloves",
+            "grams": 12,
+            "note": ""
+          },
+          {
+            "id": "gginger",
+            "key": "ginger",
+            "name": "Ginger, grated",
+            "q": "1-inch piece",
+            "grams": 8,
+            "note": ""
+          },
+          {
+            "id": "gch",
+            "key": "greenchilli",
+            "name": "Green chilli, slit",
+            "q": "1",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "tomato",
+            "key": "tomato",
+            "name": "Tomatoes, chopped",
+            "q": "2 medium",
+            "grams": 200,
+            "note": ""
+          },
+          {
+            "id": "turmeric",
+            "key": "turmeric",
+            "name": "Turmeric",
+            "q": "¼ tsp",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "chillip",
+            "key": "chilli",
+            "name": "Red chilli powder",
+            "q": "1 tsp",
+            "grams": 2.5,
+            "note": ""
+          },
+          {
+            "id": "corp",
+            "key": "coriander_p",
+            "name": "Coriander powder",
+            "q": "1½ tsp",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "garam",
+            "key": "garam",
+            "name": "Garam masala",
+            "q": "½ tsp",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "amchur",
+            "key": "amchur",
+            "name": "Amchur",
+            "q": "½ tsp",
+            "grams": 1,
+            "note": "optional",
+            "optional": true
+          },
+          {
+            "id": "salt2",
+            "key": "salt",
+            "name": "Salt",
+            "q": "½ tsp",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "coriander",
+            "key": "coriander",
+            "name": "Coriander leaves",
+            "q": "2 tbsp",
+            "grams": 6,
+            "note": ""
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Cook the chana (6–8 whistles). Drain and rinse {{chana}} soaked chana; pressure-cook with {{water}} water and {{salt1}} salt for about 6–8 whistles on medium, until one presses soft. Keep the water.",
+      "Masala (12 min). Heat {{oil}} oil, add {{cumin}} cumin, then {{onion}} onion until golden; add {{ggarlic}} garlic, {{gginger}} ginger and {{gch}} chilli for a minute.",
+      "Tomatoes (5 min). Add {{tomato}} tomatoes, {{turmeric}} turmeric, {{chillip}} chilli powder, {{corp}} coriander powder and {{salt2}} salt; cook until the oil separates.",
+      "Simmer (10–15 min). Add the chana with some cooking water and simmer until thick; mash a few chana to thicken.",
+      "Finish with {{garam}} garam masala, {{amchur}} amchur and {{coriander}} coriander."
+    ],
+    "sources": [
+      {
+        "title": "Dassana's Veg Recipes: kala chana (Punjabi black chickpeas curry)",
+        "url": "https://www.vegrecipesofindia.com/kala-chana-curry-recipe/",
+        "scope": "1 cup (172 g) soaked overnight in 2½ cups water, onion-tomato masala, garam masala and coriander; fresh chana cook better; leftovers fridge 1–2 days.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Swasthi's Recipes: kala chana",
+        "url": "https://indianhealthyrecipes.com/kala-chana",
+        "scope": "Black chickpeas precooked until tender, then simmered in onion-tomato masala.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Hebbar's Kitchen: kala chana (black chana masala)",
+        "url": "https://hebbarskitchen.com/kala-chana-recipe-black-chana-masala/",
+        "scope": "Punjabi black chickpea curry, dry or gravy, served with roti or rice.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "timing": {
+      "cookMinutes": [
+        50,
+        60
+      ],
+      "prerequisiteMinutes": [
+        480,
+        540
+      ],
+      "prerequisites": [
+        "Soak the chana 8–9 hours (overnight)."
+      ],
+      "basis": "Editorial estimate; not measured",
+      "note": "Whistle count varies with the age of the chana."
+    },
+    "serve": "Rice, phulka or jeera rice.",
+    "yield_": 4
+  },
+  {
+    "region": "Karnataka",
+    "cuisine": "Indian",
+    "tags": [],
+    "tips": [],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "id": "alasande-saaru",
+    "title": "Alasande kaalu saaru (black-eyed bean curry)",
+    "aliases": [
+      "alasande",
+      "lobia curry",
+      "black eyed beans curry",
+      "chawli",
+      "cowpeas curry",
+      "alasande gassi"
+    ],
+    "sub": "Karnataka-style lobia curry · rice or rotis",
+    "course": "main",
+    "yield": 4,
+    "servingLabel": "about 1 cup",
+    "time": "40–50 min + 6–8 h soak",
+    "uses": "Pressure cooker, 1 burner",
+    "keeps": "Fridge 3–4 days; reheat until steaming.",
+    "intro": "Black-eyed beans (alasande) cook quicker than most whole beans. A short onion-tomato-coconut masala turns them into a saaru for rice.",
+    "ingredients": [
+      {
+        "group": "Beans",
+        "items": [
+          {
+            "id": "beans",
+            "key": "lobia",
+            "name": "Alasande (black-eyed beans)",
+            "q": "1 cup / 170 g dry",
+            "grams": 170,
+            "note": "soaked 6–8 hours"
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water, for cooking",
+            "q": "about 600 ml",
+            "grams": 0,
+            "note": ""
+          },
+          {
+            "id": "salt1",
+            "key": "salt",
+            "name": "Salt, for cooking",
+            "q": "½ tsp",
+            "grams": 3,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "group": "Masala",
+        "items": [
+          {
+            "id": "oil",
+            "key": "oil",
+            "name": "Oil",
+            "q": "1½ tbsp",
+            "grams": 20,
+            "note": ""
+          },
+          {
+            "id": "mustard",
+            "key": "mustard",
+            "name": "Mustard seeds",
+            "q": "1 tsp",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "curry",
+            "key": "curryleaves",
+            "name": "Curry leaves",
+            "q": "1 sprig",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "onion",
+            "key": "onion",
+            "name": "Onion, finely chopped",
+            "q": "1 large",
+            "grams": 150,
+            "note": ""
+          },
+          {
+            "id": "garlic",
+            "key": "garlic",
+            "name": "Garlic, crushed",
+            "q": "4 cloves",
+            "grams": 12,
+            "note": ""
+          },
+          {
+            "id": "tomato",
+            "key": "tomato",
+            "name": "Tomato, chopped",
+            "q": "1 large",
+            "grams": 150,
+            "note": ""
+          },
+          {
+            "id": "turmeric",
+            "key": "turmeric",
+            "name": "Turmeric",
+            "q": "½ tsp",
+            "grams": 1.5,
+            "note": ""
+          },
+          {
+            "id": "chillip",
+            "key": "chilli",
+            "name": "Red chilli powder",
+            "q": "1 tsp",
+            "grams": 2.5,
+            "note": ""
+          },
+          {
+            "id": "corp",
+            "key": "coriander_p",
+            "name": "Coriander powder",
+            "q": "2 tsp",
+            "grams": 4,
+            "note": ""
+          },
+          {
+            "id": "coconut",
+            "key": "coconut",
+            "name": "Grated coconut",
+            "q": "3 tbsp",
+            "grams": 20,
+            "note": ""
+          },
+          {
+            "id": "tamarind",
+            "key": "tamarind",
+            "name": "Tamarind pulp",
+            "q": "1 tsp",
+            "grams": 5,
+            "note": "optional",
+            "optional": true
+          },
+          {
+            "id": "jaggery",
+            "key": "jaggery",
+            "name": "Jaggery",
+            "q": "1 tsp",
+            "grams": 5,
+            "note": "optional",
+            "optional": true
+          },
+          {
+            "id": "salt2",
+            "key": "salt",
+            "name": "Salt",
+            "q": "½ tsp",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "coriander",
+            "key": "coriander",
+            "name": "Coriander leaves",
+            "q": "2 tbsp",
+            "grams": 6,
+            "note": ""
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Cook the beans (2–3 whistles). Rinse {{beans}} soaked beans and pressure-cook with {{water}} water and {{salt1}} salt for 2–3 whistles, until soft but whole. Keep the cooking water.",
+      "Temper. Heat {{oil}} oil; add {{mustard}} mustard and {{curry}} curry leaves, then {{onion}} onion and {{garlic}} garlic; fry until soft and light brown.",
+      "Masala (5 min). Add {{tomato}} tomato, {{turmeric}} turmeric, {{chillip}} chilli powder and {{corp}} coriander powder; cook until the tomato breaks down.",
+      "Simmer (10 min). Add the beans with their water, {{coconut}} coconut, {{tamarind}} tamarind, {{jaggery}} jaggery and {{salt2}} salt; simmer to a pourable gravy.",
+      "Finish with {{coriander}} coriander."
+    ],
+    "sources": [
+      {
+        "title": "Archana's Kitchen: alasande kaalu saaru (Malnad style)",
+        "url": "https://archanaskitchen.com/alasande-kaalu-saaru-recipe-malnad-style-black-eyed-beans-curry",
+        "scope": "Soaked black-eyed beans pressure-cooked and simmered with onion, tomato, turmeric, chilli and coriander powder and a masala; served with rice.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Swasthi's Recipes: black eyed peas curry",
+        "url": "https://www.indianhealthyrecipes.com/alasandalu-kura-bobbarlu-curry-recipe/",
+        "scope": "1 cup dry beans is about 2¾ cups soaked; add the bean cooking water to the curry.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Swayampaaka: alasande kaalu usli",
+        "url": "https://swayampaaka.com/usli-or-sundal-recipes/alasandekalu-usli-black-eyed-beans-curry",
+        "scope": "Karnataka home preparation of cooked alasande with a mustard tempering.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "timing": {
+      "cookMinutes": [
+        40,
+        50
+      ],
+      "prerequisiteMinutes": [
+        360,
+        480
+      ],
+      "prerequisites": [
+        "Soak the beans 6–8 hours."
+      ],
+      "basis": "Editorial estimate; not measured",
+      "note": ""
+    },
+    "serve": "Rice, or jolada rotti or chapati.",
+    "yield_": 4
+  },
+  {
+    "region": "Karnataka",
+    "cuisine": "Indian",
+    "tags": [],
+    "tips": [
+      {
+        "title": "Hurali palya from the leftover gram",
+        "text": "Temper mustard, curry leaves and onion, add the drained cooked gram, salt, grated coconut and lemon."
+      }
+    ],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "id": "hurali-saaru",
+    "title": "Hurali saaru (horse gram rasam)",
+    "aliases": [
+      "huruli saaru",
+      "kudu saaru",
+      "horsegram rasam",
+      "kollu rasam",
+      "hurali"
+    ],
+    "sub": "Karnataka horse gram rasam · the gram makes a palya too",
+    "course": "soup",
+    "yield": 4,
+    "servingLabel": "about 1 cup saaru",
+    "time": "45–55 min + 2–8 h soak",
+    "uses": "Pressure cooker, 1 burner",
+    "keeps": "Fridge 3–4 days; Hebbar notes it tastes better the next day.",
+    "intro": "Horse gram is cooked with plenty of water; the thin stock becomes the saaru and the cooked gram can stay in it or be turned into a quick palya.",
+    "ingredients": [
+      {
+        "group": "Horse gram",
+        "items": [
+          {
+            "id": "gram",
+            "key": "hurali",
+            "name": "Horse gram (hurali)",
+            "q": "½ cup / 100 g",
+            "grams": 100,
+            "note": "soaked 2–8 hours"
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water, for cooking",
+            "q": "about 1 litre",
+            "grams": 0,
+            "note": ""
+          },
+          {
+            "id": "turmeric",
+            "key": "turmeric",
+            "name": "Turmeric",
+            "q": "¼ tsp",
+            "grams": 1,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "group": "Saaru",
+        "items": [
+          {
+            "id": "tomato",
+            "key": "tomato",
+            "name": "Tomato, chopped",
+            "q": "1",
+            "grams": 100,
+            "note": ""
+          },
+          {
+            "id": "tamarind",
+            "key": "tamarind",
+            "name": "Tamarind pulp",
+            "q": "1 tsp",
+            "grams": 5,
+            "note": ""
+          },
+          {
+            "id": "rasam",
+            "key": "sambarpowder",
+            "name": "Rasam or sambar powder",
+            "q": "2 tsp",
+            "grams": 6,
+            "note": ""
+          },
+          {
+            "id": "jaggery",
+            "key": "jaggery",
+            "name": "Jaggery",
+            "q": "1 tsp",
+            "grams": 5,
+            "note": ""
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "1 tsp",
+            "grams": 6,
+            "note": ""
+          },
+          {
+            "id": "coconut",
+            "key": "coconut",
+            "name": "Grated coconut",
+            "q": "2 tbsp",
+            "grams": 12,
+            "note": "optional",
+            "optional": true
+          }
+        ]
+      },
+      {
+        "group": "Tempering",
+        "items": [
+          {
+            "id": "oil",
+            "key": "ghee",
+            "name": "Ghee or oil",
+            "q": "1 tbsp",
+            "grams": 13,
+            "note": ""
+          },
+          {
+            "id": "mustard",
+            "key": "mustard",
+            "name": "Mustard seeds",
+            "q": "1 tsp",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "garlic",
+            "key": "garlic",
+            "name": "Garlic, crushed",
+            "q": "5 cloves",
+            "grams": 15,
+            "note": ""
+          },
+          {
+            "id": "redch",
+            "key": "redchilli",
+            "name": "Dry red chilli",
+            "q": "1",
+            "grams": 0.5,
+            "note": ""
+          },
+          {
+            "id": "hing",
+            "key": "hing",
+            "name": "Hing",
+            "q": "a pinch",
+            "grams": 0.2,
+            "note": ""
+          },
+          {
+            "id": "curry",
+            "key": "curryleaves",
+            "name": "Curry leaves",
+            "q": "1 sprig",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "coriander",
+            "key": "coriander",
+            "name": "Coriander leaves",
+            "q": "2 tbsp",
+            "grams": 6,
+            "note": ""
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Cook the gram (5–6 whistles). Pick out stones, rinse {{gram}} horse gram and pressure-cook with {{water}} water and {{turmeric}} turmeric for 5–6 whistles, until soft. (Soaking 2 hours or more shortens this.)",
+      "Stock. Strain off the cooking liquid for the saaru. Mash a ladleful of gram and return it; keep the rest whole or use it for palya.",
+      "Boil (8 min). Add {{tomato}} tomato, {{tamarind}} tamarind, {{rasam}} rasam powder, {{jaggery}} jaggery, {{salt}} salt and {{coconut}} coconut to the stock; boil until the tomato is soft and the raw smell of tamarind goes.",
+      "Temper. Heat {{oil}} ghee, add {{mustard}} mustard, {{garlic}} garlic, {{redch}} red chilli, {{hing}} hing and {{curry}} curry leaves; pour over the saaru and add {{coriander}} coriander."
+    ],
+    "sources": [
+      {
+        "title": "Hebbar's Kitchen: huruli saaru (kudu saaru)",
+        "url": "https://hebbarskitchen.com/huruli-saaru/",
+        "scope": "Karnataka horse gram rasam with garlic tempering; soaking 2 hours cuts cooking time; the boiled gram can become poriyal; tastes good the next day.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Archana's Kitchen: kollu rasam",
+        "url": "https://www.archanaskitchen.com/kollu-rasam-recipe-nourishing-horsegram-stew",
+        "scope": "Soak horse gram 4 hours or overnight; the whole cooked gram can stay in the rasam.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Cook with Smile (Smitha Kalluraya): horse gram rasam",
+        "url": "https://smithakalluraya.com/horsegram-rasam-recipe-huruli-saaru-kollu-rasam/",
+        "scope": "Karnataka-style horse gram rasam; sprouted horse gram also works.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "timing": {
+      "cookMinutes": [
+        45,
+        55
+      ],
+      "prerequisiteMinutes": [
+        120,
+        480
+      ],
+      "prerequisites": [
+        "Soak the horse gram 2–8 hours."
+      ],
+      "basis": "Editorial estimate; not measured",
+      "note": ""
+    },
+    "serve": "Hot rice with ghee, and papad.",
+    "yield_": 4
+  },
+  {
+    "region": "",
+    "cuisine": "Indian",
+    "tags": [],
+    "tips": [],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "id": "masoor-dal-tadka",
+    "title": "Masoor dal tadka (red lentil dal)",
+    "aliases": [
+      "masoor dal",
+      "red lentil dal",
+      "dal fry masoor",
+      "masoor"
+    ],
+    "sub": "quickest dal · no soaking",
+    "course": "main",
+    "yield": 4,
+    "servingLabel": "about 1 cup",
+    "time": "25–30 min",
+    "uses": "Pressure cooker or pot, 1 burner",
+    "keeps": "Fridge 3–4 days; thin with hot water when reheating.",
+    "intro": "Split red lentils cook soft in minutes without soaking; a cumin-garlic tadka gives the flavour.",
+    "ingredients": [
+      {
+        "group": "Dal",
+        "items": [
+          {
+            "id": "dal",
+            "key": "masoor",
+            "name": "Masoor dal (split red lentils), rinsed",
+            "q": "1 cup / 200 g",
+            "grams": 200,
+            "note": ""
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water",
+            "q": "about 750 ml",
+            "grams": 0,
+            "note": ""
+          },
+          {
+            "id": "turmeric",
+            "key": "turmeric",
+            "name": "Turmeric",
+            "q": "¼ tsp",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "tomato",
+            "key": "tomato",
+            "name": "Tomato, chopped",
+            "q": "1",
+            "grams": 100,
+            "note": ""
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "1 tsp",
+            "grams": 6,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "group": "Tadka",
+        "items": [
+          {
+            "id": "ghee",
+            "key": "ghee",
+            "name": "Ghee or oil",
+            "q": "1½ tbsp",
+            "grams": 20,
+            "note": ""
+          },
+          {
+            "id": "cumin",
+            "key": "cumin",
+            "name": "Cumin seeds",
+            "q": "1 tsp",
+            "grams": 2,
+            "note": ""
+          },
+          {
+            "id": "garlic",
+            "key": "garlic",
+            "name": "Garlic, chopped",
+            "q": "4 cloves",
+            "grams": 12,
+            "note": ""
+          },
+          {
+            "id": "onion",
+            "key": "onion",
+            "name": "Onion, finely chopped",
+            "q": "1 small",
+            "grams": 80,
+            "note": ""
+          },
+          {
+            "id": "redch",
+            "key": "redchilli",
+            "name": "Dry red chillies",
+            "q": "2",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "hing",
+            "key": "hing",
+            "name": "Hing",
+            "q": "a pinch",
+            "grams": 0.2,
+            "note": ""
+          },
+          {
+            "id": "chillip",
+            "key": "kashmiri",
+            "name": "Kashmiri chilli powder",
+            "q": "½ tsp",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "coriander",
+            "key": "coriander",
+            "name": "Coriander leaves",
+            "q": "2 tbsp",
+            "grams": 6,
+            "note": ""
+          },
+          {
+            "id": "lemon",
+            "key": "lemon",
+            "name": "Lemon juice",
+            "q": "1 tsp",
+            "grams": 5,
+            "note": "optional",
+            "optional": true
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Cook the dal (2 whistles or 15 min). Cook {{dal}} masoor dal with {{water}} water, {{turmeric}} turmeric, {{tomato}} tomato and {{salt}} salt for 2 whistles, or simmer covered in a pot for about 15 minutes until soft. Whisk smooth.",
+      "Tadka (3 min). Heat {{ghee}} ghee; add {{cumin}} cumin, {{garlic}} garlic and {{onion}} onion and fry until golden; add {{redch}} red chillies, {{hing}} hing and, off the heat, {{chillip}} chilli powder.",
+      "Pour the tadka over the dal, simmer 2 minutes, and finish with {{coriander}} coriander and {{lemon}} lemon."
+    ],
+    "sources": [
+      {
+        "title": "Swasthi's Recipes: masoor dal",
+        "url": "https://indianhealthyrecipes.com/masoor-dal-recipe",
+        "scope": "Split red lentils, quick-cooking, with stovetop and pressure cooker methods and a spiced tempering.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Tarla Dalal: masoor dal tadka",
+        "url": "https://tarladalal.com/masoor-dal-tadka-40586r",
+        "scope": "Masoor dal tadka in the pressure cooker, about 40 minutes for 4 servings.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Foodess: masoor dal with tadka",
+        "url": "https://foodess.com/masoor-lentil-dal-recipe/",
+        "scope": "Masoor dal means split red lentils; cook the lentils, then add a tadka.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "timing": {
+      "cookMinutes": [
+        25,
+        30
+      ],
+      "prerequisiteMinutes": [
+        0,
+        0
+      ],
+      "prerequisites": [],
+      "basis": "Editorial raw-start estimate; not measured",
+      "note": ""
+    },
+    "serve": "Rice or phulka.",
+    "yield_": 4
+  },
+  {
+    "region": "",
+    "cuisine": "Indian",
+    "tags": [],
+    "tips": [
+      {
+        "title": "Sprout safety",
+        "text": "Use sprouts that smell fresh; discard any that smell sour or feel slimy, and cook sprouts rather than eating them raw if unsure."
+      }
+    ],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "id": "matki-usal",
+    "title": "Matki usal (sprouted moth bean curry)",
+    "aliases": [
+      "matki",
+      "moth beans",
+      "matki chi usal",
+      "matki sprouts curry",
+      "madike kaalu"
+    ],
+    "sub": "sprouted matki in a light masala · rotis, bhakri or pav",
+    "course": "main",
+    "yield": 4,
+    "servingLabel": "about ¾ cup",
+    "time": "30–35 min + 1–2 days sprouting",
+    "uses": "Pressure cooker or pot, 1 burner",
+    "keeps": "Fridge 2–3 days.",
+    "intro": "Matki is soaked and sprouted for a day or two, then cooked briefly; sprouts cook in about one whistle.",
+    "ingredients": [
+      {
+        "group": "Usal",
+        "items": [
+          {
+            "id": "matki",
+            "key": "matki",
+            "name": "Matki (moth beans), sprouted",
+            "q": "250 g sprouts (from about 125 g dry)",
+            "grams": 125,
+            "note": "weight given is dry beans; sprouts roughly double"
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water",
+            "q": "about 400 ml",
+            "grams": 0,
+            "note": ""
+          },
+          {
+            "id": "oil",
+            "key": "oil",
+            "name": "Oil",
+            "q": "1½ tbsp",
+            "grams": 20,
+            "note": ""
+          },
+          {
+            "id": "mustard",
+            "key": "mustard",
+            "name": "Mustard seeds",
+            "q": "½ tsp",
+            "grams": 2,
+            "note": ""
+          },
+          {
+            "id": "cumin",
+            "key": "cumin",
+            "name": "Cumin seeds",
+            "q": "½ tsp",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "curry",
+            "key": "curryleaves",
+            "name": "Curry leaves",
+            "q": "1 sprig",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "hing",
+            "key": "hing",
+            "name": "Hing",
+            "q": "a pinch",
+            "grams": 0.2,
+            "note": ""
+          },
+          {
+            "id": "onion",
+            "key": "onion",
+            "name": "Onion, finely chopped",
+            "q": "1",
+            "grams": 110,
+            "note": ""
+          },
+          {
+            "id": "garlic",
+            "key": "garlic",
+            "name": "Garlic, crushed",
+            "q": "3 cloves",
+            "grams": 9,
+            "note": ""
+          },
+          {
+            "id": "tomato",
+            "key": "tomato",
+            "name": "Tomato, chopped",
+            "q": "1",
+            "grams": 100,
+            "note": ""
+          },
+          {
+            "id": "turmeric",
+            "key": "turmeric",
+            "name": "Turmeric",
+            "q": "¼ tsp",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "chillip",
+            "key": "chilli",
+            "name": "Red chilli powder",
+            "q": "1 tsp",
+            "grams": 2.5,
+            "note": ""
+          },
+          {
+            "id": "goda",
+            "key": "garam",
+            "name": "Goda masala (or garam masala)",
+            "q": "1 tsp",
+            "grams": 2,
+            "note": "goda masala is traditional; garam masala tastes different"
+          },
+          {
+            "id": "potato",
+            "key": "potato",
+            "name": "Potato, cubed",
+            "q": "1 small",
+            "grams": 80,
+            "note": "optional",
+            "optional": true
+          },
+          {
+            "id": "jaggery",
+            "key": "jaggery",
+            "name": "Jaggery",
+            "q": "1 tsp",
+            "grams": 5,
+            "note": "optional",
+            "optional": true
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "1 tsp",
+            "grams": 6,
+            "note": ""
+          },
+          {
+            "id": "coconut",
+            "key": "coconut",
+            "name": "Grated coconut",
+            "q": "2 tbsp",
+            "grams": 12,
+            "note": "optional",
+            "optional": true
+          },
+          {
+            "id": "coriander",
+            "key": "coriander",
+            "name": "Coriander leaves",
+            "q": "2 tbsp",
+            "grams": 6,
+            "note": ""
+          },
+          {
+            "id": "lemon",
+            "key": "lemon",
+            "name": "Lemon juice",
+            "q": "1 tsp",
+            "grams": 5,
+            "note": ""
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Sprouts. Rinse {{matki}} matki sprouts; they should smell fresh. (To sprout: soak dry matki 8–10 hours, drain, and keep covered in a damp cloth for 1–2 days, rinsing once a day.)",
+      "Temper (2 min). Heat {{oil}} oil; add {{mustard}} mustard, {{cumin}} cumin, {{curry}} curry leaves and {{hing}} hing, then {{onion}} onion and {{garlic}} garlic until soft.",
+      "Masala (4 min). Add {{tomato}} tomato, {{turmeric}} turmeric, {{chillip}} chilli powder and {{goda}} goda masala; cook until soft.",
+      "Cook (1 whistle or 15 min). Add the sprouts, {{potato}} potato, {{jaggery}} jaggery, {{salt}} salt and {{water}} water; pressure-cook 1 whistle, or simmer covered until the sprouts are tender but not mushy.",
+      "Finish with {{coconut}} coconut, {{coriander}} coriander and {{lemon}} lemon."
+    ],
+    "sources": [
+      {
+        "title": "Dassana's Veg Recipes: matki usal",
+        "url": "https://www.vegrecipesofindia.com/?p=38003",
+        "scope": "Sprouted moth beans with mustard, cumin and curry-leaf tempering and goda masala (no direct substitute); sprouts must smell fresh.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Spice Up the Curry: matki usal",
+        "url": "https://www.spiceupthecurry.com/?p=13464",
+        "scope": "Sprout matki a day or two ahead; optional potato; ready in about 30 minutes once sprouted.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Dassana's Veg Recipes: usal",
+        "url": "https://www.vegrecipesofindia.com/?p=3516",
+        "scope": "Moth bean sprouts need about 1 whistle on medium in a stovetop pressure cooker.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "timing": {
+      "cookMinutes": [
+        30,
+        35
+      ],
+      "prerequisiteMinutes": [
+        1440,
+        2880
+      ],
+      "prerequisites": [
+        "Soak and sprout the matki 1–2 days ahead (or buy sprouts)."
+      ],
+      "basis": "Editorial estimate once sprouted; not measured",
+      "note": ""
+    },
+    "serve": "Chapati, jolada rotti, pav or rice.",
+    "yield_": 4
+  },
+  {
+    "region": "Karnataka",
+    "cuisine": "Indian",
+    "tags": [],
+    "tips": [],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "id": "hesarukalu-usli",
+    "title": "Hesarukalu usli (whole green moong usli)",
+    "aliases": [
+      "hesaru kaalu usli",
+      "green gram usli",
+      "moong sundal",
+      "hesarukalu",
+      "whole moong usli"
+    ],
+    "sub": "Karnataka green gram stir-fry · breakfast or snack",
+    "course": "snack",
+    "yield": 3,
+    "servingLabel": "about ¾ cup",
+    "time": "20 min + 6–8 h soak",
+    "uses": "Pressure cooker or pot, 1 burner",
+    "keeps": "Best the same day; fridge up to 2 days.",
+    "intro": "Soaked whole moong, cooked until just tender and tempered with cumin, ginger and chilli, then finished with coconut and lemon. Sprouted moong works too.",
+    "ingredients": [
+      {
+        "group": "Usli",
+        "items": [
+          {
+            "id": "moong",
+            "key": "wmoong",
+            "name": "Whole green moong",
+            "q": "¾ cup / 150 g dry",
+            "grams": 150,
+            "note": "soaked 6–8 hours"
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water, for cooking",
+            "q": "about 450 ml",
+            "grams": 0,
+            "note": ""
+          },
+          {
+            "id": "oil",
+            "key": "oil",
+            "name": "Oil",
+            "q": "1 tbsp",
+            "grams": 13,
+            "note": ""
+          },
+          {
+            "id": "mustard",
+            "key": "mustard",
+            "name": "Mustard seeds",
+            "q": "½ tsp",
+            "grams": 2,
+            "note": ""
+          },
+          {
+            "id": "cumin",
+            "key": "cumin",
+            "name": "Cumin seeds",
+            "q": "½ tsp",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "ginger",
+            "key": "ginger",
+            "name": "Ginger, crushed",
+            "q": "½-inch piece",
+            "grams": 4,
+            "note": ""
+          },
+          {
+            "id": "gch",
+            "key": "greenchilli",
+            "name": "Green chillies, crushed",
+            "q": "2",
+            "grams": 6,
+            "note": ""
+          },
+          {
+            "id": "hing",
+            "key": "hing",
+            "name": "Hing",
+            "q": "a pinch",
+            "grams": 0.2,
+            "note": ""
+          },
+          {
+            "id": "curry",
+            "key": "curryleaves",
+            "name": "Curry leaves",
+            "q": "1 sprig",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "turmeric",
+            "key": "turmeric",
+            "name": "Turmeric",
+            "q": "¼ tsp",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "¾ tsp",
+            "grams": 4.5,
+            "note": ""
+          },
+          {
+            "id": "jaggery",
+            "key": "jaggery",
+            "name": "Jaggery",
+            "q": "1 tsp",
+            "grams": 5,
+            "note": "optional",
+            "optional": true
+          },
+          {
+            "id": "coconut",
+            "key": "coconut",
+            "name": "Grated coconut",
+            "q": "3 tbsp",
+            "grams": 18,
+            "note": ""
+          },
+          {
+            "id": "coriander",
+            "key": "coriander",
+            "name": "Coriander leaves",
+            "q": "1 tbsp",
+            "grams": 4,
+            "note": ""
+          },
+          {
+            "id": "lemon",
+            "key": "lemon",
+            "name": "Lemon juice",
+            "q": "2 tsp",
+            "grams": 10,
+            "note": ""
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Cook the moong (1–2 whistles). Pressure-cook {{moong}} soaked moong with {{water}} water for 1–2 whistles, or simmer 15–20 minutes, until soft but holding shape. Drain well.",
+      "Temper (1 min). Heat {{oil}} oil; add {{mustard}} mustard and {{cumin}} cumin, then crushed {{ginger}} ginger and {{gch}} green chillies, {{hing}} hing, {{curry}} curry leaves and {{turmeric}} turmeric.",
+      "Toss (3 min). Add the moong, {{salt}} salt and {{jaggery}} jaggery; toss until hot.",
+      "Finish off the heat with {{coconut}} coconut, {{coriander}} coriander and {{lemon}} lemon juice."
+    ],
+    "sources": [
+      {
+        "title": "Swayampaaka: hesarukaalu usli",
+        "url": "https://swayampaaka.com/recipes/side-dishes/hesarukaalu-usli-green-gram-usli",
+        "scope": "Soaked green gram cooked and tempered with turmeric and curry leaves, finished with jaggery, coriander and lemon.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Boldsky: hesaru kaalu usli",
+        "url": "https://www.boldsky.com/recipes/hesaru-kaalu-usli",
+        "scope": "Crushed cumin, green chilli and ginger added to a mustard-hing-curry leaf tempering, then the boiled green gram.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Lakshmi Adugegalu: hesaru kaalu usli",
+        "url": "https://lakshmiadugegalu.blogspot.com/2019/08/hesaru-kaalu-usli-green-gram-or-moong.html",
+        "scope": "Green gram usli with fresh coconut, green chillies and ginger; sprouted gram can be used.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "timing": {
+      "cookMinutes": [
+        20,
+        25
+      ],
+      "prerequisiteMinutes": [
+        360,
+        480
+      ],
+      "prerequisites": [
+        "Soak the moong 6–8 hours."
+      ],
+      "basis": "Editorial estimate; not measured",
+      "note": ""
+    },
+    "serve": "Breakfast with tea, or beside rice and saaru.",
+    "yield_": 3
+  },
+  {
+    "region": "",
+    "cuisine": "Indian",
+    "tags": [],
+    "tips": [],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "id": "instant-ragi-dosa",
+    "title": "Instant ragi dosa",
+    "aliases": [
+      "ragi dosa",
+      "nachni dosa",
+      "finger millet dosa",
+      "ragi rava dosa",
+      "ragi dose"
+    ],
+    "sub": "no grinding, no fermenting · 20 minutes",
+    "course": "breakfast",
+    "yield": 2,
+    "servingLabel": "3–4 thin dosas",
+    "time": "20–30 min",
+    "uses": "Dosa tawa, 1 burner",
+    "keeps": "Batter keeps a few hours; cook dosas fresh.",
+    "intro": "Ragi flour, rava and rice flour in a thin, watery batter poured like rava dosa. Curd adds a little sourness and softness.",
+    "ingredients": [
+      {
+        "group": "Batter",
+        "items": [
+          {
+            "id": "ragi",
+            "key": "ragi",
+            "name": "Ragi flour",
+            "q": "½ cup / 60 g",
+            "grams": 60,
+            "note": ""
+          },
+          {
+            "id": "rava",
+            "key": "rava",
+            "name": "Rava (semolina)",
+            "q": "¼ cup / 45 g",
+            "grams": 45,
+            "note": "makes it crisper"
+          },
+          {
+            "id": "ricefl",
+            "key": "ricefl",
+            "name": "Rice flour",
+            "q": "¼ cup / 40 g",
+            "grams": 40,
+            "note": ""
+          },
+          {
+            "id": "curd",
+            "key": "curd",
+            "name": "Curd",
+            "q": "2 tbsp",
+            "grams": 30,
+            "note": ""
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water",
+            "q": "about 2 cups",
+            "grams": 0,
+            "note": "batter should be thin and runny"
+          },
+          {
+            "id": "onion",
+            "key": "onion",
+            "name": "Onion, finely chopped",
+            "q": "1 small",
+            "grams": 60,
+            "note": "optional",
+            "optional": true
+          },
+          {
+            "id": "gch",
+            "key": "greenchilli",
+            "name": "Green chilli, chopped",
+            "q": "1",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "ginger",
+            "key": "ginger",
+            "name": "Ginger, grated",
+            "q": "½ tsp",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "cumin",
+            "key": "cumin",
+            "name": "Cumin seeds",
+            "q": "½ tsp",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "curry",
+            "key": "curryleaves",
+            "name": "Curry leaves, chopped",
+            "q": "1 sprig",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "½ tsp",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "oil",
+            "key": "oil",
+            "name": "Oil, for the tawa",
+            "q": "1½ tbsp",
+            "grams": 20,
+            "note": ""
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Batter (2 min + 15 min rest). Mix {{ragi}} ragi flour, {{rava}} rava, {{ricefl}} rice flour, {{curd}} curd and {{salt}} salt with {{water}} water into a thin, lump-free batter. Stir in {{onion}} onion, {{gch}} chilli, {{ginger}} ginger, {{cumin}} cumin and {{curry}} curry leaves. Rest 15 minutes.",
+      "Heat the tawa. It must be hot before pouring; sprinkle water — it should sizzle away immediately.",
+      "Pour. Stir the batter (it settles), then pour from a height over the tawa to fill it lacily, starting from the edge. Fill big gaps with a little more batter.",
+      "Cook (2–3 min). Drizzle {{oil}} oil around and cook on medium until the edges lift and the base is crisp; fold and serve. Thin with water if later batches turn thick."
+    ],
+    "sources": [
+      {
+        "title": "Tarla Dalal: instant ragi rava dosa",
+        "url": "https://www.tarladalal.com/instant-ragi-rava-dosa-42933r",
+        "scope": "Ragi flour, semolina, rice flour and curd made into a thin batter; stir before each dosa; adjust thickness with water.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Swasthi's Recipes: ragi dosa",
+        "url": "https://www.indianhealthyrecipes.com/ragi-dosa-recipe/",
+        "scope": "Instant ragi dosa with ragi, rice flour and optional semolina, onion, chillies and curry leaves; rest the batter about 15 minutes.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "My Food Story: instant ragi dosa",
+        "url": "https://myfoodstory.com/instant-ragi-dosa/",
+        "scope": "Without rava the dosa is less crispy and more delicate.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "timing": {
+      "cookMinutes": [
+        20,
+        30
+      ],
+      "prerequisiteMinutes": [
+        0,
+        0
+      ],
+      "prerequisites": [],
+      "basis": "Editorial estimate for 6–8 dosas; not measured",
+      "note": ""
+    },
+    "serve": "Coconut chutney, chutney powder or sambar.",
+    "yield_": 2
+  },
+  {
+    "region": "",
+    "cuisine": "Indian",
+    "tags": [],
+    "tips": [
+      {
+        "title": "Washing spinach",
+        "text": "Swish in a big bowl of water, lift out, and repeat until no grit settles at the bottom."
+      }
+    ],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "id": "dal-palak",
+    "title": "Dal palak (spinach dal)",
+    "aliases": [
+      "palak dal",
+      "spinach dal",
+      "dal palak",
+      "keerai paruppu",
+      "soppu bele"
+    ],
+    "sub": "toor and moong dal with a big bunch of spinach",
+    "course": "main",
+    "yield": 4,
+    "servingLabel": "about 1 cup",
+    "time": "30–35 min",
+    "uses": "Pressure cooker, 1 burner",
+    "keeps": "Fridge 2–3 days; the spinach darkens.",
+    "intro": "Half toor, half moong dal gives a creamy base; a whole bunch of spinach wilts down to almost nothing.",
+    "ingredients": [
+      {
+        "group": "Dal",
+        "items": [
+          {
+            "id": "toor",
+            "key": "toor",
+            "name": "Toor dal",
+            "q": "¼ cup / 50 g",
+            "grams": 50,
+            "note": ""
+          },
+          {
+            "id": "moongdal",
+            "key": "moongdal",
+            "name": "Yellow moong dal",
+            "q": "¼ cup / 50 g",
+            "grams": 50,
+            "note": ""
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water",
+            "q": "about 600 ml",
+            "grams": 0,
+            "note": ""
+          },
+          {
+            "id": "turmeric",
+            "key": "turmeric",
+            "name": "Turmeric",
+            "q": "¼ tsp",
+            "grams": 1,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "group": "Spinach tadka",
+        "items": [
+          {
+            "id": "ghee",
+            "key": "ghee",
+            "name": "Ghee or oil",
+            "q": "1 tbsp",
+            "grams": 13,
+            "note": ""
+          },
+          {
+            "id": "cumin",
+            "key": "cumin",
+            "name": "Cumin seeds",
+            "q": "1 tsp",
+            "grams": 2,
+            "note": ""
+          },
+          {
+            "id": "garlic",
+            "key": "garlic",
+            "name": "Garlic, chopped",
+            "q": "5 cloves",
+            "grams": 15,
+            "note": ""
+          },
+          {
+            "id": "onion",
+            "key": "onion",
+            "name": "Onion, chopped",
+            "q": "1 small",
+            "grams": 80,
+            "note": ""
+          },
+          {
+            "id": "gch",
+            "key": "greenchilli",
+            "name": "Green chilli, slit",
+            "q": "1",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "tomato",
+            "key": "tomato",
+            "name": "Tomato, chopped",
+            "q": "1",
+            "grams": 100,
+            "note": ""
+          },
+          {
+            "id": "spinach",
+            "key": "spinach",
+            "name": "Spinach, washed well and chopped",
+            "q": "1 bunch / 250 g",
+            "grams": 250,
+            "note": ""
+          },
+          {
+            "id": "chillip",
+            "key": "chilli",
+            "name": "Red chilli powder",
+            "q": "½ tsp",
+            "grams": 1.2,
+            "note": ""
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "1 tsp",
+            "grams": 6,
+            "note": ""
+          },
+          {
+            "id": "lemon",
+            "key": "lemon",
+            "name": "Lemon juice",
+            "q": "1 tsp",
+            "grams": 5,
+            "note": "optional",
+            "optional": true
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Cook the dal (3 whistles). Rinse {{toor}} toor and {{moongdal}} moong dal; pressure-cook with {{water}} water and {{turmeric}} turmeric for 3 whistles. Whisk smooth.",
+      "Tadka (4 min). Heat {{ghee}} ghee; add {{cumin}} cumin, {{garlic}} garlic, {{onion}} onion and {{gch}} chilli and fry until light golden; add {{tomato}} tomato and cook soft.",
+      "Spinach (3 min). Add {{spinach}} spinach, {{chillip}} chilli powder and {{salt}} salt and stir until just wilted and bright green.",
+      "Simmer (3 min). Add the dal, thin with hot water if needed, simmer 2–3 minutes and finish with {{lemon}} lemon."
+    ],
+    "sources": [
+      {
+        "title": "Swasthi's Recipes: dal palak",
+        "url": "https://www.indianhealthyrecipes.com/dal-palak-recipe",
+        "scope": "Toor dal cooked with spinach and spices; she prefers a 50/50 mix of toor and moong dal.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Holy Cow Vegan: dal palak",
+        "url": "https://holycowvegan.net/dal-palak-recipe-spinach-dal/",
+        "scope": "Toor and moong dal cooked with water to cover by two inches and turmeric; lots of spinach, which wilts down.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Dassana's Veg Recipes: dal palak",
+        "url": "https://www.vegrecipesofindia.com/wprm_print/dal-palak-recipe-easy-spinach-dal",
+        "scope": "Spinach dal with tuvar and masoor dal and fresh spinach.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "timing": {
+      "cookMinutes": [
+        30,
+        35
+      ],
+      "prerequisiteMinutes": [
+        0,
+        0
+      ],
+      "prerequisites": [],
+      "basis": "Editorial raw-start estimate; not measured",
+      "note": ""
+    },
+    "serve": "Rice or phulka.",
+    "yield_": 4
+  },
+  {
+    "region": "",
+    "cuisine": "Indian",
+    "tags": [
+      "airfryer-option"
+    ],
+    "tips": [],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "id": "bhindi-fry",
+    "title": "Bhindi fry (non-slimy okra)",
+    "aliases": [
+      "okra fry",
+      "ladies finger fry",
+      "bendekayi palya",
+      "bhindi sabzi",
+      "vendakkai poriyal"
+    ],
+    "sub": "dry, crisp-edged okra · pan or air fryer",
+    "course": "side",
+    "yield": 3,
+    "servingLabel": "about ¾ cup",
+    "time": "25–30 min",
+    "uses": "Wide pan, 1 burner (or air fryer)",
+    "keeps": "Best fresh; packs well in a lunch box with rotis.",
+    "intro": "Slime comes from moisture: wash and dry the okra completely before cutting, cook uncovered in a wide pan, and salt near the end.",
+    "ingredients": [
+      {
+        "group": "Bhindi",
+        "items": [
+          {
+            "id": "bhindi",
+            "key": "bhindi",
+            "name": "Bhindi (okra), tender",
+            "q": "250 g",
+            "grams": 250,
+            "note": ""
+          },
+          {
+            "id": "oil",
+            "key": "oil",
+            "name": "Oil",
+            "q": "1½ tbsp",
+            "grams": 20,
+            "note": ""
+          },
+          {
+            "id": "cumin",
+            "key": "cumin",
+            "name": "Cumin seeds",
+            "q": "½ tsp",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "onion",
+            "key": "onion",
+            "name": "Onion, sliced",
+            "q": "1",
+            "grams": 110,
+            "note": ""
+          },
+          {
+            "id": "turmeric",
+            "key": "turmeric",
+            "name": "Turmeric",
+            "q": "¼ tsp",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "chillip",
+            "key": "chilli",
+            "name": "Red chilli powder",
+            "q": "½ tsp",
+            "grams": 1.2,
+            "note": ""
+          },
+          {
+            "id": "corp",
+            "key": "coriander_p",
+            "name": "Coriander powder",
+            "q": "1 tsp",
+            "grams": 2,
+            "note": ""
+          },
+          {
+            "id": "amchur",
+            "key": "amchur",
+            "name": "Amchur",
+            "q": "½ tsp",
+            "grams": 1,
+            "note": "or lemon juice"
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "½ tsp",
+            "grams": 3,
+            "note": ""
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Dry completely. Rinse {{bhindi}} bhindi, then wipe each pod dry (or spread under a fan). There should be no moisture at all before cutting. Trim the ends and cut into 1–2 cm pieces.",
+      "Fry the okra (10–12 min). Heat {{oil}} oil in a wide pan, add {{cumin}} cumin, then the okra in one layer. Cook uncovered on medium-high, stirring now and then, until the stickiness is gone and the edges brown. Don't cover the pan.",
+      "Onion (4 min). Push aside, add {{onion}} onion and cook until soft.",
+      "Season at the end. Add {{turmeric}} turmeric, {{chillip}} chilli powder, {{corp}} coriander powder, {{amchur}} amchur and {{salt}} salt; toss 1–2 minutes.",
+      "Air fryer instead. Toss the dry, cut okra with half the oil and air fry at 180 °C, shaking the basket a few times, until browned at the edges; then temper the cumin and onion and toss with the spices."
+    ],
+    "sources": [
+      {
+        "title": "Dassana's Veg Recipes: bhindi fry",
+        "url": "https://www.vegrecipesofindia.com/bhindi-fry/",
+        "scope": "Rinse and wipe okra completely dry before chopping to avoid slimy bhindi; 250 g okra with onion and everyday spices.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Swasthi's Recipes: bhindi fry",
+        "url": "https://www.indianhealthyrecipes.com/bhindi-fry/",
+        "scope": "Wipe dry before chopping; okra can be air fried, cut at least ½ inch so it doesn't dry out.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "My Food Story: how to cook okra so it's not slimy",
+        "url": "https://myfoodstory.com/?p=6192",
+        "scope": "Wash whole okra and dry before cutting; don't cover the pan, since trapped steam adds moisture.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "timing": {
+      "cookMinutes": [
+        25,
+        30
+      ],
+      "prerequisiteMinutes": [
+        0,
+        0
+      ],
+      "prerequisites": [],
+      "basis": "Editorial raw-start estimate; not measured",
+      "note": "The air-fryer time depends on the model; check every few minutes."
+    },
+    "serve": "Rotis with dal, or curd rice.",
+    "yield_": 3
   }
 ]
