@@ -33,7 +33,7 @@ assert t.count("/*DATA*/") == 1 and t.count("<!--PWA-->") == 1 and t.count("/*PW
 core = (ROOT / "src" / "core.js").read_text(encoding="utf-8")
 core += '\n' + (ROOT / 'src' / 'household.js').read_text(encoding='utf-8')
 assert t.count("/*CORE_JS*/") == 1
-page = t.replace("/*DATA*/", s).replace("/*CORE_JS*/", core).replace("/*HOUSEHOLD_UI*/", (ROOT / "src/household-ui.js").read_text(encoding="utf-8") + "\n" + (ROOT / "src/pantry-check.js").read_text(encoding="utf-8"))
+page = t.replace("/*DATA*/", s).replace("/*CORE_JS*/", core).replace("/*HOUSEHOLD_UI*/", (ROOT / "src/household-ui.js").read_text(encoding="utf-8") + "\n" + (ROOT / "src/pantry-check.js").read_text(encoding="utf-8") + "\n" + (ROOT / "src/ai.js").read_text(encoding="utf-8"))
 site = page.replace("<!--PWA-->", PWA_HEAD).replace("/*PWA_JS*/", PWA_JS)
 art = page.replace("<!--PWA-->\n", "").replace("\n/*PWA_JS*/", "")
 (ROOT / "index.html").write_text(site, encoding="utf-8", newline="\n")

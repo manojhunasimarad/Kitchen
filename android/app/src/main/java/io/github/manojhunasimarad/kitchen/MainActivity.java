@@ -17,6 +17,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.webkit.JavascriptInterface;
 import android.webkit.RenderProcessGoneDetail;
+import android.webkit.ValueCallback;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
@@ -44,6 +45,19 @@ import java.util.Calendar;
  * Links to grocery apps and other sites open outside the app.
  */
 public class MainActivity extends Activity {
+    private static final int PICK_FILE = 4021;
+    private ValueCallback<Uri[]> fileCallback;
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == PICK_FILE) {
+            if (fileCallback != null) fileCallback.onReceiveValue(WebChromeClient.FileChooserParams.parseResult(resultCode, data));
+            fileCallback = null;
+            return;
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
     static final String HOME = "https://manojhunasimarad.github.io/Kitchen/";
     static final String HOST = "manojhunasimarad.github.io";
     static final int LIGHT_BG = 0xFFE8ECEC, DARK_BG = 0xFF0F1416, LIGHT_BAR = 0xFFFBFCFB, DARK_BAR = 0xFF172024;
@@ -69,7 +83,21 @@ public class MainActivity extends Activity {
         s.setUserAgentString(s.getUserAgentString() + " KitchenFromZeroApp/1");
 
         web.addJavascriptInterface(new Bridge(), "KitchenAndroid");
-        web.setWebChromeClient(new WebChromeClient());
+        web.setWebChromeClient(new WebChromeClient() {
+            @Override
+            public boolean onShowFileChooser(WebView view, ValueCallback<Uri[]> callback, FileChooserParams params) {
+                if (fileCallback != null) fileCallback.onReceiveValue(null);
+                fileCallback = callback;
+                try {
+                    startActivityForResult(params.createIntent(), PICK_FILE);
+                } catch (Exception e) {
+                    fileCallback = null;
+                    Toast.makeText(MainActivity.this, "No app found to pick a photo", Toast.LENGTH_SHORT).show();
+                    return false;
+                }
+                return true;
+            }
+        });
         web.setWebViewClient(new Client());
 
         Reminders.schedule(this);

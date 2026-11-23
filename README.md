@@ -76,6 +76,25 @@ Four source-compared regional adaptations add yennegai, khara pongal, Kesari Bat
 pakoda. Their method amounts scale with servings; their sources, variant differences and
 unmeasured timing ranges are explicit. They are not labelled kitchen-tested.
 
+## Kitchen AI (free Gemini key)
+
+Tap the ✨ button in the top bar, **Ask Kitchen AI** in the menu, or **Ask AI about this recipe** inside a recipe.
+The first time, it asks for a free Google Gemini API key: open <https://aistudio.google.com/apikey>, sign in,
+tap **Create API key** and paste it. Don't add billing to that Google project, so it can never charge you.
+
+- **Ask anything**: "What can I cook now?", "Use what's getting old", "Plan tomorrow", "The gravy is too watery".
+  Each question sends your pantry (Have / Low / use-first), the household diets and a compact list of the app's
+  recipes with what each is missing, so answers point to real recipes (tap the chips to open them).
+- **Pantry photo**: photograph a shelf, fridge or grocery bag. The AI lists pantry items it can see; you untick
+  mistakes and nothing changes until you tap save.
+- **Rules**: cooking topics only, no beef or pork, diets respected, no invented quantities, cautious food-safety
+  answers. AI can still be wrong; the recipe text stays the reference.
+- **Privacy**: the key is kept only in that phone's or browser's local storage. It is not part of the synced state,
+  backups or this repository. On the free tier Google may use what you send to improve its products.
+- **Model**: it uses the `gemini-flash-latest` alias, and if Google retires that it picks the newest available
+  Flash model for your key automatically.
+- **Android**: the photo button needs APK build 6 or later (it adds the file picker).
+
 ## Local reliability and cooking preview
 
 The local update adds tested fractional scaling, received-stock availability, visible save failures,
