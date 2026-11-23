@@ -1,243 +1,405 @@
 [
-  {
-    "id": "hand-chopper",
-    "title": "Using your pull-cord hand chopper",
-    "tools": [
-      "Pull-cord chopper"
-    ],
-    "keywords": [],
-    "match": "chopped|minced|mince|finely|diced",
-    "intro": "The pull-cord (dori) chopper is fastest for onions, tomatoes, garlic, ginger, chillies and herbs. You control how fine it gets by the number of pulls.",
-    "steps": [
-      "Prepare. Peel onions, garlic and ginger first. Cut food into chunks of about 2–3 cm: quarter an onion, halve a tomato. Don't fill above the bowl's max line.",
-      "Pull. Lock the lid, hold the bowl down firmly with one hand and pull the cord with the other. Make the first pull quick and firm.",
-      "Count. Roughly 5–6 pulls give a coarse chop, 7–12 a medium-fine chop, 13–20 very fine, and more than 20 a purée. Check after a few pulls; you can always pull again.",
-      "Dry, light things (herbs, a few garlic cloves, green chillies): pull 3–4 times, shake the closed chopper so the pieces drop back onto the blades, then continue.",
-      "Clean straight away. Lift the blade unit by its plastic centre, never by the blades. Rinse, and clean around the blades with a brush. Wash the lid with the cord by hand without soaking it, because water wears out the cord."
-    ],
-    "tips": [
-      "Watery vegetables such as tomato turn to purée sooner than onion, so pull fewer times and check.",
-      "Wash herbs and dry them thoroughly before chopping.",
-      "If an onion or garlic smell stays, soak only the bowl, not the lid, for about an hour."
-    ],
-    "sources": [
-      {
-        "title": "Kuhn Rikon Pull Chop: instructions",
-        "url": "https://www.qvc.com/footers/cd/pdf/K44671_Manual.pdf",
-        "scope": "Hold the bowl down, make the first pull sharp; pull counts for coarse, medium-fine, very fine and purée.",
-        "checked": "2026-11-22"
-      },
-      {
-        "title": "Tupperware: SuperSonic pull-cord chopper tips",
-        "url": "https://www.tupperware.ca/products/supersonic-chopper-tall-1",
-        "scope": "Herbs washed and dried well; 3–4 pulls then shake for dry ingredients; brush the blades; hand-wash cover and blades; soak the base for odours.",
-        "checked": "2026-11-22"
-      },
-      {
-        "title": "One Good Thing by Jillee: hand-powered food chopper",
-        "url": "https://www.onegoodthingbyjillee.com/hand-powered-food-chopper/",
-        "scope": "Don't submerge the lid with the pull cord; it shortens the cord's life.",
-        "checked": "2026-11-22"
-      }
-    ]
-  },
-  {
-    "id": "onion",
-    "title": "Chopping and slicing onions",
-    "tools": [
-      "Knife",
-      "Pull-cord chopper"
-    ],
-    "keywords": [
-      "onion"
-    ],
-    "intro": "Most Indian masalas start with finely chopped onion; biryani and pulao use thin slices.",
-    "steps": [
-      "Halve. Cut off the top end (not the root), cut the onion in half through the root, and peel off the papery skin. Keeping the root on holds the layers together.",
-      "Grip. Lay a half flat-side down. Curl the fingertips of your holding hand under and let your knuckles guide the side of the knife.",
-      "Cut lengthwise. Make cuts from just short of the root to the other end. The spacing sets the size: about 6 mm apart for finely chopped (chillas, salads, tadka), about 1 cm for medium (curries).",
-      "Cut across. Now slice across those cuts, working toward the root, and the onion falls into small pieces. Chop the root end separately or discard it.",
-      "Slices instead. For biryani or pulao, skip the lengthwise cuts and cut the half into thin half-moons.",
-      "With the chopper. Quarter each half and pull about 7–12 times for finely chopped onion; stop before it turns watery."
-    ],
-    "tips": [
-      "A sharp knife crushes the onion less, so you get fewer tears.",
-      "Push chopped onion off the board with the back of the knife or a scraper, not the edge; scraping blunts the blade."
-    ],
-    "sources": [
-      {
-        "title": "Serious Eats: how to slice and dice an onion",
-        "url": "https://www.yahoo.com/lifestyle/slice-dice-onion-074500491.html",
-        "scope": "Spacing of cuts sets the dice size (¼ inch fine, ½ inch medium); don't scrape the board with the blade.",
-        "checked": "2026-11-22"
-      },
-      {
-        "title": "Serious Eats: the safest way to dice an onion",
-        "url": "https://www.aol.com/safest-fastest-way-dice-onion-220000459.html",
-        "scope": "Claw grip with knuckles guiding the knife and fingertips tucked away.",
-        "checked": "2026-11-22"
-      },
-      {
-        "title": "Once Upon a Chef: how to dice an onion",
-        "url": "https://www.onceuponachef.com/how-to/how-to-dice-an-onion.html",
-        "scope": "Halve through the root; a sharp knife makes it easier and cuts down on tears.",
-        "checked": "2026-11-22"
-      },
-      {
-        "title": "Kuhn Rikon Pull Chop: instructions",
-        "url": "https://www.qvc.com/footers/cd/pdf/K44671_Manual.pdf",
-        "scope": "7–12 pulls for a medium-fine chop.",
-        "checked": "2026-11-22"
-      }
-    ]
-  },
-  {
-    "id": "garlic",
-    "title": "Peeling, mincing and grating garlic",
-    "tools": [
-      "Knife",
-      "Grater",
-      "Two steel bowls"
-    ],
-    "keywords": [
-      "garlic"
-    ],
-    "intro": "Smashing a clove with the flat of a knife is the quickest way to peel it, and the clove is half-crushed ready for mincing.",
-    "steps": [
-      "Peel by smashing. Break off a clove, lay it on the board, put the flat side of a wide knife on it and press down hard with the heel of your hand. The skin cracks and slides off.",
-      "Peel lots at once. Put the cloves between two steel bowls (rim to rim) and shake hard, then pick out the peeled ones. A glass jar works less well.",
-      "Mince. Slice the smashed cloves thinly, then rock the knife back and forth over the pile, scraping it together a few times, until fine.",
-      "Grate. For garlic butter or marinades, rub peeled cloves on the fine side of a grater.",
-      "With the chopper. Use it when you have about 8 or more cloves: 3–4 pulls, shake, then a few more. For 2–3 cloves the knife or grater is quicker."
-    ],
-    "tips": [
-      "Smashed cloves suit chopping, paste and tadka; for neat slices, peel without smashing."
-    ],
-    "sources": [
-      {
-        "title": "Parade: 10 garlic-peeling methods tested",
-        "url": "https://www.aol.com/tested-10-garlic-peeling-hacks-212100709.html",
-        "scope": "Knife-smash ranked best, shaking between two bowls second; a glass jar was slower; smashed cloves are less suitable for neat slices.",
-        "checked": "2026-11-22"
-      },
-      {
-        "title": "Tupperware: SuperSonic pull-cord chopper tips",
-        "url": "https://www.tupperware.ca/products/supersonic-chopper-tall-1",
-        "scope": "Herbs washed and dried well; 3–4 pulls then shake for dry ingredients; brush the blades; hand-wash cover and blades; soak the base for odours.",
-        "checked": "2026-11-22"
-      }
-    ]
-  },
-  {
-    "id": "ginger",
-    "title": "Peeling and grating ginger",
-    "tools": [
-      "Teaspoon",
-      "Grater",
-      "Knife"
-    ],
-    "keywords": [
-      "ginger"
-    ],
-    "intro": "A teaspoon removes only the thin skin and gets into the knobbly bits that a peeler or knife misses.",
-    "steps": [
-      "Peel. Snap off the piece you need. Scrape the skin off with the edge of a teaspoon, working along the fibres (lengthwise) and into the corners. Firm, fresh ginger peels easiest.",
-      "Grate. For chilla batters, chai and marinades, grate across the fibres on the fine side of a grater.",
-      "Julienne. Slice thinly, stack the slices and cut them into thin matchsticks for garnishes and dals.",
-      "Ginger-garlic paste. Chop peeled ginger and garlic in the chopper (20+ pulls) or grind in the mixer with a few drops of water."
-    ],
-    "tips": [],
-    "sources": [
-      {
-        "title": "Taste of Home: how to peel ginger",
-        "url": "https://www.tasteofhome.com/article/how-to-peel-ginger/",
-        "scope": "A sturdy teaspoon scrapes off only the thin outer layer, with little waste.",
-        "checked": "2026-11-22"
-      },
-      {
-        "title": "Tasting Table: peel ginger with a spoon",
-        "url": "https://www.tastingtable.com/cook/national/how-to-peel-ginger-with-spoon",
-        "scope": "Scrape the spoon's edge along the root; safer than a knife on the knobbly shape.",
-        "checked": "2026-11-22"
-      },
-      {
-        "title": "Allrecipes (via AOL): the best way to peel ginger",
-        "url": "https://www.aol.com/articles/best-way-peel-ginger-even-160000491.html",
-        "scope": "Peel along the direction of the fibres.",
-        "checked": "2026-11-22"
-      }
-    ]
-  },
-  {
-    "id": "corn",
-    "title": "Sweet corn: getting kernels off the cob",
-    "tools": [
-      "Knife",
-      "Two bowls"
-    ],
-    "keywords": [
-      "sweet corn",
-      "corn kernels"
-    ],
-    "intro": "Frozen or loose sweet corn needs no cutting. For cobs, a bowl-in-bowl stand keeps the kernels from flying around.",
-    "steps": [
-      "Cook first. Boil or pressure-cook the cob, let it cool enough to hold, then cut. Kernels cut first can pop in the pan.",
-      "Set up. Put a small bowl upside down inside a big bowl and stand the cob on it, tip down.",
-      "Cut. Hold the top and slice down the sides with a sharp knife, turning the cob as you go. The kernels collect in the big bowl.",
-      "Don't cut too deep, or tough pieces of cob come away with the kernels."
-    ],
-    "tips": [
-      "For sandwiches and cheese corn balls, drain cooked corn well and let it steam dry on a plate."
-    ],
-    "sources": [
-      {
-        "title": "MasterClass: how to cut corn off the cob",
-        "url": "https://www.masterclass.com/articles/how-to-cut-corn-off-the-cob",
-        "scope": "Two-bowl method: small bowl upside down inside a larger one, slice down the sides.",
-        "checked": "2026-11-22"
-      },
-      {
-        "title": "Kroll's Korner: how to cut corn off the cob",
-        "url": "https://krollskorner.com/techniques/how-tos/how-to-cut-corn-off-the-cobb/",
-        "scope": "Use a sharp knife; don't cut too deeply into the cob.",
-        "checked": "2026-11-22"
-      },
-      {
-        "title": "Eating on a Dime: how to cut corn off the cob",
-        "url": "https://www.eatingonadime.com/how-to-cut-corn-off-the-cob/",
-        "scope": "Cook the cob first, then cut, so kernels don't pop out of the pan.",
-        "checked": "2026-11-22"
-      }
-    ]
-  },
-  {
-    "id": "herbs-chillies",
-    "title": "Coriander, mint and green chillies",
-    "tools": [
-      "Knife",
-      "Pull-cord chopper"
-    ],
-    "keywords": [
-      "coriander",
-      "mint",
-      "green chilli",
-      "dill"
-    ],
-    "intro": "Herbs chop cleanly only when they're dry. Chillies are easier to handle when you work fast and keep your hands away from your eyes.",
-    "steps": [
-      "Wash herbs. Swish coriander or mint in a big bowl of water, lift it out (the grit stays behind) and dry it well: shake, then spread on a cloth for a few minutes.",
-      "Chop herbs. Bunch the leaves and tender coriander stems tightly and slice across finely; go over the pile once more for a finer chop. In the chopper: 3–4 pulls, shake, then 2–3 more.",
-      "Green chillies. Pull off the stalk. Slit lengthwise for tadka and curries, or slice into thin rings. For less heat, scrape out the seeds and the white ribs with the knife tip.",
-      "Wash your hands, knife and board after cutting chillies, and don't touch your eyes."
-    ],
-    "tips": [],
-    "sources": [
-      {
-        "title": "Tupperware: SuperSonic pull-cord chopper tips",
-        "url": "https://www.tupperware.ca/products/supersonic-chopper-tall-1",
-        "scope": "Herbs washed and dried well; 3–4 pulls then shake for dry ingredients; brush the blades; hand-wash cover and blades; soak the base for odours.",
-        "checked": "2026-11-22"
-      }
-    ]
-  }
+ {
+  "id": "hand-chopper",
+  "title": "Using your pull-cord hand chopper",
+  "tools": [
+   "Pull-cord chopper"
+  ],
+  "keywords": [],
+  "match": "chopped|minced|mince|finely|diced",
+  "intro": "The pull-cord (dori) chopper is fastest for onions, tomatoes, garlic, ginger, chillies and herbs. You control how fine it gets by the number of pulls.",
+  "steps": [
+   "Prepare. Peel onions, garlic and ginger first. Cut food into chunks of about 2–3 cm: quarter an onion, halve a tomato. Don't fill above the bowl's max line.",
+   "Pull. Lock the lid, hold the bowl down firmly with one hand and pull the cord with the other. Make the first pull quick and firm.",
+   "Count. Roughly 5–6 pulls give a coarse chop, 7–12 a medium-fine chop, 13–20 very fine, and more than 20 a purée. Check after a few pulls; you can always pull again.",
+   "Dry, light things (herbs, a few garlic cloves, green chillies): pull 3–4 times, shake the closed chopper so the pieces drop back onto the blades, then continue.",
+   "Clean straight away. Lift the blade unit by its plastic centre, never by the blades. Rinse, and clean around the blades with a brush. Wash the lid with the cord by hand without soaking it, because water wears out the cord."
+  ],
+  "tips": [
+   "Watery vegetables such as tomato turn to purée sooner than onion, so pull fewer times and check.",
+   "Wash herbs and dry them thoroughly before chopping.",
+   "If an onion or garlic smell stays, soak only the bowl, not the lid, for about an hour."
+  ],
+  "sources": [
+   {
+    "title": "Kuhn Rikon Pull Chop: instructions",
+    "url": "https://www.qvc.com/footers/cd/pdf/K44671_Manual.pdf",
+    "scope": "Hold the bowl down, make the first pull sharp; pull counts for coarse, medium-fine, very fine and purée.",
+    "checked": "2026-11-22"
+   },
+   {
+    "title": "Tupperware: SuperSonic pull-cord chopper tips",
+    "url": "https://www.tupperware.ca/products/supersonic-chopper-tall-1",
+    "scope": "Herbs washed and dried well; 3–4 pulls then shake for dry ingredients; brush the blades; hand-wash cover and blades; soak the base for odours.",
+    "checked": "2026-11-22"
+   },
+   {
+    "title": "One Good Thing by Jillee: hand-powered food chopper",
+    "url": "https://www.onegoodthingbyjillee.com/hand-powered-food-chopper/",
+    "scope": "Don't submerge the lid with the pull cord; it shortens the cord's life.",
+    "checked": "2026-11-22"
+   }
+  ]
+ },
+ {
+  "id": "onion",
+  "title": "Chopping and slicing onions",
+  "tools": [
+   "Knife",
+   "Pull-cord chopper"
+  ],
+  "keywords": [
+   "onion"
+  ],
+  "intro": "Most Indian masalas start with finely chopped onion; biryani and pulao use thin slices.",
+  "steps": [
+   "Halve. Cut off the top end (not the root), cut the onion in half through the root, and peel off the papery skin. Keeping the root on holds the layers together.",
+   "Grip. Lay a half flat-side down. Curl the fingertips of your holding hand under and let your knuckles guide the side of the knife.",
+   "Cut lengthwise. Make cuts from just short of the root to the other end. The spacing sets the size: about 6 mm apart for finely chopped (chillas, salads, tadka), about 1 cm for medium (curries).",
+   "Cut across. Now slice across those cuts, working toward the root, and the onion falls into small pieces. Chop the root end separately or discard it.",
+   "Slices instead. For biryani or pulao, skip the lengthwise cuts and cut the half into thin half-moons.",
+   "With the chopper. Quarter each half and pull about 7–12 times for finely chopped onion; stop before it turns watery."
+  ],
+  "tips": [
+   "A sharp knife crushes the onion less, so you get fewer tears.",
+   "Push chopped onion off the board with the back of the knife or a scraper, not the edge; scraping blunts the blade."
+  ],
+  "sources": [
+   {
+    "title": "Serious Eats: how to slice and dice an onion",
+    "url": "https://www.yahoo.com/lifestyle/slice-dice-onion-074500491.html",
+    "scope": "Spacing of cuts sets the dice size (¼ inch fine, ½ inch medium); don't scrape the board with the blade.",
+    "checked": "2026-11-22"
+   },
+   {
+    "title": "Serious Eats: the safest way to dice an onion",
+    "url": "https://www.aol.com/safest-fastest-way-dice-onion-220000459.html",
+    "scope": "Claw grip with knuckles guiding the knife and fingertips tucked away.",
+    "checked": "2026-11-22"
+   },
+   {
+    "title": "Once Upon a Chef: how to dice an onion",
+    "url": "https://www.onceuponachef.com/how-to/how-to-dice-an-onion.html",
+    "scope": "Halve through the root; a sharp knife makes it easier and cuts down on tears.",
+    "checked": "2026-11-22"
+   },
+   {
+    "title": "Kuhn Rikon Pull Chop: instructions",
+    "url": "https://www.qvc.com/footers/cd/pdf/K44671_Manual.pdf",
+    "scope": "7–12 pulls for a medium-fine chop.",
+    "checked": "2026-11-22"
+   }
+  ]
+ },
+ {
+  "id": "garlic",
+  "title": "Peeling, mincing and grating garlic",
+  "tools": [
+   "Knife",
+   "Grater",
+   "Two steel bowls"
+  ],
+  "keywords": [
+   "garlic"
+  ],
+  "intro": "Smashing a clove with the flat of a knife is the quickest way to peel it, and the clove is half-crushed ready for mincing.",
+  "steps": [
+   "Peel by smashing. Break off a clove, lay it on the board, put the flat side of a wide knife on it and press down hard with the heel of your hand. The skin cracks and slides off.",
+   "Peel lots at once. Put the cloves between two steel bowls (rim to rim) and shake hard, then pick out the peeled ones. A glass jar works less well.",
+   "Mince. Slice the smashed cloves thinly, then rock the knife back and forth over the pile, scraping it together a few times, until fine.",
+   "Grate. For garlic butter or marinades, rub peeled cloves on the fine side of a grater.",
+   "With the chopper. Use it when you have about 8 or more cloves: 3–4 pulls, shake, then a few more. For 2–3 cloves the knife or grater is quicker."
+  ],
+  "tips": [
+   "Smashed cloves suit chopping, paste and tadka; for neat slices, peel without smashing."
+  ],
+  "sources": [
+   {
+    "title": "Parade: 10 garlic-peeling methods tested",
+    "url": "https://www.aol.com/tested-10-garlic-peeling-hacks-212100709.html",
+    "scope": "Knife-smash ranked best, shaking between two bowls second; a glass jar was slower; smashed cloves are less suitable for neat slices.",
+    "checked": "2026-11-22"
+   },
+   {
+    "title": "Tupperware: SuperSonic pull-cord chopper tips",
+    "url": "https://www.tupperware.ca/products/supersonic-chopper-tall-1",
+    "scope": "Herbs washed and dried well; 3–4 pulls then shake for dry ingredients; brush the blades; hand-wash cover and blades; soak the base for odours.",
+    "checked": "2026-11-22"
+   }
+  ]
+ },
+ {
+  "id": "ginger",
+  "title": "Peeling and grating ginger",
+  "tools": [
+   "Teaspoon",
+   "Grater",
+   "Knife"
+  ],
+  "keywords": [
+   "ginger"
+  ],
+  "intro": "A teaspoon removes only the thin skin and gets into the knobbly bits that a peeler or knife misses.",
+  "steps": [
+   "Peel. Snap off the piece you need. Scrape the skin off with the edge of a teaspoon, working along the fibres (lengthwise) and into the corners. Firm, fresh ginger peels easiest.",
+   "Grate. For chilla batters, chai and marinades, grate across the fibres on the fine side of a grater.",
+   "Julienne. Slice thinly, stack the slices and cut them into thin matchsticks for garnishes and dals.",
+   "Ginger-garlic paste. Chop peeled ginger and garlic in the chopper (20+ pulls) or grind in the mixer with a few drops of water."
+  ],
+  "tips": [],
+  "sources": [
+   {
+    "title": "Taste of Home: how to peel ginger",
+    "url": "https://www.tasteofhome.com/article/how-to-peel-ginger/",
+    "scope": "A sturdy teaspoon scrapes off only the thin outer layer, with little waste.",
+    "checked": "2026-11-22"
+   },
+   {
+    "title": "Tasting Table: peel ginger with a spoon",
+    "url": "https://www.tastingtable.com/cook/national/how-to-peel-ginger-with-spoon",
+    "scope": "Scrape the spoon's edge along the root; safer than a knife on the knobbly shape.",
+    "checked": "2026-11-22"
+   },
+   {
+    "title": "Allrecipes (via AOL): the best way to peel ginger",
+    "url": "https://www.aol.com/articles/best-way-peel-ginger-even-160000491.html",
+    "scope": "Peel along the direction of the fibres.",
+    "checked": "2026-11-22"
+   }
+  ]
+ },
+ {
+  "id": "corn",
+  "title": "Sweet corn: getting kernels off the cob",
+  "tools": [
+   "Knife",
+   "Two bowls"
+  ],
+  "keywords": [
+   "sweet corn",
+   "corn kernels"
+  ],
+  "intro": "Frozen or loose sweet corn needs no cutting. For cobs, a bowl-in-bowl stand keeps the kernels from flying around.",
+  "steps": [
+   "Cook first. Boil or pressure-cook the cob, let it cool enough to hold, then cut. Kernels cut first can pop in the pan.",
+   "Set up. Put a small bowl upside down inside a big bowl and stand the cob on it, tip down.",
+   "Cut. Hold the top and slice down the sides with a sharp knife, turning the cob as you go. The kernels collect in the big bowl.",
+   "Don't cut too deep, or tough pieces of cob come away with the kernels."
+  ],
+  "tips": [
+   "For sandwiches and cheese corn balls, drain cooked corn well and let it steam dry on a plate."
+  ],
+  "sources": [
+   {
+    "title": "MasterClass: how to cut corn off the cob",
+    "url": "https://www.masterclass.com/articles/how-to-cut-corn-off-the-cob",
+    "scope": "Two-bowl method: small bowl upside down inside a larger one, slice down the sides.",
+    "checked": "2026-11-22"
+   },
+   {
+    "title": "Kroll's Korner: how to cut corn off the cob",
+    "url": "https://krollskorner.com/techniques/how-tos/how-to-cut-corn-off-the-cobb/",
+    "scope": "Use a sharp knife; don't cut too deeply into the cob.",
+    "checked": "2026-11-22"
+   },
+   {
+    "title": "Eating on a Dime: how to cut corn off the cob",
+    "url": "https://www.eatingonadime.com/how-to-cut-corn-off-the-cob/",
+    "scope": "Cook the cob first, then cut, so kernels don't pop out of the pan.",
+    "checked": "2026-11-22"
+   }
+  ]
+ },
+ {
+  "id": "herbs-chillies",
+  "title": "Coriander, mint and green chillies",
+  "tools": [
+   "Knife",
+   "Pull-cord chopper"
+  ],
+  "keywords": [
+   "coriander",
+   "mint",
+   "green chilli",
+   "dill"
+  ],
+  "intro": "Herbs chop cleanly only when they're dry. Chillies are easier to handle when you work fast and keep your hands away from your eyes.",
+  "steps": [
+   "Wash herbs. Swish coriander or mint in a big bowl of water, lift it out (the grit stays behind) and dry it well: shake, then spread on a cloth for a few minutes.",
+   "Chop herbs. Bunch the leaves and tender coriander stems tightly and slice across finely; go over the pile once more for a finer chop. In the chopper: 3–4 pulls, shake, then 2–3 more.",
+   "Green chillies. Pull off the stalk. Slit lengthwise for tadka and curries, or slice into thin rings. For less heat, scrape out the seeds and the white ribs with the knife tip.",
+   "Wash your hands, knife and board after cutting chillies, and don't touch your eyes."
+  ],
+  "tips": [],
+  "sources": [
+   {
+    "title": "Tupperware: SuperSonic pull-cord chopper tips",
+    "url": "https://www.tupperware.ca/products/supersonic-chopper-tall-1",
+    "scope": "Herbs washed and dried well; 3–4 pulls then shake for dry ingredients; brush the blades; hand-wash cover and blades; soak the base for odours.",
+    "checked": "2026-11-22"
+   }
+  ]
+ },
+ {
+  "id": "store-leftovers",
+  "title": "Storing cut lemons and other leftover prep",
+  "tools": [
+   "Airtight box or zip bag",
+   "Ice-cube tray"
+  ],
+  "keywords": [],
+  "intro": "Cut something by accident or prepped too much? Most of it keeps for a few days in a closed box in the fridge, and a lot of it freezes.",
+  "steps": [
+   "Cut lemons. Put the pieces in a closed box or zip bag, or wrap the cut face, and keep them in the fridge. Use within 3–4 days. Don't wrap them in aluminium foil: the acid reacts with it and spoils the taste.",
+   "Lemons you won't use soon. Squeeze them now. Fresh juice keeps a few days in a closed jar in the fridge. For longer, freeze it in an ice-cube tray, then move the cubes to a bag; it keeps about 3–4 months. One cube is about 1 tablespoon.",
+   "Whole lemons. Keep them in the fridge's vegetable drawer, where they stay juicy for about 3 weeks; on the counter they dry out much sooner. Leave one out for a day before squeezing, since cold lemons give less juice.",
+   "Chopped onion, tomato, capsicum, herbs. Keep in a closed box in the fridge and use within a day or two; chopped onion keeps its smell to itself only in a sealed box.",
+   "Ginger-garlic paste. Fridge in a clean, dry glass jar; or freeze spoonfuls in an ice-cube tray.",
+   "Wash vegetables just before using, not before storing: damp produce spoils faster in the fridge."
+  ],
+  "tips": [
+   "Label boxes with the day you cut them, so the oldest gets used first.",
+   "Use up cut lemons in rasam, chaat, dal, salads, lemon rice or a glass of nimbu paani."
+  ],
+  "sources": [
+   {
+    "title": "MasterClass: how to store lemons",
+    "url": "https://www.masterclass.com/articles/how-to-store-lemons",
+    "scope": "Refrigerate cut lemons in an airtight container or bag; freeze juice in ice-cube trays, then move the cubes to a freezer bag.",
+    "checked": "2026-11-23"
+   },
+   {
+    "title": "Glad: how to store and freeze lemons",
+    "url": "https://www.glad.com/wp-content/uploads/2020/07/How_To_Store_Lemons_To_Last.pdf",
+    "scope": "Whole lemons up to 21 days in the fridge; cut lemons 3–4 days; frozen up to 4 months.",
+    "checked": "2026-11-23"
+   },
+   {
+    "title": "Southern Living via AOL: how to store cut lemons",
+    "url": "https://www.aol.com/lifestyle/store-cut-lemons-last-long-120000606.html",
+    "scope": "Avoid aluminium foil for cut lemons, as it reacts with the acid; cold lemons are harder to juice.",
+    "checked": "2026-11-23"
+   },
+   {
+    "title": "MedlinePlus: pesticides on fruits and vegetables",
+    "url": "https://medlineplus.gov/ency/article/001987.htm",
+    "scope": "Wash produce when you are ready to use it; washing before storing can degrade quality.",
+    "checked": "2026-11-23"
+   }
+  ]
+ },
+ {
+  "id": "wash-produce",
+  "title": "Washing fruit and vegetables (salt, baking soda, vinegar)",
+  "tools": [
+   "Big bowl",
+   "Colander",
+   "Soft brush"
+  ],
+  "keywords": [],
+  "intro": "Plain running water does most of the work. A short soak in salt or baking-soda water removes more surface pesticide. Never use dish soap on food.",
+  "steps": [
+   "Wash your hands first. Then rinse produce under running water, rubbing it with your hands. Indian food-safety guidance says water washing removes about 75–80% of surface pesticide residue.",
+   "Salt soak (everyday). About 2% salt water: roughly 1 level tablespoon of salt per litre (or 2 tsp in 4 cups). Soak 10–15 minutes, then rinse in clean water.",
+   "Baking-soda soak (apples, grapes, guava, tomatoes). 1 teaspoon baking soda per litre is close to the 1% used in the UMass study, where a 12–15 minute soak and a rinse removed the surface pesticides tested. Some pesticide still sits inside the peel, so peel if you're worried.",
+   "Vinegar (optional). 1 part white vinegar to 3 parts water, then rinse. Evidence is mixed; it isn't clearly better than salt or baking soda.",
+   "Leafy greens (spinach, coriander, methi). Remove outer or damaged leaves, swish in a big bowl of water, lift the leaves out, change the water and repeat until no grit settles. Don't pour the water over them, or the grit goes back on.",
+   "Firm vegetables (potato, carrot, cucumber). Scrub with a soft brush under water. Peeling gourds, mangoes, citrus and apples removes more residue.",
+   "Dry before cutting, especially bhindi. Wash just before cooking, not before storing."
+  ],
+  "tips": [
+   "Wash even things you'll peel, like melons and onions: the knife carries dirt from the skin inside.",
+   "Keep the board and knife for raw chicken or fish separate from the one for fruit and salad, or wash it in hot soapy water in between."
+  ],
+  "sources": [
+   {
+    "title": "NIPHM (Govt of India): reducing pesticide residues at home",
+    "url": "https://niphm.gov.in/Education/measures.pdf",
+    "scope": "Running water reduces surface residues; 2% salt water removes most contact residues; peel fruits and gourds; discard outer leaves of leafy vegetables.",
+    "checked": "2026-11-23"
+   },
+   {
+    "title": "FSSAI note via Food Safety Helpline",
+    "url": "https://foodsafetyhelpline.com/?p=76195",
+    "scope": "About 75–80% of surface residues removed by washing with water; 2% salt water; scrub firm produce with a soft brush.",
+    "checked": "2026-11-23"
+   },
+   {
+    "title": "ACS Axial: baking soda washes pesticides (UMass study)",
+    "url": "https://axial.acs.org/multidisciplinary/baking-soda-washes-pesticides",
+    "scope": "A 15-minute soak in sodium bicarbonate solution and a rinse removed the tested pesticides from apple surfaces; some had entered the peel.",
+    "checked": "2026-11-23"
+   },
+   {
+    "title": "GoodRx: how to wash fruit and vegetables",
+    "url": "https://www.goodrx.com/well-being/diet-nutrition/how-to-wash-fruit-vegetables",
+    "scope": "Wash hands first; evidence on vinegar washes is mixed; 1 part vinegar to 3 parts water method.",
+    "checked": "2026-11-23"
+   },
+   {
+    "title": "FSSAI: are you cleaning your veggies right?",
+    "url": "https://mail.fssai.gov.in/upload/media/FSSAI_News_Fruits_Economic_15_07_2020.pdf",
+    "scope": "Wash hands; wash produce under running water; wash boards and utensils with hot soapy water; store produce away from raw meat.",
+    "checked": "2026-11-23"
+   }
+  ]
+ },
+ {
+  "id": "clean-utensils",
+  "title": "Cleaning vessels with lemon, baking soda and vinegar",
+  "tools": [
+   "Baking soda",
+   "Vinegar or used lemon halves",
+   "Salt",
+   "Non-scratch scrubber"
+  ],
+  "keywords": [],
+  "intro": "Baking soda is a mild abrasive and alkaline; lemon and vinegar are acids that lift hard-water marks and discolouration. Use the right one for the job and the metal.",
+  "steps": [
+   "Burnt steel pan or kadai. Scrape off loose bits, cover the burnt area with a little water, add 1–2 tablespoons baking soda and bring it to a boil for a few minutes. Let it cool, then scrub. For stubborn spots, rub with a thick paste of baking soda and water.",
+   "White chalky marks (hard water) on steel vessels, the pressure cooker or kettle. Boil 1 part vinegar to 3 parts water in it for a few minutes, or rub with a squeezed lemon half dipped in salt; rinse and dry.",
+   "Brown or rainbow heat stains on steel. Rub with lemon juice or a little vinegar, leave a few minutes, then scrub and rinse.",
+   "Use up squeezed lemon halves. Dip in salt and rub chopping boards, steel sinks, the chopper bowl or greasy steel plates, then rinse. It also takes the onion and garlic smell off hands and boards.",
+   "Don't mix vinegar and baking soda in a bottle in advance. They neutralise each other: the fizz helps loosen burnt bits for a minute, but the mix isn't a stronger cleaner.",
+   "Iron tawa or kadai, cast iron. Skip lemon and vinegar: acids cause rust and strip the seasoning. Use baking soda paste or salt, dry on the flame and wipe with a drop of oil.",
+   "Non-stick pans. No steel scrubber and no boiling baking soda; soak in warm soapy water and use a soft sponge.",
+   "Rinse well and dry steel immediately with a cloth to avoid water spots. Let hot pans cool before washing so they don't warp."
+  ],
+  "tips": [
+   "Keep a small jar of baking soda by the sink; it is cheap and lasts months.",
+   "Lemon and vinegar are cleaners, not disinfectants for raw-meat boards; use hot soapy water for those."
+  ],
+  "sources": [
+   {
+    "title": "Arm & Hammer: how to clean a burnt pan with baking soda",
+    "url": "https://www.armandhammer.com/articles/how-to-clean-a-burnt-pan",
+    "scope": "Baking soda is mildly abrasive and alkaline; boil with water, cool and scrub; a lemon half can also be used.",
+    "checked": "2026-11-23"
+   },
+   {
+    "title": "Real Simple via Yahoo: how to clean stainless-steel pans",
+    "url": "https://www.yahoo.com/lifestyle/clean-stainless-steel-pans-keep-172636563.html",
+    "scope": "Baking soda for burnt food; boil 1 part vinegar to 3 parts water to remove white hard-water residue.",
+    "checked": "2026-11-23"
+   },
+   {
+    "title": "KitchenAid: how to clean a burnt pot",
+    "url": "https://www.kitchenaid.com/pinch-of-help/major-appliances/how-to-clean-a-burnt-pot.html",
+    "scope": "Use baking soda on cast iron; avoid vinegar or lemon, which cause rust and damage seasoning.",
+    "checked": "2026-11-23"
+   },
+   {
+    "title": "Ideal Home: how to clean stainless steel pans",
+    "url": "https://idealhome.co.uk/house-manual/cleaning/how-to-clean-stainless-steel-pans",
+    "scope": "Lemon juice breaks down stains on steel; salt adds gentle scrubbing; cut lemon dipped in salt.",
+    "checked": "2026-11-23"
+   },
+   {
+    "title": "Tom's Guide: how to clean a stainless steel pan",
+    "url": "https://www.tomsguide.com/how-to/how-to-clean-a-stainless-steel-pan",
+    "scope": "Let a stainless steel pan cool completely before washing to prevent warping.",
+    "checked": "2026-11-23"
+   }
+  ]
+ }
 ]

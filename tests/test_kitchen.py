@@ -37,7 +37,7 @@ class RecipeTests(unittest.TestCase):
         for x in self.data['extras']: self.assertIsNone(banned.search(x['title']),x['id'])
     def test_prep_guides(self):
         import re
-        guides=self.data['prep']; self.assertGreaterEqual(len(guides),6)
+        guides=self.data['prep']; self.assertGreaterEqual(len(guides),9)
         self.assertEqual(len({g['id'] for g in guides}),len(guides))
         for g in guides:
             self.assertTrue(g['steps']) ; self.assertTrue(g['sources'],g['id'])
