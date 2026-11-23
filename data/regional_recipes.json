@@ -7653,5 +7653,189 @@
       }
     ],
     "yield_": 4
+  },
+  {
+    "cuisine": "Indian",
+    "tags": [],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "tips": [
+      "Some homes skip the roasted gram and use only jaggery, coconut and spices; others pour jaggery syrup over instead of the dry powder.",
+      "In Dharwad it's also eaten with shenga (peanut) chutney or pickle and ghee."
+    ],
+    "timing": {
+      "cookMinutes": [
+        40,
+        45
+      ],
+      "prerequisiteMinutes": [
+        0,
+        0
+      ],
+      "prerequisites": [],
+      "basis": "Editorial raw-start estimate; not measured",
+      "note": ""
+    },
+    "id": "chonge",
+    "title": "Chonge (Muharram sweet rotis)",
+    "aliases": [
+      "chonge",
+      "chonga",
+      "moharam chonge",
+      "muharram chonge",
+      "ಚೊಂಗೆ",
+      "meethe chonge"
+    ],
+    "sub": "thick wheat rotis with jaggery, coconut and poppy seeds",
+    "region": "North Karnataka",
+    "course": "sweet",
+    "yield": 4,
+    "servingLabel": "2 chonge",
+    "time": "40–45 min",
+    "uses": "Tawa and a mixer, 1 burner; a chonge mane (board) if you have one",
+    "keeps": "Room temperature 1–2 days, covered.",
+    "intro": "A Muharram sweet made in Muslim homes across North Karnataka (Dharwad), Maharashtra and Hyderabad and adopted by many other families: thick wheat rotis cooked on the tawa with ghee and, while hot, layered with a powder of roasted gram, jaggery, dry coconut, poppy seeds and cardamom that melts in. Traditionally rolled on a special board called the chonge mane.",
+    "ingredients": [
+      {
+        "group": "Dough",
+        "items": [
+          {
+            "id": "atta",
+            "key": "atta",
+            "name": "Whole-wheat atta",
+            "q": "2 cups / 260 g",
+            "grams": 260,
+            "note": ""
+          },
+          {
+            "id": "milk",
+            "key": "milk",
+            "name": "Milk",
+            "q": "1 tbsp",
+            "grams": 15,
+            "note": ""
+          },
+          {
+            "id": "oil",
+            "key": "oil",
+            "name": "Oil",
+            "q": "½ tsp",
+            "grams": 2,
+            "note": ""
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "a pinch",
+            "grams": 0.5,
+            "note": ""
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water",
+            "q": "about ¾ cup / 180 ml",
+            "grams": 0,
+            "note": ""
+          },
+          {
+            "id": "ghee",
+            "key": "ghee",
+            "name": "Ghee or oil for the tawa",
+            "q": "3 tbsp",
+            "grams": 40,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "group": "Sweet powder",
+        "items": [
+          {
+            "id": "putani",
+            "key": "rchana",
+            "name": "Roasted chana (putani), powdered",
+            "q": "1 cup / 100 g",
+            "grams": 100,
+            "note": "Dharwad style; skip for the jaggery-coconut-only version"
+          },
+          {
+            "id": "jaggery",
+            "key": "jaggery",
+            "name": "Jaggery powder",
+            "q": "½ cup / 90 g",
+            "grams": 90,
+            "note": "to taste"
+          },
+          {
+            "id": "coconut",
+            "key": "coconut",
+            "name": "Dry coconut, grated",
+            "q": "½ cup / 40 g",
+            "grams": 40,
+            "note": ""
+          },
+          {
+            "id": "poppy",
+            "key": "poppy",
+            "name": "Poppy seeds (khus khus)",
+            "q": "2 tsp",
+            "grams": 6,
+            "note": ""
+          },
+          {
+            "id": "cardamom",
+            "key": "cardamom",
+            "name": "Cardamom pods",
+            "q": "2",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "cloves",
+            "key": "wholespice",
+            "name": "Cloves",
+            "q": "2",
+            "grams": 0.5,
+            "note": ""
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Dough (5 min, rest 20). Knead {{atta}} atta, {{milk}} milk, {{oil}} oil and {{salt}} salt with {{water}} water to a soft chapati dough. Rest 20 minutes.",
+      "Sweet powder (8 min). Dry-roast {{poppy}} poppy seeds until they crackle, add {{cardamom}} cardamom and {{cloves}} cloves for a few seconds, and grind fine. Mix with {{putani}} powdered roasted chana, {{jaggery}} jaggery and {{coconut}} dry coconut. Don't heat it.",
+      "Roll (10 min). Divide into 8 lemon-sized balls. Roll each (on the chonge mane if you have one), fold once and roll again, keeping it thicker than a chapati.",
+      "Cook (3 min each). Roast on a medium-hot tawa, brushing both sides generously with {{ghee}} ghee, until golden spots appear.",
+      "Layer. While each chonge is hot, spread the sweet powder over it and stack the next one on top. Cover for a few minutes so the jaggery melts in. Cut like a cake or tear by hand."
+    ],
+    "serve": "Warm, with ghee.",
+    "sources": [
+      {
+        "title": "Dharwad Cooks: chonge",
+        "url": "https://dharwadcooks.blogspot.com/2018/10/chonge.html",
+        "scope": "Dharwad Muharram sweet: 2 cups wheat flour dough with milk and oil, rolled on a chonge mane and thicker than a chapati; topped with putani powder, jaggery, poppy seeds, dry coconut, cardamom and cloves; covered so the jaggery melts.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Cadbury Desserts Corner: chonge for Muharram",
+        "url": "https://www.cadburydessertscorner.com/articles/chonge-sweet-for-muharram-an-heirloom-delicacy-with-a-soft-crumb-texture",
+        "scope": "Muharram sweet in Muslim households of Maharashtra and Karnataka: thick pan-cooked wheat puri with jaggery, dry coconut, poppy seeds, cardamom and cloves, served stacked.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Cookpad (ZMA): old traditional Muharram chonge",
+        "url": "https://cookpad.wasmer.app/eng/recipes/16438355",
+        "scope": "Hyderabadi Muharram chonge; varieties with chashni or jaggery, and warqi chonge.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "yield_": 4
   }
 ]

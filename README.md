@@ -59,7 +59,7 @@ note says what changed. **Cook … every day** makes the current choice the defa
 
 Regional additions: Andhra/Telangana variety rices (capsicum, sweet corn, tomato, pulihora, kobbari annam, pudina,
 carrot), pachi pulusu and pesarattu; Karnataka ragi mudde, akki rotti, neer dosa, uppittu, ragi ambali (ganji), bele
-holige, kattina saaru and North Karnataka madli; Maharashtrian misal; Kerala avial; poori and atta bhatura.
+holige, kattina saaru, North Karnataka madli and Muharram chonge; Maharashtrian misal; Kerala avial; poori and atta bhatura.
 
 ## Pantry check, use-it-first and budget mode
 
@@ -133,7 +133,7 @@ guide records current limitations and the next implementation phases.
 
 A phone-first planner customized for a five-person household: two cooks, two stoves with four burners, induction, 3 L and 5 L pressure cookers, an air fryer, a sandwich maker and a fridge. It started as a companion to two home cookbooks, *Restaurant-Grade Biryani at Home* (Book 1) and *Everyday Indian Meals at Home* (Book 2), and adds 32 recipes from other cuisines written for the same kitchen.
 
-149 recipes across seven cuisines: Indian, Continental, Italian, Indo-Chinese, Mexican, Middle Eastern and East Asian. Every serving has its nutrition worked out.
+150 recipes across seven cuisines: Indian, Continental, Italian, Indo-Chinese, Mexican, Middle Eastern and East Asian. Every serving has its nutrition worked out.
 
 ![Today on a laptop](docs/screenshots/desktop-today.png)
 
