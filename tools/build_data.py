@@ -40,7 +40,7 @@ PANTRY = [
     ("lemon", "Lemons", "Vegetables and herbs", 0), ("coriander", "Coriander leaves", "Vegetables and herbs", 1),
     ("mint", "Mint", "Vegetables and herbs", 2), ("curryleaves", "Curry leaves", "Vegetables and herbs", 1),
     ("spinach", "Spinach", "Vegetables and herbs", 2), ("cabbage", "Cabbage", "Vegetables and herbs", 2),
-    ("beans", "Beans", "Vegetables and herbs", 2), ("carrot", "Carrots", "Vegetables and herbs", 0),
+    ("beans", "Beans", "Vegetables and herbs", 2), ("carrot", "Carrots", "Vegetables and herbs", 0), ("lauki", "Bottle gourd (lauki / sorekai)", "Vegetables and herbs", 2),
     ("cauliflower", "Cauliflower", "Vegetables and herbs", 2), ("bhindi", "Bhindi (okra)", "Vegetables and herbs", 2),
     ("mushrooms", "Mushrooms", "Vegetables and herbs", 2), ("capsicum", "Capsicum", "Vegetables and herbs", 2),
     ("peas", "Green peas", "Vegetables and herbs", 2), ("cucumber", "Cucumber", "Vegetables and herbs", 2),
@@ -79,7 +79,7 @@ KEYS = {k for k, *_ in PANTRY}
 SOFT = {"coriander", "cream", "kasuri", "chaat", "sugar", "lemon", "saffron", "kewra", "springonion", "cashews",
         "redchilli", "mint", "herbs", "honey"}
 # what to type into a grocery app's search box, where the label isn't a good search
-BUY = {"gpeas": "dried green peas", "kalachana": "kala chana", "lobia": "black eyed beans", "hurali": "horse gram", "masoor": "masoor dal", "matki": "moth beans", "atta": "whole wheat atta", "rice": "sona masoori rice", "chicken": "chicken curry cut",
+BUY = {"lauki": "bottle gourd", "gpeas": "dried green peas", "kalachana": "kala chana", "lobia": "black eyed beans", "hurali": "horse gram", "masoor": "masoor dal", "matki": "moth beans", "atta": "whole wheat atta", "rice": "sona masoori rice", "chicken": "chicken curry cut",
        "chickenbl": "chicken breast boneless", "mince": "chicken keema", "fish": "seer fish", "sambarveg": "drumstick",
        "coconut": "grated coconut", "wholespice": "whole garam masala", "coriander_p": "coriander powder",
        "cumin_p": "roasted jeera powder", "herbs": "oregano seasoning", "currypaste": "thai red curry paste",

@@ -7837,5 +7837,475 @@
       }
     ],
     "yield_": 4
+  },
+  {
+    "region": "",
+    "cuisine": "Indian",
+    "tags": [],
+    "tips": [
+      {
+        "title": "Taste a raw piece first",
+        "text": "Bottle gourd should taste bland. If a raw piece tastes even slightly bitter, spit it out and throw the whole gourd away: the bitter compound (cucurbitacin) is toxic and cooking does not destroy it."
+      },
+      {
+        "title": "Choosing and cutting",
+        "text": "Pick a firm, light-green gourd with smooth skin that a fingernail dents easily. Peel, halve, and scoop out the seeds only if they are large and hard."
+      },
+      {
+        "title": "Unsoaked dal",
+        "text": "Without soaking, the dal needs more whistles and the gourd turns to mush; cook the dal 2 whistles first, then add the gourd for 1–2 more."
+      }
+    ],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "id": "lauki-chana-dal",
+    "title": "Lauki chana dal (bottle gourd curry)",
+    "aliases": [
+      "lauki",
+      "bottle gourd curry",
+      "sorekai",
+      "dudhi chana dal",
+      "ghiya chana dal",
+      "sorakaya"
+    ],
+    "sub": "bottle gourd and chana dal in onion-tomato masala · rotis or rice",
+    "course": "main",
+    "yield": 4,
+    "servingLabel": "about 1 cup",
+    "time": "40–45 min + 30 min soak",
+    "uses": "Pressure cooker, 1 burner",
+    "keeps": "Fridge 2–3 days; reheat until steaming hot.",
+    "intro": "A one-cooker curry: soaked chana dal and bottle gourd cook together in the masala. The dal keeps its shape and the gourd melts into the gravy.",
+    "ingredients": [
+      {
+        "group": "Curry",
+        "items": [
+          {
+            "id": "dal",
+            "key": "chanadal",
+            "name": "Chana dal",
+            "q": "½ cup / 100 g",
+            "grams": 100,
+            "note": "soaked 30 minutes"
+          },
+          {
+            "id": "lauki",
+            "key": "lauki",
+            "name": "Bottle gourd (lauki / sorekai), peeled and cubed",
+            "q": "about 3 cups / 400 g",
+            "grams": 400,
+            "note": "taste a raw piece first"
+          },
+          {
+            "id": "oil",
+            "key": "oil",
+            "name": "Oil or ghee",
+            "q": "1½ tbsp",
+            "grams": 20,
+            "note": ""
+          },
+          {
+            "id": "cumin",
+            "key": "cumin",
+            "name": "Cumin seeds",
+            "q": "1 tsp",
+            "grams": 2,
+            "note": ""
+          },
+          {
+            "id": "hing",
+            "key": "hing",
+            "name": "Hing",
+            "q": "a pinch",
+            "grams": 0.2,
+            "note": ""
+          },
+          {
+            "id": "onion",
+            "key": "onion",
+            "name": "Onion, finely chopped",
+            "q": "1 medium",
+            "grams": 110,
+            "note": ""
+          },
+          {
+            "id": "ginger",
+            "key": "ginger",
+            "name": "Ginger, grated",
+            "q": "1-inch piece",
+            "grams": 8,
+            "note": ""
+          },
+          {
+            "id": "garlic",
+            "key": "garlic",
+            "name": "Garlic, grated",
+            "q": "3 cloves",
+            "grams": 9,
+            "note": ""
+          },
+          {
+            "id": "gch",
+            "key": "greenchilli",
+            "name": "Green chilli, slit",
+            "q": "1–2",
+            "grams": 5,
+            "note": ""
+          },
+          {
+            "id": "tomato",
+            "key": "tomato",
+            "name": "Tomatoes, chopped",
+            "q": "2 medium",
+            "grams": 200,
+            "note": ""
+          },
+          {
+            "id": "turmeric",
+            "key": "turmeric",
+            "name": "Turmeric",
+            "q": "½ tsp",
+            "grams": 1.5,
+            "note": ""
+          },
+          {
+            "id": "chillip",
+            "key": "chilli",
+            "name": "Red chilli powder",
+            "q": "1 tsp",
+            "grams": 2.5,
+            "note": ""
+          },
+          {
+            "id": "corp",
+            "key": "coriander_p",
+            "name": "Coriander powder",
+            "q": "1½ tsp",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "1 tsp",
+            "grams": 6,
+            "note": ""
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water",
+            "q": "about 1¼ cups / 300 ml",
+            "grams": 0,
+            "note": ""
+          },
+          {
+            "id": "garam",
+            "key": "garam",
+            "name": "Garam masala",
+            "q": "½ tsp",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "coriander",
+            "key": "coriander",
+            "name": "Coriander leaves",
+            "q": "2 tbsp",
+            "grams": 6,
+            "note": ""
+          },
+          {
+            "id": "lemon",
+            "key": "lemon",
+            "name": "Lemon juice",
+            "q": "1 tsp",
+            "grams": 5,
+            "note": "optional",
+            "optional": true
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Soak and check. Rinse {{dal}} chana dal and soak 30 minutes. Peel the gourd and taste a tiny raw piece: if it is bitter at all, discard the whole gourd. Cube {{lauki}} bottle gourd.",
+      "Masala (8 min). Heat {{oil}} oil in the cooker; add {{cumin}} cumin and {{hing}} hing, then {{onion}} onion until light golden. Add {{ginger}} ginger, {{garlic}} garlic and {{gch}} green chilli for a minute.",
+      "Tomatoes (5 min). Add {{tomato}} tomatoes, {{turmeric}} turmeric, {{chillip}} chilli powder and {{corp}} coriander powder; cook until soft and the oil separates.",
+      "Pressure-cook (3–4 whistles). Add the drained dal, the gourd, {{salt}} salt and {{water}} water; stir and cook 3–4 whistles on medium. Let the pressure drop on its own. The dal should be soft but whole; the gourd releases water, so don't add more at first.",
+      "Finish. Simmer open for 2–3 minutes to adjust thickness, then add {{garam}} garam masala, {{coriander}} coriander and {{lemon}} lemon."
+    ],
+    "sources": [
+      {
+        "title": "Dassana's Veg Recipes: lauki chana dal",
+        "url": "https://www.vegrecipesofindia.com/lauki-chana-dal-curry-recipe/",
+        "scope": "Punjabi-style bottle gourd and chana dal curry in an onion-tomato masala in the pressure cooker; discard lauki that tastes bitter; zucchini works instead.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Whisk Affair: lauki chana dal",
+        "url": "https://www.whiskaffair.com/lauki-chana-dal-recipe/",
+        "scope": "Soak chana dal about 20 minutes so it cooks with the lauki without the lauki turning mushy; taste a piece of lauki before cooking.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Piping Pot Curry: lauki chana dal",
+        "url": "https://pipingpotcurry.com/lauki-chana-dal-pressure-cooker/",
+        "scope": "Soak chana dal 30 minutes; about 30 minutes in a pressure cooker; how to choose and cut a bottle gourd.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "America's Poison Centers: toxic squash syndrome",
+        "url": "https://www.poison.org/articles/toxic-squash-syndrome-if-it-s-bitter-it-s-not-dinner",
+        "scope": "Taste raw squash first; if bitter, spit it out and throw it away; cooking does not inactivate the toxin.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "timing": {
+      "cookMinutes": [
+        40,
+        45
+      ],
+      "prerequisiteMinutes": [
+        30,
+        30
+      ],
+      "prerequisites": [
+        "Soak the chana dal 30 minutes."
+      ],
+      "basis": "Editorial estimate; not measured",
+      "note": ""
+    },
+    "serve": "Chapati, phulka or rice.",
+    "yield_": 4
+  },
+  {
+    "region": "Karnataka",
+    "cuisine": "Indian",
+    "tags": [],
+    "tips": [
+      {
+        "title": "Taste a raw piece first",
+        "text": "Bottle gourd should taste bland. If a raw piece tastes even slightly bitter, spit it out and throw the whole gourd away: the bitter compound (cucurbitacin) is toxic and cooking does not destroy it."
+      },
+      {
+        "title": "Gourd cooks fast",
+        "text": "Bottle gourd turns soft in 1–2 whistles. If cooking it in the same cooker as the dal, cut bigger cubes so it doesn't dissolve."
+      }
+    ],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "id": "sorekai-huli",
+    "title": "Sorekai huli (bottle gourd sambar)",
+    "aliases": [
+      "sorekai sambar",
+      "sorekayi huli",
+      "lauki sambar",
+      "sorakkai sambar",
+      "bottle gourd sambar"
+    ],
+    "sub": "Karnataka-style toor dal and bottle gourd huli · rice",
+    "course": "main",
+    "yield": 4,
+    "servingLabel": "about 1 cup",
+    "time": "35–40 min",
+    "uses": "Pressure cooker, 1 burner",
+    "keeps": "Fridge 2–3 days; reheat until boiling.",
+    "intro": "Bottle gourd is ideal for huli: it soaks up the tamarind, sambar powder and coconut. Cook the dal and gourd in the cooker, then boil everything together.",
+    "ingredients": [
+      {
+        "group": "Dal",
+        "items": [
+          {
+            "id": "toor",
+            "key": "toor",
+            "name": "Toor dal, rinsed",
+            "q": "½ cup / 100 g",
+            "grams": 100,
+            "note": ""
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water",
+            "q": "about 3 cups / 750 ml, in total",
+            "grams": 0,
+            "note": ""
+          },
+          {
+            "id": "turmeric",
+            "key": "turmeric",
+            "name": "Turmeric",
+            "q": "¼ tsp",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "lauki",
+            "key": "lauki",
+            "name": "Bottle gourd (sorekai), peeled and cubed",
+            "q": "about 3 cups / 400 g",
+            "grams": 400,
+            "note": "taste a raw piece first"
+          }
+        ]
+      },
+      {
+        "group": "Huli",
+        "items": [
+          {
+            "id": "tamarind",
+            "key": "tamarind",
+            "name": "Tamarind pulp",
+            "q": "1 tbsp (lemon-sized ball soaked)",
+            "grams": 15,
+            "note": ""
+          },
+          {
+            "id": "sambar",
+            "key": "sambarpowder",
+            "name": "Sambar powder (huli pudi)",
+            "q": "1½–2 tbsp",
+            "grams": 12,
+            "note": ""
+          },
+          {
+            "id": "jaggery",
+            "key": "jaggery",
+            "name": "Jaggery",
+            "q": "1 tsp",
+            "grams": 5,
+            "note": ""
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "1¼ tsp",
+            "grams": 7,
+            "note": ""
+          },
+          {
+            "id": "coconut",
+            "key": "coconut",
+            "name": "Grated coconut",
+            "q": "3 tbsp",
+            "grams": 18,
+            "note": "optional, for a thicker huli",
+            "optional": true
+          }
+        ]
+      },
+      {
+        "group": "Tempering",
+        "items": [
+          {
+            "id": "oil",
+            "key": "oil",
+            "name": "Oil or ghee",
+            "q": "1 tbsp",
+            "grams": 13,
+            "note": ""
+          },
+          {
+            "id": "mustard",
+            "key": "mustard",
+            "name": "Mustard seeds",
+            "q": "1 tsp",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "hing",
+            "key": "hing",
+            "name": "Hing",
+            "q": "a pinch",
+            "grams": 0.2,
+            "note": ""
+          },
+          {
+            "id": "redch",
+            "key": "redchilli",
+            "name": "Dry red chilli",
+            "q": "1",
+            "grams": 0.5,
+            "note": ""
+          },
+          {
+            "id": "curry",
+            "key": "curryleaves",
+            "name": "Curry leaves",
+            "q": "1 sprig",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "coriander",
+            "key": "coriander",
+            "name": "Coriander leaves",
+            "q": "2 tbsp",
+            "grams": 6,
+            "note": ""
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Check the gourd. Peel and taste a tiny raw piece of the gourd; if it is bitter at all, throw the whole gourd away. Cube {{lauki}} bottle gourd.",
+      "Cook dal and gourd (3 whistles). Put {{toor}} toor dal with half the {{water}} water and {{turmeric}} turmeric in the cooker; set the gourd in a separate bowl on top (or straight in with the dal) and cook 3 whistles. Let the pressure drop; mash the dal.",
+      "Boil the huli (10 min). Boil the gourd with {{tamarind}} tamarind, {{sambar}} sambar powder, {{jaggery}} jaggery, {{salt}} salt and {{coconut}} coconut (ground with a little water, if using) for 5 minutes, until the raw tamarind smell goes. Add the mashed dal and the rest of the water for a pourable huli and boil 3–4 minutes more.",
+      "Temper. Heat {{oil}} oil; add {{mustard}} mustard, then {{hing}} hing, {{redch}} red chilli and {{curry}} curry leaves; pour over the huli and add {{coriander}} coriander."
+    ],
+    "sources": [
+      {
+        "title": "Chitra's Food Book: bottle gourd sambar (sorakkai sambar)",
+        "url": "https://chitrasfoodbook.com/bottle-gourd-sambar-recipe-sorakkai/",
+        "scope": "Sambar for rice with bottle gourd, toor dal and tamarind; about 30 minutes for 4.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Nalini Somayaji: sorekai huli",
+        "url": "https://nsomayaji.blogspot.com/2012/12/sorekai-kai-huli-bottle-gourd-coconut.html",
+        "scope": "Karnataka bottle-gourd huli with rasam powder, tamarind and coconut; served with rice, chapati, dosa or idli.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Archana's Kitchen: Karnataka style sorakaya palya",
+        "url": "https://archanaskitchen.com/karnataka-style-sorakkai-palya-recipe-pressure-cooked-bottle-gourd-recipe",
+        "scope": "Bottle gourd cooked quickly in a pressure cooker with sambar powder, served with sambar and rice.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Swasthi's Recipes: sorakkai kootu",
+        "url": "https://indianhealthyrecipes.com/sorakkai-kootu-bottle-gourd-kootu/",
+        "scope": "Always taste bottle gourd before cooking; avoid a bitter one, which is said to be toxic.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "timing": {
+      "cookMinutes": [
+        35,
+        40
+      ],
+      "prerequisiteMinutes": [
+        0,
+        0
+      ],
+      "prerequisites": [],
+      "basis": "Editorial raw-start estimate; not measured",
+      "note": ""
+    },
+    "serve": "Hot rice with ghee; also good with chapati or dosa.",
+    "yield_": 4
   }
 ]
