@@ -8307,5 +8307,1299 @@
     },
     "serve": "Hot rice with ghee; also good with chapati or dosa.",
     "yield_": 4
+  },
+  {
+    "region": "",
+    "cuisine": "Indian",
+    "tags": [],
+    "tips": [
+      {
+        "title": "Other ways to use kalonji",
+        "text": "Add a pinch to dal tadka, mix ½ tsp into puri or paratha dough, sprinkle on naan before cooking, or temper it for pickles and potato or cauliflower dishes."
+      }
+    ],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "id": "aloo-kalonji",
+    "title": "Aloo kalonji (potatoes with nigella seeds)",
+    "aliases": [
+      "kalonji aloo",
+      "nigella potato",
+      "aloo kalonji sabzi",
+      "onion seeds potato"
+    ],
+    "sub": "dry potato sabzi where kalonji is the star · rotis, puris or dal-rice",
+    "course": "side",
+    "yield": 4,
+    "servingLabel": "about ¾ cup",
+    "time": "30 min",
+    "uses": "Wide pan with lid, 1 burner",
+    "keeps": "Fridge 2 days; good in lunch boxes.",
+    "intro": "A simple dry potato dish flavoured mainly with kalonji. Mustard oil is traditional in eastern India; any oil works.",
+    "ingredients": [
+      {
+        "group": "Sabzi",
+        "items": [
+          {
+            "id": "potato",
+            "key": "potato",
+            "name": "Potatoes, peeled and cut in small cubes",
+            "q": "3 medium / 500 g",
+            "grams": 500,
+            "note": ""
+          },
+          {
+            "id": "oil",
+            "key": "oil",
+            "name": "Oil (or mustard oil, heated till it smokes lightly, then cooled a little)",
+            "q": "2 tbsp",
+            "grams": 26,
+            "note": ""
+          },
+          {
+            "id": "kalonji",
+            "key": "kalonji",
+            "name": "Kalonji (nigella seeds)",
+            "q": "1 tbsp",
+            "grams": 7,
+            "note": ""
+          },
+          {
+            "id": "gch",
+            "key": "greenchilli",
+            "name": "Green chillies, thinly sliced",
+            "q": "2",
+            "grams": 6,
+            "note": ""
+          },
+          {
+            "id": "turmeric",
+            "key": "turmeric",
+            "name": "Turmeric",
+            "q": "½ tsp",
+            "grams": 1.5,
+            "note": ""
+          },
+          {
+            "id": "chillip",
+            "key": "chilli",
+            "name": "Red chilli powder",
+            "q": "½ tsp",
+            "grams": 1.2,
+            "note": ""
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "1 tsp",
+            "grams": 6,
+            "note": ""
+          },
+          {
+            "id": "amchur",
+            "key": "amchur",
+            "name": "Amchur or lemon juice",
+            "q": "½ tsp",
+            "grams": 1,
+            "note": "optional",
+            "optional": true
+          },
+          {
+            "id": "coriander",
+            "key": "coriander",
+            "name": "Coriander leaves",
+            "q": "2 tbsp",
+            "grams": 6,
+            "note": ""
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Cut. Cut {{potato}} potatoes into small, even cubes (about 1.5 cm) so they cook through in the pan; keep them in water until you start, then drain well.",
+      "Kalonji (30 sec). Heat {{oil}} oil on medium, add {{kalonji}} kalonji and let it sizzle until fragrant — don't let it burn. Add {{gch}} green chillies.",
+      "Cook the potatoes (15–18 min). Add the potatoes, {{turmeric}} turmeric, {{chillip}} chilli powder and {{salt}} salt; toss, cover and cook on low-medium, stirring every few minutes, until a cube crushes easily. Sprinkle a spoon of water if they stick.",
+      "Crisp and finish (3 min). Uncover and fry 2–3 minutes for crisp edges; add {{amchur}} amchur and {{coriander}} coriander."
+    ],
+    "sources": [
+      {
+        "title": "The Big Sweet Tooth: kalonji aloo",
+        "url": "https://www.thebigsweettooth.com/kalonji-aloo-potatoes-with-nigella-seeds/",
+        "scope": "500–600 g potatoes, 2 tbsp oil, 1 tbsp nigella seeds, turmeric, chilli and green chillies; minimal spices let the kalonji shine; with rotis, puris or dal-rice.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Archana's Kitchen: kalonji gobi aloo",
+        "url": "https://archanaskitchen.com/kalonji-gobi-aloo-cauliflower-potato-with-nigella-seeds",
+        "scope": "Bengali-style potato and cauliflower with mustard oil and kalonji; sauté the seeds on medium until aromatic.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Simply Tadka: stir-fried potato and onion with nigella seeds",
+        "url": "https://simplytadka.com/?p=115",
+        "scope": "Potato stir-fry flavoured with mustard seeds, mustard oil and kalonji.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "timing": {
+      "cookMinutes": [
+        25,
+        30
+      ],
+      "prerequisiteMinutes": [
+        0,
+        0
+      ],
+      "prerequisites": [],
+      "basis": "Editorial raw-start estimate; not measured",
+      "note": ""
+    },
+    "serve": "Phulka, puri, or as a side with dal and rice.",
+    "yield_": 4
+  },
+  {
+    "region": "North Karnataka",
+    "cuisine": "Indian",
+    "tags": [],
+    "tips": [
+      {
+        "title": "Why it cracks",
+        "text": "Water not hot enough, flour old, or dough kneaded too little. Use just-boiled water and knead until smooth, small batches at a time."
+      },
+      {
+        "title": "Eat it with",
+        "text": "Ennegai (stuffed brinjal), alasande or kaalu palya, shenga chutney pudi, curd, raw onion and fresh methi leaves — the classic jolada rotti oota."
+      }
+    ],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "id": "jolada-rotti",
+    "title": "Jolada rotti (jowar roti)",
+    "aliases": [
+      "jowar roti",
+      "jowar bhakri",
+      "jola rotti",
+      "bhakri",
+      "sorghum roti"
+    ],
+    "sub": "North Karnataka staple flatbread · hot-water dough, no oil",
+    "course": "breakfast",
+    "yield": 2,
+    "servingLabel": "3 rotis",
+    "time": "30–40 min",
+    "uses": "Tawa, rolling pin or palms, 1 burner",
+    "keeps": "Soft rotis are best fresh; dried-out (kadak) rotis keep for days in a closed tin.",
+    "intro": "Jowar has no gluten, so the dough is made with hot water and kneaded until smooth, and each roti is patted or rolled on a well-floured surface. It takes a few tries; a rolling pin is fine.",
+    "ingredients": [
+      {
+        "group": "Rotti",
+        "items": [
+          {
+            "id": "jowar",
+            "key": "jowar",
+            "name": "Jowar flour",
+            "q": "1 cup / 100–120 g",
+            "grams": 110,
+            "note": "fresh flour binds best"
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Hot water",
+            "q": "about ¾ cup / 180 ml, as needed",
+            "grams": 0,
+            "note": ""
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "a pinch",
+            "grams": 0.5,
+            "note": ""
+          },
+          {
+            "id": "dust",
+            "key": "jowar",
+            "name": "Jowar flour, for dusting",
+            "q": "¼ cup / 30 g",
+            "grams": 0,
+            "note": "mostly falls off",
+            "nutritionGrams": 5
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Dough (5 min). Mix {{jowar}} jowar flour and {{salt}} salt; pour in {{water}} hot (just-boiled) water a little at a time and mix with a spoon. When cool enough to touch, knead with the heel of your hand for 3–4 minutes into a smooth, soft dough with no cracks. Knead only what you'll roll in the next few minutes; it dries quickly.",
+      "Shape. Take a lemon-sized ball, knead it again briefly, and flatten on a board dusted with {{dust}} jowar flour. Roll or pat into a 6–7 inch circle, turning it often and dusting under it so it doesn't stick. Mend edge cracks with a wet finger.",
+      "Tawa. Lift the rotti carefully onto a hot tawa, floured side up. Spread a little water over the top with your fingers.",
+      "Cook (3–4 min). When the water dries (about 1 minute), flip and cook the other side until brown spots appear. Puff it directly on the flame or press with a cloth on the tawa. Stack in a cloth-lined box."
+    ],
+    "sources": [
+      {
+        "title": "Dassana's Veg Recipes: jowar roti",
+        "url": "https://www.vegrecipesofindia.com/jowar-roti-recipe-jowar-bhakri/",
+        "scope": "1 cup (100 g) jowar flour, about ¾ cup hot water, ⅛ tsp salt; makes 6 small-medium rotis; place floured side up and spread water on top; hot water makes the dough pliable.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Hebbar's Kitchen: jowar roti (jolada rotti)",
+        "url": "https://hebbarskitchen.com/jowar-roti-recipe-jowar-bhakri-jolada/",
+        "scope": "Staple of North Karnataka and Maharashtra; always use hot water for a soft roti; ½ cup flour for dusting.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Archana's Kitchen: jolada roti",
+        "url": "https://archanaskitchen.com/jolada-roti-jowar-bhakri-recipe",
+        "scope": "Staple of North Karnataka eaten with jhunka, ennegai or chutneys.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Whisk Affair: jowar bhakri",
+        "url": "https://www.whiskaffair.com/jowar-bhakri-recipe/",
+        "scope": "Knead only enough dough for one roti at a time, with hot water so it binds.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "timing": {
+      "cookMinutes": [
+        30,
+        40
+      ],
+      "prerequisiteMinutes": [
+        0,
+        0
+      ],
+      "prerequisites": [],
+      "basis": "Editorial estimate for 6 rotis by a beginner; not measured",
+      "note": "Gets much faster with practice."
+    },
+    "serve": "With ennegai, any palya or usli, chutney pudi and curd.",
+    "yield_": 2
+  },
+  {
+    "region": "",
+    "cuisine": "Indian",
+    "tags": [],
+    "tips": [
+      {
+        "title": "If it's sticky",
+        "text": "Too much soaking water, not rinsed enough, or cooked too long. Next time use less water, rinse more, and take it off the heat as soon as the pearls go clear."
+      }
+    ],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "id": "sabudana-khichdi",
+    "title": "Sabudana khichdi (non-sticky)",
+    "aliases": [
+      "sago khichdi",
+      "sabudana",
+      "sabakki uppittu",
+      "javvarisi upma",
+      "vrat khichdi"
+    ],
+    "sub": "soaked sago with peanuts and potato · breakfast or fasting days",
+    "course": "breakfast",
+    "yield": 2,
+    "servingLabel": "about 1 cup",
+    "time": "20 min + 4–8 h soak",
+    "uses": "Non-stick pan, 1 burner",
+    "keeps": "Best hot; it turns chewy as it cools.",
+    "intro": "Everything depends on the soak: rinse the starch off, soak with water just level with the pearls, and drain completely. Then cook only until the pearls turn translucent.",
+    "ingredients": [
+      {
+        "group": "Khichdi",
+        "items": [
+          {
+            "id": "sabudana",
+            "key": "sabudana",
+            "name": "Sabudana (medium pearls)",
+            "q": "1 cup / 180 g",
+            "grams": 180,
+            "note": "rinsed and soaked"
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water, for soaking",
+            "q": "just enough to cover, about ¾ cup",
+            "grams": 0,
+            "note": ""
+          },
+          {
+            "id": "peanuts",
+            "key": "peanuts",
+            "name": "Peanuts, dry-roasted and coarsely crushed",
+            "q": "⅓ cup / 50 g",
+            "grams": 50,
+            "note": ""
+          },
+          {
+            "id": "potato",
+            "key": "potato",
+            "name": "Potato, boiled and cubed",
+            "q": "1 medium / 150 g",
+            "grams": 150,
+            "note": "optional",
+            "optional": true
+          },
+          {
+            "id": "ghee",
+            "key": "ghee",
+            "name": "Ghee or oil",
+            "q": "1½ tbsp",
+            "grams": 20,
+            "note": ""
+          },
+          {
+            "id": "cumin",
+            "key": "cumin",
+            "name": "Cumin seeds",
+            "q": "1 tsp",
+            "grams": 2,
+            "note": ""
+          },
+          {
+            "id": "gch",
+            "key": "greenchilli",
+            "name": "Green chillies, chopped",
+            "q": "2",
+            "grams": 6,
+            "note": ""
+          },
+          {
+            "id": "curry",
+            "key": "curryleaves",
+            "name": "Curry leaves",
+            "q": "1 sprig",
+            "grams": 1,
+            "note": "optional",
+            "optional": true
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt (rock salt on fasting days)",
+            "q": "¾ tsp",
+            "grams": 4.5,
+            "note": ""
+          },
+          {
+            "id": "sugar",
+            "key": "sugar",
+            "name": "Sugar",
+            "q": "½ tsp",
+            "grams": 2,
+            "note": "optional",
+            "optional": true
+          },
+          {
+            "id": "lemon",
+            "key": "lemon",
+            "name": "Lemon juice",
+            "q": "1 tbsp",
+            "grams": 15,
+            "note": ""
+          },
+          {
+            "id": "coriander",
+            "key": "coriander",
+            "name": "Coriander leaves",
+            "q": "2 tbsp",
+            "grams": 6,
+            "note": ""
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Rinse and soak (4–8 h). Rinse {{sabudana}} sabudana 3–4 times, rubbing gently, until the water is fairly clear. Soak with {{water}} water just level with the pearls (not more), covered, 4–6 hours or overnight depending on the brand.",
+      "Test and drain. A pearl should squash easily between your fingers with no hard white centre. Drain in a colander for 15 minutes so no water remains. Mix in {{peanuts}} crushed peanuts, {{salt}} salt and {{sugar}} sugar — the peanut powder keeps the pearls separate.",
+      "Temper (2 min). Heat {{ghee}} ghee in a non-stick pan; add {{cumin}} cumin, {{gch}} green chillies and {{curry}} curry leaves, then {{potato}} potato and fry 1 minute.",
+      "Cook (5–7 min). Add the sabudana and toss gently on low-medium heat until most pearls turn translucent. Stop then — overcooking makes it gummy. Finish with {{lemon}} lemon and {{coriander}} coriander."
+    ],
+    "sources": [
+      {
+        "title": "Dassana's Veg Recipes: sabudana khichdi",
+        "url": "https://www.vegrecipesofindia.com/sabudana-khichdi-navratri-vrat-recipe/",
+        "scope": "Rinse well to remove the starch that makes it sticky; soak overnight or 3–5 hours and check the pearls are soft; peanut powder, potato, ghee, cumin, green chilli.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Swasthi's Recipes: sabudana khichdi",
+        "url": "https://www.indianhealthyrecipes.com/sabudana-khichdi-recipe",
+        "scope": "Drain completely after soaking; avoid cast iron, use a non-stick pan; peanut powder keeps it grainy.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Spice Up the Curry: sabudana khichdi",
+        "url": "https://www.spiceupthecurry.com/?p=10725",
+        "scope": "Soak 3–4 hours or overnight depending on the sabudana; no moisture should remain; overcooking makes it chewy and clumpy.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Ruchi's Kitchen: how to soak sabudana",
+        "url": "https://www.ruchiskitchen.com/how-to-soak-sabudana-for-khichdi/",
+        "scope": "Always rinse; a pearl that squishes easily when pressed is ready; too much soaking water makes it sticky.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "timing": {
+      "cookMinutes": [
+        15,
+        20
+      ],
+      "prerequisiteMinutes": [
+        240,
+        480
+      ],
+      "prerequisites": [
+        "Rinse and soak the sabudana 4–8 hours (overnight)."
+      ],
+      "basis": "Editorial estimate; not measured",
+      "note": ""
+    },
+    "serve": "Hot, with curd or a cup of tea.",
+    "yield_": 2
+  },
+  {
+    "region": "Karnataka",
+    "cuisine": "Indian",
+    "tags": [],
+    "tips": [],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "id": "shavige-uppittu",
+    "title": "Shavige uppittu (vermicelli upma)",
+    "aliases": [
+      "shavige bath",
+      "semiya upma",
+      "vermicelli upma",
+      "seviyan upma",
+      "akki shavige"
+    ],
+    "sub": "Karnataka breakfast · 15 minutes",
+    "course": "breakfast",
+    "yield": 2,
+    "servingLabel": "about 1 cup",
+    "time": "15–20 min",
+    "uses": "Pan with lid, 1 burner",
+    "keeps": "Best fresh; packs for a lunch box the same day.",
+    "intro": "Roasted vermicelli cooked in a seasoned onion-vegetable base. Wheat vermicelli is roasted first; rice vermicelli is soaked or boiled briefly instead (follow the packet).",
+    "ingredients": [
+      {
+        "group": "Uppittu",
+        "items": [
+          {
+            "id": "shavige",
+            "key": "shavige",
+            "name": "Wheat vermicelli (shavige)",
+            "q": "1 cup / 100 g",
+            "grams": 100,
+            "note": "roasted"
+          },
+          {
+            "id": "oil",
+            "key": "oil",
+            "name": "Oil or ghee",
+            "q": "1½ tbsp",
+            "grams": 20,
+            "note": ""
+          },
+          {
+            "id": "mustard",
+            "key": "mustard",
+            "name": "Mustard seeds",
+            "q": "½ tsp",
+            "grams": 2,
+            "note": ""
+          },
+          {
+            "id": "uraddal",
+            "key": "uraddal",
+            "name": "Urad dal",
+            "q": "1 tsp",
+            "grams": 5,
+            "note": ""
+          },
+          {
+            "id": "chanadal",
+            "key": "chanadal",
+            "name": "Chana dal",
+            "q": "1 tsp",
+            "grams": 5,
+            "note": ""
+          },
+          {
+            "id": "peanuts",
+            "key": "peanuts",
+            "name": "Peanuts",
+            "q": "2 tbsp",
+            "grams": 18,
+            "note": "optional",
+            "optional": true
+          },
+          {
+            "id": "curry",
+            "key": "curryleaves",
+            "name": "Curry leaves",
+            "q": "1 sprig",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "gch",
+            "key": "greenchilli",
+            "name": "Green chillies, slit",
+            "q": "2",
+            "grams": 6,
+            "note": ""
+          },
+          {
+            "id": "ginger",
+            "key": "ginger",
+            "name": "Ginger, chopped",
+            "q": "½-inch piece",
+            "grams": 4,
+            "note": ""
+          },
+          {
+            "id": "onion",
+            "key": "onion",
+            "name": "Onion, chopped",
+            "q": "1 small",
+            "grams": 80,
+            "note": ""
+          },
+          {
+            "id": "veg",
+            "key": "carrot",
+            "name": "Carrot or peas, chopped",
+            "q": "¼ cup",
+            "grams": 35,
+            "note": "optional",
+            "optional": true
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water",
+            "q": "1½ cups / 360 ml",
+            "grams": 0,
+            "note": ""
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "¾ tsp",
+            "grams": 4.5,
+            "note": ""
+          },
+          {
+            "id": "coconut",
+            "key": "coconut",
+            "name": "Grated coconut",
+            "q": "2 tbsp",
+            "grams": 12,
+            "note": "optional",
+            "optional": true
+          },
+          {
+            "id": "lemon",
+            "key": "lemon",
+            "name": "Lemon juice",
+            "q": "2 tsp",
+            "grams": 10,
+            "note": ""
+          },
+          {
+            "id": "coriander",
+            "key": "coriander",
+            "name": "Coriander leaves",
+            "q": "2 tbsp",
+            "grams": 6,
+            "note": ""
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Roast (4 min). Dry-roast or roast {{shavige}} vermicelli in a teaspoon of the oil, stirring, until light golden. Set aside. (Skip if the packet says pre-roasted.)",
+      "Temper (3 min). Heat the rest of {{oil}} oil; add {{mustard}} mustard, then {{uraddal}} urad dal, {{chanadal}} chana dal and {{peanuts}} peanuts until golden. Add {{curry}} curry leaves, {{gch}} green chillies, {{ginger}} ginger, {{onion}} onion and {{veg}} carrot or peas; cook until the onion softens.",
+      "Boil, then add vermicelli. Pour in {{water}} water and {{salt}} salt and bring to a full boil. Only then add the vermicelli, stir once, cover and cook on low 4–5 minutes until the water is absorbed and the strands are soft.",
+      "Rest and finish. Turn off the heat, keep covered 2 minutes, then fluff with a fork and mix in {{coconut}} coconut, {{lemon}} lemon juice and {{coriander}} coriander. Don't overcook or it turns sticky."
+    ],
+    "sources": [
+      {
+        "title": "Hebbar's Kitchen: shavige uppittu",
+        "url": "https://hebbarskitchen.com/?p=107322",
+        "scope": "Karnataka breakfast with thin vermicelli; add vermicelli only after the water boils; don't overcook or it turns sticky; finish with coconut, coriander and lemon.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Dassana's Veg Recipes: semiya upma",
+        "url": "https://www.vegrecipesofindia.com/vermicelli-upma-seviyan-upma",
+        "scope": "Roasted semiya with aromatics and spices; add carrots, peas or beans to make it more nourishing.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Dassana's Veg Recipes: shavige uppittu (rice vermicelli)",
+        "url": "https://www.vegrecipesofindia.com/shavige-uppittu-recipe/",
+        "scope": "Rice vermicelli is cooked in water first, then mixed with the tempering, coconut and herbs.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Tarla Dalal: semiya upma",
+        "url": "https://www.tarladalal.com/semiya-upma-2873r",
+        "scope": "Cover the pan after cooking and let it sit a few minutes to make it fluffy.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "timing": {
+      "cookMinutes": [
+        15,
+        20
+      ],
+      "prerequisiteMinutes": [
+        0,
+        0
+      ],
+      "prerequisites": [],
+      "basis": "Editorial raw-start estimate; not measured",
+      "note": ""
+    },
+    "serve": "With coconut chutney, or on its own.",
+    "yield_": 2
+  },
+  {
+    "region": "",
+    "cuisine": "Indian",
+    "tags": [],
+    "tips": [
+      {
+        "title": "Cleaning methi",
+        "text": "Pluck the leaves, discard yellow ones and thick stems, then swish in a bowl of water, lift out and repeat until no grit settles. Plucked leaves keep 4–5 days in a closed steel box in the fridge."
+      },
+      {
+        "title": "No fresh methi?",
+        "text": "Use 2 tbsp kasuri methi, rubbed between your palms; the taste is milder."
+      }
+    ],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "id": "methi-thepla",
+    "title": "Methi thepla (fenugreek flatbread)",
+    "aliases": [
+      "thepla",
+      "methi paratha",
+      "methi roti",
+      "menthya rotti",
+      "fenugreek paratha"
+    ],
+    "sub": "soft spiced flatbread with fresh methi · keeps 2–3 days, good for travel",
+    "course": "breakfast",
+    "yield": 3,
+    "servingLabel": "3–4 theplas",
+    "time": "40–45 min",
+    "uses": "Tawa, rolling pin, 1 burner",
+    "keeps": "2–3 days at room temperature in a closed box; longer in the fridge.",
+    "intro": "Fresh methi, atta and a little besan with curd and spices. The curd keeps theplas soft for days, so they're ideal for packing.",
+    "ingredients": [
+      {
+        "group": "Dough",
+        "items": [
+          {
+            "id": "atta",
+            "key": "atta",
+            "name": "Whole-wheat atta",
+            "q": "1½ cups / 180 g",
+            "grams": 180,
+            "note": ""
+          },
+          {
+            "id": "besan",
+            "key": "besan",
+            "name": "Besan",
+            "q": "2 tbsp / 15 g",
+            "grams": 15,
+            "note": ""
+          },
+          {
+            "id": "methi",
+            "key": "methi",
+            "name": "Fresh methi leaves, picked, washed and finely chopped",
+            "q": "1 packed cup / 50 g",
+            "grams": 50,
+            "note": "leaves only, no thick stems"
+          },
+          {
+            "id": "curd",
+            "key": "curd",
+            "name": "Curd",
+            "q": "¼ cup / 60 g",
+            "grams": 60,
+            "note": ""
+          },
+          {
+            "id": "ginger",
+            "key": "ginger",
+            "name": "Ginger, grated",
+            "q": "1 tsp",
+            "grams": 5,
+            "note": ""
+          },
+          {
+            "id": "gch",
+            "key": "greenchilli",
+            "name": "Green chilli, finely chopped",
+            "q": "1",
+            "grams": 3,
+            "note": ""
+          },
+          {
+            "id": "turmeric",
+            "key": "turmeric",
+            "name": "Turmeric",
+            "q": "¼ tsp",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "chillip",
+            "key": "chilli",
+            "name": "Red chilli powder",
+            "q": "½ tsp",
+            "grams": 1.2,
+            "note": ""
+          },
+          {
+            "id": "ajwain",
+            "key": "ajwain",
+            "name": "Ajwain",
+            "q": "½ tsp",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "¾ tsp",
+            "grams": 4.5,
+            "note": ""
+          },
+          {
+            "id": "oil1",
+            "key": "oil",
+            "name": "Oil, in the dough",
+            "q": "1 tbsp",
+            "grams": 13,
+            "note": ""
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water",
+            "q": "2–4 tbsp, only if needed",
+            "grams": 0,
+            "note": ""
+          },
+          {
+            "id": "oil2",
+            "key": "oil",
+            "name": "Oil, for cooking",
+            "q": "1½ tbsp",
+            "grams": 20,
+            "note": ""
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Dough (8 min). Mix {{atta}} atta, {{besan}} besan, {{methi}} methi, {{curd}} curd, {{ginger}} ginger, {{gch}} chilli, {{turmeric}} turmeric, {{chillip}} chilli powder, {{ajwain}} ajwain, {{salt}} salt and {{oil1}} oil. Knead, adding {{water}} water a spoon at a time, into a soft dough (methi and curd add moisture). Rest covered 15 minutes.",
+      "Roll. Divide into lemon-sized balls and roll each thin (about 7 inches), dusting with atta.",
+      "Cook (2–3 min each). On a medium-hot tawa, cook until small bubbles appear, flip, brush with {{oil2}} oil, flip again and press with a spatula until both sides have golden spots.",
+      "Stack in a cloth-lined box so they stay soft."
+    ],
+    "sources": [
+      {
+        "title": "Dassana's Veg Recipes: methi thepla",
+        "url": "https://www.vegrecipesofindia.com/?p=9603",
+        "scope": "Gujarati flatbread with fresh fenugreek leaves, whole grain flours, yogurt and spices; use only the leaves; plucked leaves keep 4–5 days in a steel container.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "J Cooking Odyssey: methi thepla",
+        "url": "https://www.jcookingodyssey.com/methi-thepla/",
+        "scope": "Fresh methi with yogurt, ajwain, chilli, turmeric, ginger, salt and oil; discard thick stems and yellow leaves; kasuri methi is not a substitute for fresh.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Cooking From Heart: methi thepla",
+        "url": "https://cookingfromheart.com/2013/08/02/methi-thepla/",
+        "scope": "Whole wheat flour, gram flour, fresh fenugreek and spices; theplas stay good for a couple of days.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Cooking and Me: methi thepla",
+        "url": "https://www.cookingandme.com/2013/07/16/methi-thepla-gujarati-methi-thepla/",
+        "scope": "If fresh methi isn't available, a handful of kasuri methi can be used; use only the chopped leaves.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "timing": {
+      "cookMinutes": [
+        40,
+        45
+      ],
+      "prerequisiteMinutes": [
+        0,
+        0
+      ],
+      "prerequisites": [],
+      "basis": "Editorial estimate for 10 theplas including dough rest; not measured",
+      "note": ""
+    },
+    "serve": "With curd, pickle or tea; packs well for the commute.",
+    "yield_": 3
+  },
+  {
+    "region": "North Karnataka",
+    "cuisine": "Indian",
+    "tags": [],
+    "tips": [
+      {
+        "title": "Don't over-peel",
+        "text": "Ridge gourd turns mushy fast and much of its flavour is in the green skin; remove only the sharp ridges, and the whole peel if it's an old, fibrous gourd."
+      }
+    ],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "id": "heerekai-palya",
+    "title": "Heerekai palya (North Karnataka ridge gourd curry)",
+    "aliases": [
+      "heerekayi palya",
+      "ridge gourd curry",
+      "turai sabzi",
+      "beerakaya curry",
+      "heerekai"
+    ],
+    "sub": "ridge gourd in a ground onion-coconut masala · jolada rotti, chapati or rice",
+    "course": "main",
+    "yield": 4,
+    "servingLabel": "about ¾ cup",
+    "time": "30–35 min",
+    "uses": "Pan with lid, mixer, 1 burner",
+    "keeps": "Fridge 2 days.",
+    "intro": "Ridge gourd soaks up a spicy ground masala and turns soft but holds its shape. Peel only the sharp ridges, not all the green skin.",
+    "ingredients": [
+      {
+        "group": "Masala paste",
+        "items": [
+          {
+            "id": "onion1",
+            "key": "onion",
+            "name": "Onion, roughly chopped",
+            "q": "1 medium",
+            "grams": 110,
+            "note": ""
+          },
+          {
+            "id": "coconut",
+            "key": "coconut",
+            "name": "Grated coconut (or dry coconut)",
+            "q": "¼ cup / 25 g",
+            "grams": 25,
+            "note": ""
+          },
+          {
+            "id": "sambar",
+            "key": "sambarpowder",
+            "name": "Sambar powder",
+            "q": "1½ tbsp",
+            "grams": 9,
+            "note": ""
+          },
+          {
+            "id": "garlic",
+            "key": "garlic",
+            "name": "Garlic",
+            "q": "4 cloves",
+            "grams": 12,
+            "note": ""
+          },
+          {
+            "id": "tomato",
+            "key": "tomato",
+            "name": "Tomato",
+            "q": "1",
+            "grams": 100,
+            "note": ""
+          },
+          {
+            "id": "water1",
+            "key": "water",
+            "name": "Water, for grinding",
+            "q": "¼ cup",
+            "grams": 0,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "group": "Curry",
+        "items": [
+          {
+            "id": "gourd",
+            "key": "ridgegourd",
+            "name": "Ridge gourd, ridges peeled, cut in 2-inch pieces",
+            "q": "2 medium / 500 g",
+            "grams": 500,
+            "note": "taste a raw piece first"
+          },
+          {
+            "id": "oil",
+            "key": "oil",
+            "name": "Oil",
+            "q": "2 tbsp",
+            "grams": 26,
+            "note": ""
+          },
+          {
+            "id": "mustard",
+            "key": "mustard",
+            "name": "Mustard seeds",
+            "q": "½ tsp",
+            "grams": 2,
+            "note": ""
+          },
+          {
+            "id": "cumin",
+            "key": "cumin",
+            "name": "Cumin seeds",
+            "q": "½ tsp",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "curry",
+            "key": "curryleaves",
+            "name": "Curry leaves",
+            "q": "1 sprig",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "turmeric",
+            "key": "turmeric",
+            "name": "Turmeric",
+            "q": "¼ tsp",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "jaggery",
+            "key": "jaggery",
+            "name": "Jaggery",
+            "q": "1 tsp",
+            "grams": 5,
+            "note": "optional",
+            "optional": true
+          },
+          {
+            "id": "salt",
+            "key": "salt",
+            "name": "Salt",
+            "q": "1 tsp",
+            "grams": 6,
+            "note": ""
+          },
+          {
+            "id": "water2",
+            "key": "water",
+            "name": "Water",
+            "q": "about ½ cup",
+            "grams": 0,
+            "note": ""
+          },
+          {
+            "id": "coriander",
+            "key": "coriander",
+            "name": "Coriander leaves",
+            "q": "2 tbsp",
+            "grams": 6,
+            "note": ""
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Prep. Peel just the hard ridges off {{gourd}} ridge gourd, taste a raw piece (throw it away if bitter), and cut into 2-inch lengths.",
+      "Grind. Blend {{onion1}} onion, {{coconut}} coconut, {{sambar}} sambar powder, {{garlic}} garlic and {{tomato}} tomato with {{water1}} water into a smooth paste.",
+      "Temper and sauté (5 min). Heat {{oil}} oil; add {{mustard}} mustard, {{cumin}} cumin and {{curry}} curry leaves, then the gourd and {{turmeric}} turmeric; sauté until it starts to soften.",
+      "Cook (12–15 min). Add the paste and fry until the raw smell goes, then add {{salt}} salt, {{jaggery}} jaggery and {{water2}} water. Cover and cook on low, stirring once or twice, until the gourd is soft but still holds its shape. Finish with {{coriander}} coriander."
+    ],
+    "sources": [
+      {
+        "title": "Chitra's Food Book: heerekayi palya (North Karnataka style)",
+        "url": "https://chitrasfoodbook.com/heerekayi-palya-recipe-karnataka-style/",
+        "scope": "Peel the ridges, cut 2-inch pieces, sauté until soft, add a ground paste with Karnataka sambar powder, cook until done but not mushy; for jolada roti, rice or chapati.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Spoon Fork and Food: heerekai palya",
+        "url": "https://www.spoonforkandfood.com/heerekai-payla-recipe",
+        "scope": "North Karnataka ridge gourd curry with a ground masala; side dish for roti or rice.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Cook with Smile (Smitha Kalluraya): heerekai ennegai",
+        "url": "https://smithakalluraya.com/stuffed-ridge-gourd-heerekai-ennegai-ennegayi-bharwa-turai-recipe/",
+        "scope": "North Karnataka stuffed ridge gourd curry, eaten with chapati or bhakri.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "timing": {
+      "cookMinutes": [
+        30,
+        35
+      ],
+      "prerequisiteMinutes": [
+        0,
+        0
+      ],
+      "prerequisites": [],
+      "basis": "Editorial raw-start estimate; not measured",
+      "note": ""
+    },
+    "serve": "Jolada rotti, chapati or rice.",
+    "yield_": 4
+  },
+  {
+    "region": "Karnataka",
+    "cuisine": "Indian",
+    "tags": [],
+    "tips": [
+      {
+        "title": "Less bitter still",
+        "text": "Scrape the rough outer skin lightly before slicing, and use less salt later since the salted gourd keeps some."
+      }
+    ],
+    "contentReview": {
+      "status": "Source-compared adaptation · not kitchen-tested",
+      "version": 1,
+      "kitchenTested": false
+    },
+    "note": "Ingredient weights and portions are app adaptations; nutrition uses approximate ingredient data, not laboratory analysis.",
+    "allergens": [],
+    "id": "hagalakai-gojju",
+    "title": "Hagalakai gojju (sweet-sour bitter gourd)",
+    "aliases": [
+      "bitter gourd gojju",
+      "hagalkayi gojju",
+      "karela",
+      "bitter gourd curry",
+      "menaskai"
+    ],
+    "sub": "bitter gourd tamed with salt, tamarind and jaggery · rice or chapati",
+    "course": "side",
+    "yield": 4,
+    "servingLabel": "about ½ cup",
+    "time": "40 min (incl. 20 min salting)",
+    "uses": "Kadai, 1 burner",
+    "keeps": "Fridge 4–5 days; the flavour improves.",
+    "intro": "Thin slices are salted to draw out bitterness, squeezed, fried, then simmered in tamarind and jaggery. Even people who avoid karela usually like it.",
+    "ingredients": [
+      {
+        "group": "Gojju",
+        "items": [
+          {
+            "id": "bg",
+            "key": "bittergourd",
+            "name": "Bitter gourd, thinly sliced (seeds removed if large)",
+            "q": "2 medium / 250 g",
+            "grams": 250,
+            "note": ""
+          },
+          {
+            "id": "salt1",
+            "key": "salt",
+            "name": "Salt, for drawing out bitterness",
+            "q": "1 tsp",
+            "grams": 6,
+            "note": "mostly rinsed off",
+            "nutritionGrams": 1
+          },
+          {
+            "id": "turmeric",
+            "key": "turmeric",
+            "name": "Turmeric",
+            "q": "½ tsp",
+            "grams": 1.5,
+            "note": ""
+          },
+          {
+            "id": "oil",
+            "key": "oil",
+            "name": "Oil",
+            "q": "2 tbsp",
+            "grams": 26,
+            "note": ""
+          },
+          {
+            "id": "mustard",
+            "key": "mustard",
+            "name": "Mustard seeds",
+            "q": "½ tsp",
+            "grams": 2,
+            "note": ""
+          },
+          {
+            "id": "hing",
+            "key": "hing",
+            "name": "Hing",
+            "q": "a pinch",
+            "grams": 0.2,
+            "note": ""
+          },
+          {
+            "id": "curry",
+            "key": "curryleaves",
+            "name": "Curry leaves",
+            "q": "1 sprig",
+            "grams": 1,
+            "note": ""
+          },
+          {
+            "id": "tamarind",
+            "key": "tamarind",
+            "name": "Tamarind (lemon-sized, soaked) or pulp",
+            "q": "1½ tbsp pulp",
+            "grams": 22,
+            "note": ""
+          },
+          {
+            "id": "water",
+            "key": "water",
+            "name": "Water",
+            "q": "¾ cup",
+            "grams": 0,
+            "note": ""
+          },
+          {
+            "id": "jaggery",
+            "key": "jaggery",
+            "name": "Jaggery, grated",
+            "q": "¼ cup / 40 g",
+            "grams": 40,
+            "note": "adjust to bitterness"
+          },
+          {
+            "id": "rasam",
+            "key": "rasampowder",
+            "name": "Rasam or sambar powder",
+            "q": "1½ tbsp",
+            "grams": 9,
+            "note": ""
+          },
+          {
+            "id": "salt2",
+            "key": "salt",
+            "name": "Salt",
+            "q": "½ tsp",
+            "grams": 3,
+            "note": "taste first; the gourd keeps some salt"
+          },
+          {
+            "id": "sesame",
+            "key": "sesame",
+            "name": "Roasted sesame, powdered",
+            "q": "1 tbsp",
+            "grams": 8,
+            "note": "optional",
+            "optional": true
+          }
+        ]
+      }
+    ],
+    "stepTemplates": [
+      "Salt (20 min). Toss {{bg}} sliced bitter gourd with {{salt1}} salt and {{turmeric}} turmeric; leave 20 minutes. Squeeze hard, rinse once in water and squeeze again — this removes much of the bitterness.",
+      "Fry (8–10 min). Heat {{oil}} oil; add {{mustard}} mustard, {{hing}} hing and {{curry}} curry leaves, then the squeezed slices. Fry on medium until they shrink and brown at the edges; the more you fry, the less bitter.",
+      "Simmer (8 min). Add {{tamarind}} tamarind with {{water}} water, {{jaggery}} jaggery, {{rasam}} rasam powder and {{salt2}} salt; simmer until thick and glossy. Stir in {{sesame}} sesame powder."
+    ],
+    "sources": [
+      {
+        "title": "Udupi Recipes: hagalakayi gojju",
+        "url": "https://udupi-recipes.com/wprm_print/bitter-gourd-gojju-hagalakayi-gojju",
+        "scope": "Slice thin; marinate with salt and turmeric; roast the slices, then cook in tamarind water with jaggery and salt.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Swayampaaka: hagalakayi gojju",
+        "url": "https://swayampaaka.com/recipes/side-dishes/gojju-recipes/hagalakayi-bitter-gourd-recipe",
+        "scope": "Bitter gourd gojju without coconut: lemon-sized tamarind, ⅓ cup jaggery, rasam powder and chilli powder.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Hebbar's Kitchen: hagalkayi palya",
+        "url": "https://hebbarskitchen.com/bitter-gourd-stir-fry-recipe-hagalkayi-palya-karela-stir-fry-recipe/",
+        "scope": "Soak in salt, rinse with cold water and squeeze well to reduce bitterness; cooked with jaggery and tamarind.",
+        "checked": "2026-11-23"
+      },
+      {
+        "title": "Tarla Dalal: bitter gourd not bitter anymore",
+        "url": "https://www.tarladalal.com/bitter-gourd-not-bitter-anymore-_tip-118t",
+        "scope": "Scrape the outer surface; use less salt after salting; jaggery, onion or potato balance bitterness.",
+        "checked": "2026-11-23"
+      }
+    ],
+    "timing": {
+      "cookMinutes": [
+        35,
+        40
+      ],
+      "prerequisiteMinutes": [
+        0,
+        0
+      ],
+      "prerequisites": [],
+      "basis": "Editorial estimate including salting; not measured",
+      "note": ""
+    },
+    "serve": "A spoonful with rice and dal, or with chapati.",
+    "yield_": 4
   }
 ]

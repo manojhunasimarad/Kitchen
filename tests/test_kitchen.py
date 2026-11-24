@@ -15,7 +15,7 @@ class RecipeTests(unittest.TestCase):
         cls.data=json.loads((ROOT/'data/data.json').read_text(encoding='utf-8'))
         cls.recipes={r['id']:r for r in cls.data['recipes']}
     def test_structural_contract(self):
-        self.assertEqual(len(self.recipes),152)
+        self.assertEqual(len(self.recipes),159)
         pantry={p['key'] for p in self.data['pantry']}
         for r in self.recipes.values():
             self.assertTrue(r['steps']);self.assertTrue(r['ingredients']);self.assertGreater(r['yield'],0)

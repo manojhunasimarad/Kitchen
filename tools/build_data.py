@@ -8,6 +8,8 @@ from book1_extra import B1_EXTRA
 # ------------------------------------------------------------------ pantry
 # (key, label, group, default state) — 0 have, 1 low, 2 out
 PANTRY = [
+    ("jowar", "Jowar flour (jolada hittu)", "Grains and flours", 2), ("maida", "Maida (refined flour)", "Grains and flours", 2),
+    ("shavige", "Vermicelli (shavige)", "Grains and flours", 2), ("sabudana", "Sabudana (sago)", "Grains and flours", 2),
     ("atta", "Whole-wheat atta", "Grains and flours", 0), ("rice", "Sona masoori rice", "Grains and flours", 0),
     ("basmati", "Basmati rice", "Grains and flours", 0), ("seeraga", "Seeraga samba rice", "Grains and flours", 2),
     ("ragi", "Ragi flour", "Grains and flours", 0), ("poha", "Thick poha", "Grains and flours", 0),
@@ -23,6 +25,7 @@ PANTRY = [
     ("lobia", "Alasande (black-eyed beans)", "Dals, beans and nuts", 2), ("hurali", "Horse gram (hurali)", "Dals, beans and nuts", 2),
     ("masoor", "Masoor dal (red lentils)", "Dals, beans and nuts", 2), ("matki", "Matki (moth beans)", "Dals, beans and nuts", 2),
     ("kchana", "Kabuli chana", "Dals, beans and nuts", 2), ("soya", "Soya chunks", "Dals, beans and nuts", 0),
+    ("kopra", "Dry coconut (kopra)", "Dals, beans and nuts", 2), ("almonds", "Almonds", "Dals, beans and nuts", 2),
     ("rchana", "Roasted chana (putani)", "Dals, beans and nuts", 0), ("peanuts", "Raw peanuts", "Dals, beans and nuts", 0),
     ("cashews", "Cashews", "Dals, beans and nuts", 0), ("makhana", "Makhana", "Dals, beans and nuts", 2),
     ("flax", "Flaxseeds", "Dals, beans and nuts", 2), ("sesame", "Sesame seeds", "Dals, beans and nuts", 2), ("poppy", "Poppy seeds (khus khus)", "Dals, beans and nuts", 2),
@@ -39,12 +42,17 @@ PANTRY = [
     ("garlic", "Garlic", "Vegetables and herbs", 0), ("greenchilli", "Green chillies", "Vegetables and herbs", 0),
     ("lemon", "Lemons", "Vegetables and herbs", 0), ("coriander", "Coriander leaves", "Vegetables and herbs", 1),
     ("mint", "Mint", "Vegetables and herbs", 2), ("curryleaves", "Curry leaves", "Vegetables and herbs", 1),
+    ("methi", "Fresh methi leaves", "Vegetables and herbs", 2), ("ridgegourd", "Ridge gourd (heerekai)", "Vegetables and herbs", 2),
+    ("bittergourd", "Bitter gourd (hagalakai / karela)", "Vegetables and herbs", 2),
     ("spinach", "Spinach", "Vegetables and herbs", 2), ("cabbage", "Cabbage", "Vegetables and herbs", 2),
     ("beans", "Beans", "Vegetables and herbs", 2), ("carrot", "Carrots", "Vegetables and herbs", 0), ("lauki", "Bottle gourd (lauki / sorekai)", "Vegetables and herbs", 2),
     ("cauliflower", "Cauliflower", "Vegetables and herbs", 2), ("bhindi", "Bhindi (okra)", "Vegetables and herbs", 2),
     ("mushrooms", "Mushrooms", "Vegetables and herbs", 2), ("capsicum", "Capsicum", "Vegetables and herbs", 2),
     ("peas", "Green peas", "Vegetables and herbs", 2), ("cucumber", "Cucumber", "Vegetables and herbs", 2),
     ("brinjal", "Small brinjals (badanekayi / eggplant)", "Vegetables and herbs", 2),
+    ("kalonji", "Kalonji (nigella seeds)", "Spices and masalas", 2), ("kalanamak", "Black salt (kala namak)", "Spices and masalas", 2),
+    ("rasampowder", "Rasam powder (saarina pudi)", "Spices and masalas", 2), ("chickenmasala", "Chicken or meat masala", "Spices and masalas", 2),
+    ("bakingsoda", "Baking soda", "Spices and masalas", 2), ("mustardoil", "Mustard oil", "Spices and masalas", 2),
     ("cardamom", "Green cardamom", "Spices and masalas", 2),
     ("raisins", "Raisins", "Dals, beans and nuts", 2),
     ("sambarveg", "Sambar vegetables (drumstick, pumpkin, brinjal)", "Vegetables and herbs", 2),
@@ -79,7 +87,7 @@ KEYS = {k for k, *_ in PANTRY}
 SOFT = {"coriander", "cream", "kasuri", "chaat", "sugar", "lemon", "saffron", "kewra", "springonion", "cashews",
         "redchilli", "mint", "herbs", "honey"}
 # what to type into a grocery app's search box, where the label isn't a good search
-BUY = {"lauki": "bottle gourd", "gpeas": "dried green peas", "kalachana": "kala chana", "lobia": "black eyed beans", "hurali": "horse gram", "masoor": "masoor dal", "matki": "moth beans", "atta": "whole wheat atta", "rice": "sona masoori rice", "chicken": "chicken curry cut",
+BUY = {"jowar": "jowar flour", "maida": "maida", "shavige": "vermicelli", "sabudana": "sabudana", "kopra": "dry coconut", "almonds": "almonds", "methi": "methi leaves", "ridgegourd": "ridge gourd", "bittergourd": "bitter gourd", "kalonji": "kalonji", "kalanamak": "black salt", "rasampowder": "rasam powder", "chickenmasala": "chicken masala", "bakingsoda": "baking soda", "mustardoil": "mustard oil", "lauki": "bottle gourd", "gpeas": "dried green peas", "kalachana": "kala chana", "lobia": "black eyed beans", "hurali": "horse gram", "masoor": "masoor dal", "matki": "moth beans", "atta": "whole wheat atta", "rice": "sona masoori rice", "chicken": "chicken curry cut",
        "chickenbl": "chicken breast boneless", "mince": "chicken keema", "fish": "seer fish", "sambarveg": "drumstick",
        "coconut": "grated coconut", "wholespice": "whole garam masala", "coriander_p": "coriander powder",
        "cumin_p": "roasted jeera powder", "herbs": "oregano seasoning", "currypaste": "thai red curry paste",
