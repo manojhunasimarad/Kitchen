@@ -38,10 +38,70 @@
   }
   function pantryAvailable(state) { return state === 0 || state === 1; }
   const ingredientQuantity = (item, factor) => item.scaleMode === 'pan' ? item.q : scaleQuantity(item.q, factor);
-  function stepText(recipe,index,servings) {
-    if (!recipe.stepTemplates) return recipe.steps[index];
+  function stepText(recipe,index,servings,smart) {
+    if (!recipe.stepTemplates) return smart ? scaleStepText(recipe.steps[index], servings/(recipe.yield||1)) : recipe.steps[index];
     const items=Object.fromEntries(recipe.ingredients.flatMap(g=>g.items).map(item=>[item.id,item]));
-    return recipe.stepTemplates[index].replace(/\{\{([a-z0-9-]+)\}\}/g,(_,id)=>ingredientQuantity(items[id],servings/(recipe.yield||1)));
+    return recipe.stepTemplates[index].replace(/\{\{([a-z0-9-]+)\}\}/g,(_,id)=>smart ? "\uE000" + smartQuantity(items[id],servings/(recipe.yield||1)) + "\uE001" : ingredientQuantity(items[id],servings/(recipe.yield||1)));
+  }
+  /* Cook-friendly scaling for display: whole spices grow slowly, counted vegetables round to halves
+     and show their weight for the kitchen scale, spoon and gram amounts round to what you can measure. */
+  const WHOLE_SPICE = /\b(bay lea(f|ves)|cinnamon|cloves?|cardamom|star anise|dried red chill|peppercorns|marathi moggu|kalpasi|stone flower|mace|tea bag)\b/i;
+  const COUNTED = [
+    [/spring onion/i, null], [/onion/i, {large:150, medium:110, small:70, def:110}], [/tomato/i, {large:140, medium:100, small:70, def:100}],
+    [/potato/i, {large:200, medium:150, small:90, def:150}], [/green chill/i, {def:4, whole:true, noGrams:true}], [/carrot/i, {def:70}],
+    [/capsicum/i, {def:120}], [/garlic/i, {def:4, whole:true}], [/^eggs?\b|\beggs?\b(?!.*(noodle|rice|plant))/i, {def:50, whole:true, noGrams:true}]];
+  const plainCount = new RegExp("^(" + number + ")(?:\\s*[–-]\\s*(" + number + "))?\\s*(large|medium|small|cloves?|pods?|inch(?:es)?|sticks?)?$");
+  const roundTo = (n, step) => Math.round(n / step) * step;
+  function tidy(s) {
+    const re = new RegExp("(" + number + ")(?:\\s*[–-]\\s*(" + number + "))?\\s*(pinch(?:es)?|tsp|tbsp|g|ml|cups?)\\b", "g");
+    return s.replace(re, (all, a, b, unit) => {
+      let x = value(a), y = b ? value(b) : null;
+      if (/^pinch/.test(unit)) { if (x <= 3) return all; x = Math.max(.25, roundTo(x / 8, .25)); y = y && Math.max(.25, roundTo(y / 8, .25)); unit = "tsp"; return format(x) + (y && y !== x ? "–" + format(y) : "") + " tsp"; }
+      if (unit === "tsp" && x >= 3) { unit = "tbsp"; x /= 3; if (y) y /= 3; }
+      const r = n => unit === "g" ? (n >= 20 ? roundTo(n, 5) : n >= 2 ? Math.round(n) : roundTo(n, .5)) :
+        unit === "ml" ? (n >= 50 ? roundTo(n, 10) : Math.max(5, roundTo(n, 5))) : n >= 1 ? roundTo(n, .25) : Math.max(.125, Math.floor(n * 4 + .4) / 4);
+      x = r(x); if (y) y = r(y);
+      const out = format(x, unit === "g" || unit === "ml") + (y && y !== x ? "–" + format(y, unit === "g" || unit === "ml") : "");
+      return out + " " + (/^cup/.test(unit) ? (x <= 1 && !y ? "cup" : "cups") : unit);
+    });
+  }
+  function smartQuantity(item, factor) {
+    if (!item || !item.q) return item ? item.q : "";
+    if (item.scaleMode === "pan") return item.q;
+    const name = item.name || "", note = item.note || "";
+    let base = item.q, f = factor;
+    // the books give 1- and 2-serving amounts; scale bigger batches from the 2-serving column
+    if (factor >= 1.5 && item.q2 && item.q2 !== item.q && !/[\/+]/.test(item.q2) && plainOrUnit(item.q2)) { base = item.q2; f = factor / 2; }
+    if (/ \/ /.test(name) || /[\/+]/.test(base)) return factor === 1 ? base : tidy(scaleQuantity(base, f));
+    const m = base.trim().match(plainCount);
+    if (m && WHOLE_SPICE.test(name) && !/garlic|powder|ground/i.test(name)) {
+      const v = value(m[1]), n = f > 1 ? Math.round(v * Math.sqrt(f)) : Math.max(1, Math.round(v * f));
+      return format(n) + (m[3] ? " " + m[3].replace(/s$/, "") + (n > 1 && !/inch/.test(m[3]) ? "s" : n > 1 ? "es" : "") : "");
+    }
+    const counted = COUNTED.find(([re]) => re.test(name));
+    if (m && counted && counted[1] && (!m[3] || /large|medium|small|cloves?/.test(m[3]))) {
+      const spec = counted[1], size = (m[3] || "") + " " + note + " " + name, v = value(m[1]) * f, hi = m[2] ? value(m[2]) * f : null;
+      const g = /large/.test(size) ? spec.large : /small/.test(size) ? spec.small : /medium/.test(size) ? spec.medium : null;
+      const each = g || spec.def, rq = n => spec.whole ? Math.max(1, Math.round(n)) : Math.max(.5, roundTo(n, .5));
+      const cnt = format(rq(v)) + (hi ? "–" + format(rq(hi)) : "") + (m[3] && !/cloves?/.test(m[3]) ? " " + m[3] : /cloves?/.test(m[3] || "") ? (rq(v) > 1 ? " cloves" : " clove") : "");
+      if (spec.noGrams) return cnt;
+      const grams = n => n * each >= 20 ? roundTo(n * each, 5) : Math.round(n * each);
+      return cnt + " (≈ " + grams(v) + (hi ? "–" + grams(hi) : "") + " g)";
+    }
+    return factor === 1 ? base : tidy(scaleQuantity(base, f));
+  }
+  function plainOrUnit(q) { try { scaleQuantity(q, 2); return true; } catch (e) { return false; } }
+  /* Scale the amounts written inside an older method step (cups, spoons, grams, ml), leaving times,
+     temperatures, whistles and counts alone. Scaled amounts are wrapped in \uE000…\uE001 so the page can bold them. */
+  function scaleStepText(text, factor) {
+    if (!text || factor === 1) return text;
+    const re = new RegExp("(" + number + ")(?:\\s*[–-]\\s*(" + number + "))?\\s*(kg|g|ml|litres?|l|cups?|tbsp|tsp)\\b(?![\\w°])", "g");
+    return text.replace(re, (all, a, b, unit) => {
+      const u = /^litre/.test(unit) ? "l" : unit, q = a + (b ? "–" + b : "") + " " + u;
+      let out; try { out = tidy(scaleQuantity(q, factor)); } catch (e) { return all; }
+      if (/^l$/.test(u)) out = out.replace(/ l$/, /^litres/.test(unit) ? " litres" : " l");
+      return "\uE000" + out + "\uE001";
+    });
   }
   function writeStorage(storage, key, data) {
     try { storage.setItem(key, JSON.stringify(data)); return {ok:true}; }
@@ -112,7 +172,7 @@
     for (const v of Object.values(x.labs)) if (!object(v) && typeof v !== "string") return "Invalid profile record.";
     return null;
   }
-  const api = {scaleQuantity, ingredientQuantity, stepText, format, pantryAvailable, writeStorage, timing, withinTime, validImport};
+  const api = {scaleQuantity, ingredientQuantity, smartQuantity, scaleStepText, stepText, format, pantryAvailable, writeStorage, timing, withinTime, validImport};
   if (typeof module !== "undefined" && module.exports) module.exports = api;
   else root.KitchenCore = api;
 })(typeof globalThis !== "undefined" ? globalThis : this);

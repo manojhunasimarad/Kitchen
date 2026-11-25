@@ -30,7 +30,7 @@ function pickWeighted(list, rng) {
    once  — one session: a breakfast ready in 20 minutes without soaking, and lunch and dinner from one batch;
    twice — breakfast and the lunch box together in the morning: breakfast within 30 minutes, a lunch that packs well;
    three times — everything is cooked fresh, so any dish fits. */
-const soaks = r => /soak|overnight/i.test(r.time || '');
+const soaks = r => /soak|overnight|sprout/i.test(r.time || '') || ((D.advance && D.advance.recipes[r.id]) || []).some(t => (t.kind === 'soak' || t.kind === 'sprout') && t.hours[0] >= 2);
 function breakfastFits(r, s) { if (!isMain(r, 'b')) return true; if (s === 1) return !!r.minutes && r.minutes <= 20 && !soaks(r); if (s === 2) return !!r.minutes && r.minutes <= 30; return true; }
 const lunchFits = (r, s) => !isMain(r, 'l') || s === 3 || !!r.holds;
 const sameRows = (a, b) => JSON.stringify(a || []) === JSON.stringify(b || []);
@@ -285,7 +285,7 @@ function removeDish(sl, i) {
 function nightBefore(ds) {
   const d = parseYmd(ds); d.setDate(d.getDate() + 1);
   const p = planOf(ymd(d)), ids = [...new Set(SLOTS.flatMap(sl => (p.m[sl] || []).filter(([id, k]) => dish(id) && mealServings(p, sl, dish(id), k) > 0).map(x => x[0])))];
-  const soak = ids.filter(id => R[id] && /soak|overnight/i.test(R[id].time || '')).map(id => R[id].title);
+  const soak = ids.filter(id => R[id] && soaks(R[id])).map(id => R[id].title);
   const curd = ids.some(id => id === 'x-curd' || (R[id] && R[id].needs.some(t => t.split('|').includes('curd'))));
   const out = [];
   if (curd) out.push('set curd');
@@ -350,7 +350,7 @@ function householdQuantities(p, slots, prefix = 'today') {
   if (!list.length) return '';
   return '<details class="recipe-details qty" id="quantities-' + prefix + '-' + slots.join('') + '"><summary>Quantities to cook</summary>' + list.map(([id, n]) => {
     const r = dish(id), f = n / (r.yield || 1);
-    return '<h4>' + esc(r.title) + ' · ' + nice(n) + ' servings</h4>' + (r.ingredients || []).map(g => typeof g === 'string' ? '<p>' + esc(g) + ' · legacy quantity needs manual scaling</p>' : '<ul>' + g.items.map(i => '<li>' + esc(KitchenCore.ingredientQuantity(i, f)) + ' ' + esc(i.name) + (i.scaleMode === 'pan' ? ' (pan quantity; extra batches)' : '') + '</li>').join('') + '</ul>').join('');
+    return '<h4>' + esc(r.title) + ' · ' + nice(n) + ' servings</h4>' + (r.ingredients || []).map(g => typeof g === 'string' ? '<p>' + esc(g) + ' · legacy quantity needs manual scaling</p>' : '<ul>' + g.items.map(i => '<li>' + esc(KitchenCore.smartQuantity(i, f)) + ' ' + esc(i.name) + (i.scaleMode === 'pan' ? ' (pan quantity; extra batches)' : '') + '</li>').join('') + '</ul>').join('');
   }).join('') + '</details>';
 }
 function dayPanelHTML(p, ds) {
@@ -382,7 +382,7 @@ function renderToday() {
     const ids = [...new Set(se.slots.flatMap(sl => (p.m[sl] || []).filter(([id, k]) => R[id] && mealServings(p, sl, R[id], k) > 0).map(x => x[0])))];
     const miss = []; ids.forEach(id => status(R[id]).missing.forEach(t => { const k = firstMissing(t); if (!miss.includes(k)) miss.push(k); }));
     const cook = Object.entries(H.totals(p, allDishes(), h, se.slots)).filter(([id]) => R[id]).map(([id, n]) => esc(R[id].title) + ' <b>' + nice(n) + '</b>');
-    const note = p.s === 1 ? (h.fridge ? 'Breakfast is quick, and lunch and dinner come from one pot. Eat lunch fresh; cool dinner’s share and refrigerate it within 2 hours, then reheat until steaming hot all the way through.' : se.note) : se.note;
+    const note = p.s === 1 ? (fridgeOn(selDate) ? 'Breakfast is quick, and lunch and dinner come from one pot. Eat lunch fresh; cool dinner’s share and refrigerate it within 2 hours, then reheat until steaming hot all the way through.' : se.note) : se.note;
     return '<div class="sess"><div class="sess-h"><h3>' + esc(se.name) + '</h3><span>' + esc(se.when) + '</span></div>' + workloadHTML(p, se.slots) +
       (cook.length ? '<p class="cook-line"><span class="lbl-s">Cook</span> ' + cook.join(' · ') + ' <span class="small">servings</span></p>' : '') +
       (se.slots.length < se0.slots.length ? '<p class="past-line">' + se0.slots.filter(sl => hide.includes(sl)).map(sl => SLOT[sl]).join(' and ') + (se0.slots.filter(sl => hide.includes(sl)).length > 1 ? ' times have passed, so they aren’t' : ' time has passed, so it isn’t') + ' counted here.</p>' : '') +
@@ -406,6 +406,7 @@ function renderToday() {
   $('#day-reset').hidden = !S.plan[selDate] || !!S.plan[selDate].auto;
   $('#day-nutri').innerHTML = dayPanelHTML(p, selDate);
   $('#check-card').innerHTML = checkCardHTML();
+  const pc = $('#prep-card'); if (pc) { const open = $('#batch-prep')?.open; pc.innerHTML = prepCardHTML(); if (open) $('#batch-prep').open = true; }
 }
 
 /* ---------- Settings: household ---------- */

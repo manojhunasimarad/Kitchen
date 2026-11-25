@@ -1,0 +1,49 @@
+{
+  "_about": "Components worth preparing once for several upcoming meals. match is a regex on ingredient names (case-insensitive); skip excludes. unit grams convert counts and spoons. fridgeDays: how long the prepared component keeps in a fridge at 4 °C or colder; roomHours: how long it keeps at Bengaluru room temperature (0 = make it on the day it's cooked). Keeping times follow FoodSafety.gov / USDA cold-storage charts and the National Center for Home Food Preservation's guidance on garlic in oil; they are guidance, not guarantees.",
+  "sources": [
+    {"title": "FoodSafety.gov: cold food storage chart", "url": "https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts"},
+    {"title": "National Center for Home Food Preservation: garlic and herbs in oil must be refrigerated", "url": "https://nchfp.uga.edu/how/store/flavored-vinegars-and-oils/"},
+    {"title": "USDA FSIS: leftovers and the 2-hour rule", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/leftovers-and-food-safety"}
+  ],
+  "components": [
+    {"id": "gg", "title": "Ginger-garlic paste", "match": "ginger[- ]garlic paste|ginger-garlic", "unit": {"tbsp": 15, "tsp": 5}, "fridgeDays": 4, "roomHours": 0,
+     "how": "Peel equal weights of ginger and garlic, grind with 1 tsp oil and a pinch of salt per 50 g (water only if needed). Keep in a clean, dry glass jar.",
+     "noFridge": "Homemade ginger-garlic paste must be refrigerated (garlic in oil is a botulism risk at room temperature). Without a fridge, crush only what today's cooking needs, or use a sealed shop-bought pack."},
+    {"id": "garlic", "title": "Peeled garlic cloves", "match": "^garlic\\b(?!.*paste)|garlic clove|garlic, (minced|chopped|sliced|crushed)", "skip": "ginger-garlic", "unit": {"clove": 4, "tsp": 5, "tbsp": 15}, "fridgeDays": 7, "roomHours": 24,
+     "how": "Soak the bulbs 10 minutes in warm water and the skins slip off. Store peeled cloves dry in a closed jar.",
+     "noFridge": "Peeled cloves keep about a day in a covered jar out of the sun. Peel tomorrow's too, no more."},
+    {"id": "onion", "title": "Chopped or sliced onions", "match": "onion", "skip": "spring onion|onion powder|onion seeds", "unit": {"large": 150, "medium": 110, "small": 70, "each": 110}, "fridgeDays": 3, "roomHours": 0,
+     "how": "Chop or slice with the pull-cord chopper, then pack in an airtight box lined with a paper towel. Keep each recipe's share separate if they're cut differently.",
+     "noFridge": "Cut onions spoil and smell quickly in the warm. Peel today, chop just before cooking; peeled whole onions keep a day in a closed box."},
+    {"id": "tomato", "title": "Tomato purée", "match": "tomato(es)?,? (pur[eé]e|pur[eé]ed|blended)", "unit": {"large": 140, "medium": 100, "small": 70, "each": 100}, "fridgeDays": 3, "roomHours": 0,
+     "how": "Blanch or blend raw tomatoes to a purée and keep in a closed jar.",
+     "noFridge": "Purée tomatoes on the day."},
+    {"id": "dough", "title": "Chapati dough", "recipes": ["phulka-soft-chapati", "methi-thepla", "paratha-plain-or-stuffed", "chonge", "poori"], "match": "atta|whole[- ]wheat", "unit": {"cup": 120}, "fridgeDays": 2, "roomHours": 4,
+     "how": "Knead once for the next two days, rub with a little oil, and keep in a closed box. Bring it to room temperature 20 minutes before rolling.",
+     "noFridge": "Dough keeps about 4 hours covered in a cool spot (it starts to sour after that). Knead in the morning for lunch, again in the evening for dinner."},
+    {"id": "beans", "title": "Cooked beans and chana", "match": "rajma|kabuli chana|kala chana|alasande|dried green peas|horse gram|black-eyed", "unit": {"cup": 170}, "fridgeDays": 3, "roomHours": 0,
+     "how": "Pressure-cook the soaked beans for all the dishes together, cool them quickly in a wide bowl, and store with a little of their cooking water.",
+     "noFridge": "Cook beans on the day you eat them."},
+    {"id": "coconut", "title": "Grated fresh coconut", "match": "coconut, grated|grated coconut|fresh coconut", "skip": "desiccated|milk|oil", "unit": {"cup": 80, "tbsp": 6}, "fridgeDays": 3, "roomHours": 0,
+     "how": "Grate a whole coconut once and keep it in a closed box.",
+     "noFridge": "Grated coconut sours within hours in the warm: grate it on the day, or keep the coconut halves whole until you need them."},
+    {"id": "rava", "title": "Dry-roasted rava", "match": "\\brava\\b|sooji|semolina", "unit": {"cup": 170, "tbsp": 10}, "fridgeDays": 30, "roomHours": 720,
+     "how": "Dry-roast rava on low heat 6–8 minutes until it smells toasty and flows freely, cool completely and store airtight. Upma and kesari then skip the roasting step.",
+     "noFridge": "Keeps for weeks in an airtight tin: no fridge needed."},
+    {"id": "peanuts", "title": "Roasted peanuts", "match": "peanut", "skip": "butter|oil|chutney", "unit": {"cup": 145, "tbsp": 9}, "fridgeDays": 30, "roomHours": 336,
+     "how": "Dry-roast on low until the skins crack (8–10 minutes) or air-fry at 160 °C for 8 minutes. Cool fully before closing the jar.",
+     "noFridge": "Keeps about 2 weeks in an airtight jar: no fridge needed."},
+    {"id": "tamarind", "title": "Tamarind extract", "match": "tamarind", "unit": {"tbsp": 15}, "fridgeDays": 7, "roomHours": 0,
+     "how": "Soak a lemon-sized ball in ¾ cup hot water for 15 minutes, squeeze, strain and keep in a jar.",
+     "noFridge": "Soak tamarind just before cooking (15 minutes); the dry block itself keeps for months."}
+  ],
+  "noFridge": [
+    "Cook close to eating time. Cooked food can stay out at most 2 hours (1 hour on a hot day); after that keep it piping hot or throw it away.",
+    "Rice is the riskiest leftover: cook it just before the meal and don't keep any.",
+    "Buy milk, curd, paneer and chicken on the day you use them. Boil milk morning and night so it lasts the day.",
+    "Marinate meat for at most 2 hours, covered, in the coolest spot, then cook it.",
+    "Soak beans in a cool corner, covered; change the water once if they soak more than 8 hours.",
+    "Batch the dry work instead: roast rava and peanuts, make chutney pudi or podi, peel garlic and onions for today."
+  ],
+  "newFridge": "When the new fridge arrives, let it run empty until it is properly cold (usually 2–4 hours; check its manual) before you load food. Then batch for the next three days."
+}

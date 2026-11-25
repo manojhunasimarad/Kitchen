@@ -334,6 +334,35 @@ input[type="text"], input[type="date"] { font: 400 15px var(--font-body); color:
 .ck-card { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
 .ck-card > div { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 .ck-card.due { border-color: var(--accent-fill); box-shadow: inset 4px 0 0 var(--accent-fill); }
+#prep-card:empty { display: none; }
+.prep-card { margin-top: 12px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); display: flex; flex-direction: column; gap: 10px; }
+.prep-card.has-late { border-color: var(--out); box-shadow: inset 4px 0 0 var(--out); }
+.prep-h { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.prep-h h3 { margin: 0; }
+ul.adv-list { display: flex; flex-direction: column; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.adv-task > .step-check b { font-weight: 600; }
+.batch { padding-left: 18px; }
+.adv-task { font-size: 15px; padding-bottom: 10px; border-bottom: 1px dashed var(--line); }
+.adv-task:last-child { border-bottom: 0; padding-bottom: 0; }
+.adv-task.done b { text-decoration: line-through; }
+.adv-task .btn.sm, .timer-btn { margin: 6px 0 0 30px; }
+.tag { display: inline-block; font: 600 11px var(--font-mono); text-transform: uppercase; letter-spacing: .05em; padding: 1px 6px; border-radius: 6px; border: 1px solid var(--line); margin: 4px 4px 0 0; }
+.tag.bad { color: var(--out); border-color: var(--out); }
+.tag.warn { color: var(--low); border-color: var(--low); }
+.small.warn { color: var(--out); }
+.fridge-row { display: flex; flex-direction: column; gap: 6px; }
+.fridge-row .seg { flex-wrap: wrap; }
+.batch li { margin-bottom: 8px; }
+.prep-card h4, .prep-note h4 { margin: 10px 0 4px; font-size: 14px; }
+.ahead { border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; margin: 8px 0; }
+.ahead ul, .mise { margin: 0; }
+.mise li { padding: 3px 0; border-bottom: 1px dotted var(--line); }
+b.amt { font-weight: 700; background: color-mix(in srgb, var(--accent-fill) 18%, transparent); border-radius: 3px; padding: 0 2px; }
+#timer-bar { position: fixed; left: 8px; right: 8px; bottom: calc(76px + env(safe-area-inset-bottom)); z-index: 60; display: flex; flex-direction: column; gap: 6px; pointer-events: none; }
+dialog #timer-bar { bottom: calc(16px + env(safe-area-inset-bottom)); }
+#timer-bar .tmr { pointer-events: auto; display: flex; align-items: center; gap: 10px; justify-content: space-between; background: var(--strong); color: var(--on-strong); border-radius: 12px; padding: 8px 12px; font: 600 14px var(--font-mono); box-shadow: 0 8px 20px -10px rgba(0,0,0,.6); }
+#timer-bar .tmr.ring { background: var(--out); animation: spin .5s ease 3; }
+#timer-bar .tmr button { background: none; border: 1px solid currentColor; color: inherit; border-radius: 8px; padding: 4px 8px; font: inherit; }
 .ck-list { list-style: none; margin: 0; padding: 0; }
 .ck { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 10px; padding: 8px 0; border-bottom: 1px solid var(--line); }
 .ck-l { display: flex; flex-direction: column; gap: 2px; min-width: 0; flex: 1 1 160px; }
@@ -526,6 +555,7 @@ label.who-chip input { width: 16px; height: 16px; }
     </div>
     <p class="plan-note" id="plan-note" role="status" hidden></p>
     <div id="check-card"></div>
+    <div id="prep-card"></div>
     <section class="kot" id="kot" aria-label="Day plan"></section>
     <div class="actbar">
       <button class="btn primary" type="button" id="day-surprise">Surprise me with a whole day</button>
@@ -1278,12 +1308,20 @@ function renderSetup() {
 }
 
 function preparationHTML(r) {
-  const t=r.timing, raw=KitchenCore.timing(r,false), prepared=KitchenCore.timing(r,true);
-  return '<section class="prep-note"><h3>Before you start</h3><p>'+esc(r.review?.status || "Recipe review pending")+'</p><p><b>From raw ingredients:</b> '+esc(raw.text)+'</p>'+(t?.prerequisites?.length ? '<p><b>After preparation:</b> '+esc(prepared.text)+'</p><ul>'+t.prerequisites.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>' : '')+'<p>'+esc(t?.note || 'Read the whole method before cooking.')+'</p><p class="small">Estimates apply to the base batch; extra batches and equipment change timing. ' + (r.stepTemplates ? 'Method quantities update with servings.' : 'Legacy method quantities refer to the base recipe.') + '</p>'+(r.dependencies?.length ? '<p>Component recipes:</p><div class="recipe-tools">'+r.dependencies.map(id=>'<button class="btn" type="button" data-open="'+id+'">'+esc(R[id].title)+'</button>').join('')+'</div>' : '')+'</section>';
+  const f = dlgServ / (r.yield || 1), items = (r.ingredients || []).flatMap(g => typeof g === "string" ? [] : g.items);
+  const prepRe = /chopped|sliced|grated|pur[eé]ed|minced|crushed|slit|cubes?\b|julienne|diced|strips|peeled|mashed|boiled|shredded|squeezed|paste\b|soaked|cleaned/i;
+  const mise = items.filter(i => prepRe.test(i.name + " " + (i.note || "")) && !/powder|masala\b/i.test(i.name)).map(i => { const q = KitchenCore.smartQuantity(i, f); return "<li>" + esc(i.name) + (i.note ? ' <span class="nt">· ' + esc(i.note) + "</span>" : "") + (q ? " — <b>" + esc(q) + "</b>" : "") + "</li>"; });
+  const ahead = typeof recipeAheadHTML === "function" ? recipeAheadHTML(r, dlgServ) : "";
+  return '<section class="prep-note"><h3>Before you start</h3>' + ahead +
+    (mise.length ? '<h4>Get these ready before the stove goes on</h4><ul class="plain mise">' + mise.join("") + "</ul>" : "") +
+    '<p class="small"><b>Time:</b> ' + esc(r.time || "not measured") + (r.uses ? " · <b>Uses:</b> " + esc(r.uses) : "") + (r.timing?.note ? " · " + esc(r.timing.note) : "") + "</p>" +
+    '<p class="small">Amounts in <b class="amt">bold</b> in the method are worked out for ' + nice(dlgServ) + (dlgServ === 1 ? " serving" : " servings") + '. Tap ⏱ on a step to start a timer.</p>' +
+    (r.dependencies?.length ? (r.chapter === "Biryani variations" ? '<p class="small"><b>This is a variation.</b> It lists what changes; the full technique (birista, par-boiling to 75%, layering and dum, with times and checks) is in the master recipe below. Use this recipe’s amounts.</p>' : "<p>Component recipes:</p>") + '<div class="recipe-tools">' + r.dependencies.map(id => '<button class="btn" type="button" data-open="' + id + '">' + esc(R[id].title) + "</button>").join("") + "</div>" +
+      (r.chapter === "Biryani variations" ? r.dependencies.map(id => '<details class="recipe-details"><summary>Master method: ' + esc(R[id].title) + "</summary><ol class=\"method\">" + R[id].steps.map(x => "<li>" + esc(x) + "</li>").join("") + "</ol></details>").join("") : "") : "") + "</section>";
 }
 function sourceHTML(r) { return '<details class="recipe-details"><summary>Recipe review and sources</summary><p>'+esc(r.review?.status || 'Not reviewed')+'. Not a kitchen-tested guarantee.</p>'+(r.sources?.length ? r.sources.map(x=>'<p><a href="'+esc(x.url)+'" target="_blank" rel="noopener">'+esc(x.title)+'</a> — '+esc(x.scope)+'</p>').join('') : '<p>No external recipe-level verification is attached yet. Book page references are provenance, not independent validation.</p>')+'</details>'; }
 function assistantHTML(r) {
-  const aiBtn='<p><button class="btn" type="button" data-open-ai="'+esc(r.id)+'">✨ Ask AI about this recipe</button></p>';
+  const aiBtn='<p class="recipe-tools"><button class="btn" type="button" data-open-ai="'+esc(r.id)+'">✨ Ask Kitchen AI (Gemini)</button><button class="btn" type="button" data-ask-claude="'+esc(r.id)+'">Ask Claude about this recipe</button></p><p class="small">Ask Claude opens a new Claude chat with this recipe at '+nice(dlgServ)+' servings, your plan, prep-ahead list and pantry filled in; check it and press send.</p>';
   if (!['localhost','127.0.0.1'].includes(location.hostname)) return aiBtn;
   return aiBtn+'<details class="recipe-details"><summary>Local cooking assistant · preview</summary><p>Search this recipe and its preparation notes. An optional local model can select relevant evidence. This preview does not invent missing steps, certify recipes or provide medical advice.</p><label for="ask-question">Cooking question</label><input type="search" id="ask-question" placeholder="What needs preparing first?"><button class="btn" type="button" id="ask-local">Ask about this recipe</button><div id="ask-answer" aria-live="polite"></div></details>';
 }
@@ -1300,10 +1338,13 @@ async function askLocal() {
 let dlgId = null, dlgServ = 1, dlgTotal = false, recipeOpener = null;
 const checkedSteps = {};
 function stepHTML(r, s, i) {
-  s = KitchenCore.stepText(r,i,dlgServ);
+  s = KitchenCore.stepText(r, i, dlgServ, true);
   const m = s.match(/^([^.]{2,48}\.)\s+([\s\S]*)$/);
   const meta = r.stepMeta && r.stepMeta[i] ? '<span class="sm">' + esc(r.stepMeta[i]) + "</span>" : "";
-  return '<li><label class="step-check"><input type="checkbox" data-step="' + i + '" aria-label="Complete step ' + (i + 1) + '"' + ((checkedSteps[r.id] || []).includes(i) ? " checked" : "") + '><span>' + meta + (m ? "<b>" + esc(m[1]) + "</b> " + esc(m[2]) : esc(s)) + "</span></label></li>";
+  const body = (m ? "<b>" + esc(m[1]) + "</b> " + esc(m[2]) : esc(s)).replace(/\uE000/g, '<b class="amt">').replace(/\uE001/g, "</b>");
+  const plain = s.replace(/[\uE000\uE001]/g, ""), tm = plain.match(/(\d+)(?:\s*[–-]\s*(\d+))?\s*(?:min(?:ute)?s?)\b/);
+  const timer = tm && +tm[1] > 0 && +tm[1] <= 240 ? '<button type="button" class="btn sm timer-btn" data-timer="' + (+tm[1] * 60) + '" data-timer-label="' + esc(r.title + " · step " + (i + 1)) + '">⏱ ' + esc(tm[1] + (tm[2] ? "–" + tm[2] : "")) + " min</button>" : "";
+  return '<li><label class="step-check"><input type="checkbox" data-step="' + i + '" aria-label="Complete step ' + (i + 1) + '"' + ((checkedSteps[r.id] || []).includes(i) ? " checked" : "") + '><span>' + meta + body + "</span></label>" + timer + "</li>";
 }
 function openRecipe(id, keepServ) {
   const r = R[id]; if (!r) return;
@@ -1323,7 +1364,7 @@ function openRecipe(id, keepServ) {
   let ing;
   if (r.plainIng) ing = (f !== 1 ? '<p class="small">Listed for ' + nice(r.yield || 1) + (r.yield > 1 ? " servings" : " serving") + "; multiply by " + nice(f) + ".</p>" : "") + '<ul class="plain">' + r.ingredients[0].items.map(i => "<li>" + esc(i.name) + "</li>").join("") + "</ul>";
   else ing = '<div class="tbl-wrap"><table class="ing"><thead><tr><th>Ingredient</th><th style="text-align:right">For ' + nice(dlgServ) + "</th></tr></thead><tbody>" +
-    r.ingredients.map(g => (g.group ? '<tr class="grp"><td colspan="2">' + esc(g.group) + "</td></tr>" : "") + g.items.map(i => "<tr><td>" + esc(i.name) + (i.note ? ' <span class="nt">· ' + esc(i.note) + "</span>" : "") + '</td><td class="q">' + esc(KitchenCore.ingredientQuantity(i, f)) + "</td></tr>").join("")).join("") + "</tbody></table></div>";
+    r.ingredients.map(g => (g.group ? '<tr class="grp"><td colspan="2">' + esc(g.group) + "</td></tr>" : "") + g.items.map(i => "<tr><td>" + esc(i.name) + (i.note ? ' <span class="nt">· ' + esc(i.note) + "</span>" : "") + '</td><td class="q">' + esc(KitchenCore.smartQuantity(i, f)) + "</td></tr>").join("")).join("") + "</tbody></table></div>";
   const sec = (title, body) => body ? '<section class="sec"><h3>' + title + "</h3>" + body + "</section>" : "";
   const def = r.course === "breakfast" ? "b" : (new Date().getHours() < 15 ? "l" : "d");
   $("#dlg-in").innerHTML =
@@ -1341,7 +1382,7 @@ function openRecipe(id, keepServ) {
     preparationHTML(r) + prepLinksHTML(r) +
     '<div id="recipe-ingredients" tabindex="-1">' + sec("Ingredients", ing) + '</div>' +
     '<div id="recipe-method" tabindex="-1">' +
-    sec("Method", r.steps.length ? (!r.stepTemplates && f !== 1 ? '<p class="small">Amounts in the method are for ' + nice(r.yield || 1) + (r.yield > 1 ? " servings" : " serving") + "; scale them the same way.</p>" : "") + '<ol class="method">' + r.steps.map((s, i) => stepHTML(r, s, i)).join("") + "</ol>" : "") +
+    sec("Method", r.steps.length ? '<ol class="method">' + r.steps.map((s, i) => stepHTML(r, s, i)).join("") + "</ol>" : "") +
     '</div><details class="recipe-details" id="recipe-nutrition"><summary>Nutrition estimates</summary>' +
     '<div class="nutri"><div class="toolbar"><div class="seg" role="group" aria-label="Nutrition view"><button type="button" id="nutrition-serving" data-ntot="0" aria-pressed="' + !dlgTotal + '">Per serving</button><button type="button" id="nutrition-total" data-ntot="1" aria-pressed="' + dlgTotal + '">All ' + nice(dlgServ) + "</button></div></div>" + nutriHTML(r.nutr, dlgTotal ? "For " + nice(dlgServ) + " servings" : "Per serving (" + (r.servingLabel || "1 serving") + ")", false, dlgTotal ? dlgServ : 1) + "</div>" + '</details>' +
     sec("Checks", (r.cues || []).length ? '<ul class="plain">' + r.cues.map(c => "<li>" + esc(c) + "</li>").join("") + "</ul>" : "") +

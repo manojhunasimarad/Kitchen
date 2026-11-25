@@ -26,6 +26,12 @@ DEPENDENCIES = {
  "phulka-toastie": ["phulka-soft-chapati", "paneer-bhurji", "green-chutney-mint-coriander"],
  "korean-egg-rice-bowl": ["rice-cooked-right"],
  "paratha-plain-or-stuffed": ["phulka-soft-chapati"],
+ # Book 1 variations give only what changes; the master recipe has the full, timed technique.
+ "chicken-donne-biryani": ["donne-mushroom-biryani"], "lean-chicken-donne": ["donne-mushroom-biryani"],
+ "andhra-paneer-biryani": ["andhra-chicken-biryani"], "andhra-egg-biryani": ["andhra-chicken-biryani"],
+ "mutton-biryani": ["andhra-chicken-biryani"], "vegetable-biryani": ["andhra-chicken-biryani"],
+ "fish-biryani": ["andhra-chicken-biryani"], "prawn-biryani": ["andhra-chicken-biryani"],
+ "soya-biryani": ["andhra-chicken-biryani"], "lucknowi-chicken-biryani": ["lucknowi-paneer-biryani"],
 }
 
 def enrich(recipes):

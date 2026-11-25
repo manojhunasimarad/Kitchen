@@ -23,3 +23,22 @@ test('import validates version, pantry and plan references',()=>{
   assert.match(C.validImport({...x,pantry:{atta:5}},[],['atta']),/pantry/);
   assert.match(C.validImport({...x,plan:{'2026-11-06':{s:2,n:1,m:{d:[['unknown',1]]}}}},['rice'],[]),/Unknown/);
 });
+
+test('display quantities are what a cook can measure', () => {
+  const q = (name, q, f, q2, note) => C.smartQuantity({name, q, q2, note}, f);
+  assert.equal(q('Bay leaf', '1', 5, '1'), '2');                       // whole spices grow slowly
+  assert.equal(q('Cloves', '2', 5, '3'), '5');
+  assert.equal(q('Onion, finely chopped', '½', 5, '1', 'large'), '2½ (≈ 375 g)'); // counted veg get grams
+  assert.equal(q('Green chillies, slit', '1', 2.5), '3');
+  assert.equal(q('Turmeric', 'a pinch', 5, '¼ tsp'), '½ tsp');          // no "5 pinches"
+  assert.equal(q('Coriander powder', '¾ tsp', 5, '1½ tsp'), '1¼ tbsp'); // 3¾ tsp becomes tablespoons
+  assert.equal(q('Rajma', '60 g', 5, '120 g'), '300 g');
+  assert.equal(q('Water', '75 ml', 1.5), '110 ml');
+  assert.equal(q('Rajma', '60 g', 1), '60 g');
+});
+test('method amounts scale and are marked', () => {
+  assert.equal(C.scaleStepText('Add 2 tbsp water and cook 10 minutes at 180 °C.', 2), 'Add 4 tbsp water and cook 10 minutes at 180 °C.');
+  assert.equal(C.scaleStepText('Soak in 1½ cups / 360 ml water.', 2), 'Soak in 3 cups / 720 ml water.');
+  assert.equal(C.scaleStepText('Cook 3 whistles.', 3), 'Cook 3 whistles.');
+  assert.equal(C.scaleStepText('Same text', 1), 'Same text');
+});

@@ -14,9 +14,11 @@ const AI_RULES = [
   "Answer cooking, pantry, meal-planning, shopping and kitchen-cleaning questions only. Politely decline anything else.",
   "Prefer the app's own recipes (listed in the context) and what is in the pantry. When you suggest an app recipe, put its exact id in `recipes`.",
   "Never suggest beef or pork. Respect each person's diet: veg means no meat, fish or egg; egg means vegetarian plus eggs; nonveg eats chicken, mutton, fish and prawns.",
-  "Do not invent precise quantities, temperatures or times that are not in the recipe. If you give general guidance, say it is approximate.",
+  "Answer like an experienced Indian home cook standing next to them: concrete and specific. Give amounts in grams (they have a kitchen scale) or spoons, flame level (low/medium/high), minutes, whistles, and what it should look, smell or feel like when each stage is done.",
+  "Use the CURRENT RECIPE amounts (already scaled to the servings they are cooking) and its steps first. When you add a number the recipe doesn't give, mark it with ≈.",
+  "Always mention anything that must be done ahead (soaking, sprouting, marinating, setting curd, resting dough) and how long, using the PREP AHEAD list when it is given. Respect the FRIDGE status: without a fridge, no marinating over 2 hours, no keeping cooked food over 2 hours, no batch cooking for later days.",
   "Food-safety questions (raw meat, leftovers kept out, reheating, spoiled or sour-smelling food, allergies, pregnancy): be cautious, say when to throw food away, and put the warning in `caution`. Never say food is definitely safe.",
-  "No medical or diagnosis advice. Keep answers short and practical for a home cook: a few sentences or a short list. Use Indian ingredient names where natural.",
+  "No medical or diagnosis advice. Be practical: numbered steps for methods, '- ' lists for options, and enough detail to cook without guessing. Use Indian ingredient names where natural.",
   "If you are unsure, say so instead of guessing."
 ].join("\n");
 
@@ -35,13 +37,28 @@ function aiPantry() {
 function aiHousehold() {
   try { const h = household(); return h.members.map(m => m.name + " (" + m.diet + ")").join(", "); } catch (e) { return ""; }
 }
-function aiRecipeText(id) {
+function aiRecipeText(id, servings) {
   const r = D.recipes.find(x => x.id === id); if (!r) return "";
-  const ing = (r.ingredients || []).map(g => typeof g === "string" ? g : (g.group ? g.group + ": " : "") + (g.items || []).map(i => i.name + " " + (i.q || "")).join("; ")).join("\n");
-  return "CURRENT RECIPE (" + r.id + "): " + r.title + "\nServes: " + (r.yield || "") + " · " + (r.time || "") + "\nIngredients:\n" + ing + "\nMethod:\n" + (r.steps || []).map((s, i) => (i + 1) + ". " + s).join("\n") + ((r.tips || []).length ? "\nTips: " + r.tips.map(t => t.title + ": " + t.text).join(" | ") : "") + (r.keeps ? "\nKeeps: " + r.keeps : "");
+  const n = servings || (typeof dlgId !== "undefined" && dlgId === id ? dlgServ : setv("people")), f = n / (r.yield || 1);
+  const ing = (r.ingredients || []).map(g => typeof g === "string" ? g : (g.group ? g.group + ": " : "") + (g.items || []).map(i => i.name + (i.note ? " (" + i.note + ")" : "") + " " + KitchenCore.smartQuantity(i, f)).join("; ")).join("\n");
+  const steps = (r.steps || []).map((s, i) => (i + 1) + ". " + KitchenCore.stepText(r, i, n, true).replace(/[\uE000\uE001]/g, "")).join("\n");
+  const ahead = ((D.advance && D.advance.recipes[r.id]) || []).map(t => "- " + advWhat(r, t, n, fridgeOn(todayStr())) + (t.quick ? " " + t.quick : "")).join("\n");
+  return "CURRENT RECIPE (" + r.id + "): " + r.title + "\nCooking for: " + n + " servings (" + (r.servingLabel || "1 serving") + " each) · " + (r.time || "") + (r.uses ? " · uses " + r.uses : "") +
+    (ahead ? "\nDo ahead:\n" + ahead : "") + "\nIngredients (scaled):\n" + ing + "\nMethod (scaled):\n" + steps +
+    ((r.cues || []).length ? "\nChecks: " + r.cues.join(" | ") : "") + ((r.tips || []).length ? "\nTips: " + r.tips.map(t => t.title + ": " + t.text).join(" | ") : "") +
+    ((r.var || []).length ? "\nVariations: " + r.var.join(" | ") : "") + (r.keeps ? "\nKeeps: " + r.keeps : "");
+}
+function aiPlanText() {
+  try {
+    const lines = [];
+    for (let i = 0; i < 2; i++) { const d = new Date(); d.setDate(d.getDate() + i); const ds = ymd(d), p = planOf(ds);
+      lines.push((i ? "Tomorrow" : "Today") + " (" + DAYS[dayIdx(d)] + "): " + SLOTS.map(sl => SLOT[sl] + " " + ((p.m[sl] || []).filter(([id]) => R[id]).map(([id, k]) => R[id].title + " ×" + nice(mealServings(p, sl, R[id], k))).join(", ") || "—")).join(" · ")); }
+    const t = prepTasks(new Date()).filter(x => !advDone(x)).slice(0, 6).map(x => "- " + x.what + " (for " + (x.ds === todayStr() ? "today" : DAYS[dayIdx(parseYmd(x.ds))]) + " " + SLOT[x.sl].toLowerCase() + "; " + (x.s.state === "late" ? "LATE" : x.s.state === "now" ? "start now" : "start " + whenLabel(x.s.at, new Date())) + ")");
+    return "PLAN\n" + lines.join("\n") + (t.length ? "\nPREP AHEAD\n" + t.join("\n") : "") + "\nFRIDGE: " + (fridgeOn(todayStr()) ? "working" : "NOT working" + (fridgeBackLabel() ? " (back " + fridgeBackLabel() + ")" : "")) + "\nNow: " + new Date().toLocaleString("en-IN", { weekday: "short", hour: "2-digit", minute: "2-digit" });
+  } catch (e) { return ""; }
 }
 function aiContext() {
-  return "Today: " + todayStr() + "\nHousehold: " + aiHousehold() + "\n\nPANTRY\n" + aiPantry() + "\n\n" + (AI.recipeId ? aiRecipeText(AI.recipeId) + "\n\n" : "") + "APP RECIPES (id | title | diet | course | time | ingredients missing from the pantry)\n" + aiCatalogue();
+  return "Today: " + todayStr() + "\nHousehold: " + aiHousehold() + "\nKitchen: kitchen scale, 4 gas burners, induction, 3 L and 5 L pressure cookers, air fryer, sandwich maker, pull-cord chopper.\n\n" + aiPlanText() + "\n\nPANTRY\n" + aiPantry() + "\n\n" + (AI.recipeId ? aiRecipeText(AI.recipeId) + "\n\n" : "") + "APP RECIPES (id | title | diet | course | time | ingredients missing from the pantry)\n" + aiCatalogue();
 }
 
 const AI_SCHEMA = { type: "OBJECT", properties: {
@@ -124,6 +141,7 @@ function aiSetupHTML() {
     '<li>Tap <b>Create API key</b> and copy it.</li><li>Paste it below. Don’t add billing to that project: then it can never charge you, it just pauses when the free limit is reached.</li></ol>' +
     '<label for="ai-key">Gemini API key</label><input id="ai-key" type="password" autocomplete="off" spellcheck="false" placeholder="Paste your key">' +
     '<button class="btn primary" type="button" data-ai-savekey>Save key</button>' +
+    '<p class="small">No key? <button type="button" class="linkish" data-ask-claude>Ask Claude instead</button> — opens Claude with your question and this kitchen’s details filled in.</p>' +
     '<p class="small">The key is stored only on this phone or browser. It is never synced, exported in backups or sent anywhere except Google. On the free tier Google may use what you send to improve its products, so don’t include private details.</p></section>';
 }
 function aiBodyHTML() {
@@ -134,7 +152,7 @@ function aiBodyHTML() {
     (AI.busy ? '<p class="ai-msg bot ai-wait">Thinking…</p>' : "") + "</div>" +
     (AI.chat.length ? "" : '<div class="needs">' + AI_QUICK.map((q, i) => '<button type="button" class="chip" data-ai-quick="' + i + '">' + esc(q[0]) + "</button>").join("") + "</div>") +
     '<form class="ai-form" data-ai-form><textarea id="ai-q" rows="2" maxlength="1500" placeholder="' + (r ? "e.g. The gravy is too watery, what now?" : "e.g. I have 2 cut lemons and paneer, ideas?") + '"></textarea>' +
-    '<div class="ai-row"><label class="btn ai-photo">📷 Pantry photo<input type="file" accept="image/*" data-ai-photo hidden></label><button class="btn primary" type="submit"' + (AI.busy ? " disabled" : "") + ">Ask</button></div></form>" +
+    '<div class="ai-row"><label class="btn ai-photo">📷 Pantry photo<input type="file" accept="image/*" data-ai-photo hidden></label><button class="btn" type="button" data-ask-claude>Ask Claude</button><button class="btn primary" type="submit"' + (AI.busy ? " disabled" : "") + ">Ask</button></div></form>" +
     '<details class="recipe-details"><summary>AI settings</summary><p class="small">Model: ' + esc(aiGet(AI.MODEL) || AI.DEFAULT_MODEL) + '</p><button class="btn" type="button" data-ai-newchat>New chat</button> <button class="btn" type="button" data-ai-removekey>Remove key from this device</button></details>';
 }
 function aiRender() {
@@ -151,6 +169,22 @@ function openAI(recipeId) {
 }
 window.openAI = openAI;
 
+/* Hand a question to Claude: opens a new Claude chat with the question and this kitchen's context filled in
+   (and copies the same text, in case the app opens without it). Nothing is sent until you press send there. */
+function claudePrompt(question, recipeId) {
+  const ctx = (recipeId ? aiRecipeText(recipeId) + "\n\n" : "") + aiPlanText() + "\n\nPANTRY\n" + aiPantry() + "\nHousehold: " + aiHousehold();
+  const q = (question || (recipeId ? "Walk me through cooking this step by step for the servings above: what to do the day before, what to chop and measure first, then each step with flame, time and how it should look." : "Help me with today's cooking.")).trim();
+  return ("I'm cooking from my Kitchen From Zero app (Bengaluru; I have a kitchen scale, so grams please). " + q + "\n\n--- context from the app ---\n" + ctx).slice(0, 7000);
+}
+function askClaude(question, recipeId) {
+  const text = claudePrompt(question, recipeId);
+  try { copyText(text); } catch (e) {}
+  const url = "https://claude.ai/new?q=" + encodeURIComponent(text);
+  if (APP && APP.openExternal) { try { APP.openExternal(url); return; } catch (e) {} }
+  window.open(url, "_blank", "noopener");
+}
+window.askClaude = askClaude;
+
 async function aiAsk(text) {
   text = (text || "").trim(); if (!text || AI.busy) return;
   AI.chat.push({ role: "user", text }); AI.busy = true; aiRender();
@@ -159,8 +193,8 @@ async function aiAsk(text) {
     parts: [{ text: (i === 0 ? aiContext() + "\n\nQUESTION: " : "") + (m.role === "bot" ? JSON.stringify({ answer: m.text, recipes: m.recipes || [] }) : m.text) }] }));
   try {
     const out = aiJSON(await aiGenerate({ systemInstruction: { parts: [{ text: AI_RULES }] }, contents,
-      generationConfig: { temperature: 0.4, maxOutputTokens: 1500, responseMimeType: "application/json", responseSchema: AI_SCHEMA } }));
-    AI.chat.push({ role: "bot", text: String(out.answer || "").slice(0, 4000), recipes: Array.isArray(out.recipes) ? out.recipes : [], caution: out.caution || "" });
+      generationConfig: { temperature: 0.4, maxOutputTokens: 8192, responseMimeType: "application/json", responseSchema: AI_SCHEMA } }));
+    AI.chat.push({ role: "bot", text: String(out.answer || "").slice(0, 12000), recipes: Array.isArray(out.recipes) ? out.recipes : [], caution: out.caution || "" });
   } catch (e) { AI.chat.push({ role: "error", text: aiErrText(e) }); }
   AI.busy = false; aiRender();
 }
@@ -194,6 +228,7 @@ async function aiPhoto(file) {
 
 document.addEventListener("click", e => {
   const c = s => e.target.closest && e.target.closest(s); let el;
+  if ((el = c("[data-ask-claude]"))) { const q = ($("#ai-q") && $("#ai-q").value.trim()) || ((AI.chat.filter(m => m.role === "user").pop() || {}).text || ""); askClaude(q, el.dataset.askClaude || (el.closest("#aidlg") ? AI.recipeId : null)); return; }
   if ((el = c("[data-open-ai]"))) { if (typeof closeDrawer === "function") closeDrawer(); openAI(el.dataset.openAi || dlgId || null); return; }
   if (c("[data-ai-savekey]")) { const v = ($("#ai-key").value || "").trim(); if (v.length < 20) { $("#ai-key").setCustomValidity("That doesn't look like a full key."); $("#ai-key").reportValidity(); return; } aiSet(AI.KEY, v); aiSet(AI.MODEL, ""); aiRender(); return; }
   if (c("[data-ai-removekey]")) { aiSet(AI.KEY, ""); aiSet(AI.MODEL, ""); AI.chat = []; aiRender(); return; }

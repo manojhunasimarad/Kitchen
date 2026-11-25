@@ -101,7 +101,7 @@ let lastReminderSync = "";
 function syncReminders() {
   if (!APP || !APP.setReminders) return;
   const r = reminders(), first = useFirst(), need = upcomingKeys().filter(k => !avail(k));
-  const text = [first.length ? "Use first: " + first.slice(0, 3).map(f => PDEF[f.k].label).join(", ") : "", need.length ? "Missing for your plan: " + need.slice(0, 3).map(k => PDEF[k].label).join(", ") : ""].filter(Boolean).join(" · ") || "Two-minute check of what you have.";
+  const text = [typeof prepReminderText === "function" ? prepReminderText() : "", first.length ? "Use first: " + first.slice(0, 3).map(f => PDEF[f.k].label).join(", ") : "", need.length ? "Missing for your plan: " + need.slice(0, 3).map(k => PDEF[k].label).join(", ") : ""].filter(Boolean).join(" · ") || "Two-minute check of what you have.";
   const payload = JSON.stringify({ on: !!r.on, times: r.times.filter(Boolean), text });
   if (payload === lastReminderSync) return;
   lastReminderSync = payload;

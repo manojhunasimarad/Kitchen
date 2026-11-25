@@ -20,6 +20,32 @@ the old one first (back up your data before you do). To sign every build with th
 add the repository secrets `ANDROID_KEYSTORE_B64` (the keystore, base64-encoded), `ANDROID_KEYSTORE_PASSWORD`,
 `ANDROID_KEY_ALIAS` and `ANDROID_KEY_PASSWORD`.
 
+## Prep ahead, batch prep and the fridge switch
+
+Today opens with a **Prep ahead** card covering the next four days of the plan: soaking (rajma, chole, kala chana,
+alasande, sabudana, neer dosa rice…), sprouting (moong, matki), marinating, resting dough and setting curd. Each task
+shows the scaled amount ("Soak 300 g rajma in about 1.2 L water for 8–10 hours"), which meal it is for, a suggested
+start time that avoids 23:00–06:30 (before bed or first thing in the morning), the safe window, a tick box, and an
+⏰ Clock alarm (Android) or Google Calendar reminder (web). A step that is already too late says so, gives the quick
+fix where one is safe (quick-soak for beans) and offers a one-tap swap. The evening pantry-check notification also
+mentions tonight's prep. Lead times live in `data/advance_prep.json` and are checked against the recipes by
+`tests/test_prep_ahead.py`.
+
+The **Fridge** switch (Working · Off till tomorrow · Off 2 days · Off) changes the advice: with the fridge off,
+marinades are capped at 2 hours, no batch cooking for later days, and a short list of what is safe to do instead;
+when it comes back on that date, **Batch and prep ideas** adds up what the next three days share (ginger-garlic
+paste, chopped onions, cooked beans, chapati dough, tamarind extract, roasted rava and peanuts) with total grams,
+how long each keeps and how to make it (`data/batch_prep.json`).
+
+Recipes now open with **Before you start**: what to do ahead at the servings shown, a "get these ready" list with
+gram weights for onions and tomatoes, and the time. Ingredient amounts round to what you can measure (bay leaves and
+cloves grow slowly, pinches become teaspoons, 3¾ tsp becomes 1¼ tbsp), amounts inside the method scale with
+servings and are highlighted, and each step with a time has a ⏱ timer. Biryani variations show their master
+recipe's full method. **Ask Claude about this recipe** (and *Ask Claude* in Kitchen AI) opens a new Claude chat
+with the scaled recipe, plan, prep list and pantry filled in, and copies the same text; nothing is sent until you
+press send. Kitchen AI (Gemini) now gets the same scaled recipe and prep list and is told to answer with grams,
+flame, minutes and doneness cues.
+
 ## Phone layout, dark mode and the Today planner
 
 A top bar shows the current section with search and an appearance button; the menu lists every section, grouped

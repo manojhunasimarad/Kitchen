@@ -699,7 +699,12 @@ data = {"recipes": recipes,
         # Prep skills (chopping, peeling, the pull-cord chopper), linked from recipes by ingredient name.
         "prep": json.loads((ROOT / "data" / "prep_guides.json").read_text(encoding="utf-8")),
         # How long fresh items usually keep, and which items cost the most; drives "use it up" and budget mode.
-        "shelf": json.loads((ROOT / "data" / "shelf_life.json").read_text(encoding="utf-8"))}
+        "shelf": json.loads((ROOT / "data" / "shelf_life.json").read_text(encoding="utf-8")),
+        # Soaking, sprouting and marinating that must start hours or days ahead, and batch-prep components.
+        "advance": json.loads((ROOT / "data" / "advance_prep.json").read_text(encoding="utf-8")),
+        "batch": json.loads((ROOT / "data" / "batch_prep.json").read_text(encoding="utf-8"))}
+_ids = {r["id"] for r in recipes}
+assert set(data["advance"]["recipes"]) <= _ids, set(data["advance"]["recipes"]) - _ids
 json.dump(data, open(ROOT / "data" / "data.json", "w", encoding="utf-8", newline="\n"), ensure_ascii=False, separators=(",", ":"))
 print(len(recipes), "recipes;", sum(len(s["rows"]) for s in TRACK), "track rows;",
       round(len(json.dumps(data, ensure_ascii=False)) / 1024), "KB")
