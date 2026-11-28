@@ -398,6 +398,7 @@ dialog #timer-bar { bottom: calc(16px + env(safe-area-inset-bottom)); }
 .dr-item { appearance: none; width: 100%; display: flex; align-items: center; gap: 14px; min-height: 46px; padding: 8px 14px; border: 0; border-radius: 999px;
   background: none; color: var(--ink); font: 700 15px var(--font-body); text-align: left; cursor: pointer; }
 .dr-item:hover { background: color-mix(in srgb, var(--ink) 6%, transparent); }
+a.dr-item { text-decoration: none; box-sizing: border-box; }
 .dr-item[aria-current="page"] { background: color-mix(in srgb, var(--accent-fill) 32%, transparent); }
 .dr-foot { margin-top: auto; padding: 18px 12px 4px; display: flex; flex-direction: column; gap: 8px; }
 @media (min-width: 1024px) {
@@ -518,7 +519,7 @@ label.who-chip input { width: 16px; height: 16px; }
 <body>
 <header class="appbar" id="appbar"><button type="button" class="ab-btn" id="menu-btn" aria-label="Open menu" aria-controls="drawer" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button><div class="ab-title"><small>Kitchen From Zero</small><b id="appbar-title">Today</b></div><button type="button" class="ab-btn" data-open-ai aria-label="Ask Kitchen AI"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l1.9 4.6 4.6 1.9-4.6 1.9L12 16.5l-1.9-4.6L5.5 10l4.6-1.9z"/><path d="M18.5 15.5l.8 1.9 1.9.8-1.9.8-.8 1.9-.8-1.9-1.9-.8 1.9-.8z"/></svg></button><button type="button" class="ab-btn" id="search-btn" aria-label="Search recipes" title="Search recipes"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button><button type="button" class="ab-btn" id="theme-btn" aria-label="Theme">◐</button></header>
 <div class="scrim" id="scrim" hidden></div>
-<aside class="drawer" id="drawer" aria-label="All sections"><div class="dr-brand"><b>Kitchen From Zero</b><span>Plan, cook and shop for the household</span></div><nav><p class="dr-group">Plan</p><button type="button" class="dr-item" data-go="today"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><span>Today</span></button><button type="button" class="dr-item" data-go="surprise"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="9" cy="9" r="1.2"/><circle cx="15" cy="15" r="1.2"/><circle cx="15" cy="9" r="1.2"/><circle cx="9" cy="15" r="1.2"/></svg><span>Surprise me</span></button><p class="dr-group">Cook</p><button type="button" class="dr-item" data-open-ai><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l1.9 4.6 4.6 1.9-4.6 1.9L12 16.5l-1.9-4.6L5.5 10l4.6-1.9z"/><path d="M18.5 15.5l.8 1.9 1.9.8-1.9.8-.8 1.9-.8-1.9-1.9-.8 1.9-.8z"/></svg><span>Ask Kitchen AI</span></button><button type="button" class="dr-item" data-go="cook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 10.5h15v5a4.5 4.5 0 0 1-4.5 4.5H9a4.5 4.5 0 0 1-4.5-4.5z"/><path d="M2.5 10.5h19M9 7c0-1.4 1.3-2.5 3-2.5s3 1.1 3 2.5"/></svg><span>Cook from pantry</span></button><button type="button" class="dr-item" data-go="recipes"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3.5h10l4 4v13H5z"/><path d="M9 10h6M9 13.5h6M9 17h4"/></svg><span>Recipes</span></button><button type="button" class="dr-item" data-go="prep"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 20.5 15 9l2.5 2.5L8 21z"/><path d="M15 9l3.5-5.5c1.2.8 2 2.3 1.5 3.8L17.5 11.5"/></svg><span>Prep skills</span></button><button type="button" class="dr-item" data-go="track"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18.5 9.5 13l3.5 3.5L20 9.5"/><path d="M15 9.5h5v5"/></svg><span>Learn to cook</span></button><p class="dr-group">Stock</p><button type="button" class="dr-item" data-open-check><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="3.5" width="15" height="17" rx="2.5"/><path d="m8 9 1.8 1.8L13 7.5M8 15.5l1.8 1.8L13 14"/></svg><span>Pantry check</span></button><button type="button" class="dr-item" data-go="pantry"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5h10M8 3.5v3l-2 2.5v11.5h12V9l-2-2.5v-3"/><path d="M6 13h12"/></svg><span>Pantry</span></button><button type="button" class="dr-item" data-go="shop"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 8h13l-1.2 12.5H6.7z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg><span>Shopping</span></button><p class="dr-group">You</p><button type="button" class="dr-item" data-go="me"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20.5c1.2-4 4-6 7.5-6s6.3 2 7.5 6"/></svg><span>Me & health</span></button><button type="button" class="dr-item" data-go="ref"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5c2.5-1 5-1 8 1 3-2 5.5-2 8-1v14c-2.5-1-5-1-8 1-3-2-5.5-2-8-1z"/><path d="M12 6.5v14"/></svg><span>Reference</span></button><button type="button" class="dr-item" data-go="setup"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2.8v2.4M12 18.8v2.4M2.8 12h2.4M18.8 12h2.4M5.5 5.5l1.7 1.7M16.8 16.8l1.7 1.7M5.5 18.5l1.7-1.7M16.8 7.2l1.7-1.7"/></svg><span>Settings</span></button></nav><div class="dr-foot"><span class="lbl-s">Appearance</span><div class="seg" role="group" aria-label="Appearance"><button type="button" data-theme-set="auto">Auto</button><button type="button" data-theme-set="light">Light</button><button type="button" data-theme-set="dark">Dark</button></div></div></aside>
+<aside class="drawer" id="drawer" aria-label="All sections"><div class="dr-brand"><b>Kitchen From Zero</b><span>Plan, cook and shop for the household</span></div><nav><a class="dr-item" id="dr-hub" href="../"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><span>Dinachari: your whole day</span></a><p class="dr-group">Plan</p><button type="button" class="dr-item" data-go="today"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><span>Today</span></button><button type="button" class="dr-item" data-go="surprise"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="9" cy="9" r="1.2"/><circle cx="15" cy="15" r="1.2"/><circle cx="15" cy="9" r="1.2"/><circle cx="9" cy="15" r="1.2"/></svg><span>Surprise me</span></button><p class="dr-group">Cook</p><button type="button" class="dr-item" data-open-ai><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l1.9 4.6 4.6 1.9-4.6 1.9L12 16.5l-1.9-4.6L5.5 10l4.6-1.9z"/><path d="M18.5 15.5l.8 1.9 1.9.8-1.9.8-.8 1.9-.8-1.9-1.9-.8 1.9-.8z"/></svg><span>Ask Kitchen AI</span></button><button type="button" class="dr-item" data-go="cook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 10.5h15v5a4.5 4.5 0 0 1-4.5 4.5H9a4.5 4.5 0 0 1-4.5-4.5z"/><path d="M2.5 10.5h19M9 7c0-1.4 1.3-2.5 3-2.5s3 1.1 3 2.5"/></svg><span>Cook from pantry</span></button><button type="button" class="dr-item" data-go="recipes"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3.5h10l4 4v13H5z"/><path d="M9 10h6M9 13.5h6M9 17h4"/></svg><span>Recipes</span></button><button type="button" class="dr-item" data-go="prep"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 20.5 15 9l2.5 2.5L8 21z"/><path d="M15 9l3.5-5.5c1.2.8 2 2.3 1.5 3.8L17.5 11.5"/></svg><span>Prep skills</span></button><button type="button" class="dr-item" data-go="track"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18.5 9.5 13l3.5 3.5L20 9.5"/><path d="M15 9.5h5v5"/></svg><span>Learn to cook</span></button><p class="dr-group">Stock</p><button type="button" class="dr-item" data-open-check><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="3.5" width="15" height="17" rx="2.5"/><path d="m8 9 1.8 1.8L13 7.5M8 15.5l1.8 1.8L13 14"/></svg><span>Pantry check</span></button><button type="button" class="dr-item" data-go="pantry"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5h10M8 3.5v3l-2 2.5v11.5h12V9l-2-2.5v-3"/><path d="M6 13h12"/></svg><span>Pantry</span></button><button type="button" class="dr-item" data-go="shop"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 8h13l-1.2 12.5H6.7z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg><span>Shopping</span></button><p class="dr-group">You</p><button type="button" class="dr-item" data-go="me"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20.5c1.2-4 4-6 7.5-6s6.3 2 7.5 6"/></svg><span>Me & health</span></button><button type="button" class="dr-item" data-go="ref"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5c2.5-1 5-1 8 1 3-2 5.5-2 8-1v14c-2.5-1-5-1-8 1-3-2-5.5-2-8-1z"/><path d="M12 6.5v14"/></svg><span>Reference</span></button><button type="button" class="dr-item" data-go="setup"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2.8v2.4M12 18.8v2.4M2.8 12h2.4M18.8 12h2.4M5.5 5.5l1.7 1.7M16.8 16.8l1.7 1.7M5.5 18.5l1.7-1.7M16.8 7.2l1.7-1.7"/></svg><span>Settings</span></button></nav><div class="dr-foot"><span class="lbl-s">Appearance</span><div class="seg" role="group" aria-label="Appearance"><button type="button" data-theme-set="auto">Auto</button><button type="button" data-theme-set="light">Light</button><button type="button" data-theme-set="dark">Dark</button></div></div></aside>
 <div class="wrap" id="app">
   <header class="top">
     <p class="eyebrow">Companion to Restaurant-Grade Biryani at Home and Everyday Indian Meals at Home</p>
@@ -2325,6 +2326,64 @@ document.addEventListener("submit", e => {
 document.addEventListener("keydown", e => { if (e.key === "Enter" && !e.shiftKey && e.target.id === "ai-q") { e.preventDefault(); e.target.form.requestSubmit(); } });
 document.addEventListener("change", e => { if (e.target.matches("[data-ai-photo]")) { const f = e.target.files && e.target.files[0]; e.target.value = ""; aiPhoto(f); } });
 
+/* ---------- summary for Dinachari ----------
+   Dinachari, the day app at the root of this site (manojhunasimarad.github.io/), shows today's meals,
+   what to soak or marinate and what to buy without opening this page. It reads one small key,
+   kfz.summary, written here shortly after each change and when the page is hidden. Nothing else in
+   this app reads it. Dinachari may tick a prep task: it writes S.done[key] in kfz.state, the same
+   field the tick box here writes, and the storage listener below shows that change in any open tab. */
+const HUB_KEY = "kfz.summary";
+let hubTimer = null;
+function hubDay(now, offset) {
+  const d = new Date(now); d.setDate(d.getDate() + offset);
+  const ds = ymd(d), p = planOf(ds), h = household();
+  return { date: ds, sessions: p.s, linked: !!linkedDinner(p), meals: SLOTS.map(sl => ({
+    slot: sl, name: SLOT[sl], time: hhmm(slotTime(p, sl)), people: H.attendees(p, sl, h).length, eaten: eaten(ds, sl),
+    dishes: (p.m[sl] || []).filter(([id, k]) => dish(id) && mealServings(p, sl, dish(id), k) > 0)
+      .map(([id]) => ({ id, title: dish(id).title, mins: (R[id] && R[id].minutes) || null })) })) };
+}
+function hubSummary(now = new Date()) {
+  const ds = todayStr(), p = planOf(ds), me = mePerson(), h = household();
+  const nut = only => nsum(SLOTS.filter(sl => !only || eaten(ds, sl)).map(sl => [H.personNutrition(p, sl, me.id, allDishes(), h), 1]));
+  let prep = [];
+  try {
+    prep = prepTasks(now).map(t => ({ key: t.key, what: t.what, kind: t.t.kind, dish: t.r ? t.r.title : "", ds: t.ds, slot: t.sl,
+      start: t.s && t.s.at ? +t.s.at : (t.s && t.s.state === "now" ? +now : null), by: +t.by, from: +t.from,
+      state: t.s ? t.s.state : "", done: advDone(t), quick: t.t.quick || t.t.noQuick || "" })).slice(0, 20);
+  } catch (e) {}
+  const label = k => (PDEF[k] ? PDEF[k].label : k);
+  const need = planNeeds(2);
+  const eat = nut(true), plan = nut(false);
+  return {
+    v: 1, at: +now, date: ds, days: [hubDay(now, 0), hubDay(now, 1)], prep,
+    shop: {
+      need: Object.keys(need).filter(k => PDEF[k]).map(k => ({ key: k, label: label(k), for: need[k].slice(0, 3) })),
+      bring: Object.keys(S.basket).filter(k => S.basket[k].via === "bring" && PDEF[k]).map(label),
+      ordered: Object.keys(S.basket).filter(k => (S.basket[k].via === "order" || S.basket[k].via === "search") && PDEF[k]).map(label),
+      low: D.pantry.filter(x => pstate(x.key) === 1 && !S.basket[x.key]).map(x => x.label),
+      app: appOf().label
+    },
+    nutrition: { person: me.name, p: Math.round(eat.p), pPlan: Math.round(plan.p), pTarget: Math.round(+target("p") || 0),
+      kcal: Math.round(eat.kcal), kcalPlan: Math.round(plan.kcal), kcalTarget: Math.round(+target("kcal") || 0) },
+    people: h.members.length, fridge: fridgeOn(ds), tonight: nightBefore(ds) || "", cooked: Object.keys(S.done).filter(k => !k.startsWith("adv:")).length
+  };
+}
+function writeHubSummary() {
+  clearTimeout(hubTimer); hubTimer = null;
+  try { localStorage.setItem(HUB_KEY, JSON.stringify(hubSummary())); } catch (e) {}
+}
+function scheduleHubSummary() { if (!hubTimer) hubTimer = setTimeout(writeHubSummary, 600); }
+document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden") writeHubSummary(); });
+
+/* Another tab or Dinachari changed the saved data: show it here instead of overwriting it later. */
+window.addEventListener("storage", e => {
+  if (e.key !== "kfz.state" || !e.newValue || mode === "db" || dirty || writing) return;
+  try {
+    const next = norm(JSON.parse(e.newValue));
+    if (JSON.stringify(next) !== JSON.stringify(S)) { S = next; render(); }
+  } catch (err) {}
+});
+
 function nutriHTML(t, title, daily, mult) {
   const m = mult || 1;
   const big = [["kcal", "kcal"], ["p", "protein"], ["c", "carbs"], ["f", "fat"]].map(([k, l]) => "<div><b>" + fmtN(t[k] * m, k) + (k === "kcal" ? "" : " g") + "</b><span>" + l + "</span></div>").join("");
@@ -2905,6 +2964,7 @@ function render() {
   RENDER[currentTab]();
   syncThemeChrome();
   syncReminders();
+  scheduleHubSummary();
   if ($("#dlg").open && dlgId) openRecipe(dlgId, true);
   if ($("#pick").open) renderPickList();
   if (fid) { const el = document.getElementById(fid); if (el && el !== document.activeElement) el.focus({ preventScroll: true }); }
@@ -3145,6 +3205,7 @@ window.kitchenBack = () => {
 };
 if (window.matchMedia && window.matchMedia("(min-width: 761px)").matches) $("#r-filters").open = true;
 
+if (/KitchenFromZeroApp/.test(navigator.userAgent)) { const hub = $("#dr-hub"); if (hub) hub.hidden = true; }
 const h0 = (location.hash || "").slice(1);
 const lastTab=lsGet("kfz.tab", "today");
 selectTab(TABS.includes(h0) ? h0 : h0.startsWith("recipe/") ? "recipes" : TABS.includes(lastTab) ? lastTab : "today", false);
